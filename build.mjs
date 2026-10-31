@@ -239,13 +239,23 @@ for (const b of books) {
 }
 for (const c of concepts) index.push({ type: 'concept', title: `${c.ar} (${c.en})`, sub: 'مفهوم', text: c.def, tag: c.tag, audience: [], book: '', href: `#/concept/${c.id}` });
 
+const strip = b => ({ ...b, nTools: b.tools.length, chapters: b.chapters.map(({ text, ...rest }) => rest) });
+const stub = b => {
+  const full = strip(b);
+  return { id: b.id, title: b.title, author: b.author, year: b.year, audience: b.audience, ageRange: b.ageRange,
+    nTools: full.nTools, chapters: full.chapters.map(c => ({ id: c.id, badge: c.badge, prefix: c.prefix, title: c.title })) };
+};
 const data = {
   site: { title: 'ADHD Wiki', subtitle: 'مرجع العائلة', generated: new Date().toISOString().slice(0, 10), stage: `نموذج تجريبي: ${books.length} ${books.length > 2 ? 'كتب' : books.length === 2 ? 'كتابان' : 'كتاب'}` },
   audiences: AUDIENCES.map(a => ({ id: a.id, ar: a.ar, desc: a.desc })),
-  books: books.map(b => ({ ...b, chapters: b.chapters.map(({ text, ...rest }) => rest) })),
-  concepts, audienceLists, index
+  books: books.map(stub),
+  concepts, audienceLists
 };
-fs.mkdirSync(path.dirname(OUT), { recursive: true });
+const OUT_DIR = path.dirname(OUT);
+fs.mkdirSync(path.join(OUT_DIR, 'books'), { recursive: true });
+for (const f of fs.readdirSync(path.join(OUT_DIR, 'books'))) fs.unlinkSync(path.join(OUT_DIR, 'books', f));
+for (const b of books) fs.writeFileSync(path.join(OUT_DIR, 'books', b.id + '.json'), JSON.stringify(strip(b)));
+fs.writeFileSync(path.join(OUT_DIR, 'search.json'), JSON.stringify(index));
 fs.writeFileSync(OUT, JSON.stringify(data));
 
 console.log('books:', books.length);
@@ -254,4 +264,4 @@ for (const b of books) {
   for (const c of b.chapters) console.log('    ', c.id.padEnd(10), c.fields.map(f => f.key).join(','));
 }
 console.log('concepts:', concepts.map(c => `${c.id}(${c.hits.length})`).join(' '));
-console.log('index records:', index.length, '| size KB:', Math.round(fs.statSync(OUT).size / 1024));
+console.log('index records:', index.length, '| data.json KB:', Math.round(fs.statSync(OUT).size / 1024), '| search.json KB:', Math.round(fs.statSync(path.join(OUT_DIR, 'search.json')).size / 1024));

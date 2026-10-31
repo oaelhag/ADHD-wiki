@@ -1,4 +1,4 @@
-/* ADHD Wiki: واجهة ثابتة بلا خادم. البيانات في data.json */
+/* ADHD Wiki: واجهة ثابتة بلا خادم. البيانات: data.json (فهرس خفيف) + books/<id>.json لكل كتاب + search.json للبحث */
 (() => {
   'use strict';
   const $app = document.getElementById('app');
@@ -58,7 +58,7 @@
   // ---------- العروض ----------
   function home() {
     const nb = D.books.length, nc = D.books.reduce((s, b) => s + b.chapters.length, 0);
-    const nt = D.books.reduce((s, b) => s + b.tools.length, 0);
+    const nt = D.books.reduce((s, b) => s + b.nTools, 0);
     return `
       <section class="hero">
         <h1>مرجع العائلة عن ADHD والتربية</h1>
@@ -88,7 +88,7 @@
           <h3><a href="#/book/${b.id}">${esc(b.title)}</a></h3>
           <p class="muted">${esc(b.author)}، ${b.year}</p>
           <div class="chips">${b.audience.map(a => `<span class="chip plain">${esc(audName(a))}</span>`).join('')}</div>
-          <p class="muted">${b.chapters.length} فصلًا، و${b.tools.length} أداة. الفئة العمرية في الكتاب: ${esc(b.ageRange)}.</p>
+          <p class="muted">${b.chapters.length} فصلًا، و${b.nTools} أداة. الفئة العمرية في الكتاب: ${esc(b.ageRange)}.</p>
         </article>`).join('')}
       <p class="empty">الكتب الأخرى تُضاف واحدًا بعد الآخر بعد مراجعة كل ملخص.</p>`;
   }
@@ -116,7 +116,7 @@
       <div class="card"><dl class="kv">${b.card.map(k => `<dt>${esc(k.k)}</dt><dd>${k.html}</dd>`).join('')}</dl></div>
       <h2>أقسام أخرى في الكتاب</h2>
       <ul class="list card">
-        <li><a class="row" href="#/toolkit"><span class="n">${b.tools.length}</span><span><strong>الأدوات</strong><br><span class="muted">أهم ${b.tools.length} أداة، مع قوائم تحقق.</span></span></a></li>
+        <li><a class="row" href="#/toolkit"><span class="n">${b.nTools}</span><span><strong>الأدوات</strong><br><span class="muted">أهم ${b.nTools} أداة، مع قوائم تحقق.</span></span></a></li>
         <li><a class="row" href="#/book/${b.id}/differences"><span class="n">${b.differences.length}</span><span><strong>أين يختلف الكتاب</strong><br><span class="muted">مواضع تحتاج موازنة، نعرض فيها الرأيين.</span></span></a></li>
         <li><a class="row" href="#/book/${b.id}/verify"><span class="n">${b.numbers.length}</span><span><strong>أرقام تحتاج تحققًا</strong><br><span class="muted">وأسئلة تحتاج الرجوع إلى النص الأصلي.</span></span></a></li>
       </ul>`;
@@ -285,9 +285,35 @@
   }
   function notFound() { return `<h1>الصفحة غير موجودة</h1><p>الرابط قديم أو خاطئ. <a href="#/">ارجع إلى الرئيسية</a>.</p>`; }
 
-  // ---------- التوجيه ----------
+  // ---------- تحميل البيانات عند الحاجة ----------
+  const loading = {};
+  const loadJSON = u => fetch(u).then(r => { if (!r.ok) throw new Error(u); return r.json(); });
+  function loadBook(id) {
+    const i = D.books.findIndex(b => b.id === id);
+    if (i < 0 || D.books[i].core) return Promise.resolve();
+    return (loading['b:' + id] = loading['b:' + id] || loadJSON('books/' + encodeURIComponent(id) + '.json').then(full => { D.books[D.books.findIndex(b => b.id === id)] = full; }));
+  }
+  const loadAllBooks = () => Promise.all(D.books.map(b => loadBook(b.id)));
+  function loadIndex() {
+    if (D.index) return Promise.resolve();
+    return (loading.index = loading.index || loadJSON('search.json').then(x => { D.index = x; }));
+  }
+  let seq = 0;
   function render() {
     if (!D) return;
+    const my = ++seq;
+    const { parts } = hash();
+    const [a, b] = parts;
+    let need;
+    if (a === 'book' && b) need = loadBook(b);
+    else if (a === 'toolkit') need = loadAllBooks();
+    else if (a === 'search') need = loadIndex();
+    if (!need) return draw();
+    $app.setAttribute('aria-busy', 'true');
+    need.then(() => { if (my === seq) { $app.removeAttribute('aria-busy'); draw(); } })
+      .catch(() => { if (my === seq) { $app.removeAttribute('aria-busy'); $app.innerHTML = '<p class="callout">تعذّر تحميل البيانات. أعد تحميل الصفحة.</p>'; } });
+  }
+  function draw() {
     const { parts, params } = hash();
     const [a, b, c] = parts;
     let html, title = 'ADHD Wiki', nav = a || '';
