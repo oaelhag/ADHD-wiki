@@ -1080,5 +1080,63 @@
       "overjustification",
       "الإفراط في التبرير"
     ]
+  },
+  {
+    "id": "nvc-four-steps",
+    "ar": "الخطوات الأربع للتواصل اللاعنفي",
+    "en": "NVC Four Steps",
+    "tag": "book",
+    "def": "ملاحظة بلا حكم، ثم شعور، ثم حاجة، ثم طلب محدد.",
+    "patterns": [
+      "التواصل اللاعنفي",
+      "Nonviolent Communication",
+      "NVC"
+    ]
+  },
+  {
+    "id": "observation-vs-evaluation",
+    "ar": "الملاحظة مقابل التقييم",
+    "en": "Observation vs Evaluation",
+    "tag": "book",
+    "def": "وصف ما يُرى أو يُسمع بلا حكم، فيقل دفاع الطرف الآخر.",
+    "patterns": [
+      "الملاحظة بلا",
+      "observation"
+    ]
+  },
+  {
+    "id": "request-vs-demand",
+    "ar": "الطلب مقابل الأمر",
+    "en": "Request vs Demand",
+    "tag": "book",
+    "def": "يتبيّن الفرق من ردّك حين يقول الآخر لا: تعاطف أم لوم.",
+    "patterns": [
+      "طلب لا أمر",
+      "الطلب أم الأمر",
+      "requests versus demands"
+    ]
+  },
+  {
+    "id": "protective-force",
+    "ar": "القوة الحامية",
+    "en": "Protective Force",
+    "tag": "book",
+    "def": "تدخل يمنع الأذى بلا لوم ولا إذلال، بخلاف القوة العقابية.",
+    "patterns": [
+      "القوة الحامية",
+      "protective use of force"
+    ]
+  },
+  {
+    "id": "empathic-listening",
+    "ar": "الإصغاء بتعاطف",
+    "en": "Empathic Listening",
+    "tag": "book",
+    "def": "حضور كامل وتخمين للشعور والحاجة قبل النصيحة والحلول.",
+    "patterns": [
+      "الإصغاء بتعاطف",
+      "الاستقبال بتعاطف",
+      "empathic"
+    ]
   }
 ]
