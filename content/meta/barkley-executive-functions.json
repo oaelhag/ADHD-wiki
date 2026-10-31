@@ -1,0 +1,192 @@
+{
+  "note": "تصنيف المستفيدين والأدوات اجتهاد من معدّ الموقع وليس رأي المؤلف.",
+  "sensitiveChapters": [
+    10
+  ],
+  "chapterAudiences": {
+    "1": [
+      "parents",
+      "teachers",
+      "adults"
+    ],
+    "2": [
+      "adults"
+    ],
+    "3": [
+      "parents",
+      "teachers",
+      "adults"
+    ],
+    "4": [
+      "parents",
+      "teachers",
+      "adults"
+    ],
+    "5": [
+      "parents",
+      "teachers",
+      "adults"
+    ],
+    "6": [
+      "parents",
+      "teachers",
+      "adults"
+    ],
+    "7": [
+      "adults"
+    ],
+    "8": [
+      "parents",
+      "teachers",
+      "adults"
+    ],
+    "9": [
+      "parents",
+      "teachers",
+      "adults"
+    ],
+    "10": [
+      "parents",
+      "teachers",
+      "adults",
+      "special"
+    ]
+  },
+  "tools": {
+    "1": {
+      "kind": "فهم",
+      "audiences": [
+        "parents",
+        "teachers",
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "2": {
+      "kind": "نقطة الأداء",
+      "audiences": [
+        "parents",
+        "teachers",
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "3": {
+      "kind": "دعم الذاكرة",
+      "audiences": [
+        "parents",
+        "teachers",
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "4": {
+      "kind": "ضبط النفس",
+      "audiences": [
+        "parents",
+        "teachers",
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "5": {
+      "kind": "إدارة الوقت",
+      "audiences": [
+        "parents",
+        "teachers",
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "6": {
+      "kind": "مكافآت",
+      "audiences": [
+        "parents",
+        "teachers",
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "7": {
+      "kind": "استمرارية الدعم",
+      "audiences": [
+        "parents",
+        "teachers",
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "8": {
+      "kind": "تنظيم الانفعال",
+      "audiences": [
+        "parents",
+        "teachers",
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "9": {
+      "kind": "تنظيم الانفعال",
+      "audiences": [
+        "parents",
+        "teachers",
+        "adults"
+      ],
+      "tag": "claim"
+    },
+    "10": {
+      "kind": "إدارة الوقت",
+      "audiences": [
+        "parents",
+        "teachers",
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "11": {
+      "kind": "تقييم",
+      "audiences": [
+        "parents",
+        "teachers",
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "12": {
+      "kind": "استمرارية الدعم",
+      "audiences": [
+        "parents",
+        "teachers",
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "13": {
+      "kind": "مساءلة",
+      "audiences": [
+        "parents",
+        "teachers",
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "14": {
+      "kind": "مكافآت",
+      "audiences": [
+        "parents",
+        "teachers",
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "15": {
+      "kind": "وقاية",
+      "audiences": [
+        "parents",
+        "teachers",
+        "adults"
+      ],
+      "tag": "book"
+    }
+  }
+}

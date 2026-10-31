@@ -1,0 +1,228 @@
+{
+  "note": "تصنيف المستفيدين والأدوات اجتهاد من معدّ الموقع وليس رأي المؤلف.",
+  "sensitiveChapters": [
+    12,
+    13,
+    14,
+    15,
+    28,
+    30
+  ],
+  "chapterAudiences": {
+    "0": [
+      "adults"
+    ],
+    "1": [
+      "adults"
+    ],
+    "2": [
+      "adults"
+    ],
+    "3": [
+      "adults"
+    ],
+    "4": [
+      "adults"
+    ],
+    "5": [
+      "adults"
+    ],
+    "6": [
+      "adults"
+    ],
+    "7": [
+      "adults"
+    ],
+    "8": [
+      "adults"
+    ],
+    "9": [
+      "adults"
+    ],
+    "10": [
+      "adults"
+    ],
+    "11": [
+      "adults"
+    ],
+    "12": [
+      "adults"
+    ],
+    "13": [
+      "adults"
+    ],
+    "14": [
+      "adults"
+    ],
+    "15": [
+      "adults"
+    ],
+    "16": [
+      "adults"
+    ],
+    "17": [
+      "adults"
+    ],
+    "18": [
+      "adults"
+    ],
+    "19": [
+      "adults"
+    ],
+    "20": [
+      "adults"
+    ],
+    "21": [
+      "adults"
+    ],
+    "22": [
+      "adults"
+    ],
+    "23": [
+      "adults"
+    ],
+    "24": [
+      "adults",
+      "teachers"
+    ],
+    "25": [
+      "adults"
+    ],
+    "26": [
+      "adults"
+    ],
+    "27": [
+      "adults",
+      "parents"
+    ],
+    "28": [
+      "adults"
+    ],
+    "29": [
+      "adults",
+      "parents"
+    ],
+    "30": [
+      "adults"
+    ],
+    "appendix": [
+      "adults"
+    ]
+  },
+  "tools": {
+    "1": {
+      "kind": "ضبط النفس",
+      "audiences": [
+        "adults",
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "2": {
+      "kind": "دعم الذاكرة",
+      "audiences": [
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "3": {
+      "kind": "دعم الذاكرة",
+      "audiences": [
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "4": {
+      "kind": "تنظيم المهام",
+      "audiences": [
+        "adults",
+        "teachers"
+      ],
+      "tag": "book"
+    },
+    "5": {
+      "kind": "مساءلة",
+      "audiences": [
+        "adults",
+        "teachers"
+      ],
+      "tag": "book"
+    },
+    "6": {
+      "kind": "مكافآت",
+      "audiences": [
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "7": {
+      "kind": "إدارة الوقت",
+      "audiences": [
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "8": {
+      "kind": "ضبط النفس",
+      "audiences": [
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "9": {
+      "kind": "دافع",
+      "audiences": [
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "10": {
+      "kind": "علاقة",
+      "audiences": [
+        "adults",
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "11": {
+      "kind": "ضبط النفس",
+      "audiences": [
+        "adults",
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "12": {
+      "kind": "تنسيق الوالدين",
+      "audiences": [
+        "parents",
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "13": {
+      "kind": "تنسيق الوالدين",
+      "audiences": [
+        "parents",
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "14": {
+      "kind": "تنسيق الوالدين",
+      "audiences": [
+        "parents",
+        "adults"
+      ],
+      "tag": "claim"
+    },
+    "15": {
+      "kind": "مساءلة",
+      "audiences": [
+        "adults",
+        "teachers"
+      ],
+      "tag": "book"
+    }
+  }
+}

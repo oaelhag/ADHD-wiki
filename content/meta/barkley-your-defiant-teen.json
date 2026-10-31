@@ -1,0 +1,185 @@
+{
+  "note": "تصنيف المستفيدين والأدوات اجتهاد من معدّ الموقع وليس رأي المؤلفين.",
+  "sensitiveChapters": [
+    4,
+    11,
+    17
+  ],
+  "chapterAudiences": {
+    "0": [
+      "parents"
+    ],
+    "1": [
+      "parents"
+    ],
+    "2": [
+      "parents"
+    ],
+    "3": [
+      "parents"
+    ],
+    "4": [
+      "parents",
+      "special"
+    ],
+    "5": [
+      "parents",
+      "adults"
+    ],
+    "6": [
+      "parents"
+    ],
+    "7": [
+      "parents"
+    ],
+    "8": [
+      "parents"
+    ],
+    "9": [
+      "parents"
+    ],
+    "10": [
+      "parents"
+    ],
+    "11": [
+      "parents",
+      "special"
+    ],
+    "12": [
+      "parents"
+    ],
+    "13": [
+      "parents",
+      "teachers"
+    ],
+    "14": [
+      "parents"
+    ],
+    "15": [
+      "parents"
+    ],
+    "16": [
+      "parents"
+    ],
+    "17": [
+      "parents",
+      "special"
+    ],
+    "appendix": [
+      "parents"
+    ]
+  },
+  "tools": {
+    "1": {
+      "kind": "علاقة",
+      "audiences": [
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "2": {
+      "kind": "قراءة السلوك",
+      "audiences": [
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "3": {
+      "kind": "تواصل",
+      "audiences": [
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "4": {
+      "kind": "روتين",
+      "audiences": [
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "5": {
+      "kind": "حدود",
+      "audiences": [
+        "parents",
+        "special"
+      ],
+      "tag": "book"
+    },
+    "6": {
+      "kind": "مكافآت",
+      "audiences": [
+        "parents",
+        "special"
+      ],
+      "tag": "book"
+    },
+    "7": {
+      "kind": "مكافآت",
+      "audiences": [
+        "parents",
+        "special"
+      ],
+      "tag": "book"
+    },
+    "8": {
+      "kind": "حدود",
+      "audiences": [
+        "parents"
+      ],
+      "tag": "claim"
+    },
+    "9": {
+      "kind": "حدود",
+      "audiences": [
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "10": {
+      "kind": "حدود",
+      "audiences": [
+        "parents",
+        "special"
+      ],
+      "tag": "claim"
+    },
+    "11": {
+      "kind": "تواصل مع المدرسة",
+      "audiences": [
+        "parents",
+        "teachers"
+      ],
+      "tag": "book"
+    },
+    "12": {
+      "kind": "واجب",
+      "audiences": [
+        "parents",
+        "teachers"
+      ],
+      "tag": "book"
+    },
+    "13": {
+      "kind": "حل المشكلات",
+      "audiences": [
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "14": {
+      "kind": "تواصل",
+      "audiences": [
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "15": {
+      "kind": "وقاية",
+      "audiences": [
+        "parents"
+      ],
+      "tag": "book"
+    }
+  }
+}
