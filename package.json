@@ -1,0 +1,13 @@
+{
+  "name": "adhd-wiki",
+  "version": "0.1.0",
+  "description": "ADHD and parenting knowledge hub",
+  "scripts": {
+    "build": "node build.mjs"
+  },
+  "dependencies": {
+    "marked": "^18.1.2"
+  },
+  "private": true,
+  "type": "module"
+}
