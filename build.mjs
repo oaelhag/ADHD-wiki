@@ -246,8 +246,9 @@ const stub = b => {
     nTools: full.nTools, chapters: full.chapters.map(c => ({ id: c.id, badge: c.badge, prefix: c.prefix, title: c.title })) };
 };
 const data = {
-  site: { title: 'ADHD Wiki', subtitle: 'مرجع العائلة', generated: new Date().toISOString().slice(0, 10), stage: `نموذج تجريبي: ${books.length} ${books.length > 2 ? 'كتب' : books.length === 2 ? 'كتابان' : 'كتاب'}` },
+  site: { title: 'ADHD Wiki', subtitle: 'مرجع العائلة', generated: new Date().toISOString().slice(0, 10), stage: `نموذج تجريبي: ${books.length} ${books.length > 10 ? 'كتابًا' : books.length > 2 ? 'كتب' : books.length === 2 ? 'كتابان' : 'كتاب'}` },
   audiences: AUDIENCES.map(a => ({ id: a.id, ar: a.ar, desc: a.desc })),
+  news: fs.existsSync(path.join(ROOT, 'content/news.json')) ? JSON.parse(fs.readFileSync(path.join(ROOT, 'content/news.json'), 'utf8')) : [],
   books: books.map(stub),
   concepts, audienceLists
 };

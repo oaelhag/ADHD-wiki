@@ -71,6 +71,7 @@
           ${['الذاكرة العاملة', 'كره الانتظار', 'التجنب', 'وقت إضافي', 'النوم'].map(q => `<a href="#/search?q=${encodeURIComponent(q)}">${q}</a>`).join('')}
         </div>
       </section>
+      ${newsBox()}
       <section class="doors" aria-label="الأقسام">
         <a class="door" href="#/library"><b>${nb}</b><span>المكتبة</span><small>${nc} فصلًا بملخصات كاملة، وخريطة لكل كتاب.</small></a>
         <a class="door" href="#/toolkit"><b>${nt}</b><span>الأدوات</span><small>خطوات وقوائم تحقق تجرّبها وتضع عليها علامة.</small></a>
@@ -78,6 +79,14 @@
         <a class="door" href="#/audience"><b>${D.audiences.length}</b><span>حسب من تكون؟</span><small>بالغ مصاب، أب أو أم، معلم، أو تحدٍّ خاص.</small></a>
       </section>
       <p class="stage">${esc(D.site.stage)}. كل شيء هنا موسوم: ما يقوله الكتاب، وما هو استنتاج، وما يحتاج مختصًا. <a href="#/about">اعرف الوسوم</a>.</p>`;
+  }
+
+  function newsBox() {
+    const n = (D.news || [])[0];
+    if (!n) return '';
+    const links = (n.books || []).map(id => D.books.find(b => b.id === id)).filter(Boolean)
+      .map(b => `<a href="#/book/${b.id}">${esc(b.title.split(':')[0])}</a>`).join('');
+    return `<aside class="news" aria-label="آخر الإضافات"><b>${esc(n.title)} <small>${esc(n.date)}</small></b><p>${esc(n.note)}</p><div class="quick">${links}</div></aside>`;
   }
 
   function library() {

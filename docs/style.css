@@ -192,6 +192,8 @@ mark { background: #FFE08A; color: #1c1c1c; padding: 0 2px; border-radius: 3px; 
 
 .actions { margin: .4em 0 1em; }
 .printcard { display: none; }
+.news{border:1px solid #DCEEEB;background:#F2F9F8;border-inline-start:4px solid #1E6B66;border-radius:10px;padding:.8em 1em;margin:1em 0}
+.news p{margin:.3em 0 .5em}.news small{font-weight:400;color:#5a6b69;margin-inline-start:.5em}
 @media print {
   @page { size: A4; margin: 12mm; }
   html { font-size: 11pt; }
