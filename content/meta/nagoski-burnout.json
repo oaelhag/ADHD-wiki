@@ -1,0 +1,134 @@
+{
+  "note": "تصنيف المستفيدين والأدوات اجتهاد من معدّ الموقع وليس رأي المؤلف.",
+  "sensitiveChapters": [
+    "5"
+  ],
+  "chapterAudiences": {
+    "default": [
+      "adults",
+      "parents"
+    ]
+  },
+  "tools": {
+    "1": {
+      "kind": "فهم",
+      "audiences": [
+        "adults",
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "2": {
+      "kind": "حركة",
+      "audiences": [
+        "adults",
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "3": {
+      "kind": "تنفس",
+      "audiences": [
+        "adults",
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "4": {
+      "kind": "جسد",
+      "audiences": [
+        "adults",
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "5": {
+      "kind": "تواصل جسدي",
+      "audiences": [
+        "adults",
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "6": {
+      "kind": "علامات",
+      "audiences": [
+        "adults",
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "7": {
+      "kind": "حل مشكلات",
+      "audiences": [
+        "adults",
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "8": {
+      "kind": "هدف",
+      "audiences": [
+        "adults",
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "9": {
+      "kind": "قرار",
+      "audiences": [
+        "adults",
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "10": {
+      "kind": "فعل",
+      "audiences": [
+        "adults",
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "11": {
+      "kind": "دعم",
+      "audiences": [
+        "adults",
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "12": {
+      "kind": "راحة",
+      "audiences": [
+        "adults",
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "13": {
+      "kind": "تخطيط",
+      "audiences": [
+        "adults",
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "14": {
+      "kind": "رحمة بالنفس",
+      "audiences": [
+        "adults",
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "15": {
+      "kind": "امتنان",
+      "audiences": [
+        "adults",
+        "parents"
+      ],
+      "tag": "book"
+    }
+  }
+}

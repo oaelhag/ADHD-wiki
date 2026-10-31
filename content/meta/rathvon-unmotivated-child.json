@@ -1,0 +1,134 @@
+{
+  "note": "تصنيف المستفيدين والأدوات اجتهاد من معدّ الموقع وليس رأي المؤلف.",
+  "sensitiveChapters": [
+    "2"
+  ],
+  "chapterAudiences": {
+    "default": [
+      "parents",
+      "teachers"
+    ]
+  },
+  "tools": {
+    "1": {
+      "kind": "تشجيع",
+      "audiences": [
+        "parents",
+        "teachers"
+      ],
+      "tag": "book"
+    },
+    "2": {
+      "kind": "مشاعر",
+      "audiences": [
+        "parents",
+        "teachers"
+      ],
+      "tag": "book"
+    },
+    "3": {
+      "kind": "استجابة للعجز",
+      "audiences": [
+        "parents",
+        "teachers"
+      ],
+      "tag": "book"
+    },
+    "4": {
+      "kind": "حل مشكلات",
+      "audiences": [
+        "parents",
+        "teachers"
+      ],
+      "tag": "book"
+    },
+    "5": {
+      "kind": "أسئلة",
+      "audiences": [
+        "parents",
+        "teachers"
+      ],
+      "tag": "book"
+    },
+    "6": {
+      "kind": "انفعال",
+      "audiences": [
+        "parents",
+        "teachers"
+      ],
+      "tag": "book"
+    },
+    "7": {
+      "kind": "تزوّد بالوقود",
+      "audiences": [
+        "parents",
+        "teachers"
+      ],
+      "tag": "book"
+    },
+    "8": {
+      "kind": "روتين",
+      "audiences": [
+        "parents",
+        "teachers"
+      ],
+      "tag": "book"
+    },
+    "9": {
+      "kind": "جدول",
+      "audiences": [
+        "parents",
+        "teachers"
+      ],
+      "tag": "book"
+    },
+    "10": {
+      "kind": "خطوات",
+      "audiences": [
+        "parents",
+        "teachers"
+      ],
+      "tag": "book"
+    },
+    "11": {
+      "kind": "كتابة",
+      "audiences": [
+        "parents",
+        "teachers"
+      ],
+      "tag": "book"
+    },
+    "12": {
+      "kind": "مراجعة",
+      "audiences": [
+        "parents",
+        "teachers"
+      ],
+      "tag": "book"
+    },
+    "13": {
+      "kind": "تعاون مع المعلم",
+      "audiences": [
+        "parents",
+        "teachers"
+      ],
+      "tag": "book"
+    },
+    "14": {
+      "kind": "دور ومسؤولية",
+      "audiences": [
+        "parents",
+        "teachers"
+      ],
+      "tag": "book"
+    },
+    "15": {
+      "kind": "انتكاس",
+      "audiences": [
+        "parents",
+        "teachers"
+      ],
+      "tag": "book"
+    }
+  }
+}
