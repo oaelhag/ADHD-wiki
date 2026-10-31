@@ -1,0 +1,31 @@
+{
+  "note": "تصنيف المستفيدين والأدوات اجتهاد من معدّ الموقع وليس رأي المؤلفين.",
+  "sensitiveChapters": [],
+  "chapterAudiences": {
+    "0": ["parents", "teachers"],
+    "1": ["parents", "teachers"],
+    "2": ["parents", "teachers", "special"],
+    "3": ["parents", "teachers"],
+    "4": ["parents", "teachers", "adults"],
+    "5": ["parents", "teachers"],
+    "conclusion": ["parents", "teachers"],
+    "appendix": ["parents", "teachers"]
+  },
+  "tools": {
+    "1": { "kind": "تنظيم الانفعال", "audiences": ["parents", "teachers"], "tag": "claim" },
+    "2": { "kind": "تواصل", "audiences": ["parents", "teachers"], "tag": "book" },
+    "3": { "kind": "قراءة السلوك", "audiences": ["parents", "teachers"], "tag": "book" },
+    "4": { "kind": "قراءة السلوك", "audiences": ["parents"], "tag": "book" },
+    "5": { "kind": "وضع الحدود", "audiences": ["parents", "teachers"], "tag": "book" },
+    "6": { "kind": "تنظيم الانفعال", "audiences": ["parents", "adults"], "tag": "book" },
+    "7": { "kind": "قلق", "audiences": ["parents"], "tag": "specialist" },
+    "8": { "kind": "تنظيم الانفعال", "audiences": ["parents", "teachers", "adults"], "tag": "book" },
+    "9": { "kind": "وعي بالمشاعر", "audiences": ["parents", "teachers", "adults"], "tag": "book" },
+    "10": { "kind": "حل المشكلات", "audiences": ["parents", "teachers"], "tag": "book" },
+    "11": { "kind": "نوم", "audiences": ["parents", "teachers"], "tag": "claim" },
+    "12": { "kind": "نمط حياة", "audiences": ["parents", "adults"], "tag": "book" },
+    "13": { "kind": "علاقة", "audiences": ["parents"], "tag": "claim" },
+    "14": { "kind": "تعليم المهارة", "audiences": ["parents", "teachers"], "tag": "book" },
+    "15": { "kind": "قيم وأولويات", "audiences": ["parents", "adults"], "tag": "book" }
+  }
+}
