@@ -103,10 +103,11 @@
     const b = D.books.find(x => x.id === id);
     if (!b) return notFound();
     const { strip } = bookPage(b);
-    return `
+    return `${printCard(b)}<div class="screen-only">
       <p class="crumbs"><a href="#/library">المكتبة</a></p>
       <h1>${esc(b.title)}</h1>
       <p class="muted">${esc(b.author)}، ${b.year}</p>
+      <p class="actions"><button class="btn ghost" type="button" data-print>🖨 طباعة بطاقة الكتاب</button></p>
       <h2>الفكرة في خمسة أسطر</h2>
       <ol class="body">${b.core.map(c => `<li>${c.html}</li>`).join('')}</ol>
       <h2>خريطة الفصول</h2>
@@ -119,7 +120,37 @@
         <li><a class="row" href="#/toolkit"><span class="n">${b.nTools}</span><span><strong>الأدوات</strong><br><span class="muted">أهم ${b.nTools} أداة، مع قوائم تحقق.</span></span></a></li>
         <li><a class="row" href="#/book/${b.id}/differences"><span class="n">${b.differences.length}</span><span><strong>أين يختلف الكتاب</strong><br><span class="muted">مواضع تحتاج موازنة، نعرض فيها الرأيين.</span></span></a></li>
         <li><a class="row" href="#/book/${b.id}/verify"><span class="n">${b.numbers.length}</span><span><strong>أرقام تحتاج تحققًا</strong><br><span class="muted">وأسئلة تحتاج الرجوع إلى النص الأصلي.</span></span></a></li>
-      </ul>`;
+      </ul></div>`;
+  }
+
+  function printCard(b) {
+    const tools = (b.tools || []).slice(0, 15);
+    const sens = b.chapters.filter(c => c.sensitive).map(c => c.prefix + c.title);
+    return `<section class="printcard" aria-hidden="true" dir="rtl">
+      <header class="pc-head">
+        <div class="pc-brand">مرجع العائلة عن ADHD والتربية</div>
+        <h1>${esc(b.title)}</h1>
+        <p>${esc(b.author)} · ${b.year}</p>
+        <div class="pc-aud">${b.audience.map(a => `<span>${esc(audName(a))}</span>`).join('')}<span>${esc(b.ageRange)}</span></div>
+      </header>
+      <h2>الفكرة في خمسة أسطر</h2>
+      <ol class="pc-core">${b.core.map(c => `<li>${c.html}</li>`).join('')}</ol>
+      <div class="pc-cols">
+        <div>
+          <h2>بطاقة الكتاب</h2>
+          <dl class="pc-kv">${b.card.map(k => `<dt>${esc(k.k)}</dt><dd>${k.html}</dd>`).join('')}</dl>
+        </div>
+        <div>
+          <h2>خريطة الفصول (${b.chapters.length})</h2>
+          <ul class="pc-map">${b.chapters.map(c => `<li><b>${esc(c.badge)}</b>${esc(c.title)}</li>`).join('')}</ul>
+        </div>
+      </div>
+      <h2>أهم الأدوات</h2>
+      <ul class="pc-tools">${tools.map(t => `<li><i></i><span>${esc(t.title)}</span><small>${esc(t.kind)}</small></li>`).join('')}</ul>
+      ${b.differences.length ? `<h2>أين يحتاج الكتاب موازنة</h2><ul class="pc-diff">${b.differences.map(d => `<li>${esc(d.title)}</li>`).join('')}</ul>` : ''}
+      ${sens.length ? `<p class="pc-note">فصول حساسة: ${sens.map(esc).join('، ')}.</p>` : ''}
+      <footer class="pc-foot">ملخص تعليمي وليس بديلًا عن الكتاب أو المختص. لا تشخيص ولا جرعات. ما يحتاج تحققًا موسوم في صفحة «للتحقق».</footer>
+    </section>`;
   }
 
   function chapter(bid, cid) {
@@ -139,6 +170,7 @@
       <p class="crumbs"><a href="#/library">المكتبة</a> / <a href="#/book/${b.id}">${esc(b.title.split(':')[0])}</a></p>
       ${strip}
       <h1>${esc(c.prefix + c.title)}</h1>
+      <p class="actions"><button class="btn ghost" type="button" data-print>🖨 طباعة الفصل</button></p>
       ${c.en ? `<p class="muted" dir="ltr" style="text-align:end">${esc(c.en)}</p>` : ''}
       ${c.sensitive ? `<p class="callout" role="note">تنبيه: يتناول هذا الفصل حزنًا شديدًا أو إيذاء النفس. اقرأه بحذر. إن كنت أنت أو أحد من حولك في خطر فوري، اطلب مساعدة طوارئ محلية أو مختصًا الآن.</p>` : ''}
       ${(c.fields.find(f => f.key === 'problem') || {}).html ? `<div class="card"><strong>المشكلة:</strong> ${c.fields.find(f => f.key === 'problem').html.replace(/^<p>|<\/p>\s*$/g, '')}</div>` : ''}
@@ -358,6 +390,11 @@
   document.addEventListener('click', e => {
     const b = e.target.closest('button[data-href]');
     if (b) location.hash = b.dataset.href;
+    if (e.target.closest('button[data-print]')) {
+      document.querySelectorAll('details.fld').forEach(d => { d.dataset.was = d.open ? '1' : '0'; d.open = true; });
+      window.print();
+      document.querySelectorAll('details.fld').forEach(d => { d.open = d.dataset.was === '1'; });
+    }
   });
   window.addEventListener('hashchange', render);
 

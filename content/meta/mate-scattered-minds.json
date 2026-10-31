@@ -1,0 +1,230 @@
+{
+  "note": "تصنيف المستفيدين والأدوات اجتهاد من معدّ الموقع وليس رأي المؤلف. الكتاب يقوم على نظرية المؤلف وهي محل جدل.",
+  "sensitiveChapters": [
+    4,
+    12,
+    18,
+    30,
+    31
+  ],
+  "chapterAudiences": {
+    "0": [
+      "parents"
+    ],
+    "1": [
+      "adults",
+      "parents"
+    ],
+    "2": [
+      "adults",
+      "parents"
+    ],
+    "3": [
+      "parents"
+    ],
+    "4": [
+      "parents"
+    ],
+    "5": [
+      "adults",
+      "parents"
+    ],
+    "6": [
+      "parents"
+    ],
+    "7": [
+      "parents"
+    ],
+    "8": [
+      "parents"
+    ],
+    "9": [
+      "parents"
+    ],
+    "10": [
+      "parents"
+    ],
+    "11": [
+      "parents"
+    ],
+    "12": [
+      "parents"
+    ],
+    "13": [
+      "parents"
+    ],
+    "14": [
+      "parents"
+    ],
+    "15": [
+      "parents"
+    ],
+    "16": [
+      "parents"
+    ],
+    "17": [
+      "parents"
+    ],
+    "18": [
+      "parents"
+    ],
+    "19": [
+      "parents"
+    ],
+    "20": [
+      "parents"
+    ],
+    "21": [
+      "parents"
+    ],
+    "22": [
+      "parents"
+    ],
+    "23": [
+      "teachers",
+      "parents"
+    ],
+    "24": [
+      "parents",
+      "special"
+    ],
+    "25": [
+      "adults",
+      "parents"
+    ],
+    "26": [
+      "adults",
+      "parents"
+    ],
+    "27": [
+      "adults",
+      "parents"
+    ],
+    "28": [
+      "adults",
+      "parents"
+    ],
+    "29": [
+      "adults",
+      "parents"
+    ],
+    "30": [
+      "adults",
+      "parents"
+    ],
+    "31": [
+      "parents",
+      "special"
+    ],
+    "32": [
+      "parents"
+    ]
+  },
+  "tools": {
+    "1": {
+      "kind": "علاقة",
+      "audiences": [
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "2": {
+      "kind": "علاقة",
+      "audiences": [
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "3": {
+      "kind": "علاقة",
+      "audiences": [
+        "parents"
+      ],
+      "tag": "claim"
+    },
+    "4": {
+      "kind": "غضب",
+      "audiences": [
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "5": {
+      "kind": "إصلاح",
+      "audiences": [
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "6": {
+      "kind": "انتباه",
+      "audiences": [
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "7": {
+      "kind": "حدود",
+      "audiences": [
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "8": {
+      "kind": "قراءة السلوك",
+      "audiences": [
+        "parents"
+      ],
+      "tag": "claim"
+    },
+    "9": {
+      "kind": "عناد",
+      "audiences": [
+        "parents"
+      ],
+      "tag": "claim"
+    },
+    "10": {
+      "kind": "إصلاح",
+      "audiences": [
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "11": {
+      "kind": "واجب",
+      "audiences": [
+        "parents"
+      ],
+      "tag": "claim"
+    },
+    "12": {
+      "kind": "حدود",
+      "audiences": [
+        "parents"
+      ],
+      "tag": "claim"
+    },
+    "13": {
+      "kind": "ذات",
+      "audiences": [
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "14": {
+      "kind": "ذات",
+      "audiences": [
+        "adults"
+      ],
+      "tag": "specialist"
+    },
+    "15": {
+      "kind": "نمط حياة",
+      "audiences": [
+        "adults"
+      ],
+      "tag": "book"
+    }
+  }
+}

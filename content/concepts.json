@@ -685,5 +685,103 @@
       "Ego depletion",
       "ego depletion"
     ]
+  },
+  {
+    "id": "attunement",
+    "ar": "التناغم",
+    "en": "Attunement",
+    "tag": "claim",
+    "def": "أن يشعر الطفل أن من يرعاه يشاركه حالته لحظة بلحظة. يراه ماتيه أساس نمو ضبط الذات. نظرية المؤلف وعليها جدل.",
+    "patterns": [
+      "التناغم",
+      "الانسجام",
+      "Attunement",
+      "attunement"
+    ]
+  },
+  {
+    "id": "counterwill",
+    "ar": "الإرادة المضادة",
+    "en": "Counterwill",
+    "tag": "claim",
+    "def": "مقاومة تلقائية لإرادة الآخر بسبب الخوف من السيطرة. يفسر بها ماتيه عناد الأطفال.",
+    "patterns": [
+      "الإرادة المضادة",
+      "Counterwill",
+      "counterwill"
+    ]
+  },
+  {
+    "id": "self-parenting",
+    "ar": "الأبوة الذاتية",
+    "en": "Self-Parenting",
+    "tag": "claim",
+    "def": "أن يقدّم البالغ لنفسه القبول والحدود والرعاية التي يحتاجها. فكرة عند ماتيه.",
+    "patterns": [
+      "الأبوة الذاتية",
+      "Self-parenting",
+      "self-parenting"
+    ]
+  },
+  {
+    "id": "hidden-stress",
+    "ar": "الضغط الخفي",
+    "en": "Hidden Stress",
+    "tag": "dispute",
+    "def": "ضغط مزمن لا يشعر به صاحبه (كثرة الإرضاء وصعوبة قول لا وكبت الغضب). ربطه بالأمراض ادعاء متنازع عليه.",
+    "patterns": [
+      "الضغط الخفي",
+      "Hidden stress",
+      "hidden stress",
+      "الضغط المزمن"
+    ]
+  },
+  {
+    "id": "emotional-competence",
+    "ar": "الكفاءة العاطفية",
+    "en": "Emotional Competence",
+    "tag": "claim",
+    "def": "أربع قدرات: الإحساس بالمشاعر، التعبير مع حماية الحدود، التمييز بين الماضي والحاضر، معرفة الحاجة الحقيقية.",
+    "patterns": [
+      "الكفاءة العاطفية",
+      "Emotional competence",
+      "emotional competence"
+    ]
+  },
+  {
+    "id": "genetic-fundamentalism",
+    "ar": "الأصولية الجينية",
+    "en": "Genetic Fundamentalism",
+    "tag": "dispute",
+    "def": "نقد ماتيه لتفسير ADD بالجينات وحدها. يخالفه باركلي الذي يرى الوراثة أساسية.",
+    "patterns": [
+      "الأصولية الجينية",
+      "Genetic fundamentalism",
+      "genetic fundamentalism"
+    ]
+  },
+  {
+    "id": "dissociation",
+    "ar": "الانفصال الذهني",
+    "en": "Dissociation",
+    "tag": "claim",
+    "def": "انفصال الانتباه كوسيلة لتخدير ألم عاطفي. يفسر به ماتيه التشتت. تفسير المؤلف.",
+    "patterns": [
+      "الانفصال الذهني",
+      "Dissociation",
+      "dissociation"
+    ]
+  },
+  {
+    "id": "proximate-separation",
+    "ar": "الانفصال القريب",
+    "en": "Proximate Separation",
+    "tag": "claim",
+    "def": "والد موجود جسديًا وغائب عاطفيًا. مصطلح للمؤلف وليس طبيًا معياريًا.",
+    "patterns": [
+      "الانفصال القريب",
+      "Proximate separation",
+      "proximate separation"
+    ]
   }
 ]
