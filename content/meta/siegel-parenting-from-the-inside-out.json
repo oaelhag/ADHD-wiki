@@ -1,0 +1,34 @@
+{
+  "note": "تصنيف المستفيدين والأدوات اجتهاد من معدّ الموقع وليس رأي المؤلفين.",
+  "sensitiveChapters": [1, 6, 7],
+  "chapterAudiences": {
+    "0": ["parents", "adults"],
+    "1": ["parents", "adults"],
+    "2": ["parents", "adults"],
+    "3": ["parents", "adults"],
+    "4": ["parents", "teachers"],
+    "5": ["parents"],
+    "6": ["parents", "adults"],
+    "7": ["parents", "adults"],
+    "8": ["parents", "teachers"],
+    "9": ["parents", "teachers"],
+    "conclusion": ["parents", "adults"]
+  },
+  "tools": {
+    "1": { "kind": "إصلاح العلاقة", "audiences": ["parents", "teachers", "adults"], "tag": "book" },
+    "2": { "kind": "ضبط النفس", "audiences": ["parents", "adults"], "tag": "book" },
+    "3": { "kind": "تواصل", "audiences": ["parents", "teachers"], "tag": "book" },
+    "4": { "kind": "ضبط النفس", "audiences": ["parents", "adults"], "tag": "book" },
+    "5": { "kind": "قصة الوالد", "audiences": ["parents", "adults"], "tag": "specialist" },
+    "6": { "kind": "تواصل", "audiences": ["parents", "teachers"], "tag": "claim" },
+    "7": { "kind": "تواصل", "audiences": ["parents", "teachers"], "tag": "book" },
+    "8": { "kind": "وضع الحدود", "audiences": ["parents", "teachers"], "tag": "book" },
+    "9": { "kind": "وضع الحدود", "audiences": ["parents", "teachers"], "tag": "book" },
+    "10": { "kind": "حكي التجارب", "audiences": ["parents"], "tag": "book" },
+    "11": { "kind": "حكي التجارب", "audiences": ["parents"], "tag": "book" },
+    "12": { "kind": "وعي بالمشاعر", "audiences": ["parents", "teachers"], "tag": "claim" },
+    "13": { "kind": "تنظيم الانفعال", "audiences": ["parents", "teachers"], "tag": "book" },
+    "14": { "kind": "علاقة", "audiences": ["parents"], "tag": "book" },
+    "15": { "kind": "ضبط النفس", "audiences": ["parents", "adults"], "tag": "book" }
+  }
+}
