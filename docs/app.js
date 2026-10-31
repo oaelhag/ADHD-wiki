@@ -95,7 +95,7 @@
 
   function bookPage(b, current) {
     const strip = `<div class="strip" role="list" aria-label="خريطة الفصول">${b.chapters.map(c =>
-      `<a class="tile" role="listitem" href="#/book/${b.id}/${c.id}" ${current === c.id ? 'aria-current="true"' : ''}><b>${c.num || 'م'}</b><span>${esc(c.title)}</span></a>`).join('')}</div>`;
+      `<a class="tile" role="listitem" href="#/book/${b.id}/${c.id}" ${current === c.id ? 'aria-current="true"' : ''}><b>${esc(c.badge)}</b><span>${esc(c.title)}</span></a>`).join('')}</div>`;
     return { strip, b };
   }
 
@@ -111,7 +111,7 @@
       <ol class="body">${b.core.map(c => `<li>${c.html}</li>`).join('')}</ol>
       <h2>خريطة الفصول</h2>
       ${strip}
-      <p class="muted">${esc(b.chapterNote.replace(/^ملاحظة عن الإحالات:\s*/, ''))}</p>
+      ${b.chapterNote ? `<p class="muted">${esc(b.chapterNote.replace(/^ملاحظة عن الإحالات:\s*/, ''))}</p>` : ''}
       <h2>بطاقة الكتاب</h2>
       <div class="card"><dl class="kv">${b.card.map(k => `<dt>${esc(k.k)}</dt><dd>${k.html}</dd>`).join('')}</dl></div>
       <h2>أقسام أخرى في الكتاب</h2>
@@ -138,15 +138,15 @@
     return `
       <p class="crumbs"><a href="#/library">المكتبة</a> / <a href="#/book/${b.id}">${esc(b.title.split(':')[0])}</a></p>
       ${strip}
-      <h1>${c.num ? `الفصل ${c.num}: ` : ''}${esc(c.title)}</h1>
+      <h1>${esc(c.prefix + c.title)}</h1>
       ${c.en ? `<p class="muted" dir="ltr" style="text-align:end">${esc(c.en)}</p>` : ''}
       ${c.sensitive ? `<p class="callout" role="note">تنبيه: يتناول هذا الفصل حزنًا شديدًا أو إيذاء النفس. اقرأه بحذر. إن كنت أنت أو أحد من حولك في خطر فوري، اطلب مساعدة طوارئ محلية أو مختصًا الآن.</p>` : ''}
       ${(c.fields.find(f => f.key === 'problem') || {}).html ? `<div class="card"><strong>المشكلة:</strong> ${c.fields.find(f => f.key === 'problem').html.replace(/^<p>|<\/p>\s*$/g, '')}</div>` : ''}
       ${body}
       ${related.length ? `<h2>مفاهيم في هذا الفصل</h2><div class="chips">${related.map(k => `<a class="chip book" href="#/concept/${k.id}">${esc(k.ar)}</a>`).join('')}</div>` : ''}
       <nav class="pager" aria-label="الفصول">
-        ${prev ? `<a href="#/book/${b.id}/${prev.id}"><small>الفصل السابق</small>${prev.num ? prev.num + ': ' : ''}${esc(prev.title)}</a>` : '<span></span>'}
-        ${next ? `<a href="#/book/${b.id}/${next.id}"><small>الفصل التالي</small>${next.num}: ${esc(next.title)}</a>` : '<span></span>'}
+        ${prev ? `<a href="#/book/${b.id}/${prev.id}"><small>الفصل السابق</small>${esc(prev.prefix + prev.title)}</a>` : '<span></span>'}
+        ${next ? `<a href="#/book/${b.id}/${next.id}"><small>الفصل التالي</small>${esc(next.prefix + next.title)}</a>` : '<span></span>'}
       </nav>`;
   }
 
@@ -220,9 +220,10 @@
       <p class="muted" dir="ltr" style="text-align:end">${esc(c.en)}</p>
       <div class="card"><p>${esc(c.def)}</p><div class="chips">${chip(c.tag)}</div></div>
       <h2>أين يظهر</h2>
-      <div class="card">${c.hits.map(h => `<div class="hit"><a href="#/book/${h.bookId}/${h.chapterId}"><strong>${h.num ? 'الفصل ' + h.num + ': ' : ''}${esc(h.chTitle)}</strong></a> <span class="muted">في ${esc(h.bookTitle.split(':')[0])}</span>${h.snippet ? `<q>${esc(h.snippet)}</q>` : ''}</div>`).join('')}</div>
-      <h2>في كتب أخرى</h2>
-      <p class="empty">لم تُضف كتب أخرى بعد. عند إضافتها سيظهر هنا ما تقوله عن المفهوم نفسه، مع الخلافات بينها.</p>
+      ${c.books.map(bid => { const bk = getBook(bid); return `<h3>${esc(bk.title.split(':')[0])} <span class="muted">${esc(bk.author)}</span></h3>
+        <div class="card">${c.hits.filter(h => h.bookId === bid).map(h => `<div class="hit"><a href="#/book/${h.bookId}/${h.chapterId}"><strong>${esc((h.prefix || '') + h.chTitle)}</strong></a>${h.snippet ? `<q>${esc(h.snippet)}</q>` : ''}</div>`).join('')}</div>`; }).join('')}
+      ${D.books.length > c.books.length ? `<p class="muted">لم يظهر في: ${D.books.filter(b => !c.books.includes(b.id)).map(b => esc(b.title.split(':')[0])).join('، ')}.</p>` : ''}
+      ${D.books.length < 2 ? '<p class="empty">لم تُضف كتب أخرى بعد. عند إضافتها سيظهر هنا ما تقوله عن المفهوم نفسه.</p>' : ''}
       <p><a class="btn ghost" href="#/search?q=${encodeURIComponent(c.ar)}">ابحث عن «${esc(c.ar)}» في كل شيء</a></p>`;
   }
 
@@ -237,7 +238,7 @@
     return `<h1>${esc(a.ar)}</h1><p class="muted">${esc(a.desc)}</p>${tabs}
       <p class="stage">التصنيف اجتهاد من معدّ الموقع وليس رأي المؤلفين ${chip('inference')}</p>
       ${!a.tools.length && !a.chapters.length ? `<p class="empty">لا يغطي الكتاب الوحيد المضاف حتى الآن هذا الموضوع. سنضيف الكتب المناسبة له لاحقًا. هذا أصدق من ملء الصفحة بكلام عام.</p>` : ''}
-      ${a.chapters.length ? `<h2>فصول تناسبك</h2><ul class="list card">${a.chapters.map(c => `<li><a class="row" href="#/book/${c.bookId}/${c.id}"><span class="n">${c.num || 'م'}</span><span><strong>${esc(c.title)}</strong><br><span class="muted">${esc(c.lead)}</span></span></a></li>`).join('')}</ul>` : ''}
+      ${a.chapters.length ? `<h2>فصول تناسبك</h2><ul class="list card">${a.chapters.map(c => `<li><a class="row" href="#/book/${c.bookId}/${c.id}"><span class="n">${esc(c.badge)}</span><span><strong>${esc(c.prefix + c.title)}</strong> <span class="muted">${esc(getBook(c.bookId).title.split(':')[0])}</span><br><span class="muted">${esc(c.lead)}</span></span></a></li>`).join('')}</ul>` : ''}
       ${a.tools.length ? `<h2>أدوات تناسبك</h2><ul class="list card">${a.tools.map(t => `<li><a class="row" href="#/toolkit/${t.bookId}-t${t.n}"><span class="n">${t.n}</span><span><strong>${esc(t.title)}</strong> <span class="chip plain">${esc(t.kind)}</span></span></a></li>`).join('')}</ul>` : ''}`;
   }
 

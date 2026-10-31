@@ -1,0 +1,32 @@
+{
+  "note": "تصنيف المستفيدين والأدوات اجتهاد من معدّ الموقع وليس رأي المؤلفين.",
+  "sensitiveChapters": [],
+  "chapterAudiences": {
+    "0": ["parents", "teachers"],
+    "1": ["parents", "teachers"],
+    "2": ["parents", "teachers"],
+    "3": ["parents"],
+    "4": ["parents", "teachers"],
+    "5": ["parents", "teachers"],
+    "6": ["parents", "teachers"],
+    "conclusion": ["parents", "adults"],
+    "appendix": ["parents", "teachers"]
+  },
+  "tools": {
+    "1": { "kind": "ضبط النفس", "audiences": ["parents", "adults", "teachers"], "tag": "book" },
+    "2": { "kind": "قراءة السلوك", "audiences": ["parents", "teachers"], "tag": "book" },
+    "3": { "kind": "تواصل", "audiences": ["parents", "teachers"], "tag": "book" },
+    "4": { "kind": "تواصل", "audiences": ["parents", "teachers"], "tag": "claim" },
+    "5": { "kind": "تواصل", "audiences": ["parents", "teachers"], "tag": "book" },
+    "6": { "kind": "توقيت", "audiences": ["parents", "adults", "teachers"], "tag": "book" },
+    "7": { "kind": "تواصل", "audiences": ["parents", "teachers"], "tag": "book" },
+    "8": { "kind": "تواصل", "audiences": ["parents", "teachers"], "tag": "book" },
+    "9": { "kind": "حل المشكلات", "audiences": ["parents", "teachers"], "tag": "book" },
+    "10": { "kind": "وضع الحدود", "audiences": ["parents", "teachers"], "tag": "book" },
+    "11": { "kind": "تعليم المهارة", "audiences": ["parents", "teachers"], "tag": "book" },
+    "12": { "kind": "إصلاح العلاقة", "audiences": ["parents", "adults", "teachers"], "tag": "book" },
+    "13": { "kind": "وقاية", "audiences": ["parents", "teachers"], "tag": "book" },
+    "14": { "kind": "تنظيم الانفعال", "audiences": ["parents"], "tag": "claim" },
+    "15": { "kind": "توحيد الرسالة", "audiences": ["parents", "teachers"], "tag": "book" }
+  }
+}

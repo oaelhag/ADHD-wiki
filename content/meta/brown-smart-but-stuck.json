@@ -1,46 +1,216 @@
 {
   "note": "تصنيف المستفيدين والأدوات اجتهاد من معدّ الموقع وليس رأي المؤلف. القوائم (checklist) منقولة من خطط الحالات في الكتاب.",
   "chapterAudiences": {
-    "0": ["adults", "parents", "teachers"],
-    "1": ["adults", "parents"],
-    "2": ["adults", "parents"],
-    "3": ["adults", "teachers"],
-    "4": ["adults", "parents"],
-    "5": ["adults"],
-    "6": ["adults", "parents"],
-    "7": ["parents", "adults"],
-    "8": ["adults"],
-    "9": ["parents", "teachers"],
-    "10": ["adults", "parents", "teachers"],
-    "11": ["adults"],
-    "12": ["adults", "teachers"],
-    "13": ["adults", "parents", "teachers"]
+    "0": [
+      "adults",
+      "parents",
+      "teachers"
+    ],
+    "1": [
+      "adults",
+      "parents"
+    ],
+    "2": [
+      "adults",
+      "parents"
+    ],
+    "3": [
+      "adults",
+      "teachers"
+    ],
+    "4": [
+      "adults",
+      "parents"
+    ],
+    "5": [
+      "adults"
+    ],
+    "6": [
+      "adults",
+      "parents"
+    ],
+    "7": [
+      "parents",
+      "adults"
+    ],
+    "8": [
+      "adults"
+    ],
+    "9": [
+      "parents",
+      "teachers"
+    ],
+    "10": [
+      "adults",
+      "parents",
+      "teachers"
+    ],
+    "11": [
+      "adults"
+    ],
+    "12": [
+      "adults",
+      "teachers"
+    ],
+    "13": [
+      "adults",
+      "parents",
+      "teachers"
+    ]
   },
   "tools": {
-    "1": { "kind": "تقييم", "audiences": ["adults", "parents"], "tag": "book" },
-    "2": { "kind": "نظام مكافآت", "audiences": ["adults", "parents"], "tag": "book",
+    "1": {
+      "kind": "تقييم",
+      "audiences": [
+        "adults",
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "2": {
+      "kind": "نظام مكافآت",
+      "audiences": [
+        "adults",
+        "parents"
+      ],
+      "tag": "book",
       "checklistTitle": "كما في خطة إريك (الفصل 2)",
-      "checklist": ["مصروف أسبوعي ثابت", "يُدفع عن كل يوم ثبت فيه الحضور والعمل المنتج", "يُربط بالجهد (تسطير القراءة، ملاحظات، مسودات) لا بالدرجات"] },
-    "3": { "kind": "أسلوب والدي", "audiences": ["parents"], "tag": "book" },
-    "4": { "kind": "تنسيق الوالدين", "audiences": ["parents"], "tag": "book" },
-    "5": { "kind": "تنظيم", "audiences": ["parents", "teachers"], "tag": "book" },
-    "6": { "kind": "تسهيلات مدرسية", "audiences": ["parents", "teachers", "adults"], "tag": "book",
+      "checklist": [
+        "مصروف أسبوعي ثابت",
+        "يُدفع عن كل يوم ثبت فيه الحضور والعمل المنتج",
+        "يُربط بالجهد (تسطير القراءة، ملاحظات، مسودات) لا بالدرجات"
+      ]
+    },
+    "3": {
+      "kind": "أسلوب والدي",
+      "audiences": [
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "4": {
+      "kind": "تنسيق الوالدين",
+      "audiences": [
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "5": {
+      "kind": "تنظيم",
+      "audiences": [
+        "parents",
+        "teachers"
+      ],
+      "tag": "book"
+    },
+    "6": {
+      "kind": "تسهيلات مدرسية",
+      "audiences": [
+        "parents",
+        "teachers",
+        "adults"
+      ],
+      "tag": "book",
       "checklistTitle": "كما في خطة سو (الفصل 9)",
-      "checklist": ["وقت إضافي في الامتحانات (1.5 ضعف في حالة سو)", "عدم خصم درجات على الخط", "حصة دراسة مشرف عليها", "وثيقة طبية للمدرسة لطلب التسهيلات"] },
-    "7": { "kind": "بيئة وسياق", "audiences": ["adults", "parents"], "tag": "book" },
-    "8": { "kind": "سؤال للطبيب", "audiences": ["adults", "parents"], "tag": "specialist" },
-    "9": { "kind": "قياس القدرات", "audiences": ["parents", "teachers"], "tag": "specialist" },
-    "10": { "kind": "كتابة", "audiences": ["adults", "teachers"], "tag": "book",
+      "checklist": [
+        "وقت إضافي في الامتحانات (1.5 ضعف في حالة سو)",
+        "عدم خصم درجات على الخط",
+        "حصة دراسة مشرف عليها",
+        "وثيقة طبية للمدرسة لطلب التسهيلات"
+      ]
+    },
+    "7": {
+      "kind": "بيئة وسياق",
+      "audiences": [
+        "adults",
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "8": {
+      "kind": "سؤال للطبيب",
+      "audiences": [
+        "adults",
+        "parents"
+      ],
+      "tag": "specialist"
+    },
+    "9": {
+      "kind": "قياس القدرات",
+      "audiences": [
+        "parents",
+        "teachers"
+      ],
+      "tag": "specialist"
+    },
+    "10": {
+      "kind": "كتابة",
+      "audiences": [
+        "adults",
+        "teachers"
+      ],
+      "tag": "book",
       "checklistTitle": "كما في خطة جيمس (الفصل 12)",
-      "checklist": ["ضع كل فكرة في دائرة", "رتّب الدوائر هرميًا", "حوّلها إلى مخطط", "ثم اكتب النص من المخطط"] },
-    "11": { "kind": "روتين عمل", "audiences": ["adults"], "tag": "book",
+      "checklist": [
+        "ضع كل فكرة في دائرة",
+        "رتّب الدوائر هرميًا",
+        "حوّلها إلى مخطط",
+        "ثم اكتب النص من المخطط"
+      ]
+    },
+    "11": {
+      "kind": "روتين عمل",
+      "audiences": [
+        "adults"
+      ],
+      "tag": "book",
       "checklistTitle": "كما في خطة مات (الفصل 10)",
-      "checklist": ["ست ساعات دراسة يوميًا بلا حصص (ثلاث نهارًا وثلاث مساءً)", "سجل يومي للدراسة مقابل التجنب", "محادثتان قصيرتان على الأقل مع زميلين في كل مقرر", "شريك دراسة لكل مقرر"] },
-    "12": { "kind": "مهارات اجتماعية", "audiences": ["adults", "parents"], "tag": "book" },
-    "13": { "kind": "مواجهة التجنب", "audiences": ["adults"], "tag": "book" },
-    "14": { "kind": "الاستيقاظ", "audiences": ["adults"], "tag": "book",
+      "checklist": [
+        "ست ساعات دراسة يوميًا بلا حصص (ثلاث نهارًا وثلاث مساءً)",
+        "سجل يومي للدراسة مقابل التجنب",
+        "محادثتان قصيرتان على الأقل مع زميلين في كل مقرر",
+        "شريك دراسة لكل مقرر"
+      ]
+    },
+    "12": {
+      "kind": "مهارات اجتماعية",
+      "audiences": [
+        "adults",
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "13": {
+      "kind": "مواجهة التجنب",
+      "audiences": [
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "14": {
+      "kind": "الاستيقاظ",
+      "audiences": [
+        "adults"
+      ],
+      "tag": "book",
       "checklistTitle": "كما في خطة إريك (الفصل 2)",
-      "checklist": ["شخص يوقظ يوميًا", "ستائر مفتوحة", "منبه بضوء متصاعد قبل نصف ساعة"] },
-    "15": { "kind": "دعم المتابعة", "audiences": ["adults", "parents"], "tag": "book" }
-  }
+      "checklist": [
+        "شخص يوقظ يوميًا",
+        "ستائر مفتوحة",
+        "منبه بضوء متصاعد قبل نصف ساعة"
+      ]
+    },
+    "15": {
+      "kind": "دعم المتابعة",
+      "audiences": [
+        "adults",
+        "parents"
+      ],
+      "tag": "book"
+    }
+  },
+  "sensitiveChapters": [
+    7,
+    11
+  ]
 }

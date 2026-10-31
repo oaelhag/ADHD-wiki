@@ -1,0 +1,37 @@
+{
+  "note": "تصنيف المستفيدين والأدوات اجتهاد من معدّ الموقع وليس رأي المؤلف.",
+  "sensitiveChapters": [],
+  "chapterAudiences": {
+    "0": ["parents", "teachers", "adults"],
+    "1": ["parents", "teachers"],
+    "2": ["parents", "teachers"],
+    "3": ["parents"],
+    "4": ["parents"],
+    "5": ["parents", "adults"],
+    "6": ["parents", "teachers"],
+    "7": ["parents", "teachers"],
+    "8": ["parents", "teachers"],
+    "9": ["parents", "teachers"],
+    "10": ["parents", "teachers"],
+    "11": ["parents", "teachers"],
+    "12": ["parents", "teachers"],
+    "conclusion": ["parents", "adults"]
+  },
+  "tools": {
+    "1": { "kind": "ضبط التوقعات", "audiences": ["parents", "teachers"], "tag": "claim" },
+    "2": { "kind": "ترتيب الأولويات", "audiences": ["parents"], "tag": "book" },
+    "3": { "kind": "علاقة", "audiences": ["parents"], "tag": "book" },
+    "4": { "kind": "ضبط النفس", "audiences": ["parents", "adults"], "tag": "book" },
+    "5": { "kind": "توجيه", "audiences": ["parents", "teachers"], "tag": "book" },
+    "6": { "kind": "مكافآت", "audiences": ["parents", "teachers"], "tag": "book" },
+    "7": { "kind": "مكافآت", "audiences": ["parents", "teachers"], "tag": "claim" },
+    "8": { "kind": "مساءلة", "audiences": ["parents", "teachers"], "tag": "book" },
+    "9": { "kind": "تقييم السلوك", "audiences": ["parents", "teachers"], "tag": "book" },
+    "10": { "kind": "إدارة الوقت", "audiences": ["parents", "teachers", "adults"], "tag": "book" },
+    "11": { "kind": "دعم الذاكرة", "audiences": ["parents", "teachers", "adults"], "tag": "book" },
+    "12": { "kind": "اتفاق مكتوب", "audiences": ["parents", "teachers"], "tag": "book" },
+    "13": { "kind": "تنظيم", "audiences": ["parents", "teachers"], "tag": "book" },
+    "14": { "kind": "حل المشكلات", "audiences": ["parents", "teachers"], "tag": "book" },
+    "15": { "kind": "خطة استباقية", "audiences": ["parents", "teachers"], "tag": "book" }
+  }
+}
