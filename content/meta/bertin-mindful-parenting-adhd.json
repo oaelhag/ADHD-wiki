@@ -1,0 +1,127 @@
+{
+  "note": "تصنيف المستفيدين والأدوات اجتهاد من معدّ الموقع وليس رأي المؤلف.",
+  "sensitiveChapters": [
+    "9"
+  ],
+  "chapterAudiences": {
+    "default": [
+      "parents"
+    ]
+  },
+  "tools": {
+    "1": {
+      "kind": "ضبط النفس",
+      "audiences": [
+        "parents",
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "2": {
+      "kind": "دعم تنفيذي",
+      "audiences": [
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "3": {
+      "kind": "تفسير السلوك",
+      "audiences": [
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "4": {
+      "kind": "ترتيب الأولويات",
+      "audiences": [
+        "parents",
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "5": {
+      "kind": "رعاية الأهل",
+      "audiences": [
+        "parents",
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "6": {
+      "kind": "تنفس",
+      "audiences": [
+        "parents",
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "7": {
+      "kind": "تعليمات",
+      "audiences": [
+        "parents",
+        "teachers"
+      ],
+      "tag": "book"
+    },
+    "8": {
+      "kind": "إصلاح التواصل",
+      "audiences": [
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "9": {
+      "kind": "علاقة",
+      "audiences": [
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "10": {
+      "kind": "مديح",
+      "audiences": [
+        "parents",
+        "teachers"
+      ],
+      "tag": "book"
+    },
+    "11": {
+      "kind": "مكافآت",
+      "audiences": [
+        "parents",
+        "teachers"
+      ],
+      "tag": "book"
+    },
+    "12": {
+      "kind": "حدود",
+      "audiences": [
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "13": {
+      "kind": "روتين",
+      "audiences": [
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "14": {
+      "kind": "ضبط النفس",
+      "audiences": [
+        "parents",
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "15": {
+      "kind": "تعاطف مع الذات",
+      "audiences": [
+        "parents",
+        "adults"
+      ],
+      "tag": "book"
+    }
+  }
+}

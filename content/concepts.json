@@ -945,5 +945,140 @@
       "الاجتماع العائلي",
       "family meeting"
     ]
+  },
+  {
+    "id": "stop-think-act",
+    "ar": "توقّف، فكّر، تصرّف",
+    "en": "Stop-Think-Act",
+    "tag": "book",
+    "def": "خطوات قصيرة يتعلمها الطفل لتأخير الاندفاع قبل الفعل.",
+    "patterns": [
+      "توقّف، فكّر، تصرّف",
+      "Stop, Think, Act",
+      "توقف. فكر",
+      "Stop-Think-Act"
+    ]
+  },
+  {
+    "id": "rule-of-three",
+    "ar": "قاعدة الثلاثة",
+    "en": "Rule of Three",
+    "tag": "book",
+    "def": "تعطي التعليمات بثلاث خطوات على الأكثر وبنبرة هادئة وواضحة.",
+    "patterns": [
+      "قاعدة الثلاثة",
+      "Rule of Three"
+    ]
+  },
+  {
+    "id": "easy-on-easy-off",
+    "ar": "سهل التشغيل، سهل الإيقاف",
+    "en": "Easy On/Easy Off",
+    "tag": "book",
+    "def": "تهيئة الانتقال إلى النشاط الممتع وإنهائه بتنبيه مسبق وخطوات متفق عليها.",
+    "patterns": [
+      "Easy On",
+      "سهل التشغيل"
+    ]
+  },
+  {
+    "id": "crossing-guard",
+    "ar": "حارس العبور",
+    "en": "Crossing Guard",
+    "tag": "book",
+    "def": "الوالد يرافق الطفل اجتماعيًا ويتدخل بلطف عند الحاجة ثم يتراجع.",
+    "patterns": [
+      "حارس العبور",
+      "crossing guard"
+    ]
+  },
+  {
+    "id": "wise-mind",
+    "ar": "العقل الحكيم",
+    "en": "Wise Mind",
+    "tag": "book",
+    "def": "توازن بين العقل المنطقي والعقل الانفعالي في اتخاذ القرار.",
+    "patterns": [
+      "العقل الحكيم",
+      "Wise Mind"
+    ]
+  },
+  {
+    "id": "stop-skill",
+    "ar": "STOP (توقف، تنفس، لاحظ، تابع)",
+    "en": "STOP",
+    "tag": "book",
+    "def": "أربع خطوات قصيرة لكسر رد الفعل التلقائي واختيار الاستجابة.",
+    "patterns": [
+      "STOP",
+      "S.T.O.P."
+    ]
+  },
+  {
+    "id": "four-rs",
+    "ar": "الأربعة R",
+    "en": "Four R's",
+    "tag": "book",
+    "def": "تعرّف، امتنع، استرخِ، عاهد نفسك: لفك التعلق بالفكرة المنفعلة.",
+    "patterns": [
+      "الأربعة R",
+      "Four R"
+    ]
+  },
+  {
+    "id": "app-framework",
+    "ar": "إطار APP",
+    "en": "Aptitude-Pleasure-Practice",
+    "tag": "book",
+    "def": "القدرة والمتعة والتدريب: تقاطعها يكشف نقاط قوة الطفل.",
+    "patterns": [
+      "APP",
+      "Aptitude",
+      "Pleasure"
+    ]
+  },
+  {
+    "id": "flow",
+    "ar": "التدفق",
+    "en": "Flow",
+    "tag": "book",
+    "def": "حالة انغماس تتحقق عند توازن المهارة مع التحدي.",
+    "patterns": [
+      "التدفق",
+      "flow"
+    ]
+  },
+  {
+    "id": "deliberate-practice",
+    "ar": "التدريب المتعمّد",
+    "en": "Deliberate Practice",
+    "tag": "book",
+    "def": "تكرار مركّز على الصعب مع تغذية راجعة حتى الإتقان.",
+    "patterns": [
+      "التدريب المتعمّد",
+      "deliberate practice"
+    ]
+  },
+  {
+    "id": "goodness-of-fit",
+    "ar": "الملاءمة بين الطفل والبيئة",
+    "en": "Goodness of Fit",
+    "tag": "book",
+    "def": "السلوك الصعب ينشأ من التفاعل بين الطفل والبيئة لا من صفته وحدها.",
+    "patterns": [
+      "goodness of fit",
+      "ملاءمة الطفل"
+    ]
+  },
+  {
+    "id": "overjustification",
+    "ar": "أثر الإفراط في التبرير",
+    "en": "Overjustification Effect",
+    "tag": "book",
+    "def": "مكافأة كبيرة على ما يحبه الطفل أصلًا قد تقلل اهتمامه الداخلي.",
+    "patterns": [
+      "overjustification",
+      "الإفراط في التبرير"
+    ]
   }
 ]

@@ -1,0 +1,132 @@
+{
+  "note": "تصنيف المستفيدين والأدوات اجتهاد من معدّ الموقع وليس رأي المؤلف.",
+  "sensitiveChapters": [
+    "11"
+  ],
+  "chapterAudiences": {
+    "default": [
+      "parents",
+      "teachers"
+    ],
+    "0": [
+      "parents",
+      "teachers"
+    ]
+  },
+  "tools": {
+    "1": {
+      "kind": "فهم الطفل",
+      "audiences": [
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "2": {
+      "kind": "تشخيص المشكلة",
+      "audiences": [
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "3": {
+      "kind": "حوار",
+      "audiences": [
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "4": {
+      "kind": "نقاط القوة",
+      "audiences": [
+        "parents",
+        "teachers"
+      ],
+      "tag": "book"
+    },
+    "5": {
+      "kind": "مديح",
+      "audiences": [
+        "parents",
+        "teachers"
+      ],
+      "tag": "book"
+    },
+    "6": {
+      "kind": "تغذية راجعة",
+      "audiences": [
+        "parents",
+        "teachers"
+      ],
+      "tag": "book"
+    },
+    "7": {
+      "kind": "توجيه",
+      "audiences": [
+        "parents",
+        "teachers"
+      ],
+      "tag": "book"
+    },
+    "8": {
+      "kind": "مكافآت",
+      "audiences": [
+        "parents",
+        "teachers"
+      ],
+      "tag": "book"
+    },
+    "9": {
+      "kind": "جدولة",
+      "audiences": [
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "10": {
+      "kind": "إعادة صياغة",
+      "audiences": [
+        "parents",
+        "teachers"
+      ],
+      "tag": "book"
+    },
+    "11": {
+      "kind": "ضبط التوقعات",
+      "audiences": [
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "12": {
+      "kind": "ضغط الأهل",
+      "audiences": [
+        "parents",
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "13": {
+      "kind": "أهداف",
+      "audiences": [
+        "parents",
+        "teachers"
+      ],
+      "tag": "book"
+    },
+    "14": {
+      "kind": "أهداف",
+      "audiences": [
+        "parents",
+        "teachers"
+      ],
+      "tag": "book"
+    },
+    "15": {
+      "kind": "تقييم مهني",
+      "audiences": [
+        "parents"
+      ],
+      "tag": "specialist"
+    }
+  }
+}

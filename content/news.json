@@ -2,6 +2,19 @@
   {
     "date": "2026-10-31",
     "title": "أُضيف حديثًا",
+    "note": "ستة كتب عن تربية طفل ADHD: الانفجارات الانفعالية، الدافعية، اليقظة الذهنية، والمشاعر الشديدة، مع 12 مفهومًا جديدًا.",
+    "books": [
+      "lyons-defusing-explosive-adhd",
+      "harvey-penzo-parenting-intense-emotions",
+      "saline-what-your-adhd-child-wishes-you-knew",
+      "morgan-parenting-children-adhd-workbook",
+      "bertin-mindful-parenting-adhd",
+      "braaten-bright-kids-who-couldnt-care-less"
+    ]
+  },
+  {
+    "date": "2026-10-31",
+    "title": "أُضيف حديثًا",
     "note": "سبعة كتب عن تربية الطفل وإدارة المشاعر والقلق واللعب والتفكير الناقد، مع مفاهيم جديدة.",
     "books": [
       "bryson-way-of-play",

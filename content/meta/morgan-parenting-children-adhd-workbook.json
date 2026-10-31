@@ -1,0 +1,148 @@
+{
+  "note": "تصنيف المستفيدين والأدوات اجتهاد من معدّ الموقع وليس رأي المؤلف.",
+  "sensitiveChapters": [],
+  "chapterAudiences": {
+    "default": [
+      "parents"
+    ],
+    "10": [
+      "parents"
+    ],
+    "11": [
+      "parents"
+    ],
+    "12": [
+      "parents"
+    ],
+    "13": [
+      "parents"
+    ],
+    "14": [
+      "parents"
+    ],
+    "15": [
+      "parents"
+    ],
+    "16": [
+      "parents"
+    ],
+    "17": [
+      "parents"
+    ],
+    "18": [
+      "parents"
+    ]
+  },
+  "tools": {
+    "1": {
+      "kind": "ضبط النفس",
+      "audiences": [
+        "parents",
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "2": {
+      "kind": "تهدئة",
+      "audiences": [
+        "parents",
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "3": {
+      "kind": "تقسيم المهام",
+      "audiences": [
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "4": {
+      "kind": "رعاية الأهل",
+      "audiences": [
+        "parents",
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "5": {
+      "kind": "ضبط النفس",
+      "audiences": [
+        "parents",
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "6": {
+      "kind": "مكافآت",
+      "audiences": [
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "7": {
+      "kind": "حدود",
+      "audiences": [
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "8": {
+      "kind": "تواصل",
+      "audiences": [
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "9": {
+      "kind": "اختيارات",
+      "audiences": [
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "10": {
+      "kind": "مشاعر",
+      "audiences": [
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "11": {
+      "kind": "ضبط الاندفاع",
+      "audiences": [
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "12": {
+      "kind": "حديث ذاتي",
+      "audiences": [
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "13": {
+      "kind": "روتين",
+      "audiences": [
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "14": {
+      "kind": "عواقب",
+      "audiences": [
+        "parents",
+        "teachers"
+      ],
+      "tag": "book"
+    },
+    "15": {
+      "kind": "مراجعة",
+      "audiences": [
+        "parents"
+      ],
+      "tag": "book"
+    }
+  }
+}

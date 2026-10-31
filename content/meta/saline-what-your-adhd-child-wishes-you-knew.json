@@ -1,0 +1,127 @@
+{
+  "note": "تصنيف المستفيدين والأدوات اجتهاد من معدّ الموقع وليس رأي المؤلف.",
+  "sensitiveChapters": [],
+  "chapterAudiences": {
+    "default": [
+      "parents",
+      "teachers"
+    ]
+  },
+  "tools": {
+    "1": {
+      "kind": "ضبط النفس",
+      "audiences": [
+        "parents",
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "2": {
+      "kind": "ضبط الاندفاع",
+      "audiences": [
+        "parents",
+        "teachers"
+      ],
+      "tag": "book"
+    },
+    "3": {
+      "kind": "تعليمات",
+      "audiences": [
+        "parents",
+        "teachers"
+      ],
+      "tag": "book"
+    },
+    "4": {
+      "kind": "تعاون",
+      "audiences": [
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "5": {
+      "kind": "مكافآت",
+      "audiences": [
+        "parents",
+        "teachers"
+      ],
+      "tag": "book"
+    },
+    "6": {
+      "kind": "مكافآت",
+      "audiences": [
+        "parents",
+        "teachers"
+      ],
+      "tag": "book"
+    },
+    "7": {
+      "kind": "وقت مشترك",
+      "audiences": [
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "8": {
+      "kind": "شاشات",
+      "audiences": [
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "9": {
+      "kind": "واجب",
+      "audiences": [
+        "parents",
+        "teachers"
+      ],
+      "tag": "book"
+    },
+    "10": {
+      "kind": "روتين",
+      "audiences": [
+        "parents",
+        "teachers"
+      ],
+      "tag": "book"
+    },
+    "11": {
+      "kind": "تخطيط",
+      "audiences": [
+        "parents",
+        "teachers"
+      ],
+      "tag": "book"
+    },
+    "12": {
+      "kind": "حدود",
+      "audiences": [
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "13": {
+      "kind": "دعم اجتماعي",
+      "audiences": [
+        "parents",
+        "teachers"
+      ],
+      "tag": "book"
+    },
+    "14": {
+      "kind": "قلق",
+      "audiences": [
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "15": {
+      "kind": "مديح",
+      "audiences": [
+        "parents",
+        "teachers"
+      ],
+      "tag": "book"
+    }
+  }
+}

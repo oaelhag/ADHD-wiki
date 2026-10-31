@@ -1,0 +1,118 @@
+{
+  "note": "تصنيف المستفيدين والأدوات اجتهاد من معدّ الموقع وليس رأي المؤلف.",
+  "sensitiveChapters": [],
+  "chapterAudiences": {
+    "default": [
+      "parents"
+    ]
+  },
+  "tools": {
+    "1": {
+      "kind": "تصديق",
+      "audiences": [
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "2": {
+      "kind": "مشاعر",
+      "audiences": [
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "3": {
+      "kind": "تفسير السلوك",
+      "audiences": [
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "4": {
+      "kind": "ضبط النفس",
+      "audiences": [
+        "parents",
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "5": {
+      "kind": "تهدئة",
+      "audiences": [
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "6": {
+      "kind": "روتين",
+      "audiences": [
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "7": {
+      "kind": "اتفاق مكتوب",
+      "audiences": [
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "8": {
+      "kind": "مكافآت",
+      "audiences": [
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "9": {
+      "kind": "مكافآت",
+      "audiences": [
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "10": {
+      "kind": "تواصل",
+      "audiences": [
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "11": {
+      "kind": "متابعة",
+      "audiences": [
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "12": {
+      "kind": "حدود",
+      "audiences": [
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "13": {
+      "kind": "علاقة",
+      "audiences": [
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "14": {
+      "kind": "اتساق",
+      "audiences": [
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "15": {
+      "kind": "رعاية الأهل",
+      "audiences": [
+        "parents",
+        "adults"
+      ],
+      "tag": "book"
+    }
+  }
+}
