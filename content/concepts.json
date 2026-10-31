@@ -783,5 +783,167 @@
       "Proximate separation",
       "proximate separation"
     ]
+  },
+  {
+    "id": "stepladder",
+    "ar": "السلّم التدريجي",
+    "en": "Stepladder (graded exposure)",
+    "tag": "book",
+    "def": "خطوات صغيرة مرتبة من الأسهل إلى الأصعب لمواجهة ما يخيف الطفل. كل درجة تُكرَّر حتى يخف القلق قبل الصعود.",
+    "patterns": [
+      "السلالم",
+      "السلم التدريجي",
+      "Stepladder",
+      "stepladder"
+    ]
+  },
+  {
+    "id": "detective-thinking",
+    "ar": "التفكير المحقق",
+    "en": "Detective Thinking",
+    "tag": "book",
+    "def": "طريقة لفحص الفكرة القلقة بالأدلة: ما الدليل؟ هل هناك تفسير آخر؟ ما أرجح ما سيحدث؟",
+    "patterns": [
+      "التفكير المحقق",
+      "Detective Thinking"
+    ]
+  },
+  {
+    "id": "anxious-prediction",
+    "ar": "التوقع القلق",
+    "en": "Anxious Prediction",
+    "tag": "book",
+    "def": "توقّع الطفل أن شيئًا سيئًا سيحدث. يُسجَّل ثم يُقارَن بما حدث فعلًا.",
+    "patterns": [
+      "التوقع القلق",
+      "anxious prediction"
+    ]
+  },
+  {
+    "id": "reassurance-reduction",
+    "ar": "تقليل الطمأنة",
+    "en": "Reducing Reassurance",
+    "tag": "book",
+    "def": "الطمأنة المتكررة تريح الطفل لحظة وتُبقي القلق. يُتفق مسبقًا على عدد محدد منها.",
+    "patterns": [
+      "تقليل الطمأنة",
+      "الطمأنة المتكررة"
+    ]
+  },
+  {
+    "id": "co-regulation",
+    "ar": "التنظيم المشترك",
+    "en": "Co-regulation",
+    "tag": "book",
+    "def": "هدوء الوالد يساعد الطفل على الهدوء. يبدأ الوالد بتهدئة نفسه ثم يقترب من الطفل.",
+    "patterns": [
+      "Co-regulation",
+      "co-regulation",
+      "التنظيم المشترك"
+    ]
+  },
+  {
+    "id": "narrate-to-integrate",
+    "ar": "الحكي للدمج",
+    "en": "Narrate to Integrate",
+    "tag": "book",
+    "def": "إعادة رواية ما حدث بصوت هادئ لتربط الطفل بين الانفعال والحدث والترتيب الزمني.",
+    "patterns": [
+      "Narrate to Integrate",
+      "الحكي للدمج"
+    ]
+  },
+  {
+    "id": "think-out-loud",
+    "ar": "التفكير بصوت عالٍ",
+    "en": "Think Out Loud",
+    "tag": "book",
+    "def": "الوالد يلاحظ، ويخمّن النية، ثم يقولها بجملة قصيرة قبل أن يحكم أو يصحح.",
+    "patterns": [
+      "Think Out Loud",
+      "فكّر بصوت عالٍ"
+    ]
+  },
+  {
+    "id": "play-based-parenting",
+    "ar": "التربية باللعب",
+    "en": "Play-based Parenting",
+    "tag": "book",
+    "def": "استعمال لحظات لعب قصيرة لبناء الصلة وتعليم التنظيم، دون أن يتحول اللعب إلى درس مفروض.",
+    "patterns": [
+      "PlayStrong",
+      "التربية باللعب",
+      "لحظات اللعب"
+    ]
+  },
+  {
+    "id": "giftedness-intensity",
+    "ar": "الشدة الانفعالية عند الموهوبين",
+    "en": "Emotional Intensity (gifted)",
+    "tag": "book",
+    "def": "تصف فونسيكا الحساسية والشدة العالية عند الموهوبين، وتفرّقها عن الاضطراب السلوكي.",
+    "patterns": [
+      "الشدة الانفعالية",
+      "Emotional Intensity",
+      "emotional intensity"
+    ]
+  },
+  {
+    "id": "critical-thinking",
+    "ar": "التفكير الناقد",
+    "en": "Critical Thinking",
+    "tag": "book",
+    "def": "عند بوغارت: عادة السؤال والتحقق وفهم المنظورات المختلفة، لا مجرد الشك أو النقد.",
+    "patterns": [
+      "التفكير الناقد",
+      "Critical Thinking",
+      "critical thinking"
+    ]
+  },
+  {
+    "id": "habit-loop",
+    "ar": "حلقة العادة",
+    "en": "Habit Loop",
+    "tag": "book",
+    "def": "إشارة ثم روتين ثم مكافأة. ربط العادة الجديدة بإشارة ثابتة يسهّل تكرارها.",
+    "patterns": [
+      "حلقة العادة",
+      "Habit Loop",
+      "habit loop"
+    ]
+  },
+  {
+    "id": "accountability-partner",
+    "ar": "صديق المساءلة",
+    "en": "Accountability Partner",
+    "tag": "book",
+    "def": "شخص تعلن له خطتك ويتابع معك. وجوده يرفع احتمال الالتزام.",
+    "patterns": [
+      "صديق المساءلة",
+      "accountability partner",
+      "Accountability"
+    ]
+  },
+  {
+    "id": "goal-setting-smart",
+    "ar": "أهداف SMART",
+    "en": "SMART Goals",
+    "tag": "book",
+    "def": "أهداف محددة وقابلة للقياس وواقعية ومحددة بزمن، وتُستعمل في خطط الدعم المدرسي.",
+    "patterns": [
+      "SMART"
+    ]
+  },
+  {
+    "id": "family-meeting",
+    "ar": "الاجتماع الأسري",
+    "en": "Family Meeting",
+    "tag": "book",
+    "def": "موعد ثابت تتحدث فيه الأسرة بقواعد واضحة عن المشكلات والخطط.",
+    "patterns": [
+      "الاجتماع الأسري",
+      "الاجتماع العائلي",
+      "family meeting"
+    ]
   }
 ]

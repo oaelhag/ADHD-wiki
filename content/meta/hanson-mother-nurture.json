@@ -1,0 +1,131 @@
+{
+  "note": "تصنيف المستفيدين والأدوات اجتهاد من معدّ الموقع وليس رأي المؤلف.",
+  "chapterAudiences": {
+    "default": [
+      "parents"
+    ]
+  },
+  "tools": {
+    "1": {
+      "kind": "أداة",
+      "audiences": [
+        "parents",
+        "challenges"
+      ],
+      "tag": "specialist"
+    },
+    "2": {
+      "kind": "تهدئة",
+      "audiences": [
+        "parents",
+        "challenges"
+      ],
+      "tag": "book"
+    },
+    "3": {
+      "kind": "تهدئة",
+      "audiences": [
+        "parents",
+        "challenges"
+      ],
+      "tag": "book"
+    },
+    "4": {
+      "kind": "مهارة تفكير",
+      "audiences": [
+        "parents",
+        "challenges"
+      ],
+      "tag": "book"
+    },
+    "5": {
+      "kind": "تواصل",
+      "audiences": [
+        "parents",
+        "challenges"
+      ],
+      "tag": "book"
+    },
+    "6": {
+      "kind": "أداة",
+      "audiences": [
+        "parents",
+        "challenges"
+      ],
+      "tag": "book"
+    },
+    "7": {
+      "kind": "تواصل",
+      "audiences": [
+        "parents",
+        "challenges"
+      ],
+      "tag": "book"
+    },
+    "8": {
+      "kind": "تواصل",
+      "audiences": [
+        "parents",
+        "challenges"
+      ],
+      "tag": "book"
+    },
+    "9": {
+      "kind": "تواصل",
+      "audiences": [
+        "parents",
+        "challenges"
+      ],
+      "tag": "book"
+    },
+    "10": {
+      "kind": "أداة",
+      "audiences": [
+        "parents",
+        "challenges"
+      ],
+      "tag": "book"
+    },
+    "11": {
+      "kind": "تواصل",
+      "audiences": [
+        "parents",
+        "challenges"
+      ],
+      "tag": "book"
+    },
+    "12": {
+      "kind": "أداة",
+      "audiences": [
+        "parents",
+        "challenges"
+      ],
+      "tag": "book"
+    },
+    "13": {
+      "kind": "تواصل",
+      "audiences": [
+        "parents",
+        "challenges"
+      ],
+      "tag": "book"
+    },
+    "14": {
+      "kind": "أداة",
+      "audiences": [
+        "parents",
+        "challenges"
+      ],
+      "tag": "book"
+    },
+    "15": {
+      "kind": "تواصل",
+      "audiences": [
+        "parents",
+        "challenges"
+      ],
+      "tag": "book"
+    }
+  },
+  "sensitiveChapters": []
+}

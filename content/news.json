@@ -1,3 +1,28 @@
 [
-  {"date":"2026-10-31","title":"أُضيف حديثًا","note":"ثلاثة كتب لباركلي وكتابان لجابور ماتيه، وزر طباعة بطاقة الكتاب والفصل.","books":["mate-scattered-minds","mate-when-the-body-says-no","barkley-your-defiant-teen","barkley-executive-functions","barkley-taking-charge-of-adult-adhd"]}
+  {
+    "date": "2026-10-31",
+    "title": "أُضيف حديثًا",
+    "note": "سبعة كتب عن تربية الطفل وإدارة المشاعر والقلق واللعب والتفكير الناقد، مع مفاهيم جديدة.",
+    "books": [
+      "bryson-way-of-play",
+      "rapee-helping-your-anxious-child",
+      "shapiro-adhd-workbook-for-kids",
+      "bogart-raising-critical-thinkers",
+      "fonseca-emotional-intensity-gifted",
+      "hanson-mother-nurture",
+      "milliken-playdhd"
+    ]
+  },
+  {
+    "date": "2026-10-31",
+    "title": "أُضيف حديثًا",
+    "note": "ثلاثة كتب لباركلي وكتابان لجابور ماتيه، وزر طباعة بطاقة الكتاب والفصل.",
+    "books": [
+      "mate-scattered-minds",
+      "mate-when-the-body-says-no",
+      "barkley-your-defiant-teen",
+      "barkley-executive-functions",
+      "barkley-taking-charge-of-adult-adhd"
+    ]
+  }
 ]
