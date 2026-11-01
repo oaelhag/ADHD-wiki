@@ -259,6 +259,41 @@ for (const b of books) fs.writeFileSync(path.join(OUT_DIR, 'books', b.id + '.jso
 fs.writeFileSync(path.join(OUT_DIR, 'search.json'), JSON.stringify(index));
 fs.writeFileSync(OUT, JSON.stringify(data));
 
+// ---------- مصفوفة الموضوعات × المؤلفين (docs/topics.json) ----------
+const authorGroups = JSON.parse(fs.readFileSync(path.join(ROOT, 'content/authors.json'), 'utf8'));
+const topicsRaw = JSON.parse(fs.readFileSync(path.join(ROOT, 'content/topics.json'), 'utf8'));
+const groupOfBook = {};
+for (const g of authorGroups) for (const id of g.books) groupOfBook[id] = g.id;
+for (const b of books) if (!groupOfBook[b.id]) throw new Error('كتاب بلا مجموعة مؤلف في content/authors.json: ' + b.id);
+const clip = (text, re) => {
+  for (const p of text.split(/(?<=[.؟!])\s+/)) if (re.test(norm(p))) return p.length > 230 ? p.slice(0, 227) + '…' : p;
+  return text.length > 230 ? text.slice(0, 227) + '…' : text;
+};
+const topics = topicsRaw.map(t => {
+  const re = new RegExp(t.patterns.map(p => norm(p).replace(/[.*+?^${}()|[\]\\\/]/g, '\\$&')).join('|'), 'g');
+  const per = {}, diffs = [];
+  for (const r of index) {
+    if (!r.book || r.type === 'concept' || r.type === 'verify') continue;
+    if (r.tag === 'specialist' || MED.test(r.title + ' ' + r.text)) continue; // لا تُعرض مقاطع الدواء في المصفوفة
+    const hay = norm(r.title + ' ' + r.sub + ' ' + r.text);
+    const m = hay.match(re); if (!m) continue;
+    const mt = (norm(r.text + ' ' + r.sub).match(re) || []).length;
+    const gid = groupOfBook[r.book];
+    if (r.type === 'difference') { diffs.push({ gid, bookId: r.book, title: r.title, text: r.text.length > 420 ? r.text.slice(0, 417) + '…' : r.text, href: r.href }); continue; }
+    if (mt === 0 && (per[gid] || []).some(x => x.score > 0)) continue;
+    (per[gid] = per[gid] || []).push({ score: mt * 2 + (m.length > mt ? 1 : 0), bookId: r.book, type: r.type, title: r.title, sub: r.sub, text: clip(r.text, new RegExp(re.source)), titleOnly: mt === 0, tag: r.tag, href: r.href });
+  }
+  const counts = {}, passages = {};
+  for (const [gid, arr] of Object.entries(per)) {
+    counts[gid] = arr.length;
+    const seen = new Set();
+    passages[gid] = arr.sort((a, b) => b.score - a.score).filter(p => { const k = p.text; if (seen.has(k)) return false; seen.add(k); return true; }).slice(0, 6).map(({ score, ...x }) => x);
+  }
+  return { id: t.id, ar: t.ar, desc: t.desc, counts, passages, differences: diffs.slice(0, 14), nDifferences: diffs.length };
+}).filter(t => Object.keys(t.counts).length >= 2);
+fs.writeFileSync(path.join(OUT_DIR, 'topics.json'), JSON.stringify({ groups: authorGroups.map(g => ({ id: g.id, ar: g.ar, books: g.books.filter(id => books.some(b => b.id === id)) })).filter(g => g.books.length), topics }));
+console.log('topics:', topics.map(t => `${t.id}(${Object.keys(t.counts).length} مؤلفين)`).join(' '));
+
 console.log('books:', books.length);
 for (const b of books) {
   console.log(' ', b.id, '| chapters:', b.chapters.length, 'tools:', b.tools.length, 'differences:', b.differences.length, 'questions:', b.questions.length, 'numbers:', b.numbers.length, 'card:', b.card.length, 'core:', b.core.length, 'quality:', b.quality.length);

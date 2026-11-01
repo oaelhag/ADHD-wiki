@@ -1,0 +1,159 @@
+[
+  {
+    "id": "barkley",
+    "ar": "باركلي",
+    "books": [
+      "barkley-12-principles",
+      "barkley-executive-functions",
+      "barkley-taking-charge-of-adhd",
+      "barkley-taking-charge-of-adult-adhd",
+      "barkley-your-defiant-teen"
+    ]
+  },
+  {
+    "id": "brown",
+    "ar": "توماس براون",
+    "books": [
+      "brown-smart-but-stuck"
+    ]
+  },
+  {
+    "id": "siegel-bryson",
+    "ar": "سيجل وبرايسون",
+    "books": [
+      "siegel-no-drama-discipline",
+      "siegel-power-of-showing-up",
+      "siegel-whole-brain-child",
+      "siegel-whole-brain-child-workbook",
+      "siegel-yes-brain",
+      "siegel-yes-brain-workbook"
+    ]
+  },
+  {
+    "id": "siegel-hartzell",
+    "ar": "سيجل وهارتزل",
+    "books": [
+      "siegel-parenting-from-the-inside-out"
+    ]
+  },
+  {
+    "id": "bryson-play",
+    "ar": "برايسون (اللعب)",
+    "books": [
+      "bryson-way-of-play"
+    ]
+  },
+  {
+    "id": "bertin",
+    "ar": "بيرتن",
+    "books": [
+      "bertin-mindful-parenting-adhd"
+    ]
+  },
+  {
+    "id": "bogart",
+    "ar": "بوغارت",
+    "books": [
+      "bogart-raising-critical-thinkers"
+    ]
+  },
+  {
+    "id": "braaten",
+    "ar": "براتن",
+    "books": [
+      "braaten-bright-kids-who-couldnt-care-less"
+    ]
+  },
+  {
+    "id": "fonseca",
+    "ar": "فونسيكا",
+    "books": [
+      "fonseca-emotional-intensity-gifted"
+    ]
+  },
+  {
+    "id": "hanson",
+    "ar": "هانسون",
+    "books": [
+      "hanson-mother-nurture"
+    ]
+  },
+  {
+    "id": "harvey-penzo",
+    "ar": "هارفي وبينزو",
+    "books": [
+      "harvey-penzo-parenting-intense-emotions"
+    ]
+  },
+  {
+    "id": "lyons",
+    "ar": "ليونز",
+    "books": [
+      "lyons-defusing-explosive-adhd"
+    ]
+  },
+  {
+    "id": "mate",
+    "ar": "غابور ماتي",
+    "books": [
+      "mate-scattered-minds",
+      "mate-when-the-body-says-no"
+    ]
+  },
+  {
+    "id": "milliken",
+    "ar": "ميليكن",
+    "books": [
+      "milliken-playdhd"
+    ]
+  },
+  {
+    "id": "morgan",
+    "ar": "مورغان",
+    "books": [
+      "morgan-parenting-children-adhd-workbook"
+    ]
+  },
+  {
+    "id": "nagoski",
+    "ar": "ناغوسكي",
+    "books": [
+      "nagoski-burnout"
+    ]
+  },
+  {
+    "id": "rapee",
+    "ar": "رابي وزملاؤه",
+    "books": [
+      "rapee-helping-your-anxious-child"
+    ]
+  },
+  {
+    "id": "rathvon",
+    "ar": "راثفون",
+    "books": [
+      "rathvon-unmotivated-child"
+    ]
+  },
+  {
+    "id": "rosenberg",
+    "ar": "روزنبرغ",
+    "books": [
+      "rosenberg-nonviolent-communication"
+    ]
+  },
+  {
+    "id": "saline",
+    "ar": "سالين",
+    "books": [
+      "saline-what-your-adhd-child-wishes-you-knew"
+    ]
+  },
+  {
+    "id": "shapiro",
+    "ar": "شابيرو",
+    "books": [
+      "shapiro-adhd-workbook-for-kids"
+    ]
+  }
+]

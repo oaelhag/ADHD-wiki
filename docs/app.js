@@ -55,6 +55,10 @@
     return { parts: path.split('/').filter(Boolean).map(decodeURIComponent), params: new URLSearchParams(qs || '') };
   };
 
+  // واجهة للعروض الإضافية (viz.js)
+  window.__views = window.__views || Object.create(null);
+  window.__wiki = { D: () => D, esc, chip, getBook, hash, termRe, parseQuery, highlight, snippet, loadIndex: () => loadIndex(), loadJSON: u => loadJSON(u) };
+
   // ---------- العروض ----------
   function home() {
     const nb = D.books.length, nc = D.books.reduce((s, b) => s + b.chapters.length, 0);
@@ -85,7 +89,7 @@
     const n = (D.news || [])[0];
     if (!n) return '';
     const links = (n.books || []).map(id => D.books.find(b => b.id === id)).filter(Boolean)
-      .map(b => `<a href="#/book/${b.id}">${esc(b.title.split(':')[0])}</a>`).join('');
+      .map(b => `<a href="#/book/${b.id}">${esc(b.title.split(':')[0])}</a>`).join('') + (n.links || []).map(([h, t]) => `<a href="${esc(h)}">${esc(t)}</a>`).join('');
     return `<aside class="news" aria-label="آخر الإضافات"><b>${esc(n.title)} <small>${esc(n.date)}</small></b><p>${esc(n.note)}</p><div class="quick">${links}</div></aside>`;
   }
 
@@ -251,7 +255,7 @@
   function concepts() {
     const list = [...D.concepts].sort((a, b) => a.ar.localeCompare(b.ar, 'ar'));
     return `<h1>شبكة المفاهيم</h1>
-      <p class="muted">كل مصطلح يقودك إلى الفصول التي يظهر فيها. كلما أضفنا كتابًا اتسعت الشبكة.</p>
+      <p class="muted">كل مصطلح يقودك إلى الفصول التي يظهر فيها. كلما أضفنا كتابًا اتسعت الشبكة. <a href="#/map">شاهدها كخريطة تفاعلية</a> أو <a href="#/compare">قارن المؤلفين</a>.</p>
       <div class="cgrid">${list.map(c => `<a href="#/concept/${c.id}"><strong>${esc(c.ar)}</strong><small>${esc(c.en)}</small><span class="muted">${c.hits.length} فصول</span></a>`).join('')}</div>`;
   }
   function concept(id) {
@@ -349,6 +353,7 @@
     if (a === 'book' && b) need = loadBook(b);
     else if (a === 'toolkit') need = loadAllBooks();
     else if (a === 'search') need = loadIndex();
+    else if (window.__views[a] && window.__views[a].need) need = window.__views[a].need();
     if (!need) return draw();
     $app.setAttribute('aria-busy', 'true');
     need.then(() => { if (my === seq) { $app.removeAttribute('aria-busy'); draw(); } })
@@ -367,8 +372,10 @@
     else if (a === 'audience') html = audience(b);
     else if (a === 'search') html = search(params);
     else if (a === 'about') html = about();
+    else if (window.__views[a]) html = window.__views[a].html(b, params);
     else html = notFound();
     $app.innerHTML = html;
+    $app.classList.toggle('wide', !!(window.__views[a] && window.__views[a].wide));
     const h1 = $app.querySelector('h1'); if (h1) title = h1.textContent + ' | ADHD Wiki';
     document.title = title;
     document.querySelectorAll('#nav a').forEach(l => l.toggleAttribute('aria-current', l.dataset.nav === (nav === 'book' ? 'library' : nav)));
@@ -377,6 +384,7 @@
     if (a === 'book' && c && /^ch/.test(c)) { const t = $app.querySelector('.tile[aria-current]'); if (t) t.scrollIntoView({ inline: 'center', block: 'nearest' }); }
     window.scrollTo(0, 0);
     $app.focus({ preventScroll: true });
+    if (window.__views[a] && window.__views[a].after) window.__views[a].after($app, b, params);
   }
 
   // ---------- أحداث ----------
