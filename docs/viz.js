@@ -103,6 +103,7 @@
         </div>
         <aside id="mapPanel" class="map-panel card" aria-live="polite"></aside>
       </div>
+      <p class="note-fixed" role="note"><b>تنبيه:</b> الرابط يعني أن المفهومين يظهران معًا في الفصل نفسه بمطابقة كلمات آلية. لا يعني أن المؤلف يقول إن أحدهما يسبب الآخر أو يرتبط به.</p>
       <div id="mapIso"></div>`;
   }
 
@@ -272,6 +273,7 @@
         <table class="hm"><caption class="sr">الموضوعات في الصفوف والمؤلفون في الأعمدة. كل خلية عدد المقاطع.</caption>
           <thead><tr><th scope="col" class="corner">الموضوع</th>${used.map(g => `<th scope="col" class="vh"><span>${esc(g.ar)}</span></th>`).join('')}</tr></thead>
           <tbody>${T.map(t => `<tr><th scope="row"><button type="button" class="linkish" data-viz="topic" data-t="${esc(t.id)}">${esc(t.ar)}</button></th>${used.map(g => { const n = t.counts[g.id] || 0; return n ? `<td><button type="button" class="hc" data-viz="cell" data-t="${esc(t.id)}" data-g="${esc(g.id)}" style="--a:${shade(n)}" aria-label="${esc(g.ar)}، ${esc(t.ar)}: ${n} مقطعًا">${n}</button></td>` : `<td class="z" aria-label="لا مقاطع">·</td>`; }).join('')}</tr>`).join('')}</tbody></table></div>
+      <p class="note-fixed" role="note"><b>تنبيه:</b> الرقم في الخلية يعدّ المقاطع التي تذكر الموضوع بكلماته، ولا يقيس جودة المعالجة. والصفر لا يعني أن المؤلف يعارض الفكرة، فقد يتناولها بكلمات أخرى.</p>
       <section id="cmpDetail" aria-live="polite"></section>`;
   }
 
@@ -298,6 +300,7 @@
         <span class="pk-act"><button type="button" class="linkish" data-viz="top3">الأكثر تناولًا (3)</button> · <button type="button" class="linkish" data-viz="clr">مسح</button></span></div>
       ${C.sel.length ? `<div class="ccols" style="--n:${C.sel.length}">${cols}</div>` : '<p class="empty">اضغط على مؤلفين أو أكثر (حتى ' + MAXSEL + ') لتظهر أقوالهم جنبًا إلى جنب.</p>'}
       <h3>ما سجّله معدّو الملخصات عن الاتفاق والاختلاف ${W.chip('dispute')}</h3>
+      <p class="note-fixed" role="note"><b>تنبيه:</b> الاتفاق والاختلاف هنا من صياغة معدّ الملخصات في أقسام «أين يختلف الكتاب»، وليس استنتاجًا آليًا ولا قولًا حرفيًا للمؤلفين. ارجع إلى الفصل الأصلي قبل الاعتماد عليه.</p>
       ${diffs.length ? diffs.map(d => `<div class="card dcard"><p class="pmeta"><b>${esc(C.gName[d.gid] || '')}</b> · <a href="${esc(d.href)}">${esc(d.title)}</a></p><p>${esc(d.text)}</p></div>`).join('') : '<p class="muted">لا أقسام «أين يختلف الكتاب» تذكر هذا الموضوع عند المؤلفين المختارين.</p>'}
       ${(t.nDifferences || 0) > diffs.length && !C.sel.length ? `<p class="muted small">يوجد ${t.nDifferences} خلافًا مسجّلًا؛ اختر مؤلفين لتصفية ما يخصهم.</p>` : ''}`;
   }
