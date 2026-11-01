@@ -1491,5 +1491,73 @@
       "خرافة الإغلاق",
       "الإغلاق (closure)"
     ]
+  },
+  {
+    "id": "collaborative-problem-solving",
+    "ar": "حل المشكلات التعاوني",
+    "en": "Collaborative & Proactive Solutions",
+    "tag": "book",
+    "def": "نموذج غرين: يُحسن الطفل إن استطاع، فنحل المشكلات معه بدل فرض الحل. أداته الخطة B.",
+    "patterns": [
+      "حل المشكلات التعاوني",
+      "Collaborative"
+    ]
+  },
+  {
+    "id": "lagging-skills",
+    "ar": "المهارات المتأخرة",
+    "en": "Lagging Skills",
+    "tag": "book",
+    "def": "مهارات تفكير لم تنمُ بعد (مرونة، تحمل إحباط، حل مشكلات) وراء السلوك الصعب.",
+    "patterns": [
+      "المهارات المتأخرة",
+      "lagging skills"
+    ]
+  },
+  {
+    "id": "unsolved-problems",
+    "ar": "المشكلات غير المحلولة",
+    "en": "Unsolved Problems",
+    "tag": "book",
+    "def": "مواقف محددة متوقعة تفوق فيها المطالب مهارات الطفل وتشعل النوبات.",
+    "patterns": [
+      "المشكلات غير المحلولة",
+      "unsolved problems"
+    ]
+  },
+  {
+    "id": "alsup",
+    "ar": "استمارة ALSUP",
+    "en": "ALSUP",
+    "tag": "book",
+    "def": "استمارة لتقييم المهارات المتأخرة وربطها بالمشكلات غير المحلولة.",
+    "patterns": [
+      "ALSUP"
+    ]
+  },
+  {
+    "id": "plan-abc",
+    "ar": "الخطط A وB وC",
+    "en": "Plans A, B, C",
+    "tag": "book",
+    "def": "A فرض رأي الكبير، B حل بالتعاون، C تأجيل واعٍ.",
+    "patterns": [
+      "الخطة B",
+      "الخطة A",
+      "الخطة C",
+      "Plan B"
+    ]
+  },
+  {
+    "id": "empathy-step",
+    "ar": "خطوة التعاطف",
+    "en": "Empathy Step",
+    "tag": "book",
+    "def": "جمع المعلومات لفهم همّ الطفل بالإصغاء العاكس والحفر لا الاستجواب.",
+    "patterns": [
+      "خطوة التعاطف",
+      "الإصغاء العاكس",
+      "Empathy step"
+    ]
   }
 ]
