@@ -1400,5 +1400,96 @@
       "وقفة قبل",
       "People-Pleasing"
     ]
+  },
+  {
+    "id": "ambiguous-loss",
+    "ar": "الفقد الغامض",
+    "en": "Ambiguous Loss",
+    "tag": "book",
+    "def": "فقد بلا وضوح ولا إغلاق: غائب بالجسد حاضر بالذهن، أو العكس. تراه بوس اضطراب علاقات لا مرض فرد.",
+    "patterns": [
+      "الفقد الغامض",
+      "Ambiguous Loss"
+    ]
+  },
+  {
+    "id": "boundary-ambiguity",
+    "ar": "غموض الحدود",
+    "en": "Boundary Ambiguity",
+    "tag": "book",
+    "def": "عدم اليقين في من هو داخل الأسرة ومن خارجها. يزداد الخطر كلما اتسعت الفجوة بين الأسرة النفسية والواقعية.",
+    "patterns": [
+      "غموض الحدود",
+      "Boundary ambiguity"
+    ]
+  },
+  {
+    "id": "psychological-family",
+    "ar": "الأسرة النفسية",
+    "en": "Psychological Family",
+    "tag": "book",
+    "def": "من يحملهم الإنسان في قلبه وذهنه أسرةً له. قد تجمّد صاحبها، وقد تدفعه للحركة.",
+    "patterns": [
+      "الأسرة النفسية",
+      "Psychological family"
+    ]
+  },
+  {
+    "id": "tempering-mastery",
+    "ar": "تلطيف السيطرة",
+    "en": "Tempering Mastery",
+    "tag": "book",
+    "def": "موازنة الرغبة في التحكم بقبول ما لا يُحل. القبول هنا قرار واعٍ لا استسلام.",
+    "patterns": [
+      "تلطيف السيطرة",
+      "Tempering Mastery",
+      "تلطيف الحاجة إلى السيطرة"
+    ]
+  },
+  {
+    "id": "both-and-thinking",
+    "ar": "التفكير «هذا وذاك»",
+    "en": "Both/And Thinking",
+    "tag": "book",
+    "def": "حمل فكرتين متضادتين معًا، مثل غائب وحاضر. تعدّه بوس أهم مؤشر للمرونة.",
+    "patterns": [
+      "هذا وذاك",
+      "Both/And",
+      "both-and"
+    ]
+  },
+  {
+    "id": "manageable-ambivalence",
+    "ar": "التناقض الوجداني القابل للإدارة",
+    "en": "Manageable Ambivalence",
+    "tag": "book",
+    "def": "الهدف ليس إلغاء المشاعر المتناقضة بل جعلها محتملة، بتسميتها وربطها بالموقف.",
+    "patterns": [
+      "التناقض الوجداني",
+      "Ambivalence",
+      "المشاعر المتناقضة"
+    ]
+  },
+  {
+    "id": "revising-attachment",
+    "ar": "مراجعة التعلّق",
+    "en": "Revising Attachment",
+    "tag": "book",
+    "def": "تعديل العلاقة بالغائب لتناسب الغموض بدل الانفصال عنه. الغائب قد يبقى قاعدة آمنة.",
+    "patterns": [
+      "مراجعة التعلّق",
+      "Revising attachment"
+    ]
+  },
+  {
+    "id": "closure-myth",
+    "ar": "خرافة الإغلاق",
+    "en": "Closure Myth",
+    "tag": "book",
+    "def": "الفكرة أن الفقد الغامض لا يُغلق. الهدف زيادة تحمّل الغموض لا الإغلاق.",
+    "patterns": [
+      "خرافة الإغلاق",
+      "الإغلاق (closure)"
+    ]
   }
 ]
