@@ -93,16 +93,48 @@
     return `<aside class="news" aria-label="آخر الإضافات"><b>${esc(n.title)} <small>${esc(n.date)}</small></b><p>${esc(n.note)}</p><div class="quick">${links}</div></aside>`;
   }
 
-  function library() {
-    return `<h1>المكتبة</h1>
-      <p class="muted">كل كتاب له بطاقة، وخريطة فصول، وملخص لكل فصل.</p>
-      ${D.books.map(b => `
+  function library(params) {
+    const cats = D.categories || [];
+    const catName = id => (cats.find(c => c.id === id) || {}).ar || id;
+    const cat = params.get('cat') || '', tag = params.get('tag') || '';
+    const link = (k, v) => `#/library${v ? '?' + k + '=' + encodeURIComponent(v) : ''}`;
+    const card = b => `
         <article class="card">
           <h3><a href="#/book/${b.id}">${esc(b.title)}</a></h3>
           <p class="muted">${esc(b.author)}، ${b.year}</p>
+          <div class="chips">${(b.cats || []).map(c => `<a class="chip" href="${link('cat', c)}">${esc(catName(c))}</a>`).join('')}</div>
+          <div class="chips">${(b.tags || []).map(t => `<a class="chip plain" href="${link('tag', t)}">#${esc(t)}</a>`).join('')}</div>
           <div class="chips">${b.audience.map(a => `<span class="chip plain">${esc(audName(a))}</span>`).join('')}</div>
           <p class="muted">${b.chapters.length} فصلًا، و${b.nTools} أداة. الفئة العمرية في الكتاب: ${esc(b.ageRange)}.</p>
-        </article>`).join('')}
+        </article>`;
+    const filters = `<nav class="chips lib-filters" aria-label="التصنيفات">
+        <a class="chip ${!cat && !tag ? 'book' : 'plain'}" href="#/library">الكل (${D.books.length})</a>
+        ${cats.map(c => { const n = D.books.filter(b => (b.cats || []).includes(c.id)).length; return n ? `<a class="chip ${cat === c.id ? 'book' : 'plain'}" href="${link('cat', c.id)}">${esc(c.ar)} (${n})</a>` : ''; }).join('')}
+      </nav>`;
+    let body;
+    if (cat || tag) {
+      const list = D.books.filter(b => cat ? (b.cats || []).includes(cat) : (b.tags || []).includes(tag));
+      const what = cat ? `التصنيف: ${esc(catName(cat))}` : `الوسم: #${esc(tag)}`;
+      const desc = cat ? (cats.find(c => c.id === cat) || {}).desc : '';
+      body = `<h2>${what} (${list.length})</h2>${desc ? `<p class="muted">${esc(desc)}</p>` : ''}${list.length ? list.map(card).join('') : '<p class="empty">لا توجد كتب بهذا التصنيف.</p>'}
+        <p><a href="#/library">عرض كل التصنيفات</a></p>`;
+    } else {
+      body = cats.map(c => {
+        const list = D.books.filter(b => (b.cats || [])[0] === c.id);
+        if (!list.length) return '';
+        return `<section class="lib-group"><h2><a href="${link('cat', c.id)}">${esc(c.ar)}</a> <span class="muted">(${list.length})</span></h2>
+          <p class="muted">${esc(c.desc)}</p>${list.map(card).join('')}</section>`;
+      }).join('') + `<p class="muted note-fixed">يظهر كل كتاب مرة واحدة تحت تصنيفه الرئيسي. التصنيفات الأخرى للكتاب تظهر على بطاقته، وتضغط عليها لترى كل الكتب المشابهة. التصنيف والوسوم من اجتهاد معدّ الموقع، وليست من المؤلفين.</p>`;
+    }
+    const tagCounts = {};
+    D.books.forEach(b => (b.tags || []).forEach(t => { tagCounts[t] = (tagCounts[t] || 0) + 1; }));
+    const topTags = Object.entries(tagCounts).sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0], 'ar')).slice(0, 24);
+    return `<h1>المكتبة</h1>
+      <p class="muted">${D.books.length} كتابًا أُضيفت حتى الآن. لكل كتاب بطاقة، وخريطة فصول، وملخص لكل فصل.</p>
+      ${filters}
+      ${body}
+      <h2>أشهر الوسوم</h2>
+      <div class="chips">${topTags.map(([t, n]) => `<a class="chip ${tag === t ? 'book' : 'plain'}" href="${link('tag', t)}">#${esc(t)} (${n})</a>`).join('')}</div>
       <p class="empty">الكتب الأخرى تُضاف واحدًا بعد الآخر بعد مراجعة كل ملخص.</p>`;
   }
 
@@ -364,7 +396,7 @@
     const [a, b, c] = parts;
     let html, title = 'ADHD Wiki', nav = a || '';
     if (!a) html = home();
-    else if (a === 'library') html = library();
+    else if (a === 'library') html = library(params);
     else if (a === 'book') html = !c ? book(b) : c === 'differences' ? differences(b) : c === 'verify' ? verify(b) : chapter(b, c);
     else if (a === 'toolkit') html = toolkit(b, params);
     else if (a === 'concepts') html = concepts();

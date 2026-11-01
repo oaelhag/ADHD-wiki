@@ -315,3 +315,10 @@ button.chip { border: 0; cursor: pointer; font: inherit; font-size: .78rem; }
 @media (max-width: 860px) { .vz-controls input[type=search] { min-width: 0; flex: 1 1 160px; } }
 
 .note-fixed { background: var(--t-inference-bg); color: var(--t-inference-fg); border-radius: var(--r); padding: 8px 14px; font-size: .88rem; max-width: none; margin: 12px 0; }
+
+/* المكتبة: التصنيفات */
+.lib-filters { margin: 10px 0 18px; }
+.lib-filters .chip, .lib-group .chip, .card .chip { text-decoration: none; }
+a.chip:hover { filter: brightness(.95); }
+.lib-group { margin-bottom: 8px; }
+.lib-group h2 a { color: inherit; text-decoration: none; }

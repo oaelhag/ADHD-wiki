@@ -240,16 +240,23 @@ for (const b of books) {
 for (const c of concepts) index.push({ type: 'concept', title: `${c.ar} (${c.en})`, sub: 'مفهوم', text: c.def, tag: c.tag, audience: [], book: '', href: `#/concept/${c.id}` });
 
 const strip = b => ({ ...b, nTools: b.tools.length, chapters: b.chapters.map(({ text, ...rest }) => rest) });
+const CATS = JSON.parse(fs.readFileSync(path.join(ROOT, 'content/categories.json'), 'utf8'));
+for (const b of books) {
+  const m = CATS.books[b.id];
+  if (!m) throw new Error('كتاب بلا تصنيف في content/categories.json: ' + b.id);
+  for (const c of m.cats) if (!CATS.categories.some(x => x.id === c)) throw new Error('تصنيف غير معروف: ' + c + ' في ' + b.id);
+}
 const stub = b => {
   const full = strip(b);
   return { id: b.id, title: b.title, author: b.author, year: b.year, audience: b.audience, ageRange: b.ageRange,
-    nTools: full.nTools, chapters: full.chapters.map(c => ({ id: c.id, badge: c.badge, prefix: c.prefix, title: c.title })) };
+    nTools: full.nTools, cats: CATS.books[b.id].cats, tags: CATS.books[b.id].tags, chapters: full.chapters.map(c => ({ id: c.id, badge: c.badge, prefix: c.prefix, title: c.title })) };
 };
 const data = {
   site: { title: 'ADHD Wiki', subtitle: 'مرجع العائلة', generated: new Date().toISOString().slice(0, 10), stage: `نموذج تجريبي: ${books.length} ${books.length > 10 ? 'كتابًا' : books.length > 2 ? 'كتب' : books.length === 2 ? 'كتابان' : 'كتاب'}` },
   audiences: AUDIENCES.map(a => ({ id: a.id, ar: a.ar, desc: a.desc })),
   news: fs.existsSync(path.join(ROOT, 'content/news.json')) ? JSON.parse(fs.readFileSync(path.join(ROOT, 'content/news.json'), 'utf8')) : [],
   books: books.map(stub),
+  categories: CATS.categories,
   concepts, audienceLists
 };
 const OUT_DIR = path.dirname(OUT);

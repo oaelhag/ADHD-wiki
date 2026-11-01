@@ -155,5 +155,26 @@
     "books": [
       "shapiro-adhd-workbook-for-kids"
     ]
+  },
+  {
+    "id": "lembke",
+    "ar": "ليمبكي",
+    "books": [
+      "lembke-dopamine-nation"
+    ]
+  },
+  {
+    "id": "schewe",
+    "ar": "شيفه",
+    "books": [
+      "schewe-super-student"
+    ]
+  },
+  {
+    "id": "maskell",
+    "ar": "ماسكل",
+    "books": [
+      "maskell-adhd-a-to-z"
+    ]
   }
 ]

@@ -1,0 +1,454 @@
+{
+ "categories": [
+  {
+   "id": "adhd",
+   "ar": "ADHD",
+   "desc": "الاضطراب نفسه: أسبابه، الوظائف التنفيذية، وأدوات الحياة معه"
+  },
+  {
+   "id": "parenting",
+   "ar": "تربية وسلوك",
+   "desc": "التعامل مع سلوك الطفل والمراهق، والانضباط، والارتباط"
+  },
+  {
+   "id": "education",
+   "ar": "تعليم ودراسة",
+   "desc": "التحصيل والدافعية والمذاكرة والتعاون مع المدرسة"
+  },
+  {
+   "id": "emotions",
+   "ar": "مشاعر وانفعالات",
+   "desc": "تنظيم الانفعال، الغضب، القلق من المشاعر الشديدة"
+  },
+  {
+   "id": "communication",
+   "ar": "تواصل وعلاقات",
+   "desc": "لغة الحوار، التعاطف، العلاقة بين الوالدين"
+  },
+  {
+   "id": "caregiver",
+   "ar": "رعاية الوالد والإنهاك",
+   "desc": "ما يخفف الحمل عن الوالد ويحمي من الإنهاك"
+  },
+  {
+   "id": "adult-skills",
+   "ar": "مهارات حياة للبالغين",
+   "desc": "تنظيم الوقت والعادات والعمل والمال"
+  },
+  {
+   "id": "addiction",
+   "ar": "إدمان وعادات قهرية",
+   "desc": "الدوبامين، الشاشات، الإفراط وكيف نضبطه"
+  },
+  {
+   "id": "anxiety-health",
+   "ar": "قلق وصحة نفسية",
+   "desc": "قلق الطفل، الضغط المكتوم، الصحة النفسية"
+  }
+ ],
+ "books": {
+  "barkley-12-principles": {
+   "cats": [
+    "adhd",
+    "parenting"
+   ],
+   "tags": [
+    "ADHD",
+    "تربية",
+    "وظائف تنفيذية",
+    "إدارة السلوك"
+   ]
+  },
+  "barkley-executive-functions": {
+   "cats": [
+    "adhd"
+   ],
+   "tags": [
+    "ADHD",
+    "وظائف تنفيذية",
+    "ضبط الذات",
+    "نظرية"
+   ]
+  },
+  "barkley-taking-charge-of-adhd": {
+   "cats": [
+    "adhd",
+    "parenting",
+    "education"
+   ],
+   "tags": [
+    "ADHD",
+    "تربية",
+    "مدرسة",
+    "مراهقة"
+   ]
+  },
+  "barkley-taking-charge-of-adult-adhd": {
+   "cats": [
+    "adhd",
+    "adult-skills"
+   ],
+   "tags": [
+    "ADHD بالغين",
+    "إدارة الوقت",
+    "مال",
+    "عمل"
+   ]
+  },
+  "barkley-your-defiant-teen": {
+   "cats": [
+    "parenting",
+    "communication"
+   ],
+   "tags": [
+    "مراهقة",
+    "عناد",
+    "حل مشكلات",
+    "تواصل"
+   ]
+  },
+  "bertin-mindful-parenting-adhd": {
+   "cats": [
+    "adhd",
+    "parenting",
+    "caregiver"
+   ],
+   "tags": [
+    "ADHD",
+    "يقظة ذهنية",
+    "ضغط الوالد",
+    "روتين"
+   ]
+  },
+  "bogart-raising-critical-thinkers": {
+   "cats": [
+    "education",
+    "parenting"
+   ],
+   "tags": [
+    "تفكير نقدي",
+    "تربية",
+    "قراءة"
+   ]
+  },
+  "braaten-bright-kids-who-couldnt-care-less": {
+   "cats": [
+    "education",
+    "parenting"
+   ],
+   "tags": [
+    "دافعية",
+    "تحصيل",
+    "أهداف",
+    "عقلية النمو"
+   ]
+  },
+  "brown-smart-but-stuck": {
+   "cats": [
+    "adhd",
+    "emotions"
+   ],
+   "tags": [
+    "ADHD",
+    "مشاعر",
+    "مراهقون وشباب",
+    "وظائف تنفيذية"
+   ]
+  },
+  "bryson-way-of-play": {
+   "cats": [
+    "parenting",
+    "emotions"
+   ],
+   "tags": [
+    "لعب",
+    "ارتباط",
+    "انضباط",
+    "تنظيم الانفعال"
+   ]
+  },
+  "fonseca-emotional-intensity-gifted": {
+   "cats": [
+    "emotions",
+    "education"
+   ],
+   "tags": [
+    "موهوبون",
+    "شدة الانفعال",
+    "تعاون مع المدرسة"
+   ]
+  },
+  "hanson-mother-nurture": {
+   "cats": [
+    "caregiver",
+    "communication"
+   ],
+   "tags": [
+    "صحة الأم",
+    "ضغط",
+    "تواصل الزوجين"
+   ]
+  },
+  "harvey-penzo-parenting-intense-emotions": {
+   "cats": [
+    "emotions",
+    "parenting",
+    "caregiver"
+   ],
+   "tags": [
+    "انفعالات شديدة",
+    "DBT",
+    "تصديق المشاعر",
+    "رعاية الوالد"
+   ]
+  },
+  "lembke-dopamine-nation": {
+   "cats": [
+    "addiction",
+    "emotions"
+   ],
+   "tags": [
+    "دوبامين",
+    "إدمان",
+    "شاشات",
+    "صدق",
+    "ضبط الذات"
+   ]
+  },
+  "lyons-defusing-explosive-adhd": {
+   "cats": [
+    "adhd",
+    "emotions",
+    "parenting"
+   ],
+   "tags": [
+    "ADHD",
+    "نوبات الغضب",
+    "روتين",
+    "مدرسة"
+   ]
+  },
+  "maskell-adhd-a-to-z": {
+   "cats": [
+    "adhd",
+    "adult-skills"
+   ],
+   "tags": [
+    "ADHD بالغين",
+    "تنظيم",
+    "حدود",
+    "حساسية الرفض",
+    "نوم"
+   ]
+  },
+  "mate-scattered-minds": {
+   "cats": [
+    "adhd",
+    "parenting"
+   ],
+   "tags": [
+    "ADHD",
+    "ارتباط",
+    "أصل الاضطراب",
+    "بالغين"
+   ]
+  },
+  "mate-when-the-body-says-no": {
+   "cats": [
+    "caregiver",
+    "anxiety-health"
+   ],
+   "tags": [
+    "ضغط مكتوم",
+    "حدود",
+    "رعاية",
+    "صحة الجسد"
+   ]
+  },
+  "milliken-playdhd": {
+   "cats": [
+    "adhd",
+    "adult-skills"
+   ],
+   "tags": [
+    "ADHD بالغين",
+    "لعب",
+    "دافعية",
+    "عادات"
+   ]
+  },
+  "morgan-parenting-children-adhd-workbook": {
+   "cats": [
+    "parenting",
+    "adhd",
+    "caregiver"
+   ],
+   "tags": [
+    "ADHD",
+    "تربية",
+    "مكافآت",
+    "كتاب أنشطة"
+   ]
+  },
+  "nagoski-burnout": {
+   "cats": [
+    "caregiver",
+    "emotions"
+   ],
+   "tags": [
+    "إنهاك",
+    "دورة الضغط",
+    "راحة",
+    "رحمة بالنفس"
+   ]
+  },
+  "rapee-helping-your-anxious-child": {
+   "cats": [
+    "anxiety-health",
+    "parenting"
+   ],
+   "tags": [
+    "قلق الطفل",
+    "تعريض تدريجي",
+    "استرخاء"
+   ]
+  },
+  "rathvon-unmotivated-child": {
+   "cats": [
+    "education",
+    "parenting"
+   ],
+   "tags": [
+    "تحصيل",
+    "دافعية",
+    "واجبات",
+    "تعاون مع المدرسة"
+   ]
+  },
+  "rosenberg-nonviolent-communication": {
+   "cats": [
+    "communication"
+   ],
+   "tags": [
+    "تواصل",
+    "تعاطف",
+    "غضب",
+    "طلب لا أمر"
+   ]
+  },
+  "saline-what-your-adhd-child-wishes-you-knew": {
+   "cats": [
+    "adhd",
+    "parenting"
+   ],
+   "tags": [
+    "ADHD",
+    "وجهة نظر الطفل",
+    "مدرسة",
+    "أصدقاء",
+    "شاشات"
+   ]
+  },
+  "schewe-super-student": {
+   "cats": [
+    "education",
+    "adult-skills"
+   ],
+   "tags": [
+    "دراسة",
+    "ذاكرة",
+    "امتحانات",
+    "انضباط",
+    "وقت"
+   ]
+  },
+  "shapiro-adhd-workbook-for-kids": {
+   "cats": [
+    "adhd",
+    "education"
+   ],
+   "tags": [
+    "كتاب أنشطة للأطفال",
+    "ضبط النفس",
+    "مهارات اجتماعية"
+   ]
+  },
+  "siegel-no-drama-discipline": {
+   "cats": [
+    "parenting",
+    "emotions"
+   ],
+   "tags": [
+    "انضباط",
+    "ارتباط",
+    "نمو الدماغ"
+   ]
+  },
+  "siegel-parenting-from-the-inside-out": {
+   "cats": [
+    "parenting",
+    "caregiver"
+   ],
+   "tags": [
+    "ارتباط",
+    "فهم الذات",
+    "إصلاح العلاقة"
+   ]
+  },
+  "siegel-power-of-showing-up": {
+   "cats": [
+    "parenting"
+   ],
+   "tags": [
+    "حضور الوالد",
+    "أمان",
+    "إصلاح العلاقة"
+   ]
+  },
+  "siegel-whole-brain-child": {
+   "cats": [
+    "parenting",
+    "emotions"
+   ],
+   "tags": [
+    "نمو الدماغ",
+    "تنظيم الانفعال",
+    "ذاكرة"
+   ]
+  },
+  "siegel-whole-brain-child-workbook": {
+   "cats": [
+    "parenting",
+    "emotions"
+   ],
+   "tags": [
+    "كتاب أنشطة للوالد",
+    "نمو الدماغ",
+    "تنظيم الانفعال"
+   ]
+  },
+  "siegel-yes-brain": {
+   "cats": [
+    "parenting",
+    "emotions"
+   ],
+   "tags": [
+    "مرونة",
+    "فضول",
+    "نوم",
+    "لعب"
+   ]
+  },
+  "siegel-yes-brain-workbook": {
+   "cats": [
+    "parenting",
+    "emotions"
+   ],
+   "tags": [
+    "كتاب أنشطة للوالد",
+    "مرونة",
+    "نوم"
+   ]
+  }
+ }
+}

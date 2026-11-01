@@ -1,0 +1,134 @@
+{
+  "note": "تصنيف المستفيدين والأدوات اجتهاد من معدّ الموقع وليس رأي المؤلف.",
+  "sensitiveChapters": [
+    "31"
+  ],
+  "chapterAudiences": {
+    "default": [
+      "adults",
+      "teachers"
+    ]
+  },
+  "tools": {
+    "1": {
+      "kind": "مهارة تفكير",
+      "audiences": [
+        "adults",
+        "teachers"
+      ],
+      "tag": "book"
+    },
+    "2": {
+      "kind": "تنظيم",
+      "audiences": [
+        "adults",
+        "teachers"
+      ],
+      "tag": "book"
+    },
+    "3": {
+      "kind": "مهارة تفكير",
+      "audiences": [
+        "adults",
+        "teachers"
+      ],
+      "tag": "book"
+    },
+    "4": {
+      "kind": "مهارة تفكير",
+      "audiences": [
+        "adults",
+        "teachers"
+      ],
+      "tag": "book"
+    },
+    "5": {
+      "kind": "ضبط النفس",
+      "audiences": [
+        "adults",
+        "teachers"
+      ],
+      "tag": "book"
+    },
+    "6": {
+      "kind": "روتين",
+      "audiences": [
+        "adults",
+        "teachers"
+      ],
+      "tag": "book"
+    },
+    "7": {
+      "kind": "تحفيز",
+      "audiences": [
+        "adults",
+        "teachers"
+      ],
+      "tag": "book"
+    },
+    "8": {
+      "kind": "تنظيم",
+      "audiences": [
+        "adults",
+        "teachers"
+      ],
+      "tag": "book"
+    },
+    "9": {
+      "kind": "تنظيم",
+      "audiences": [
+        "adults",
+        "teachers"
+      ],
+      "tag": "book"
+    },
+    "10": {
+      "kind": "مهارة تفكير",
+      "audiences": [
+        "adults",
+        "teachers"
+      ],
+      "tag": "book"
+    },
+    "11": {
+      "kind": "علاقة",
+      "audiences": [
+        "adults",
+        "teachers"
+      ],
+      "tag": "book"
+    },
+    "12": {
+      "kind": "مهارة تفكير",
+      "audiences": [
+        "adults",
+        "teachers"
+      ],
+      "tag": "book"
+    },
+    "13": {
+      "kind": "دعم الذاكرة",
+      "audiences": [
+        "adults",
+        "teachers"
+      ],
+      "tag": "book"
+    },
+    "14": {
+      "kind": "مهارة تفكير",
+      "audiences": [
+        "adults",
+        "teachers"
+      ],
+      "tag": "book"
+    },
+    "15": {
+      "kind": "تنظيم",
+      "audiences": [
+        "adults",
+        "teachers"
+      ],
+      "tag": "book"
+    }
+  }
+}
