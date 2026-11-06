@@ -1,0 +1,138 @@
+{
+  "note": "تصنيف المستفيدين والأدوات اجتهاد من معدّ الموقع وليس رأي المؤلف.",
+  "sensitiveChapters": [
+    "4",
+    "5",
+    "7"
+  ],
+  "chapterAudiences": {
+    "default": [
+      "adults",
+      "parents"
+    ]
+  },
+  "tools": {
+    "1": {
+      "kind": "حركة",
+      "audiences": [
+        "adults",
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "2": {
+      "kind": "روتين",
+      "audiences": [
+        "adults",
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "3": {
+      "kind": "حركة",
+      "audiences": [
+        "adults",
+        "parents",
+        "teachers"
+      ],
+      "tag": "book"
+    },
+    "4": {
+      "kind": "تنظيم",
+      "audiences": [
+        "adults",
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "5": {
+      "kind": "تنظيم الانفعال",
+      "audiences": [
+        "adults",
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "6": {
+      "kind": "دعم",
+      "audiences": [
+        "adults",
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "7": {
+      "kind": "وقاية",
+      "audiences": [
+        "adults",
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "8": {
+      "kind": "تنظيم",
+      "audiences": [
+        "adults",
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "9": {
+      "kind": "روتين",
+      "audiences": [
+        "adults",
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "10": {
+      "kind": "دعم الذاكرة",
+      "audiences": [
+        "adults",
+        "parents",
+        "teachers"
+      ],
+      "tag": "book"
+    },
+    "11": {
+      "kind": "تنظيم",
+      "audiences": [
+        "adults",
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "12": {
+      "kind": "وقاية",
+      "audiences": [
+        "adults",
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "13": {
+      "kind": "تحفيز",
+      "audiences": [
+        "adults",
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "14": {
+      "kind": "وعي بالمشاعر",
+      "audiences": [
+        "adults",
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "15": {
+      "kind": "وقاية",
+      "audiences": [
+        "adults",
+        "parents"
+      ],
+      "tag": "book"
+    }
+  }
+}

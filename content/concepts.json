@@ -1943,5 +1943,116 @@
       "Procrasti-break",
       "استراحة التسويف"
     ]
+  },
+  {
+    "id": "bdnf",
+    "ar": "عامل النمو العصبي BDNF",
+    "en": "BDNF",
+    "tag": "book",
+    "def": "بروتين يبني الدوائر العصبية ويحميها، يرتفع بالتمرين. شبّهه الكتاب بسماد للدماغ.",
+    "patterns": [
+      "BDNF"
+    ]
+  },
+  {
+    "id": "stress-inoculation",
+    "ar": "تطعيم التوتر",
+    "en": "Stress Inoculation",
+    "tag": "book",
+    "def": "جرعة توتر معتدلة مع وقت للتعافي تقوّي القدرة على التحمل.",
+    "patterns": [
+      "Stress Inoculation",
+      "تطعيم التوتر"
+    ]
+  },
+  {
+    "id": "heart-rate-zones",
+    "ar": "مناطق النبض",
+    "en": "Heart Rate Zones",
+    "tag": "book",
+    "def": "نطاقات شدة التمرين بنسبة من النبض الأقصى (220 − العمر): منخفضة ومعتدلة وعالية.",
+    "patterns": [
+      "Heart Rate Zones",
+      "مناطق الشدة",
+      "النبض الأقصى"
+    ]
+  },
+  {
+    "id": "anxiety-sensitivity",
+    "ar": "حساسية القلق",
+    "en": "Anxiety Sensitivity",
+    "tag": "book",
+    "def": "الخوف من الأعراض الجسدية نفسها (خفقان، تعرق). التمرين يعيد تعليم الجسم أنها آمنة.",
+    "patterns": [
+      "Anxiety Sensitivity",
+      "حساسية القلق"
+    ]
+  },
+  {
+    "id": "fear-extinction",
+    "ar": "انقراض الخوف",
+    "en": "Fear Extinction",
+    "tag": "book",
+    "def": "لا تُمحى ذاكرة الخوف بل تُبنى ذاكرة بديلة بالتعرض المتكرر الآمن.",
+    "patterns": [
+      "Fear Extinction",
+      "انقراض الخوف"
+    ]
+  },
+  {
+    "id": "reward-deficiency",
+    "ar": "متلازمة نقص المكافأة",
+    "en": "Reward-Deficiency Syndrome",
+    "tag": "book",
+    "def": "فرضية: قلة مستقبلات الدوبامين تدفع لطلب تعويض بالمواد أو الإثارة.",
+    "patterns": [
+      "Reward-Deficiency",
+      "نقص المكافأة"
+    ]
+  },
+  {
+    "id": "wanting-vs-liking",
+    "ar": "الرغبة مقابل الاستمتاع",
+    "en": "Wanting vs Liking",
+    "tag": "book",
+    "def": "الدوبامين يرتبط بالدافع والرغبة أكثر من المتعة نفسها.",
+    "patterns": [
+      "Wanting vs Liking",
+      "الرغبة والاستمتاع",
+      "الرغبة مقابل الاستمتاع"
+    ]
+  },
+  {
+    "id": "attention-variability",
+    "ar": "تباين الانتباه",
+    "en": "Attention Variability",
+    "tag": "book",
+    "def": "وصف راتي لـ ADHD: المشكلة في عدم ثبات الانتباه لا غيابه.",
+    "patterns": [
+      "تباين الانتباه",
+      "Attention Variability"
+    ]
+  },
+  {
+    "id": "cognitive-reserve",
+    "ar": "الاحتياطي المعرفي",
+    "en": "Cognitive Reserve",
+    "tag": "book",
+    "def": "قدرة الدماغ على تحمل التلف بفضل التعلم والنشاط المستمر.",
+    "patterns": [
+      "Cognitive Reserve",
+      "الاحتياطي المعرفي"
+    ]
+  },
+  {
+    "id": "zero-hour",
+    "ar": "الساعة صفر",
+    "en": "Zero Hour",
+    "tag": "book",
+    "def": "حصة ركض بنبض مرتفع قبل الدراسة في مدارس نابرفيل.",
+    "patterns": [
+      "Zero Hour",
+      "الساعة صفر"
+    ]
   }
 ]
