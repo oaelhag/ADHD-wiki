@@ -1,0 +1,137 @@
+{
+  "note": "تصنيف المستفيدين والأدوات اجتهاد من معدّ الموقع وليس رأي المؤلف.",
+  "sensitiveChapters": [
+    "1",
+    "6",
+    "12"
+  ],
+  "chapterAudiences": {
+    "default": [
+      "adults"
+    ],
+    "2": [
+      "adults",
+      "challenges"
+    ],
+    "14": [
+      "adults",
+      "challenges"
+    ],
+    "16": [
+      "adults",
+      "challenges"
+    ]
+  },
+  "tools": {
+    "1": {
+      "kind": "تنظيم",
+      "audiences": [
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "2": {
+      "kind": "روتين",
+      "audiences": [
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "3": {
+      "kind": "تحفيز",
+      "audiences": [
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "4": {
+      "kind": "تنظيم",
+      "audiences": [
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "5": {
+      "kind": "دعم",
+      "audiences": [
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "6": {
+      "kind": "دعم الذاكرة",
+      "audiences": [
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "7": {
+      "kind": "تنظيم",
+      "audiences": [
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "8": {
+      "kind": "تنظيم",
+      "audiences": [
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "9": {
+      "kind": "روتين",
+      "audiences": [
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "10": {
+      "kind": "حدود",
+      "audiences": [
+        "adults",
+        "challenges"
+      ],
+      "tag": "book"
+    },
+    "11": {
+      "kind": "حدود",
+      "audiences": [
+        "adults",
+        "challenges"
+      ],
+      "tag": "book"
+    },
+    "12": {
+      "kind": "حدود",
+      "audiences": [
+        "adults",
+        "challenges"
+      ],
+      "tag": "book"
+    },
+    "13": {
+      "kind": "وعي بالمشاعر",
+      "audiences": [
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "14": {
+      "kind": "ذات",
+      "audiences": [
+        "adults",
+        "challenges"
+      ],
+      "tag": "book"
+    },
+    "15": {
+      "kind": "ذات",
+      "audiences": [
+        "adults",
+        "challenges"
+      ],
+      "tag": "book"
+    }
+  }
+}

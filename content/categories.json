@@ -477,6 +477,45 @@
         "مهارات متأخرة",
         "مدرسة"
       ]
+    },
+    "foer-moonwalking-with-einstein": {
+      "cats": [
+        "education",
+        "adult-skills"
+      ],
+      "tags": [
+        "ذاكرة",
+        "قصر الذاكرة",
+        "ممارسة متعمدة",
+        "انتباه",
+        "تعلم"
+      ]
+    },
+    "brown-focus-adhd-productivity": {
+      "cats": [
+        "adhd",
+        "adult-skills"
+      ],
+      "tags": [
+        "ADHD بالغين",
+        "إنتاجية",
+        "روتين",
+        "مماطلة",
+        "حدود"
+      ]
+    },
+    "ramsay-once-i-get-started": {
+      "cats": [
+        "adhd",
+        "adult-skills"
+      ],
+      "tags": [
+        "ADHD بالغين",
+        "CBT",
+        "مماطلة",
+        "ثقة بالنفس",
+        "علاقات"
+      ]
     }
   }
 }

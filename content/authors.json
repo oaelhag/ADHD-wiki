@@ -190,5 +190,26 @@
     "books": [
       "greene-explosive-child"
     ]
+  },
+  {
+    "id": "foer",
+    "ar": "فوير",
+    "books": [
+      "foer-moonwalking-with-einstein"
+    ]
+  },
+  {
+    "id": "brown-focus",
+    "ar": "جيمس وسام براون",
+    "books": [
+      "brown-focus-adhd-productivity"
+    ]
+  },
+  {
+    "id": "ramsay",
+    "ar": "رامزي",
+    "books": [
+      "ramsay-once-i-get-started"
+    ]
   }
 ]
