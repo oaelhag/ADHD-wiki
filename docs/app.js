@@ -86,11 +86,25 @@
   }
 
   function newsBox() {
-    const n = (D.news || [])[0];
-    if (!n) return '';
-    const links = (n.books || []).map(id => D.books.find(b => b.id === id)).filter(Boolean)
-      .map(b => `<a href="#/book/${b.id}">${esc(b.title.split(':')[0])}</a>`).join('') + (n.links || []).map(([h, t]) => `<a href="${esc(h)}">${esc(t)}</a>`).join('');
-    return `<aside class="news" aria-label="آخر الإضافات"><b>${esc(n.title)} <small>${esc(n.date)}</small></b><p>${esc(n.note)}</p><div class="quick">${links}</div></aside>`;
+    // آخر 10 كتب أُضيفت (من الأحدث إلى الأقدم)، لا آخر إضافة فقط
+    const seen = new Set(), items = [];
+    for (const n of (D.news || [])) {
+      const ids = (n.books || []).filter(id => D.books.some(b => b.id === id));
+      for (const id of ids) {
+        if (seen.has(id) || items.length >= 10) continue;
+        seen.add(id);
+        const b = D.books.find(x => x.id === id);
+        const single = ids.length === 1;
+        items.push({
+          id, date: n.date,
+          label: single ? n.title.replace(/^كتاب جديد:\s*/, '') : b.title.split(':')[0],
+          note: single ? n.note : ''
+        });
+      }
+    }
+    if (!items.length) return '';
+    const li = items.map(i => `<li><a href="#/book/${i.id}">${esc(i.label)}</a> <small>${esc(i.date)}</small>${i.note ? `<p>${esc(i.note)}</p>` : ''}</li>`).join('');
+    return `<aside class="news" aria-label="آخر الإضافات"><b>آخر ${items.length} كتب أُضيفت</b><ol class="newslist">${li}</ol></aside>`;
   }
 
   function library(params) {

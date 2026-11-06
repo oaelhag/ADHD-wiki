@@ -322,3 +322,5 @@ button.chip { border: 0; cursor: pointer; font: inherit; font-size: .78rem; }
 a.chip:hover { filter: brightness(.95); }
 .lib-group { margin-bottom: 8px; }
 .lib-group h2 a { color: inherit; text-decoration: none; }
+
+.newslist{margin:.5em 0 0;padding-inline-start:1.4em}.newslist li{margin:.35em 0}.newslist p{margin:.1em 0 0;font-size:.92em;color:#41524f}
