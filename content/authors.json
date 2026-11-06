@@ -211,5 +211,20 @@
     "books": [
       "ramsay-once-i-get-started"
     ]
+  },
+  {
+    "id": "faber-mazlish",
+    "ar": "فابر ومازليش",
+    "books": [
+      "faber-mazlish-how-to-talk-so-kids-will-listen",
+      "faber-mazlish-how-to-talk-so-teens-will-listen"
+    ]
+  },
+  {
+    "id": "johnston-sullivan",
+    "ar": "جونستون وسوليفان",
+    "books": [
+      "johnston-sullivan-parental-incarceration"
+    ]
   }
 ]

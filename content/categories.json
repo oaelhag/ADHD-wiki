@@ -516,6 +516,45 @@
         "ثقة بالنفس",
         "علاقات"
       ]
+    },
+    "faber-mazlish-how-to-talk-so-kids-will-listen": {
+      "cats": [
+        "communication",
+        "parenting"
+      ],
+      "tags": [
+        "تواصل",
+        "اعتراف بالمشاعر",
+        "بدائل العقاب",
+        "استقلال",
+        "مديح"
+      ]
+    },
+    "faber-mazlish-how-to-talk-so-teens-will-listen": {
+      "cats": [
+        "communication",
+        "parenting"
+      ],
+      "tags": [
+        "مراهقون",
+        "تواصل",
+        "بدائل العقاب",
+        "حل المشكلات",
+        "حوار"
+      ]
+    },
+    "johnston-sullivan-parental-incarceration": {
+      "cats": [
+        "parenting",
+        "caregiver"
+      ],
+      "tags": [
+        "سجن أحد الوالدين",
+        "انفصال",
+        "وصمة",
+        "اتصال",
+        "عودة"
+      ]
     }
   }
 }
