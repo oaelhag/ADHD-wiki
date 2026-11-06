@@ -181,7 +181,9 @@
     "id": "boss",
     "ar": "بوس",
     "books": [
-      "boss-loss-trauma-resilience"
+      "boss-loss-trauma-resilience",
+      "boss-ambiguous-loss",
+      "boss-myth-of-closure"
     ]
   },
   {
@@ -267,6 +269,20 @@
     "ar": "نِف وجيرمر",
     "books": [
       "neff-germer-msc-for-burnout"
+    ]
+  },
+  {
+    "id": "ashley",
+    "ar": "آشلي",
+    "books": [
+      "ashley-long-distance-dad"
+    ]
+  },
+  {
+    "id": "pollak",
+    "ar": "بولاك",
+    "books": [
+      "pollak-self-compassion-for-parents"
     ]
   }
 ]

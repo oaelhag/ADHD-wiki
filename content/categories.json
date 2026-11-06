@@ -633,6 +633,60 @@
         "كمالية",
         "ناقد داخلي"
       ]
+    },
+    "ashley-long-distance-dad": {
+      "cats": [
+        "parenting",
+        "communication"
+      ],
+      "tags": [
+        "أب بعيد",
+        "طقوس",
+        "مكالمات",
+        "تنسيق الوالدين",
+        "مراهقة"
+      ]
+    },
+    "pollak-self-compassion-for-parents": {
+      "cats": [
+        "parenting",
+        "caregiver",
+        "emotions"
+      ],
+      "tags": [
+        "رحمة بالنفس",
+        "ضغط الوالدين",
+        "عار",
+        "غضب",
+        "يقظة"
+      ]
+    },
+    "boss-ambiguous-loss": {
+      "cats": [
+        "caregiver",
+        "emotions",
+        "communication"
+      ],
+      "tags": [
+        "فقد غامض",
+        "غياب",
+        "طقوس",
+        "اجتماعات أسرية",
+        "مرونة"
+      ]
+    },
+    "boss-myth-of-closure": {
+      "cats": [
+        "caregiver",
+        "emotions"
+      ],
+      "tags": [
+        "خرافة الإغلاق",
+        "حزن طبيعي",
+        "تغيير",
+        "هذا وذاك",
+        "مرونة"
+      ]
     }
   }
 }

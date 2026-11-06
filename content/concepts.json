@@ -2260,5 +2260,302 @@
       "Mama Bear",
       "الدبة الأم"
     ]
+  },
+  {
+    "id": "disney-dad",
+    "ar": "أب ديزني",
+    "en": "Disney Land Dad",
+    "tag": "book",
+    "def": "أب يعوّض غيابه بالحلوى والهدايا والسهر عند اللقاء. الكتاب ينصح بالحدود المعتادة بدل التعويض.",
+    "patterns": [
+      "أب ديزني",
+      "Disney Land Dad",
+      "Disney"
+    ]
+  },
+  {
+    "id": "virtual-visitation",
+    "ar": "الزيارة الافتراضية",
+    "en": "Virtual Visitation",
+    "tag": "book",
+    "def": "مكالمات فيديو منتظمة تكمّل اللقاء الحقيقي ولا تحل محله.",
+    "patterns": [
+      "الزيارة الافتراضية",
+      "virtual visitation"
+    ]
+  },
+  {
+    "id": "framing-technique",
+    "ar": "التأطير",
+    "en": "Framing",
+    "tag": "book",
+    "def": "شرح الخلفية والسبب قبل الطلب عند الحديث مع الطرف الآخر، لتقليل الدفاعية.",
+    "patterns": [
+      "التأطير",
+      "framing"
+    ]
+  },
+  {
+    "id": "call-ritual",
+    "ar": "طقس ثابت للمكالمة",
+    "en": "Structured Interaction",
+    "tag": "book",
+    "def": "جملة أو مصافحة أو سؤال ثابت في كل لقاء أو مكالمة، يصنع انتظارًا وذكرى.",
+    "patterns": [
+      "Structure Interactions",
+      "طقس ثابت",
+      "طقوس ثابتة"
+    ]
+  },
+  {
+    "id": "self-compassion-life-saver",
+    "ar": "طوق نجاة الرحمة",
+    "en": "Self-Compassion Life Saver",
+    "tag": "book",
+    "def": "ثلاث جمل وقت الأزمة: هذه لحظة معاناة، الجميع يمرون بمثلها، لأكن لطيفًا مع نفسي.",
+    "patterns": [
+      "طوق نجاة",
+      "Life Saver"
+    ]
+  },
+  {
+    "id": "parenting-pause",
+    "ar": "الوقفة الوالدية",
+    "en": "Parenting Pause",
+    "tag": "book",
+    "def": "توقف قصير قبل الرد: غادر المكان، سمِّ الصعوبة، اشعر بقدميك، اسأل ماذا أحتاج.",
+    "patterns": [
+      "الوقفة الوالدية",
+      "Parenting Pause"
+    ]
+  },
+  {
+    "id": "rain-method",
+    "ar": "RAIN",
+    "en": "RAIN",
+    "tag": "book",
+    "def": "أربع خطوات: راقب، اسمح، استكشف، غذِّ بالرحمة. تكشف ما تحت الغضب.",
+    "patterns": [
+      "RAIN:",
+      "RAIN/",
+      "RAIN،",
+      "RAIN ليس",
+      "RAIN)",
+      "RAIN**"
+    ]
+  },
+  {
+    "id": "soften-soothe-allow",
+    "ar": "ليّن–هدّئ–اسمح",
+    "en": "Soften–Soothe–Allow",
+    "tag": "book",
+    "def": "سمِّ الشعور، ليّن عضلات الجسد حوله، هدّئه بلمسة وكلمات، ودعه يوجد.",
+    "patterns": [
+      "ليّن–هدّئ–اسمح",
+      "Soften",
+      "SSA"
+    ]
+  },
+  {
+    "id": "negativity-bias",
+    "ar": "انحياز السلبية",
+    "en": "Negativity Bias",
+    "tag": "book",
+    "def": "ميل الدماغ لالتقاط الخطر والسيئ أكثر من الجيد، خصوصًا بعد الخسارات.",
+    "patterns": [
+      "انحياز الدماغ للسلبي",
+      "Negativity bias",
+      "الانحياز للسلبي"
+    ]
+  },
+  {
+    "id": "unlived-life",
+    "ar": "الحياة غير المعاشة",
+    "en": "Unlived Life of the Parent",
+    "tag": "book",
+    "def": "أحلام الوالد التي لم تتحقق قد يحاول تحقيقها عبر الطفل فيضغط عليه.",
+    "patterns": [
+      "الحياة غير المعاشة",
+      "unlived life"
+    ]
+  },
+  {
+    "id": "illusion-of-control",
+    "ar": "وهم السيطرة",
+    "en": "Illusion of Control",
+    "tag": "book",
+    "def": "الاعتقاد بأننا نتحكم في مصير الطفل مصدر رئيسي للضغط.",
+    "patterns": [
+      "وهم السيطرة"
+    ]
+  },
+  {
+    "id": "urge-surfing",
+    "ar": "ركوب الموجة",
+    "en": "Urge Surfing",
+    "tag": "book",
+    "def": "مراقبة الاندفاع أو الشعور حتى يبلغ ذروته ثم يهدأ، بدل مقاومته أو الانجراف معه.",
+    "patterns": [
+      "ركوب الموجة",
+      "ركوب أمواج",
+      "Urge surfing"
+    ]
+  },
+  {
+    "id": "taking-in-the-good",
+    "ar": "استيعاب الجيد",
+    "en": "Taking in the Good",
+    "tag": "book",
+    "def": "جهد واعٍ لتثبيت اللحظات الجيدة لأن الدماغ يلتقط السيئ تلقائيًا.",
+    "patterns": [
+      "استيعاب الجيد",
+      "Taking in the good"
+    ]
+  },
+  {
+    "id": "oxygen-mask",
+    "ar": "قناع الأكسجين",
+    "en": "Oxygen Mask",
+    "tag": "book",
+    "def": "اعتنِ بنفسك أولًا لتستطيع الاستجابة للطفل بدل الانفعال عليه.",
+    "patterns": [
+      "قناع الأكسجين"
+    ]
+  },
+  {
+    "id": "reconnection-rituals",
+    "ar": "طقوس إعادة الاتصال",
+    "en": "Reconnection Rituals",
+    "tag": "book",
+    "def": "طقس بسيط عند العودة أو في اللقاء يشعر الطفل أنه مرئي ومرحّب به.",
+    "patterns": [
+      "طقوس إعادة الاتصال"
+    ]
+  },
+  {
+    "id": "frozen-grief",
+    "ar": "الحزن المتجمد",
+    "en": "Frozen Grief",
+    "tag": "book",
+    "def": "حزن لا يبدأ ولا ينتهي لأن الفقد غير واضح.",
+    "patterns": [
+      "الحزن المتجمد",
+      "Frozen Grief",
+      "حزن متجمد"
+    ]
+  },
+  {
+    "id": "family-gamble",
+    "ar": "رهان الأسرة",
+    "en": "Family Gamble",
+    "tag": "book",
+    "def": "تقرر الأسرة بتخمين مدروس كيف تتعامل مع غموض الوضع بدل البقاء في التعليق.",
+    "patterns": [
+      "رهان الأسرة",
+      "Family gamble"
+    ]
+  },
+  {
+    "id": "turning-point",
+    "ar": "نقطة التحول",
+    "en": "Turning Point",
+    "tag": "book",
+    "def": "لحظة تخرج فيها الأسرة من التجمد إلى الفعل بمعلومة جديدة أو فرد تعب من الوضع.",
+    "patterns": [
+      "نقطة التحول",
+      "Turning Point"
+    ]
+  },
+  {
+    "id": "just-world-belief",
+    "ar": "الإيمان بعالم عادل",
+    "en": "Just-World Belief",
+    "tag": "book",
+    "def": "من يرى العالم عادلًا دائمًا يلوم الضحية أو يلوم نفسه.",
+    "patterns": [
+      "عالم عادل",
+      "Just-world"
+    ]
+  },
+  {
+    "id": "revise-not-cancel-ritual",
+    "ar": "عدّل الطقس ولا تلغه",
+    "en": "Revising Rituals",
+    "tag": "book",
+    "def": "حين يتغير الدور أو الظرف، نُبقي معنى الطقس بشكل أبسط بدل إلغائه.",
+    "patterns": [
+      "عدّل الطقس",
+      "تعديل الطقس",
+      "تعديل الطقوس"
+    ]
+  },
+  {
+    "id": "disenfranchised-grief",
+    "ar": "الحزن غير المعترف به",
+    "en": "Disenfranchised Grief",
+    "tag": "book",
+    "def": "حزن لا يراه الآخرون جديرًا بالحزن فلا يُسمح به.",
+    "patterns": [
+      "الحزن غير المعترف",
+      "Disenfranchised"
+    ]
+  },
+  {
+    "id": "continuing-bond",
+    "ar": "الرابطة المستمرة",
+    "en": "Continuing Bond",
+    "tag": "book",
+    "def": "علاقة تستمر مع الغائب بشكل جديد بدل الانفصال التام.",
+    "patterns": [
+      "الرابطة المستمرة",
+      "Continuing bond",
+      "الروابط المستمرة"
+    ]
+  },
+  {
+    "id": "ghosting",
+    "ar": "الاختفاء المفاجئ",
+    "en": "Ghosting",
+    "tag": "book",
+    "def": "قطع التواصل فجأة بلا كلمة. قاسٍ ويترك الطرف الآخر معلقًا.",
+    "patterns": [
+      "الاختفاء المفاجئ",
+      "Ghosting"
+    ]
+  },
+  {
+    "id": "first-second-order-change",
+    "ar": "تغيير الدرجة الأولى والثانية",
+    "en": "First/Second-Order Change",
+    "tag": "book",
+    "def": "الأولى: نفس الشيء بجهد أكبر. الثانية: تغيير الاتجاه.",
+    "patterns": [
+      "تغيير الدرجة الثانية",
+      "تغيير من الدرجة",
+      "الدرجة الأولى"
+    ]
+  },
+  {
+    "id": "ordinary-magic",
+    "ar": "السحر العادي",
+    "en": "Ordinary Magic",
+    "tag": "book",
+    "def": "المرونة عند الأطفال أكثر شيوعًا مما نظن، وتُبنى بإدارة متاعب الحياة اليومية.",
+    "patterns": [
+      "السحر العادي",
+      "Ordinary magic"
+    ]
+  },
+  {
+    "id": "normal-grief-signs",
+    "ar": "علامتا الحزن الطبيعي",
+    "en": "Signs of Normal Grief",
+    "tag": "book",
+    "def": "تخف الشدة مع الأسابيع، ولا يوجد شعور بانعدام القيمة أو كره الذات.",
+    "patterns": [
+      "الحزن الطبيعي",
+      "علامتين فارقتين",
+      "علامتا الحزن"
+    ]
   }
 ]
