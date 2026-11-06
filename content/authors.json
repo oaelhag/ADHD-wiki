@@ -226,5 +226,19 @@
     "books": [
       "johnston-sullivan-parental-incarceration"
     ]
+  },
+  {
+    "id": "oakley",
+    "ar": "أوكلي",
+    "books": [
+      "oakley-mindshift"
+    ]
+  },
+  {
+    "id": "williams",
+    "ar": "ويليامز",
+    "books": [
+      "williams-procrastination-playbook"
+    ]
   }
 ]

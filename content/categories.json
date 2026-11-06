@@ -555,6 +555,32 @@
         "اتصال",
         "عودة"
       ]
+    },
+    "oakley-mindshift": {
+      "cats": [
+        "education",
+        "adult-skills"
+      ],
+      "tags": [
+        "تعلّم الكبار",
+        "تركيز وتشتت",
+        "تغيير مهني",
+        "ذاكرة",
+        "مرشدون"
+      ]
+    },
+    "williams-procrastination-playbook": {
+      "cats": [
+        "adhd",
+        "adult-skills"
+      ],
+      "tags": [
+        "ADHD بالغين",
+        "مماطلة",
+        "عمى الزمن",
+        "حديث داخلي",
+        "محاسبة"
+      ]
     }
   }
 }

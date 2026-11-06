@@ -1791,5 +1791,157 @@
       "Reentry",
       "لمّ الشمل"
     ]
+  },
+  {
+    "id": "focused-diffuse",
+    "ar": "الوضع المركّز والوضع المنتشر",
+    "en": "Focused and Diffuse Modes",
+    "tag": "book",
+    "def": "نمطان للدماغ: تركيز على المسألة، ثم ابتعاد يسمح بربط الأفكار. التعلّم الجيد يبدّل بينهما.",
+    "patterns": [
+      "Focused mode",
+      "diffuse mode",
+      "الوضع المنتشر",
+      "الوضع المركّز",
+      "diffuse"
+    ]
+  },
+  {
+    "id": "pomodoro",
+    "ar": "بومودورو",
+    "en": "Pomodoro",
+    "tag": "book",
+    "def": "جلسة تركيز بمؤقت (غالبًا 25 دقيقة) ثم راحة قصيرة، بعد إغلاق المنبهات.",
+    "patterns": [
+      "Pomodoro",
+      "بومودورو"
+    ]
+  },
+  {
+    "id": "reframing",
+    "ar": "إعادة التأطير",
+    "en": "Reframing",
+    "tag": "book",
+    "def": "النظر إلى الموقف من زاوية أخرى لتخفيف الانفعال وفتح خيار جديد.",
+    "patterns": [
+      "reframing",
+      "إعادة التأطير",
+      "cognitive reappraisal"
+    ]
+  },
+  {
+    "id": "second-skilling",
+    "ar": "المهارة الثانية",
+    "en": "Second-Skilling",
+    "tag": "book",
+    "def": "بناء مهارة عميقة ثانية فوق الأولى لمرونة مهنية (شكل π).",
+    "patterns": [
+      "second-skilling",
+      "π-shaped",
+      "المهارة الثانية"
+    ]
+  },
+  {
+    "id": "imposter-syndrome",
+    "ar": "متلازمة المحتال",
+    "en": "Imposter Syndrome",
+    "tag": "book",
+    "def": "شعور بأن النجاح مصادفة والفشل خطؤك. عند أوكلي طريقة تأطير مؤذية لا اضطراب.",
+    "patterns": [
+      "imposter syndrome",
+      "متلازمة المحتال",
+      "imposter"
+    ]
+  },
+  {
+    "id": "call-plan-act",
+    "ar": "سمِّه، خطّط، تحرّك",
+    "en": "Call It Out, Plan It Out, Take Action",
+    "tag": "book",
+    "def": "صيغة ويليامز: اعترف أنك تسوّف، ضع خطة صغيرة، ثم ابدأ.",
+    "patterns": [
+      "Call it out",
+      "Take action",
+      "سمِّه ← خطّط"
+    ]
+  },
+  {
+    "id": "time-mapping",
+    "ar": "خريطة الوقت",
+    "en": "Time Mapping",
+    "tag": "book",
+    "def": "تحديد موعد نهائي، ثم موعد منتصف، ثم العودة إلى تاريخ الخطوة الأولى.",
+    "patterns": [
+      "Time Mapping",
+      "خريطة الوقت"
+    ]
+  },
+  {
+    "id": "first-step-prep",
+    "ar": "تهيئة الخطوة الأولى",
+    "en": "First Step Prep",
+    "tag": "book",
+    "def": "أصغر خطوة أولى مع إشارة مرئية تذكّر بها (مثل الحذاء عند الباب).",
+    "patterns": [
+      "First Step Prep",
+      "تهيئة الخطوة الأولى",
+      "الخطوة الأولى + إشارة"
+    ]
+  },
+  {
+    "id": "half-way-drift",
+    "ar": "انجراف منتصف الطريق",
+    "en": "Half-Way Drift",
+    "tag": "book",
+    "def": "التوقف عند 75–90% والاحتفال مبكرًا فتُنسى الخطوة الأخيرة.",
+    "patterns": [
+      "Half-Way Drift",
+      "انجراف منتصف الطريق",
+      "نصف منجز"
+    ]
+  },
+  {
+    "id": "good-enough-zone",
+    "ar": "المنطقة الكافية",
+    "en": "Good Enough Zone",
+    "tag": "book",
+    "def": "حد «يكفي للبدء» يكسر شلل التحليل بدل انتظار الكمال.",
+    "patterns": [
+      "good enough zone",
+      "المنطقة الكافية"
+    ]
+  },
+  {
+    "id": "avoidance-onion",
+    "ar": "بصلة التجنب",
+    "en": "Avoidance Onion",
+    "tag": "book",
+    "def": "طبقات من المشاعر تقود إلى المعتقد السلبي الأعمق خلف التجنب.",
+    "patterns": [
+      "Avoidance Onion",
+      "بصلة التجنب"
+    ]
+  },
+  {
+    "id": "time-blocking",
+    "ar": "حجز كتل الوقت",
+    "en": "Time Blocking",
+    "tag": "book",
+    "def": "وضع المهمة في كتلة زمنية بالتقويم مع فواصل راحة.",
+    "patterns": [
+      "Time Blocking",
+      "كتل الوقت"
+    ]
+  },
+  {
+    "id": "procrasti-break",
+    "ar": "استراحة التسويف",
+    "en": "Procrasti-Break",
+    "tag": "book",
+    "def": "استراحة تحوّلت إلى تجنب. الاستراحة الحقيقية تريح وتعيد الوضوح.",
+    "patterns": [
+      "Procrasti-break",
+      "استراحة التسويف"
+    ]
   }
 ]

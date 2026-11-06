@@ -1,0 +1,118 @@
+{
+  "note": "تصنيف المستفيدين والأدوات اجتهاد من معدّ الموقع وليس رأي المؤلف.",
+  "sensitiveChapters": [
+    "4"
+  ],
+  "chapterAudiences": {
+    "default": [
+      "adults"
+    ]
+  },
+  "tools": {
+    "1": {
+      "kind": "تنظيم",
+      "audiences": [
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "2": {
+      "kind": "تنظيم",
+      "audiences": [
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "3": {
+      "kind": "روتين",
+      "audiences": [
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "4": {
+      "kind": "تحفيز",
+      "audiences": [
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "5": {
+      "kind": "مهارة تفكير",
+      "audiences": [
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "6": {
+      "kind": "تنظيم",
+      "audiences": [
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "7": {
+      "kind": "تنظيم",
+      "audiences": [
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "8": {
+      "kind": "وعي بالمشاعر",
+      "audiences": [
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "9": {
+      "kind": "دعم",
+      "audiences": [
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "10": {
+      "kind": "تحفيز",
+      "audiences": [
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "11": {
+      "kind": "تنظيم",
+      "audiences": [
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "12": {
+      "kind": "مهارة تفكير",
+      "audiences": [
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "13": {
+      "kind": "تحفيز",
+      "audiences": [
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "14": {
+      "kind": "وعي بالمشاعر",
+      "audiences": [
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "15": {
+      "kind": "ذات",
+      "audiences": [
+        "adults"
+      ],
+      "tag": "book"
+    }
+  }
+}
