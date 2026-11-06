@@ -60,6 +60,8 @@
   window.__wiki = { D: () => D, esc, chip, getBook, hash, termRe, parseQuery, highlight, snippet, loadIndex: () => loadIndex(), loadJSON: u => loadJSON(u) };
 
   // ---------- العروض ----------
+  const noDot = t => String(t || '').replace(/[\s.،]+$/, '');
+  const titleOf = b => b.titleAr || b.title;
   function home() {
     const nb = D.books.length, nc = D.books.reduce((s, b) => s + b.chapters.length, 0);
     const nt = D.books.reduce((s, b) => s + b.nTools, 0);
@@ -75,13 +77,13 @@
           ${['الذاكرة العاملة', 'كره الانتظار', 'التجنب', 'وقت إضافي', 'النوم'].map(q => `<a href="#/search?q=${encodeURIComponent(q)}">${q}</a>`).join('')}
         </div>
       </section>
-      ${newsBox()}
       <section class="doors" aria-label="الأقسام">
         <a class="door" href="#/library"><b>${nb}</b><span>المكتبة</span><small>${nc} فصلًا بملخصات كاملة، وخريطة لكل كتاب.</small></a>
         <a class="door" href="#/toolkit"><b>${nt}</b><span>الأدوات</span><small>خطوات وقوائم تحقق تجرّبها وتضع عليها علامة.</small></a>
         <a class="door" href="#/concepts"><b>${D.concepts.length}</b><span>المفاهيم</span><small>مصطلح بمصطلح، وأين يظهر في الكتب.</small></a>
         <a class="door" href="#/audience"><b>${D.audiences.length}</b><span>حسب من تكون؟</span><small>بالغ مصاب، أب أو أم، معلم، أو تحدٍّ خاص.</small></a>
       </section>
+      ${newsBox()}
       <p class="stage">${esc(D.site.stage)}. كل شيء هنا موسوم: ما يقوله الكتاب، وما هو استنتاج، وما يحتاج مختصًا. <a href="#/about">اعرف الوسوم</a>.</p>`;
   }
 
@@ -97,14 +99,14 @@
         const single = ids.length === 1;
         items.push({
           id, date: n.date,
-          label: single ? n.title.replace(/^كتاب جديد:\s*/, '') : b.title.split(':')[0],
+          label: single ? n.title.replace(/^كتاب جديد:\s*/, '') : titleOf(b).split(':')[0],
           note: single ? n.note : ''
         });
       }
     }
     if (!items.length) return '';
-    const li = items.map(i => `<li><a href="#/book/${i.id}">${esc(i.label)}</a> <small>${esc(i.date)}</small>${i.note ? `<p>${esc(i.note)}</p>` : ''}</li>`).join('');
-    return `<aside class="news" aria-label="آخر الإضافات"><b>آخر ${items.length} كتب أُضيفت</b><ol class="newslist">${li}</ol></aside>`;
+    const li = items.map(i => `<li><div class="nl-h"><a href="#/book/${i.id}">${esc(i.label)}</a><small>${esc(i.date)}</small></div>${i.note ? `<p>${esc(i.note)}</p>` : ''}</li>`).join('');
+    return `<aside class="news" aria-label="آخر الإضافات"><b>آخر ${items.length} كتب أُضيفت</b><ul class="newslist">${li}</ul></aside>`;
   }
 
   function library(params) {
@@ -114,12 +116,10 @@
     const link = (k, v) => `#/library${v ? '?' + k + '=' + encodeURIComponent(v) : ''}`;
     const card = b => `
         <article class="card">
-          <h3><a href="#/book/${b.id}">${esc(b.title)}</a></h3>
-          <p class="muted">${esc(b.author)}، ${b.year}</p>
-          <div class="chips">${(b.cats || []).map(c => `<a class="chip" href="${link('cat', c)}">${esc(catName(c))}</a>`).join('')}</div>
-          <div class="chips">${(b.tags || []).map(t => `<a class="chip plain" href="${link('tag', t)}">#${esc(t)}</a>`).join('')}</div>
-          <div class="chips">${b.audience.map(a => `<span class="chip plain">${esc(audName(a))}</span>`).join('')}</div>
-          <p class="muted">${b.chapters.length} فصلًا، و${b.nTools} أداة. الفئة العمرية في الكتاب: ${esc(b.ageRange)}.</p>
+          <h3 class="bk-title"><a href="#/book/${b.id}">${esc(titleOf(b))}</a></h3>
+          ${b.titleAr ? `<p class="bk-en">${esc(b.title.split(':')[0])}</p>` : ''}
+          <p class="bk-meta">${esc(noDot(b.author))} · ${b.year}</p>
+          <p class="bk-sum"><a class="chip" href="${link('cat', (b.cats || [])[0])}">${esc(catName((b.cats || [])[0]))}</a><span>${b.chapters.length} فصلًا · ${b.nTools} أداة</span></p>
         </article>`;
     const filters = `<nav class="chips lib-filters" aria-label="التصنيفات">
         <a class="chip ${!cat && !tag ? 'book' : 'plain'}" href="#/library">الكل (${D.books.length})</a>
@@ -130,14 +130,14 @@
       const list = D.books.filter(b => cat ? (b.cats || []).includes(cat) : (b.tags || []).includes(tag));
       const what = cat ? `التصنيف: ${esc(catName(cat))}` : `الوسم: #${esc(tag)}`;
       const desc = cat ? (cats.find(c => c.id === cat) || {}).desc : '';
-      body = `<h2>${what} (${list.length})</h2>${desc ? `<p class="muted">${esc(desc)}</p>` : ''}${list.length ? list.map(card).join('') : '<p class="empty">لا توجد كتب بهذا التصنيف.</p>'}
+      body = `<h2>${what} (${list.length})</h2>${desc ? `<p class="muted">${esc(desc)}</p>` : ''}${list.length ? `<div class="lib-grid">${list.map(card).join('')}</div>` : '<p class="empty">لا توجد كتب بهذا التصنيف.</p>'}
         <p><a href="#/library">عرض كل التصنيفات</a></p>`;
     } else {
       body = cats.map(c => {
         const list = D.books.filter(b => (b.cats || [])[0] === c.id);
         if (!list.length) return '';
         return `<section class="lib-group"><h2><a href="${link('cat', c.id)}">${esc(c.ar)}</a> <span class="muted">(${list.length})</span></h2>
-          <p class="muted">${esc(c.desc)}</p>${list.map(card).join('')}</section>`;
+          <p class="muted">${esc(c.desc)}</p><div class="lib-grid">${list.map(card).join('')}</div></section>`;
       }).join('') + `<p class="muted note-fixed">يظهر كل كتاب مرة واحدة تحت تصنيفه الرئيسي. التصنيفات الأخرى للكتاب تظهر على بطاقته، وتضغط عليها لترى كل الكتب المشابهة. التصنيف والوسوم من اجتهاد معدّ الموقع، وليست من المؤلفين.</p>`;
     }
     const tagCounts = {};
@@ -164,8 +164,9 @@
     const { strip } = bookPage(b);
     return `${printCard(b)}<div class="screen-only">
       <p class="crumbs"><a href="#/library">المكتبة</a></p>
-      <h1>${esc(b.title)}</h1>
-      <p class="muted">${esc(b.author)}، ${b.year}</p>
+      <h1 class="bk-h1">${esc(titleOf(b))}</h1>
+      ${b.titleAr ? `<p class="bk-h1-en">${esc(b.title)}</p>` : ''}
+      <p class="bk-by">${esc(noDot(b.author))} · ${b.year}</p>
       <p class="actions"><button class="btn ghost" type="button" data-print>🖨 طباعة بطاقة الكتاب</button></p>
       <h2>الفكرة في خمسة أسطر</h2>
       <ol class="body">${b.core.map(c => `<li>${c.html}</li>`).join('')}</ol>
@@ -226,7 +227,7 @@
     const related = D.concepts.filter(k => k.hits.some(h => h.chapterId === c.id && h.bookId === b.id));
     const { strip } = bookPage(b, c.id);
     return `
-      <p class="crumbs"><a href="#/library">المكتبة</a> / <a href="#/book/${b.id}">${esc(b.title.split(':')[0])}</a></p>
+      <p class="crumbs"><a href="#/library">المكتبة</a> / <a href="#/book/${b.id}">${esc(titleOf(b).split(':')[0])}</a></p>
       ${strip}
       <h1>${esc(c.prefix + c.title)}</h1>
       <p class="actions"><button class="btn ghost" type="button" data-print>🖨 طباعة الفصل</button></p>
@@ -243,7 +244,7 @@
 
   function differences(id) {
     const b = D.books.find(x => x.id === id); if (!b) return notFound();
-    return `<p class="crumbs"><a href="#/library">المكتبة</a> / <a href="#/book/${b.id}">${esc(b.title.split(':')[0])}</a></p>
+    return `<p class="crumbs"><a href="#/library">المكتبة</a> / <a href="#/book/${b.id}">${esc(titleOf(b).split(':')[0])}</a></p>
       <h1>أين يختلف الكتاب أو يحتاج موازنة</h1>
       <p class="muted">عند الخلاف نعرض الرأيين ولا نحسم. القرار الأول لمختص يعرف الحالة.</p>
       ${b.differences.map(d => `<article class="card"><h3>${esc(d.title)} ${chip('dispute')}</h3><div class="body"><p>${d.html}</p></div></article>`).join('')}`;
@@ -251,7 +252,7 @@
 
   function verify(id) {
     const b = D.books.find(x => x.id === id); if (!b) return notFound();
-    return `<p class="crumbs"><a href="#/library">المكتبة</a> / <a href="#/book/${b.id}">${esc(b.title.split(':')[0])}</a></p>
+    return `<p class="crumbs"><a href="#/library">المكتبة</a> / <a href="#/book/${b.id}">${esc(titleOf(b).split(':')[0])}</a></p>
       <h1>للتحقق قبل الاعتماد</h1>
       <h2>أرقام ${chip('verify')}</h2>
       <ul class="body card">${b.numbers.map(n => `<li>${n.html}</li>`).join('')}</ul>
@@ -261,6 +262,7 @@
       <ul class="body card">${b.quality.map(q => `<li>${q}</li>`).join('')}</ul>`;
   }
 
+  const TK_N = 30; let tkRest = [];
   function toolkit(focusId, params) {
     const aud = params.get('aud') || '', kind = params.get('kind') || '';
     let tools = D.books.flatMap(b => b.tools);
@@ -270,6 +272,9 @@
     if (kind) tools = tools.filter(t => t.kind === kind);
     const link = (k, v) => { const p = new URLSearchParams(params); v ? p.set(k, v) : p.delete(k); const s = p.toString(); return '#/toolkit' + (s ? '?' + s : ''); };
     const done = store.get('tried', {});
+    const fi = focusId ? tools.findIndex(t => t.id === focusId) : -1;
+    if (fi >= TK_N) tools = [tools[fi], ...tools.filter((_, i) => i !== fi)];
+    tkRest = tools.slice(TK_N);
     return `<h1>الأدوات</h1>
       <p class="muted">خطوات وقوائم من الكتب. علّم ما جرّبته. العلامات تُحفظ في هذا المتصفح فقط.</p>
       <div class="filters" aria-label="تصفية حسب المستفيد">
@@ -281,7 +286,9 @@
         <select id="tk-kind" data-tk="kind"><option value="">كل الأنواع</option>${kinds.map(k => `<option value="${esc(k)}" ${kind === k ? 'selected' : ''}>${esc(k)}</option>`).join('')}</select>
       </div>
       <p class="count">${tools.length} من ${total}</p>
-      ${tools.length ? tools.map(t => toolCard(t, done, focusId)).join('') : '<p class="empty">لا توجد أدوات بهذا التصفية. جرّب «الكل».</p>'}`;
+      <div id="tk-list">${tools.slice(0, TK_N).map(t => toolCard(t, done, focusId)).join('')}</div>
+      ${tools.length > TK_N ? `<button class="btn ghost more" type="button" data-more>عرض المزيد (${tools.length - TK_N})</button>` : ''}
+      ${!tools.length ? '<p class="empty">لا توجد أدوات بهذا التصفية. جرّب «الكل».</p>' : ''}`;
   }
   function toolCard(t, done, focusId) {
     const b = getBook(t.bookId);
@@ -293,7 +300,7 @@
       <div class="body"><p>${t.html}</p></div>
       ${t.checklist ? `<h4 style="margin:.6em 0 0">${esc(t.checklistTitle)}</h4>
         <ul class="check">${t.checklist.map((s, i) => `<li><label><input type="checkbox" data-chk="${t.id}" data-i="${i}" ${checks.includes(i) ? 'checked' : ''}><span>${esc(s)}</span></label></li>`).join('')}</ul>` : ''}
-      <p class="src">المصدر: ${esc(b.title.split(':')[0])}، ${esc(src)}. ${t.chapters[0] != null ? `<a href="#/book/${b.id}/ch${t.chapters[0]}">افتح الفصل</a>` : ''}</p>
+      <p class="src">المصدر: ${esc(titleOf(b).split(':')[0])}${src ? '، ' + esc(src) : ''}. ${t.chapters[0] != null ? `<a href="#/book/${b.id}/ch${t.chapters[0]}">افتح الفصل</a>` : ''}</p>
       <label class="tried"><input type="checkbox" data-tried="${t.id}" ${done[t.id] ? 'checked' : ''}> جرّبتها</label>
     </article>`;
   }
@@ -311,9 +318,9 @@
       <p class="muted" dir="ltr" style="text-align:end">${esc(c.en)}</p>
       <div class="card"><p>${esc(c.def)}</p><div class="chips">${chip(c.tag)}</div></div>
       <h2>أين يظهر</h2>
-      ${c.books.map(bid => { const bk = getBook(bid); return `<h3>${esc(bk.title.split(':')[0])} <span class="muted">${esc(bk.author)}</span></h3>
+      ${c.books.map(bid => { const bk = getBook(bid); return `<h3>${esc(titleOf(bk).split(':')[0])} <span class="muted">${esc(bk.author)}</span></h3>
         <div class="card">${c.hits.filter(h => h.bookId === bid).map(h => `<div class="hit"><a href="#/book/${h.bookId}/${h.chapterId}"><strong>${esc((h.prefix || '') + h.chTitle)}</strong></a>${h.snippet ? `<q>${esc(h.snippet)}</q>` : ''}</div>`).join('')}</div>`; }).join('')}
-      ${D.books.length > c.books.length ? `<p class="muted">لم يظهر في: ${D.books.filter(b => !c.books.includes(b.id)).map(b => esc(b.title.split(':')[0])).join('، ')}.</p>` : ''}
+      ${D.books.length > c.books.length ? `<p class="muted">لم يظهر في: ${D.books.filter(b => !c.books.includes(b.id)).map(b => esc(titleOf(b).split(':')[0])).join('، ')}.</p>` : ''}
       ${D.books.length < 2 ? '<p class="empty">لم تُضف كتب أخرى بعد. عند إضافتها سيظهر هنا ما تقوله عن المفهوم نفسه.</p>' : ''}
       <p><a class="btn ghost" href="#/search?q=${encodeURIComponent(c.ar)}">ابحث عن «${esc(c.ar)}» في كل شيء</a></p>`;
   }
@@ -354,7 +361,7 @@
         ${sel('type', 'النوع', Object.entries(TYPES), type)}
         ${sel('aud', 'المستفيد', D.audiences.map(a => [a.id, a.ar]), aud)}
         ${sel('tag', 'الوسم', Object.entries(TAGS).map(([k, v]) => [k, v[0]]), tag)}
-        ${sel('book', 'الكتاب (رأسي)', D.books.map(b => [b.id, b.title.split(':')[0]]), bk)}
+        ${sel('book', 'الكتاب (رأسي)', D.books.map(b => [b.id, titleOf(b).split(':')[0]]), bk)}
       </div>
       <p class="muted">بلا كتاب محدد، يبحث في كل الكتب (أفقي). مع كتاب محدد، يبحث داخله فقط (رأسي).</p>
       ${res.length ? `<p class="count">${results.length} نتيجة</p>` : ''}
@@ -451,6 +458,15 @@
     if (t.dataset.tried) { const d = store.get('tried', {}); d[t.dataset.tried] = t.checked; store.set('tried', d); }
   });
   document.addEventListener('click', e => {
+    const mb = e.target.closest('[data-menu]');
+    if (mb) { const top = mb.closest('.top'); const o = top.classList.toggle('open'); mb.setAttribute('aria-expanded', o); }
+    else if (e.target.closest('#nav a')) { const top = document.querySelector('.top'); top.classList.remove('open'); const m = top.querySelector('[data-menu]'); if (m) m.setAttribute('aria-expanded', 'false'); }
+    const more = e.target.closest('button[data-more]');
+    if (more) {
+      const next = tkRest.splice(0, TK_N), done = store.get('tried', {});
+      document.getElementById('tk-list').insertAdjacentHTML('beforeend', next.map(t => toolCard(t, done, '')).join(''));
+      if (tkRest.length) more.textContent = `عرض المزيد (${tkRest.length})`; else more.remove();
+    }
     const b = e.target.closest('button[data-href]');
     if (b) location.hash = b.dataset.href;
     if (e.target.closest('button[data-print]')) {

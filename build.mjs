@@ -17,6 +17,7 @@ const AUDIENCES = [
 ];
 
 // عبارات ممنوعة في أي ملف محتوى (بيانات شخصية). البناء يفشل إن وُجدت.
+const TITLE_AR = JSON.parse(fs.readFileSync(path.join(path.dirname(BOOKS_DIR), 'title-ar.json'), 'utf8'));
 const BANNED = [/ما يخص حالتي/, /حالتكم/, /حالتك/, /لحالتك/, /ابنك/, /ابني\b/, /ملفاتك/, /الأب المسافر/, /ظروف سياسية/, /ضغط سياسي/, /الأب المصاب/, /الأم التي تحمل/];
 
 // ---------- أدوات مساعدة ----------
@@ -153,6 +154,8 @@ function buildBook(file) {
   meta.id = meta.id || file.replace(/\.md$/, '');
   const metaFile = path.join(META_DIR, file.replace(/\.md$/, '.json'));
   const extra = fs.existsSync(metaFile) ? JSON.parse(fs.readFileSync(metaFile, 'utf8')) : {};
+  const h1m = body.match(/^# (.*)$/m); const h1pre = h1m ? h1m[1].split(' — ')[0].split(' (')[0].trim() : '';
+  const titleAr = TITLE_AR[meta.id] || (/[\u0600-\u06FF]/.test(h1pre) ? h1pre : '');
   const secs = splitSections(body.replace(/^# .*\n/, '')).filter(s => s.role !== 'personal');
   const sec = r => secs.find(s => s.role === r) || { body: '' };
 
@@ -195,7 +198,7 @@ function buildBook(file) {
   const quality = sec('quality').body.split('\n').filter(l => /^- /.test(l)).map(l => inline(l.replace(/^- /, '')));
 
   return {
-    id: meta.id, title: String(meta.title).replace(/\s*[—-]\s*ملخص.*$/, ''), author: meta.author, year: +meta.year,
+    id: meta.id, titleAr, title: String(meta.title).replace(/\s*[—-]\s*ملخص.*$/, ''), author: meta.author, year: +meta.year,
     audience: meta.audience || [], ageRange: meta.age_range || '', sourcePages: meta.source_pages || '',
     card, core, chapters, tools, differences, questions, numbers, quality,
     chapterNote: plain((sec('chapters').body.split('\n').find(l => l.startsWith('>')) || ''))
@@ -248,7 +251,7 @@ for (const b of books) {
 }
 const stub = b => {
   const full = strip(b);
-  return { id: b.id, title: b.title, author: b.author, year: b.year, audience: b.audience, ageRange: b.ageRange,
+  return { id: b.id, titleAr: b.titleAr, title: b.title, author: b.author, year: b.year, audience: b.audience, ageRange: b.ageRange,
     nTools: full.nTools, cats: CATS.books[b.id].cats, tags: CATS.books[b.id].tags, chapters: full.chapters.map(c => ({ id: c.id, badge: c.badge, prefix: c.prefix, title: c.title })) };
 };
 const data = {
