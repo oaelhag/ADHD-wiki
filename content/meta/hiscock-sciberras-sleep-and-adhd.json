@@ -1,0 +1,141 @@
+{
+  "note": "تصنيف المستفيدين والأدوات اجتهاد من معدّ الموقع وليس رأي المؤلف.",
+  "sensitiveChapters": [
+    "6",
+    "9",
+    "10"
+  ],
+  "chapterAudiences": {
+    "default": [
+      "parents",
+      "adults"
+    ],
+    "12": [
+      "adults",
+      "challenges"
+    ],
+    "11": [
+      "parents",
+      "challenges"
+    ]
+  },
+  "tools": {
+    "1": {
+      "kind": "تنظيم",
+      "audiences": [
+        "parents",
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "2": {
+      "kind": "تنظيم",
+      "audiences": [
+        "parents",
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "3": {
+      "kind": "روتين",
+      "audiences": [
+        "parents",
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "4": {
+      "kind": "روتين",
+      "audiences": [
+        "parents",
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "5": {
+      "kind": "وقاية",
+      "audiences": [
+        "parents",
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "6": {
+      "kind": "روتين",
+      "audiences": [
+        "parents",
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "7": {
+      "kind": "دعم",
+      "audiences": [
+        "parents",
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "8": {
+      "kind": "وقاية",
+      "audiences": [
+        "parents",
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "9": {
+      "kind": "تنظيم",
+      "audiences": [
+        "parents",
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "10": {
+      "kind": "دعم",
+      "audiences": [
+        "parents",
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "11": {
+      "kind": "تنظيم",
+      "audiences": [
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "12": {
+      "kind": "روتين",
+      "audiences": [
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "13": {
+      "kind": "روتين",
+      "audiences": [
+        "parents",
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "14": {
+      "kind": "وقاية",
+      "audiences": [
+        "parents",
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "15": {
+      "kind": "مهارة تفكير",
+      "audiences": [
+        "adults"
+      ],
+      "tag": "book"
+    }
+  }
+}

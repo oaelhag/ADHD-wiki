@@ -247,5 +247,26 @@
     "books": [
       "ratey-spark"
     ]
+  },
+  {
+    "id": "adhdoers",
+    "ar": "ADHDoers",
+    "books": [
+      "adhdoers-managing-anger"
+    ]
+  },
+  {
+    "id": "hiscock-sciberras",
+    "ar": "هيسكوك وسيبراسيرا",
+    "books": [
+      "hiscock-sciberras-sleep-and-adhd"
+    ]
+  },
+  {
+    "id": "neff-germer",
+    "ar": "نِف وجيرمر",
+    "books": [
+      "neff-germer-msc-for-burnout"
+    ]
   }
 ]

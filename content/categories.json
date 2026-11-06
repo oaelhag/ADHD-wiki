@@ -594,6 +594,45 @@
         "اكتئاب",
         "انتباه"
       ]
+    },
+    "adhdoers-managing-anger": {
+      "cats": [
+        "emotions",
+        "adult-skills"
+      ],
+      "tags": [
+        "غضب",
+        "ADHD بالغين",
+        "تنظيم الانفعال",
+        "حدود",
+        "كتيّب تمارين"
+      ]
+    },
+    "hiscock-sciberras-sleep-and-adhd": {
+      "cats": [
+        "adhd",
+        "anxiety-health"
+      ],
+      "tags": [
+        "نوم",
+        "ADHD",
+        "أرق",
+        "مراهقة",
+        "كتاب سريري"
+      ]
+    },
+    "neff-germer-msc-for-burnout": {
+      "cats": [
+        "caregiver",
+        "emotions"
+      ],
+      "tags": [
+        "إنهاك",
+        "رحمة بالنفس",
+        "حدود",
+        "كمالية",
+        "ناقد داخلي"
+      ]
     }
   }
 }

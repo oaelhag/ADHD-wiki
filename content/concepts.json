@@ -2054,5 +2054,211 @@
       "Zero Hour",
       "الساعة صفر"
     ]
+  },
+  {
+    "id": "secondary-emotion",
+    "ar": "الشعور الثانوي",
+    "en": "Secondary Emotion",
+    "tag": "book",
+    "def": "شعور يغطي شعورًا أعمق (حزن، خوف، خجل). الغضب غالبًا يعبّر عنه.",
+    "patterns": [
+      "secondary emotion",
+      "الشعور الثانوي"
+    ]
+  },
+  {
+    "id": "distant-observer",
+    "ar": "المراقب البعيد",
+    "en": "Distant Observer",
+    "tag": "book",
+    "def": "رؤية الموقف من الخارج (شاشة سينما أو عيون صديق) قبل التصرف وقت الغضب.",
+    "patterns": [
+      "Distant Observer",
+      "المراقب البعيد"
+    ]
+  },
+  {
+    "id": "sleep-diary",
+    "ar": "سجل النوم المصوّر",
+    "en": "Sleep Diary (Somnolog)",
+    "tag": "book",
+    "def": "سجل أسبوعين أو ثلاثة لساعات النوم والشاشات والدواء والمزاج. أبسط أداة تقييم.",
+    "patterns": [
+      "somnolog",
+      "سجل النوم",
+      "sleep diary"
+    ]
+  },
+  {
+    "id": "healthy-sleep-practices",
+    "ar": "ممارسات النوم الصحي",
+    "en": "Healthy Sleep Practices",
+    "tag": "book",
+    "def": "روتين وموعد ثابت وغرفة بلا شاشات. ضرورية على الأرجح لكن قد لا تكفي في ADHD.",
+    "patterns": [
+      "ممارسات النوم الصحي",
+      "نظافة النوم",
+      "sleep hygiene"
+    ]
+  },
+  {
+    "id": "dswpd",
+    "ar": "تأخر طور النوم",
+    "en": "Delayed Sleep-Wake Phase",
+    "tag": "book",
+    "def": "ساعة بيولوجية متأخرة تجعل النوم والاستيقاظ متأخرين.",
+    "patterns": [
+      "تأخر طور النوم",
+      "DSWPD",
+      "طور النوم المتأخر"
+    ]
+  },
+  {
+    "id": "behavioral-insomnia",
+    "ar": "الأرق السلوكي",
+    "en": "Behavioral Insomnia of Childhood",
+    "tag": "book",
+    "def": "صعوبة نوم ترتبط بشروط (حضور الوالد) أو بضعف الحدود عند النوم.",
+    "patterns": [
+      "الأرق السلوكي",
+      "behavioral insomnia"
+    ]
+  },
+  {
+    "id": "masked-sleepiness",
+    "ar": "النعاس المقنّع",
+    "en": "Masked Sleepiness",
+    "tag": "book",
+    "def": "طفل يبدو مفرط النشاط وهو في الحقيقة نعسان.",
+    "patterns": [
+      "النعاس المقنّع",
+      "masked sleepiness",
+      "النعاس المقنع"
+    ]
+  },
+  {
+    "id": "restless-legs",
+    "ar": "تململ الساقين",
+    "en": "Restless Legs Syndrome",
+    "tag": "book",
+    "def": "إحساس مزعج في الساقين مساءً يخف بالحركة، وقد يُفهم خطأً فرطَ حركة.",
+    "patterns": [
+      "تململ الساقين",
+      "Restless legs",
+      "RLS"
+    ]
+  },
+  {
+    "id": "tender-fierce",
+    "ar": "الرحمة الليّنة والحازمة",
+    "en": "Tender and Fierce Compassion",
+    "tag": "book",
+    "def": "وجهان للرحمة: يقبل ويهدّئ، ويحمي ويقول «لا». نحتاجهما معًا.",
+    "patterns": [
+      "الحازمة",
+      "Fierce",
+      "الليّنة",
+      "Tender"
+    ]
+  },
+  {
+    "id": "backdraft",
+    "ar": "الارتداد",
+    "en": "Backdraft",
+    "tag": "book",
+    "def": "ظهور ألم قديم حين يدخل اللطف. علامة أن القلب انفتح، ويحتاج جرعة صغيرة.",
+    "patterns": [
+      "Backdraft",
+      "الارتداد"
+    ]
+  },
+  {
+    "id": "central-paradox",
+    "ar": "المفارقة المركزية",
+    "en": "Central Paradox",
+    "tag": "book",
+    "def": "نرحم أنفسنا لأننا نتألم، لا لنطرد الألم.",
+    "patterns": [
+      "المفارقة المركزية",
+      "central paradox"
+    ]
+  },
+  {
+    "id": "supportive-touch",
+    "ar": "اللمس الداعم",
+    "en": "Supportive Touch",
+    "tag": "book",
+    "def": "وضع اليد على القلب أو الذراع لتهدئة الجسد بسرعة.",
+    "patterns": [
+      "اللمس الداعم",
+      "supportive touch"
+    ]
+  },
+  {
+    "id": "compassionate-mess",
+    "ar": "فوضى رحيمة",
+    "en": "Compassionate Mess",
+    "tag": "book",
+    "def": "الهدف ليس الكمال بل إدخال الرحمة إلى الفوضى.",
+    "patterns": [
+      "فوضى رحيمة",
+      "Compassionate mess"
+    ]
+  },
+  {
+    "id": "moral-injury",
+    "ar": "الجرح الأخلاقي",
+    "en": "Moral Injury",
+    "tag": "book",
+    "def": "ألم حين تشهد أو تفعل ما يخالف قيمك ولا تستطيع فعل الصواب.",
+    "patterns": [
+      "الجرح الأخلاقي",
+      "Moral injury"
+    ]
+  },
+  {
+    "id": "equanimity",
+    "ar": "الثبات",
+    "en": "Equanimity",
+    "tag": "book",
+    "def": "التخلي عن وهم السيطرة على حياة من نرعاهم مع بقاء الاهتمام.",
+    "patterns": [
+      "Equanimity",
+      "الثبات"
+    ]
+  },
+  {
+    "id": "lean-in-back-let-go",
+    "ar": "اقترب، تراجع، اترك",
+    "en": "Lean In, Lean Back, Let Go",
+    "tag": "book",
+    "def": "قاعدة التعامل مع الارتداد: قرّب أو أبعد أو أوقف حسب منطقة تحملك.",
+    "patterns": [
+      "Lean in",
+      "اقترب، تراجع",
+      "اقترب تراجع"
+    ]
+  },
+  {
+    "id": "empathy-fatigue",
+    "ar": "إرهاق التعاطف",
+    "en": "Empathy Fatigue",
+    "tag": "book",
+    "def": "تعب من حمل ألم الآخرين. الرحمة نفسها لا ترهق بل تنشّط مراكز المكافأة بحسب الكتاب.",
+    "patterns": [
+      "إرهاق التعاطف",
+      "Empathy fatigue"
+    ]
+  },
+  {
+    "id": "mama-bear",
+    "ar": "الدبة الأم",
+    "en": "Mama Bear",
+    "tag": "book",
+    "def": "صورة الرحمة الحازمة: تحمي وتقول «لا» وتتحرك دفاعًا.",
+    "patterns": [
+      "Mama Bear",
+      "الدبة الأم"
+    ]
   }
 ]
