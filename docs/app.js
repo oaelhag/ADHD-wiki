@@ -77,6 +77,7 @@
           ${['الذاكرة العاملة', 'كره الانتظار', 'التجنب', 'وقت إضافي', 'النوم'].map(q => `<a href="#/search?q=${encodeURIComponent(q)}">${q}</a>`).join('')}
         </div>
       </section>
+      ${intro()}
       <section class="doors" aria-label="الأقسام">
         <a class="door" href="#/library"><b>${nb}</b><span>المكتبة</span><small>${nc} فصلًا بملخصات كاملة، وخريطة لكل كتاب.</small></a>
         <a class="door" href="#/toolkit"><b>${nt}</b><span>الأدوات</span><small>خطوات وقوائم تحقق تجرّبها وتضع عليها علامة.</small></a>
@@ -85,6 +86,25 @@
       </section>
       ${newsBox()}
       <p class="stage">${esc(D.site.stage)}. كل شيء هنا موسوم: ما يقوله الكتاب، وما هو استنتاج، وما يحتاج مختصًا. <a href="#/about">اعرف الوسوم</a>.</p>`;
+  }
+
+
+  function intro() {
+    const steps = [['ابحث', 'اكتب مشكلة أو مفهومًا، مثل: التسويف أو النوم. تصلك الفكرة والأداة ورقم الفصل.'], ['اقرأ بسرعة', 'افتح الكتاب: خمسة أسطر تلخصه، ثم خريطة الفصول. اختر فصلًا واحدًا فقط.'], ['جرّب', 'من «الأدوات» اختر خطوة صغيرة واحدة، وعلّم «جرّبتها». العلامات تُحفظ في متصفحك وحده.']];
+    const who = [['بالغ مصاب بـ ADHD', 'ابدأ من الأدوات، وجرّب أداة واحدة هذا الأسبوع.', '#/toolkit?aud=adults'], ['أب أو أم', 'ابدأ بكتب التربية، ثم خذ أداة واحدة تجرّبها مع الأسرة.', '#/toolkit?aud=parents'], ['معلم أو مرافق', 'ابدأ بالتسهيلات وطرق التواصل وقراءة السلوك.', '#/toolkit?aud=teachers'], ['تحدٍّ خاص: بُعد أو ضغط أو إنهاك', 'ابدأ بكتب الفقد والإنهاك والرحمة بالنفس.', '#/toolkit?aud=challenges']];
+    return `<section class="intro" aria-labelledby="intro-h">
+        <h2 id="intro-h">كيف يعمل الموقع؟</h2>
+        <p class="lead">ملخصات لكتب ADHD والتربية، مرتبة بالطريقة نفسها: فكرة، فصول، أدوات، وأين يختلف الكتاب عن غيره. هدفها أن تصل للفكرة المفيدة بسرعة، ثم تقرر أي كتاب تقرأ كاملًا.</p>
+        <ol class="steps">${steps.map(([t, d], i) => `<li><b>${i + 1}</b><div><strong>${t}</strong><p>${d}</p></div></li>`).join('')}</ol>
+        <details class="fld"><summary>طرق الاستفادة حسب من أنت</summary><div class="body"><ul class="who">${who.map(([t, d, h]) => `<li><a href="${h}"><strong>${t}</strong></a><span>${d}</span></li>`).join('')}</ul></div></details>
+        <details class="fld"><summary>كيف تقرأ الوسوم الملونة؟</summary><div class="body"><div class="legend">${['book', 'inference', 'verify', 'specialist'].filter(k => TAGS[k]).map(k => `<div>${chip(k)}<span>${esc(TAGS[k][1])}</span></div>`).join('')}</div></div></details>
+        <details class="fld"><summary>نصائح للتعامل مع الموقع</summary><div class="body"><ul>
+          <li>لا تقرأ كل شيء. فصل واحد أو أداة واحدة في الجلسة تكفي.</li>
+          <li>الملخص خريطة، والكتاب هو المصدر. ارجع للكتاب الأصلي في القرارات المهمة.</li>
+          <li>حين يختلف كتابان نعرض الرأيين تحت «أين يختلف الكتاب».</li>
+          <li>الأرقام والادعاءات القوية موسومة «يحتاج تحققًا». لا تعتمد عليها وحدها.</li>
+          <li>ليس تشخيصًا ولا وصفة دواء. القرارات الطبية للطبيب أو المختص.</li></ul></div></details>
+      </section>`;
   }
 
   function newsBox() {
