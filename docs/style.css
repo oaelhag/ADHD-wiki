@@ -408,3 +408,9 @@ h2 { font-weight: 600; margin-top: 2.2rem; }
 .more { display: block; margin: 18px auto 0; }
 
 @media (prefers-color-scheme: dark) { .top { background: color-mix(in srgb, var(--surface) 90%, transparent); } }
+
+/* بطاقة المكتبة كلها قابلة للضغط */
+.lib-grid .card { position: relative; cursor: pointer; }
+.lib-grid .bk-title a::after { content: ""; position: absolute; inset: 0; border-radius: var(--r); }
+.lib-grid .chips a, .lib-grid .chips span { position: relative; z-index: 1; }
+.sortbar { display: flex; align-items: center; gap: 8px; margin: 8px 0 14px; }

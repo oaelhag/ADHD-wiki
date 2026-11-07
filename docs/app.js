@@ -112,8 +112,12 @@
   function library(params) {
     const cats = D.categories || [];
     const catName = id => (cats.find(c => c.id === id) || {}).ar || id;
-    const cat = params.get('cat') || '', tag = params.get('tag') || '';
-    const link = (k, v) => `#/library${v ? '?' + k + '=' + encodeURIComponent(v) : ''}`;
+    const cat = params.get('cat') || '', tag = params.get('tag') || '', sort = params.get('sort') || 'new';
+    const rank = {}; (D.news || []).forEach((n, i) => (n.books || []).forEach(id => { if (!(id in rank)) rank[id] = i; }));
+    const pos = id => D.books.findIndex(b => b.id === id);
+    const order = { new: (a, b) => (rank[a.id] ?? 1e3 + pos(a.id)) - (rank[b.id] ?? 1e3 + pos(b.id)), old: (a, b) => (rank[b.id] ?? 1e3 + pos(b.id)) - (rank[a.id] ?? 1e3 + pos(a.id)), year: (a, b) => b.year - a.year || pos(a.id) - pos(b.id), title: (a, b) => titleOf(a).localeCompare(titleOf(b), 'ar') };
+    const sorted = list => [...list].sort(order[sort] || order.new);
+    const link = (k, v) => `#/library${v ? '?' + k + '=' + encodeURIComponent(v) + (sort !== 'new' ? '&sort=' + sort : '') : (sort !== 'new' ? '?sort=' + sort : '')}`;
     const card = b => `
         <article class="card">
           <h3 class="bk-title"><a href="#/book/${b.id}">${esc(titleOf(b))}</a></h3>
@@ -128,13 +132,13 @@
       </nav>`;
     let body;
     if (cat || tag) {
-      const list = D.books.filter(b => cat ? (b.cats || []).includes(cat) : (b.tags || []).includes(tag));
+      const list = sorted(D.books.filter(b => cat ? (b.cats || []).includes(cat) : (b.tags || []).includes(tag)));
       const what = cat ? `التصنيف: ${esc(catName(cat))}` : `الوسم: #${esc(tag)}`;
       const desc = cat ? (cats.find(c => c.id === cat) || {}).desc : '';
       body = `<h2>${what} (${list.length})</h2>${desc ? `<p class="muted">${esc(desc)}</p>` : ''}${list.length ? `<div class="lib-grid">${list.map(card).join('')}</div>` : '<p class="empty">لا توجد كتب بهذا التصنيف.</p>'}
         <p><a href="#/library">عرض كل التصنيفات</a></p>`;
     } else {
-      body = `<div class="lib-grid">${D.books.map(card).join('')}</div><p class="muted note-fixed">التصنيف والوسوم من اجتهاد معدّ الموقع، وليست من المؤلفين. الضغط على أي تصنيف أو وسم يعرض الكتب المشابهة.</p>`;
+      body = `<div class="lib-grid">${sorted(D.books).map(card).join('')}</div><p class="muted note-fixed">التصنيف والوسوم من اجتهاد معدّ الموقع، وليست من المؤلفين. الضغط على أي تصنيف أو وسم يعرض الكتب المشابهة.</p>`;
     }
     const tagCounts = {};
     D.books.forEach(b => (b.tags || []).forEach(t => { tagCounts[t] = (tagCounts[t] || 0) + 1; }));
@@ -142,6 +146,7 @@
     return `<h1>المكتبة</h1>
       <p class="muted">${D.books.length} كتابًا أُضيفت حتى الآن. لكل كتاب بطاقة، وخريطة فصول، وملخص لكل فصل.</p>
       ${filters}
+      <div class="filters sortbar"><label for="lib-sort" class="muted">الترتيب</label><select id="lib-sort" data-libsort>${[['new', 'الأحدث إضافة'], ['old', 'الأقدم إضافة'], ['year', 'الأحدث نشرًا'], ['title', 'العنوان']].map(([v, t]) => `<option value="${v}" ${sort === v ? 'selected' : ''}>${t}</option>`).join('')}</select></div>
       ${body}
       <h2>أشهر الوسوم</h2>
       <div class="chips">${topTags.map(([t, n]) => `<a class="chip ${tag === t ? 'book' : 'plain'}" href="${link('tag', t)}">#${esc(t)} (${n})</a>`).join('')}</div>
@@ -452,9 +457,13 @@
     const t = e.target;
     if (t.dataset.f) { const p = hash().params; t.value ? p.set(t.dataset.f, t.value) : p.delete(t.dataset.f); location.hash = '#/search?' + p.toString(); }
     if (t.dataset.tk) { const p = hash().params; t.value ? p.set(t.dataset.tk, t.value) : p.delete(t.dataset.tk); const s = p.toString(); location.hash = '#/toolkit' + (s ? '?' + s : ''); }
+    if (t.dataset.libsort !== undefined) { const p = hash().params; t.value === 'new' ? p.delete('sort') : p.set('sort', t.value); const q = p.toString(); location.hash = '#/library' + (q ? '?' + q : ''); }
     if (t.dataset.chk) { const k = 'chk:' + t.dataset.chk; let a = store.get(k, []); const i = +t.dataset.i; a = t.checked ? [...new Set([...a, i])] : a.filter(x => x !== i); store.set(k, a); }
     if (t.dataset.tried) { const d = store.get('tried', {}); d[t.dataset.tried] = t.checked; store.set('tried', d); }
   });
+  const prefetch = e => { const a = e.target.closest && e.target.closest('a[href^="#/book/"]'); if (a) { const id = decodeURIComponent(a.getAttribute('href').split('/')[2] || ''); if (id) loadBook(id).catch(() => {}); } };
+  document.addEventListener('pointerover', prefetch, { passive: true });
+  document.addEventListener('touchstart', prefetch, { passive: true });
   document.addEventListener('click', e => {
     const more = e.target.closest('button[data-more]');
     if (more) {
