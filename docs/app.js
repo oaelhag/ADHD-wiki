@@ -119,7 +119,8 @@
           <h3 class="bk-title"><a href="#/book/${b.id}">${esc(titleOf(b))}</a></h3>
           ${b.titleAr ? `<p class="bk-en">${esc(b.title.split(':')[0])}</p>` : ''}
           <p class="bk-meta">${esc(noDot(b.author))} · ${b.year}</p>
-          <p class="bk-sum"><a class="chip" href="${link('cat', (b.cats || [])[0])}">${esc(catName((b.cats || [])[0]))}</a><span>${b.chapters.length} فصلًا · ${b.nTools} أداة</span></p>
+          <div class="chips">${(b.cats || []).map(c => `<a class="chip" href="${link('cat', c)}">${esc(catName(c))}</a>`).join('')}${(b.tags || []).map(t => `<a class="chip plain" href="${link('tag', t)}">#${esc(t)}</a>`).join('')}</div>
+          <p class="bk-sum"><span>${b.chapters.length} فصلًا · ${b.nTools} أداة</span></p>
         </article>`;
     const filters = `<nav class="chips lib-filters" aria-label="التصنيفات">
         <a class="chip ${!cat && !tag ? 'book' : 'plain'}" href="#/library">الكل (${D.books.length})</a>
@@ -133,12 +134,7 @@
       body = `<h2>${what} (${list.length})</h2>${desc ? `<p class="muted">${esc(desc)}</p>` : ''}${list.length ? `<div class="lib-grid">${list.map(card).join('')}</div>` : '<p class="empty">لا توجد كتب بهذا التصنيف.</p>'}
         <p><a href="#/library">عرض كل التصنيفات</a></p>`;
     } else {
-      body = cats.map(c => {
-        const list = D.books.filter(b => (b.cats || [])[0] === c.id);
-        if (!list.length) return '';
-        return `<section class="lib-group"><h2><a href="${link('cat', c.id)}">${esc(c.ar)}</a> <span class="muted">(${list.length})</span></h2>
-          <p class="muted">${esc(c.desc)}</p><div class="lib-grid">${list.map(card).join('')}</div></section>`;
-      }).join('') + `<p class="muted note-fixed">يظهر كل كتاب مرة واحدة تحت تصنيفه الرئيسي. التصنيفات الأخرى للكتاب تظهر على بطاقته، وتضغط عليها لترى كل الكتب المشابهة. التصنيف والوسوم من اجتهاد معدّ الموقع، وليست من المؤلفين.</p>`;
+      body = `<div class="lib-grid">${D.books.map(card).join('')}</div><p class="muted note-fixed">التصنيف والوسوم من اجتهاد معدّ الموقع، وليست من المؤلفين. الضغط على أي تصنيف أو وسم يعرض الكتب المشابهة.</p>`;
     }
     const tagCounts = {};
     D.books.forEach(b => (b.tags || []).forEach(t => { tagCounts[t] = (tagCounts[t] || 0) + 1; }));
@@ -389,7 +385,7 @@
   function loadBook(id) {
     const i = D.books.findIndex(b => b.id === id);
     if (i < 0 || D.books[i].core) return Promise.resolve();
-    return (loading['b:' + id] = loading['b:' + id] || loadJSON('books/' + encodeURIComponent(id) + '.json').then(full => { D.books[D.books.findIndex(b => b.id === id)] = full; }));
+    return (loading['b:' + id] = loading['b:' + id] || loadJSON('books/' + encodeURIComponent(id) + '.json').then(full => { const k = D.books.findIndex(b => b.id === id); D.books[k] = { ...D.books[k], ...full }; }));
   }
   const loadAllBooks = () => Promise.all(D.books.map(b => loadBook(b.id)));
   function loadIndex() {
@@ -409,6 +405,7 @@
     else if (window.__views[a] && window.__views[a].need) need = window.__views[a].need();
     if (!need) return draw();
     $app.setAttribute('aria-busy', 'true');
+    $app.innerHTML = '<p class="loading">جارٍ التحميل…</p>';
     need.then(() => { if (my === seq) { $app.removeAttribute('aria-busy'); draw(); } })
       .catch(() => { if (my === seq) { $app.removeAttribute('aria-busy'); $app.innerHTML = '<p class="callout">تعذّر تحميل البيانات. أعد تحميل الصفحة.</p>'; } });
   }
@@ -433,6 +430,7 @@
     document.title = title;
     document.querySelectorAll('#nav a').forEach(l => l.toggleAttribute('aria-current', l.dataset.nav === (nav === 'book' ? 'library' : nav)));
     document.querySelectorAll('#nav a[aria-current]').forEach(l => l.setAttribute('aria-current', 'page'));
+    const cur = document.querySelector('#nav a[aria-current]'); if (cur) cur.scrollIntoView({ inline: 'center', block: 'nearest' });
     if (a === 'toolkit' && b) { const el = document.getElementById(b); if (el) { el.scrollIntoView({ block: 'center' }); return; } }
     if (a === 'book' && c && /^ch/.test(c)) { const t = $app.querySelector('.tile[aria-current]'); if (t) t.scrollIntoView({ inline: 'center', block: 'nearest' }); }
     window.scrollTo(0, 0);
@@ -458,9 +456,6 @@
     if (t.dataset.tried) { const d = store.get('tried', {}); d[t.dataset.tried] = t.checked; store.set('tried', d); }
   });
   document.addEventListener('click', e => {
-    const mb = e.target.closest('[data-menu]');
-    if (mb) { const top = mb.closest('.top'); const o = top.classList.toggle('open'); mb.setAttribute('aria-expanded', o); }
-    else if (e.target.closest('#nav a')) { const top = document.querySelector('.top'); top.classList.remove('open'); const m = top.querySelector('[data-menu]'); if (m) m.setAttribute('aria-expanded', 'false'); }
     const more = e.target.closest('button[data-more]');
     if (more) {
       const next = tkRest.splice(0, TK_N), done = store.get('tried', {});
