@@ -729,6 +729,47 @@
         "مدرسة",
         "تعاون الأهل والمعلم"
       ]
+    },
+    "horsley-unlimited-memory": {
+      "cats": [
+        "adult-skills",
+        "education"
+      ],
+      "tags": [
+        "ذاكرة",
+        "قصر المدى والمراجعة",
+        "تقنيات الحفظ",
+        "تركيز",
+        "انضباط"
+      ]
+    },
+    "puryear-your-life-can-be-better": {
+      "cats": [
+        "adhd",
+        "adult-skills",
+        "emotions"
+      ],
+      "tags": [
+        "استراتيجيات وعادات",
+        "قائمة الخمسة",
+        "العار والحديث الذاتي",
+        "الوقت",
+        "الشريك"
+      ]
+    },
+    "hari-stolen-focus": {
+      "cats": [
+        "adhd",
+        "anxiety-health",
+        "parenting"
+      ],
+      "tags": [
+        "الانتباه والتقنية",
+        "النوم",
+        "التوتر واليقظة المفرطة",
+        "اللعب الحر",
+        "جدل ADHD"
+      ]
     }
   }
 }

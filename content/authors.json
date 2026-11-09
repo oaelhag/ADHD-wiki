@@ -299,5 +299,26 @@
     "books": [
       "rodsky-fair-play"
     ]
+  },
+  {
+    "id": "horsley",
+    "ar": "هورسلي",
+    "books": [
+      "horsley-unlimited-memory"
+    ]
+  },
+  {
+    "id": "puryear",
+    "ar": "بوريير",
+    "books": [
+      "puryear-your-life-can-be-better"
+    ]
+  },
+  {
+    "id": "hari",
+    "ar": "هاري",
+    "books": [
+      "hari-stolen-focus"
+    ]
   }
 ]

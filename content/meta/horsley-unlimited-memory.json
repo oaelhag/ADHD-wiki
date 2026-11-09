@@ -1,0 +1,125 @@
+{
+  "note": "تصنيف المستفيدين والأدوات اجتهاد من معدّ الموقع وليس رأي المؤلف.",
+  "sensitiveChapters": [],
+  "chapterAudiences": {
+    "default": [
+      "adults",
+      "teachers"
+    ]
+  },
+  "tools": {
+    "1": {
+      "kind": "دعم الذاكرة",
+      "audiences": [
+        "adults",
+        "teachers"
+      ],
+      "tag": "book"
+    },
+    "2": {
+      "kind": "دعم الذاكرة",
+      "audiences": [
+        "adults",
+        "teachers"
+      ],
+      "tag": "book"
+    },
+    "3": {
+      "kind": "دعم الذاكرة",
+      "audiences": [
+        "adults",
+        "teachers"
+      ],
+      "tag": "book"
+    },
+    "4": {
+      "kind": "دعم الذاكرة",
+      "audiences": [
+        "adults",
+        "teachers"
+      ],
+      "tag": "book"
+    },
+    "5": {
+      "kind": "ضبط النفس",
+      "audiences": [
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "6": {
+      "kind": "تحفيز",
+      "audiences": [
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "7": {
+      "kind": "تنظيم الانفعال",
+      "audiences": [
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "8": {
+      "kind": "دعم الذاكرة",
+      "audiences": [
+        "adults",
+        "teachers"
+      ],
+      "tag": "book"
+    },
+    "9": {
+      "kind": "دعم الذاكرة",
+      "audiences": [
+        "adults",
+        "teachers"
+      ],
+      "tag": "book"
+    },
+    "10": {
+      "kind": "دعم الذاكرة",
+      "audiences": [
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "11": {
+      "kind": "دعم الذاكرة",
+      "audiences": [
+        "adults",
+        "teachers"
+      ],
+      "tag": "book"
+    },
+    "12": {
+      "kind": "دعم الذاكرة",
+      "audiences": [
+        "adults",
+        "teachers"
+      ],
+      "tag": "book"
+    },
+    "13": {
+      "kind": "ذات",
+      "audiences": [
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "14": {
+      "kind": "تنظيم",
+      "audiences": [
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "15": {
+      "kind": "روتين",
+      "audiences": [
+        "adults"
+      ],
+      "tag": "book"
+    }
+  }
+}

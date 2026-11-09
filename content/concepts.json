@@ -2784,5 +2784,364 @@
       "العلاقة المساعِدة",
       "helping relationship"
     ]
+  },
+  {
+    "id": "see-method",
+    "ar": "طريقة SEE للتخيل",
+    "en": "SEE Method",
+    "tag": "book",
+    "def": "حواس ومبالغة وحركة: تحويل المعلومة إلى صورة غريبة ومتحركة تُتذكَّر أسهل.",
+    "patterns": [
+      "Senses",
+      "SEE:"
+    ]
+  },
+  {
+    "id": "phonetic-number-code",
+    "ar": "الشفرة الصوتية للأرقام",
+    "en": "Phonetic Number Code",
+    "tag": "book",
+    "def": "كل رقم يقابل صوت حرف، فيتحول الرقم إلى كلمة تُصوَّر.",
+    "patterns": [
+      "الشفرة الصوتية",
+      "الشفرة الأصوات",
+      "phonetic number"
+    ]
+  },
+  {
+    "id": "peg-system",
+    "ar": "الأوتاد المقفّاة",
+    "en": "Peg System",
+    "tag": "book",
+    "def": "قائمة ثابتة مرقمة (one–bun، two–shoe) تُعلَّق عليها المعلومات الجديدة.",
+    "patterns": [
+      "الأوتاد المقفّاة",
+      "الوتد الشكلي",
+      "الأوتاد"
+    ]
+  },
+  {
+    "id": "link-story",
+    "ar": "الربط بقصة",
+    "en": "Link Method",
+    "tag": "book",
+    "def": "سلسلة صور غريبة متتابعة تحفظ قائمة مرتبة.",
+    "patterns": [
+      "طريقة الربط",
+      "الربط (Link",
+      "Link story"
+    ]
+  },
+  {
+    "id": "names-4cs",
+    "ar": "الـ4 Cs لتذكر الأسماء",
+    "en": "4 Cs for Names",
+    "tag": "book",
+    "def": "تركيز، ثم صورة، ثم ربط، ثم استعمال متكرر.",
+    "patterns": [
+      "الـ4 Cs",
+      "الـ4Cs",
+      "ملف الأسماء"
+    ]
+  },
+  {
+    "id": "forgetting-curve",
+    "ar": "منحنى النسيان",
+    "en": "Forgetting Curve",
+    "tag": "book",
+    "def": "يضيع معظم ما نتعلمه بسرعة ما لم نراجعه. المراجعة المتباعدة تبطّئ الضياع.",
+    "patterns": [
+      "منحنى النسيان",
+      "Forgetting Curve"
+    ]
+  },
+  {
+    "id": "spaced-review",
+    "ar": "المراجعة المتباعدة",
+    "en": "Spaced Review",
+    "tag": "book",
+    "def": "مراجعة المعلومة في فواصل تتسع: بعد دقائق، ثم يوم، ثم أيام.",
+    "patterns": [
+      "جدول المراجعة",
+      "المراجعة المتباعدة"
+    ]
+  },
+  {
+    "id": "focus-center",
+    "ar": "مركز التركيز",
+    "en": "Focus Center",
+    "tag": "book",
+    "def": "نموذج تبسيطي عند Puryear: الانتباه يعمل بأربعة مفاتيح (اهتمام، جِدّة، تحدٍّ، موعد قريب) لا بالأهمية.",
+    "patterns": [
+      "مركز التركيز",
+      "Focus Center"
+    ]
+  },
+  {
+    "id": "list-of-five",
+    "ar": "قائمة الخمسة",
+    "en": "List of Five",
+    "tag": "book",
+    "def": "قائمة مهام لا تتجاوز خمسًا، ومنها يُختار شيء واحد الآن.",
+    "patterns": [
+      "قائمة الخمسة",
+      "البطاقة الحمراء",
+      "قوة الخمسة"
+    ]
+  },
+  {
+    "id": "problem-strategy-rule-habit",
+    "ar": "مشكلة ← استراتيجية ← قاعدة ← عادة",
+    "en": "Problem–Strategy–Rule–Habit",
+    "tag": "book",
+    "def": "صيغة Puryear: لكل مشكلة استراتيجية، تتحول لقاعدة ثابتة، ثم لعادة.",
+    "patterns": [
+      "استراتيجية ← قاعدة",
+      "مشكلة ← استراتيجية"
+    ]
+  },
+  {
+    "id": "red-flags",
+    "ar": "الأعلام الحمراء (عبارات التسويف)",
+    "en": "Red Flags",
+    "tag": "book",
+    "def": "عبارات تنذر بالتأجيل: «لاحقًا»، «سيكون كل شيء بخير»، «عندي وقت كافٍ».",
+    "patterns": [
+      "الأعلام الحمراء",
+      "سيكون كل شيء بخير"
+    ]
+  },
+  {
+    "id": "spotting-countering",
+    "ar": "الرصد ثم المواجهة",
+    "en": "Spotting and Countering",
+    "tag": "book",
+    "def": "لاحظ حديث النفس السلبي ثم واجهه بالحقائق والمنطق.",
+    "patterns": [
+      "الرصد (spotting)",
+      "spotting",
+      "المواجهة (countering)"
+    ]
+  },
+  {
+    "id": "avoiding-card",
+    "ar": "بطاقة التجنب",
+    "en": "Avoiding Card",
+    "tag": "book",
+    "def": "بطاقة تسأل يوميًا: ما الذي أتجنبه؟",
+    "patterns": [
+      "بطاقة التجنب",
+      "Avoiding card"
+    ]
+  },
+  {
+    "id": "fifty-percent-rule",
+    "ar": "قاعدة الخمسين بالمئة",
+    "en": "Fifty Percent Rule",
+    "tag": "book",
+    "def": "قدّر الوقت ثم أضف خمسين بالمئة.",
+    "patterns": [
+      "قاعدة الخمسين",
+      "قاعدة الـ 50%"
+    ]
+  },
+  {
+    "id": "false-self",
+    "ar": "الذات الزائفة",
+    "en": "False Self",
+    "tag": "book",
+    "def": "حين تُلبّى حاجات الوالدين لا الطفل، يتكيف ليكون ما يُطلب منه.",
+    "patterns": [
+      "الذات الزائفة",
+      "False self"
+    ]
+  },
+  {
+    "id": "self-fulfilling",
+    "ar": "النبوءة المحققة لذاتها",
+    "en": "Self-Fulfilling Prophecy",
+    "tag": "book",
+    "def": "توقّع سلبي يغيّر السلوك فيتحقق التوقع.",
+    "patterns": [
+      "النبوءات المحققة لذاتها",
+      "النبوءة المحققة"
+    ]
+  },
+  {
+    "id": "all-or-nothing",
+    "ar": "التفكير الكل أو لا شيء",
+    "en": "All-or-Nothing Thinking",
+    "tag": "book",
+    "def": "تعثر صغير يُفهم على أنه فشل كامل.",
+    "patterns": [
+      "الكل أو لا شيء",
+      "كله أو لا شيء"
+    ]
+  },
+  {
+    "id": "mind-wandering",
+    "ar": "شرود الذهن",
+    "en": "Mind-Wandering",
+    "tag": "book",
+    "def": "شكل آخر من الانتباه يربط الأفكار ويتوقع المستقبل؛ نعمة مع الأمان، واجترار مع التوتر.",
+    "patterns": [
+      "شرود الذهن",
+      "Mind-wandering"
+    ]
+  },
+  {
+    "id": "default-mode-network",
+    "ar": "شبكة الوضع الافتراضي",
+    "en": "Default Mode Network",
+    "tag": "book",
+    "def": "مناطق نشطة في الدماغ غير الموجَّه (رايكل). علاقتها بالشرود محل جدل.",
+    "patterns": [
+      "شبكة الوضع الافتراضي",
+      "Default Mode Network"
+    ]
+  },
+  {
+    "id": "cruel-optimism",
+    "ar": "التفاؤل القاسي",
+    "en": "Cruel Optimism",
+    "tag": "book",
+    "def": "حل فردي مبسّط لمشكلة بنيوية، يحمّل الفرد اللوم عند الفشل.",
+    "patterns": [
+      "التفاؤل القاسي",
+      "Cruel optimism"
+    ]
+  },
+  {
+    "id": "surveillance-capitalism",
+    "ar": "رأسمالية المراقبة",
+    "en": "Surveillance Capitalism",
+    "tag": "book",
+    "def": "نموذج ربح يعتمد على تتبع الناس وبيع انتباههم للمعلنين.",
+    "patterns": [
+      "رأسمالية المراقبة",
+      "Surveillance capitalism"
+    ]
+  },
+  {
+    "id": "hypervigilance",
+    "ar": "اليقظة المفرطة",
+    "en": "Hypervigilance",
+    "tag": "book",
+    "def": "في بيئة خطرة يتحول الانتباه إلى مراقبة التهديد لا الدرس.",
+    "patterns": [
+      "اليقظة المفرطة",
+      "Hypervigilance"
+    ]
+  },
+  {
+    "id": "screen-inferiority",
+    "ar": "دونية الشاشة",
+    "en": "Screen Inferiority",
+    "tag": "book",
+    "def": "القراءة على الشاشة تُفهم أقل من الورق في دراسات كثيرة.",
+    "patterns": [
+      "دونية الشاشة",
+      "Screen inferiority"
+    ]
+  },
+  {
+    "id": "switch-cost",
+    "ar": "كلفة تبديل المهام",
+    "en": "Switch Cost",
+    "tag": "book",
+    "def": "الدماغ يبدّل ولا يعمل على مهمتين معًا، وكل تبديل له ثمن.",
+    "patterns": [
+      "كلفة التبديل",
+      "تكلفة التبديل",
+      "Switch Cost"
+    ]
+  },
+  {
+    "id": "local-sleep",
+    "ar": "النوم الموضعي",
+    "en": "Local Sleep",
+    "tag": "book",
+    "def": "جزء من الدماغ ينام والعينان مفتوحتان.",
+    "patterns": [
+      "النوم الموضعي",
+      "Local sleep"
+    ]
+  },
+  {
+    "id": "twin-studies",
+    "ar": "دراسات التوائم",
+    "en": "Twin Studies",
+    "tag": "book",
+    "def": "مصدر أرقام الوراثة العالية في ADHD، ويُنتقد لأن التوائم تتشارك البيئة.",
+    "patterns": [
+      "دراسات التوائم",
+      "Twin studies"
+    ]
+  },
+  {
+    "id": "attention-economy",
+    "ar": "اقتصاد الانتباه",
+    "en": "Attention Economy",
+    "tag": "book",
+    "def": "ربح المنصات من وقت نظرك، فتصمم لإبقائك.",
+    "patterns": [
+      "اقتصاد الانتباه",
+      "Attention economy"
+    ]
+  },
+  {
+    "id": "free-play",
+    "ar": "اللعب الحر",
+    "en": "Free Play",
+    "tag": "book",
+    "def": "لعب غير مُشرَف عليه، يُعدّ من أسس الانتباه والإبداع والاستقلال.",
+    "patterns": [
+      "اللعب الحر",
+      "Free play"
+    ]
+  },
+  {
+    "id": "right-to-disconnect",
+    "ar": "الحق في الانفصال",
+    "en": "Right to Disconnect",
+    "tag": "book",
+    "def": "حق قانوني بعدم الرد على العمل خارج ساعاته.",
+    "patterns": [
+      "الحق في الانفصال",
+      "Right to disconnect"
+    ]
+  },
+  {
+    "id": "elimination-diet",
+    "ar": "الحمية الإقصائية",
+    "en": "Elimination Diet",
+    "tag": "book",
+    "def": "إزالة أطعمة معينة مؤقتًا لرصد أثرها. تُجرى مع مختص.",
+    "patterns": [
+      "الحمية الإقصائية",
+      "Elimination diet"
+    ]
+  },
+  {
+    "id": "endocrine-disruptors",
+    "ar": "ملوثات الغدد الصماء",
+    "en": "Endocrine Disruptors",
+    "tag": "book",
+    "def": "مواد كيميائية تربك الهرمونات، وقد تؤثر في نمو الدماغ (جدل).",
+    "patterns": [
+      "ملوثات الغدد الصماء",
+      "Endocrine disruptors"
+    ]
+  },
+  {
+    "id": "attention-layers",
+    "ar": "طبقات الانتباه",
+    "en": "Spotlight, Starlight, Daylight",
+    "tag": "book",
+    "def": "كشاف للمهام القريبة، وضوء نجوم للأهداف البعيدة، وضوء نهار لمعرفة ما تريد.",
+    "patterns": [
+      "ضوء النجوم",
+      "Starlight"
+    ]
   }
 ]
