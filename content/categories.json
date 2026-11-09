@@ -687,6 +687,48 @@
         "هذا وذاك",
         "مرونة"
       ]
+    },
+    "sayers-coming-back-together": {
+      "cats": [
+        "communication",
+        "parenting",
+        "caregiver"
+      ],
+      "tags": [
+        "عودة بعد غياب",
+        "أزواج",
+        "إشادة",
+        "اجتماع أسبوعي",
+        "تنسيق الوالدين"
+      ]
+    },
+    "rodsky-fair-play": {
+      "cats": [
+        "caregiver",
+        "communication",
+        "parenting"
+      ],
+      "tags": [
+        "عبء ذهني",
+        "عمل غير مرئي",
+        "تقاسم المهام",
+        "اجتماع أسبوعي",
+        "شغف"
+      ]
+    },
+    "greene-lost-at-school": {
+      "cats": [
+        "education",
+        "parenting",
+        "adhd"
+      ],
+      "tags": [
+        "حل المشكلات التعاوني",
+        "الخطة B",
+        "مهارات متأخرة",
+        "مدرسة",
+        "تعاون الأهل والمعلم"
+      ]
     }
   }
 }

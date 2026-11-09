@@ -2557,5 +2557,232 @@
       "علامتين فارقتين",
       "علامتا الحزن"
     ]
+  },
+  {
+    "id": "bids-for-intimacy",
+    "ar": "المبادرات (bids)",
+    "en": "Bids for Intimacy",
+    "tag": "book",
+    "def": "دعوة صغيرة للقرب يقبلها الطرف الآخر أو يرفضها. الأزواج السعداء يقبلون أكثر ويعيدون المحاولة.",
+    "patterns": [
+      "bids",
+      "المبادرات (bid)",
+      "المبادرة (bid)"
+    ]
+  },
+  {
+    "id": "weekly-business-meeting",
+    "ar": "اجتماع الأعمال الأسبوعي",
+    "en": "Weekly Business Meeting",
+    "tag": "book",
+    "def": "لقاء ثابت من 20 إلى 30 دقيقة بجدول مكتوب للمواعيد والفواتير والمهام، بلا لوم.",
+    "patterns": [
+      "اجتماع الأعمال الأسبوعي"
+    ]
+  },
+  {
+    "id": "daily-praise",
+    "ar": "الإشادة اليومية",
+    "en": "Daily Positive Feedback",
+    "tag": "book",
+    "def": "كل يوم تذكر سلوكًا محددًا تحبه عند الشريك مع السبب، بنبرة عادية.",
+    "patterns": [
+      "الإشادة اليومية"
+    ]
+  },
+  {
+    "id": "battlemind",
+    "ar": "برنامج Battlemind",
+    "en": "Battlemind",
+    "tag": "book",
+    "def": "برنامج عسكري يصف أنماط التدريب والانتشار: حجب المعلومات، كبت المشاعر، اليقظة المفرطة.",
+    "patterns": [
+      "Battlemind"
+    ]
+  },
+  {
+    "id": "reintegration",
+    "ar": "إعادة الاندماج",
+    "en": "Reintegration",
+    "tag": "book",
+    "def": "العودة إلى الأسرة والمجتمع بعد غياب طويل. عمل مستمر للطرفين وليست حدثًا.",
+    "patterns": [
+      "إعادة الاندماج",
+      "reintegration"
+    ]
+  },
+  {
+    "id": "polarization",
+    "ar": "الاستقطاب في طلب القرب",
+    "en": "Polarization",
+    "tag": "book",
+    "def": "كلما طلب أحد الشريكين القرب أكثر ابتعد الآخر، فيطلب أكثر. يضخّم فروقًا صغيرة.",
+    "patterns": [
+      "الاستقطاب (polarization)"
+    ]
+  },
+  {
+    "id": "cpe",
+    "ar": "CPE: الفكرة والتخطيط والتنفيذ",
+    "en": "Conception-Planning-Execution",
+    "tag": "book",
+    "def": "من يحمل المهمة يلاحظ الحاجة ويخطط وينفذ دون تذكير من أحد.",
+    "patterns": [
+      "CPE"
+    ]
+  },
+  {
+    "id": "minimum-standard-of-care",
+    "ar": "الحد الأدنى للعناية",
+    "en": "Minimum Standard of Care (MSC)",
+    "tag": "book",
+    "def": "مستوى متفق عليه للإتقان والتوقيت لكل مهمة، يزيل التصحيح والتذكير.",
+    "patterns": [
+      "Minimum Standard of Care",
+      "MSC"
+    ]
+  },
+  {
+    "id": "unicorn-space",
+    "ar": "مساحة الحصان الوحيد القرن",
+    "en": "Unicorn Space",
+    "tag": "book",
+    "def": "وقت ومكان لشغف يخصك وتشاركه مع العالم. تأتي بعد إعادة توازن العمل.",
+    "patterns": [
+      "Unicorn Space"
+    ]
+  },
+  {
+    "id": "invisible-work",
+    "ar": "العمل غير المرئي والعبء الذهني",
+    "en": "Invisible Work / Mental Load",
+    "tag": "book",
+    "def": "التفكير والتخطيط الذي لا يُرى في تدبير البيت والأطفال، فلا يُقدَّر ولا يُقسَّم.",
+    "patterns": [
+      "العمل غير المرئي",
+      "العبء الذهني",
+      "mental load"
+    ]
+  },
+  {
+    "id": "toxic-time-messages",
+    "ar": "رسائل الوقت السامة",
+    "en": "Toxic Time Messages",
+    "tag": "book",
+    "def": "عبارات تقول ضمنًا إن وقت أحد الشريكين أثمن من الآخر (مثل «الوقت مال»).",
+    "patterns": [
+      "رسائل الوقت السامة",
+      "Toxic Time"
+    ]
+  },
+  {
+    "id": "daily-grind",
+    "ar": "الطحن اليومي",
+    "en": "Daily Grind",
+    "tag": "book",
+    "def": "مهام لا تقبل التأجيل: توصيل المدرسة، العشاء، النوم. تقع غالبًا على واحد.",
+    "patterns": [
+      "الطحن اليومي",
+      "Daily Grind"
+    ]
+  },
+  {
+    "id": "re-deal",
+    "ar": "إعادة التوزيع",
+    "en": "Re-Deal",
+    "tag": "book",
+    "def": "عند أي خلل يُعاد توزيع البطاقة بدل العقوبة أو اللوم.",
+    "patterns": [
+      "إعادة التوزيع",
+      "re-deal"
+    ]
+  },
+  {
+    "id": "both-trap",
+    "ar": "فخ «كلانا»",
+    "en": "Both Trap",
+    "tag": "book",
+    "def": "بطاقة بلا مالك واحد: إما يؤديها الاثنان (Double-Up) أو يفكر واحد وينفذ آخر (Break-Up).",
+    "patterns": [
+      "فخ «كلانا»",
+      "Both Trap"
+    ]
+  },
+  {
+    "id": "happiness-trio",
+    "ar": "الثلاثي السعيد",
+    "en": "Happiness Trio",
+    "tag": "book",
+    "def": "العناية بالنفس والصداقات ومساحة الشغف: حق متساوٍ للشريكين.",
+    "patterns": [
+      "الثلاثي السعيد",
+      "Happiness Trio"
+    ]
+  },
+  {
+    "id": "rat-random-task",
+    "ar": "RAT: مهمة عشوائية",
+    "en": "Random Assignment of a Task",
+    "tag": "book",
+    "def": "أن تُلقي على شريكك مهمة فجأة. تسبب الاستياء، وتُستبدل بالتوزيع المسبق.",
+    "patterns": [
+      "RAT:",
+      "RAT ",
+      "Random Assignment"
+    ]
+  },
+  {
+    "id": "dueling-solutions",
+    "ar": "حلول متصارعة",
+    "en": "Dueling Solutions",
+    "tag": "book",
+    "def": "حلان على الطاولة قبل أن يتضح الهمّان، فيتحول الحوار إلى صراع قوى.",
+    "patterns": [
+      "حلول متصارعة",
+      "Dueling Solutions"
+    ]
+  },
+  {
+    "id": "perpetual-b",
+    "ar": "الخطة B الدائمة",
+    "en": "Perpetual B",
+    "tag": "book",
+    "def": "تكرار الخطة B الطارئة على مشكلة واحدة كل يوم، أي أنها لم تُحل.",
+    "patterns": [
+      "B الدائمة",
+      "Perpetual B"
+    ]
+  },
+  {
+    "id": "educated-guessing",
+    "ar": "التخمين المدروس",
+    "en": "Educated Guessing",
+    "tag": "book",
+    "def": "حين لا يعرف الطفل همّه تعرض احتمالات محدودة كفرضيات مؤقتة تتقبل خطأها.",
+    "patterns": [
+      "التخمين المدروس",
+      "educated guess"
+    ]
+  },
+  {
+    "id": "differentiated-discipline",
+    "ar": "الانضباط المتمايز",
+    "en": "Differentiated Discipline",
+    "tag": "book",
+    "def": "التوقعات واحدة تقريبًا، لكن طريق الوصول إليها يختلف بحسب مهارات كل طفل.",
+    "patterns": [
+      "الانضباط المتمايز"
+    ]
+  },
+  {
+    "id": "helping-relationship",
+    "ar": "العلاقة المساعِدة",
+    "en": "Helping Relationship",
+    "tag": "book",
+    "def": "عند Greene أقوى عامل يغيّر الأطفال. الخطة B تبنيها والخطة A تدفع الطفل بعيدًا.",
+    "patterns": [
+      "العلاقة المساعِدة",
+      "helping relationship"
+    ]
   }
 ]

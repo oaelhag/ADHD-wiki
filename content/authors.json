@@ -190,7 +190,8 @@
     "id": "greene",
     "ar": "غرين",
     "books": [
-      "greene-explosive-child"
+      "greene-explosive-child",
+      "greene-lost-at-school"
     ]
   },
   {
@@ -283,6 +284,20 @@
     "ar": "بولاك",
     "books": [
       "pollak-self-compassion-for-parents"
+    ]
+  },
+  {
+    "id": "sayers",
+    "ar": "ساير",
+    "books": [
+      "sayers-coming-back-together"
+    ]
+  },
+  {
+    "id": "rodsky",
+    "ar": "رودسكي",
+    "books": [
+      "rodsky-fair-play"
     ]
   }
 ]
