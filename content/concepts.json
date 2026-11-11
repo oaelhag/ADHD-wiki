@@ -3435,5 +3435,48 @@
       "anything but yes"
     ],
     "tag": "book"
+  },
+  {
+    "id": "smart-goals-short",
+    "ar": "أهداف SMART القصيرة",
+    "en": "SMART goals",
+    "def": "أهداف محددة قابلة للقياس بمدة 2–4 أسابيع وخطوات أسبوعية.",
+    "patterns": [
+      "أهداف SMART",
+      "SMART"
+    ],
+    "tag": "book"
+  },
+  {
+    "id": "correspondence-training",
+    "ar": "تدريب التوافق",
+    "en": "Correspondence training",
+    "def": "التزام علني أمام شخص بسلوك محدد يزيد احتمال تنفيذه.",
+    "patterns": [
+      "تدريب التوافق",
+      "correspondence training"
+    ],
+    "tag": "book"
+  },
+  {
+    "id": "teach-me-to-help",
+    "ar": "دعني أعلّمك كيف تساعدني",
+    "en": "Teach me how to help me",
+    "def": "الشاب يحدد كيف يساعده الوالد، وما لا يقوله، وإشارة توقف.",
+    "patterns": [
+      "كيف تساعدني"
+    ],
+    "tag": "book"
+  },
+  {
+    "id": "passing-baton",
+    "ar": "تمرير العصا",
+    "en": "Passing the baton",
+    "def": "تواصل تعاوني مبني على المقابلة التحفيزية: أكّد، تفاءل، أصغِ، تعاون.",
+    "patterns": [
+      "تمرير العصا",
+      "Passing the Baton"
+    ],
+    "tag": "book"
   }
 ]
