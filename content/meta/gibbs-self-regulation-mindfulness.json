@@ -1,0 +1,120 @@
+{
+  "note": "تصنيف المستفيدين والأدوات اجتهاد من معدّ الموقع وليس رأي المؤلف.",
+  "sensitiveChapters": [],
+  "chapterAudiences": {
+    "default": [
+      "parents"
+    ]
+  },
+  "tools": {
+    "1": {
+      "kind": "تقييم",
+      "audiences": [
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "2": {
+      "kind": "تنظيم انفعالي",
+      "audiences": [
+        "parents",
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "3": {
+      "kind": "تسمية المشاعر",
+      "audiences": [
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "4": {
+      "kind": "تنظيم الراشد",
+      "audiences": [
+        "parents",
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "5": {
+      "kind": "حركة",
+      "audiences": [
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "6": {
+      "kind": "إيقاع",
+      "audiences": [
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "7": {
+      "kind": "تنظيم حسي",
+      "audiences": [
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "8": {
+      "kind": "تنفس",
+      "audiences": [
+        "parents",
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "9": {
+      "kind": "حواس",
+      "audiences": [
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "10": {
+      "kind": "كبح",
+      "audiences": [
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "11": {
+      "kind": "تعبير",
+      "audiences": [
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "12": {
+      "kind": "حواس",
+      "audiences": [
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "13": {
+      "kind": "نوم",
+      "audiences": [
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "14": {
+      "kind": "تنظيم",
+      "audiences": [
+        "parents",
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "15": {
+      "kind": "حركة",
+      "audiences": [
+        "parents"
+      ],
+      "tag": "book"
+    }
+  }
+}

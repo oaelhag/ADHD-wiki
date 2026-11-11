@@ -3478,5 +3478,36 @@
       "Passing the Baton"
     ],
     "tag": "book"
+  },
+  {
+    "id": "fads-jel",
+    "ar": "FADS و JEL",
+    "en": "FADS / JEL",
+    "def": "تصنيف المشاعر: إحباط وقلق ورغبة وحزن مقابل فرح وحماس وحب.",
+    "patterns": [
+      "FADS"
+    ],
+    "tag": "book"
+  },
+  {
+    "id": "arousal-threshold",
+    "ar": "الاستثارة والعتبة",
+    "en": "Arousal and threshold",
+    "def": "مستوى استثارة الطفل وعتبته الحسية يحددان نوع النشاط المناسب.",
+    "patterns": [
+      "الاستثارة والعتبة"
+    ],
+    "tag": "book"
+  },
+  {
+    "id": "heavy-work",
+    "ar": "العمل الثقيل",
+    "en": "Heavy work",
+    "def": "دفع وسحب وحمل يعطي إدخالًا عضليًا منظِّمًا.",
+    "patterns": [
+      "العمل الثقيل",
+      "heavy work"
+    ],
+    "tag": "book"
   }
 ]
