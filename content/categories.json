@@ -796,6 +796,19 @@
         "رياضة",
         "VAST"
       ]
+    },
+    "safren-mastering-adult-adhd": {
+      "cats": [
+        "adult-skills",
+        "adhd"
+      ],
+      "tags": [
+        "ADHD",
+        "بالغون",
+        "علاج معرفي سلوكي",
+        "تنظيم",
+        "تسويف"
+      ]
     }
   }
 }

@@ -3307,5 +3307,49 @@
       "time-in"
     ],
     "tag": "book"
+  },
+  {
+    "id": "abc-priorities",
+    "ar": "أولويات A/B/C",
+    "en": "A/B/C Priorities",
+    "def": "تصنيف المهام بحسب الأهمية: أنجز كل A قبل B وكل B قبل C، دون أن تجعل كل شيء A.",
+    "patterns": [
+      "A/B/C",
+      "A وB وC",
+      "الأولويات (A"
+    ],
+    "tag": "book"
+  },
+  {
+    "id": "ohio-rule",
+    "ar": "قاعدة OHIO",
+    "en": "Only Handle It Once",
+    "def": "تعامل مع الورقة أو الرسالة مرة واحدة: ادفع أو أجب أو احفظ أو تخلّص منها.",
+    "patterns": [
+      "OHIO"
+    ],
+    "tag": "book"
+  },
+  {
+    "id": "distractibility-delay",
+    "ar": "تأجيل المشتتات",
+    "en": "Distractibility Delay",
+    "def": "حين تخطر فكرة مشتتة أثناء العمل، دوّنها ولا تنفذها، ثم راجعها عند الاستراحة.",
+    "patterns": [
+      "تأجيل المشتتات",
+      "Distractibility Delay"
+    ],
+    "tag": "book"
+  },
+  {
+    "id": "thought-record",
+    "ar": "سجل الأفكار",
+    "en": "Thought Record",
+    "def": "جدول من 3 إلى 5 أعمدة: الموقف، الفكرة، الشعور، خطأ التفكير، الرد العقلاني. يفصل الفكرة عن الشعور.",
+    "patterns": [
+      "سجل الأفكار",
+      "thought record"
+    ],
+    "tag": "book"
   }
 ]
