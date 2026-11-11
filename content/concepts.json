@@ -3393,5 +3393,47 @@
       "مقياس الجهد"
     ],
     "tag": "book"
+  },
+  {
+    "id": "keep-in-the-game",
+    "ar": "أبقِه في اللعبة",
+    "en": "Keep your teen in the game",
+    "def": "اسمح بالأخطاء الصغيرة وامنع الكارثية، وحدّد المخاطرة المقبولة.",
+    "patterns": [
+      "أبقِه في اللعبة",
+      "keep your teen in the game"
+    ],
+    "tag": "book"
+  },
+  {
+    "id": "reap-coaching",
+    "ar": "جلسة المدرب REAP",
+    "en": "Review-Evaluate-Anticipate-Plan",
+    "def": "مراجعة، تقييم، توقّع، خطة: جلسات يومية قصيرة مع مدرب.",
+    "patterns": [
+      "REAP"
+    ],
+    "tag": "book"
+  },
+  {
+    "id": "effort-in-beholder",
+    "ar": "الجهد في عين صاحبه",
+    "en": "Effort is in the mind of the beholder",
+    "def": "العمل نفسه سهل لشخص ومرهق لآخر حسب قوة المهارة عنده.",
+    "patterns": [
+      "الجهد في عين صاحبه"
+    ],
+    "tag": "book"
+  },
+  {
+    "id": "anything-but-yes",
+    "ar": "كل شيء عدا نعم",
+    "en": "Anything but yes",
+    "def": "«نعم» الصريحة وحدها التزام؛ و«ربما» من الوالد تُسمع «نعم» عند المراهق.",
+    "patterns": [
+      "كل شيء عدا نعم",
+      "anything but yes"
+    ],
+    "tag": "book"
   }
 ]
