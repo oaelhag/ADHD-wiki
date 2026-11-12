@@ -1,0 +1,132 @@
+{
+  "note": "وثيقة خدمات صحية وليست كتابًا. تصنيف المستفيدين والأدوات اجتهاد من معدّ الموقع وليس رأي الجهة. بلا جرعات.",
+  "sensitiveChapters": [],
+  "chapterAudiences": {
+    "default": [
+      "adults",
+      "parents"
+    ]
+  },
+  "tools": {
+    "1": {
+      "kind": "حقيبة توعوية",
+      "audiences": [
+        "adults",
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "2": {
+      "kind": "حقيبة توعوية",
+      "audiences": [
+        "adults",
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "3": {
+      "kind": "حقيبة توعوية",
+      "audiences": [
+        "adults",
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "4": {
+      "kind": "حقيبة توعوية",
+      "audiences": [
+        "adults",
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "5": {
+      "kind": "حقيبة توعوية",
+      "audiences": [
+        "adults",
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "6": {
+      "kind": "حقيبة توعوية",
+      "audiences": [
+        "adults",
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "7": {
+      "kind": "حقيبة توعوية",
+      "audiences": [
+        "adults",
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "8": {
+      "kind": "حقيبة توعوية",
+      "audiences": [
+        "adults",
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "9": {
+      "kind": "حقيبة توعوية",
+      "audiences": [
+        "adults",
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "10": {
+      "kind": "حقيبة توعوية",
+      "audiences": [
+        "adults",
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "11": {
+      "kind": "حقيبة توعوية",
+      "audiences": [
+        "adults",
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "12": {
+      "kind": "حقيبة توعوية",
+      "audiences": [
+        "adults",
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "13": {
+      "kind": "حقيبة توعوية",
+      "audiences": [
+        "adults",
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "14": {
+      "kind": "حقيبة توعوية",
+      "audiences": [
+        "adults",
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "15": {
+      "kind": "حقيبة توعوية",
+      "audiences": [
+        "adults",
+        "parents"
+      ],
+      "tag": "book"
+    }
+  }
+}

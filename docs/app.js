@@ -143,7 +143,7 @@
         <article class="card">
           <h3 class="bk-title"><a href="#/book/${b.id}">${esc(titleOf(b))}</a></h3>
           ${b.titleAr ? `<p class="bk-en">${esc(b.title.split(':')[0])}</p>` : ''}
-          <p class="bk-meta">${esc(noDot(b.author))} · ${b.year}</p>
+          <p class="bk-meta">${esc(noDot(b.author))} · ${b.year || "بلا تاريخ"}</p>
           <div class="chips">${(b.cats || []).map(c => `<a class="chip" href="${link('cat', c)}">${esc(catName(c))}</a>`).join('')}${(b.tags || []).map(t => `<a class="chip plain" href="${link('tag', t)}">#${esc(t)}</a>`).join('')}</div>
           <p class="bk-sum"><span>${b.chapters.length} فصلًا · ${b.nTools} أداة</span></p>
         </article>`;
@@ -188,7 +188,7 @@
       <p class="crumbs"><a href="#/library">المكتبة</a></p>
       <h1 class="bk-h1">${esc(titleOf(b))}</h1>
       ${b.titleAr ? `<p class="bk-h1-en">${esc(b.title)}</p>` : ''}
-      <p class="bk-by">${esc(noDot(b.author))} · ${b.year}</p>
+      <p class="bk-by">${esc(noDot(b.author))} · ${b.year || "بلا تاريخ"}</p>
       <p class="actions"><button class="btn ghost" type="button" data-print>🖨 طباعة بطاقة الكتاب</button></p>
       <h2>الفكرة في خمسة أسطر</h2>
       <ol class="body">${b.core.map(c => `<li>${c.html}</li>`).join('')}</ol>
@@ -212,7 +212,7 @@
       <header class="pc-head">
         <div class="pc-brand">مرجع العائلة عن ADHD والتربية</div>
         <h1>${esc(b.title)}</h1>
-        <p>${esc(b.author)} · ${b.year}</p>
+        <p>${esc(b.author)} · ${b.year || "بلا تاريخ"}</p>
         <div class="pc-aud">${b.audience.map(a => `<span>${esc(audName(a))}</span>`).join('')}<span>${esc(b.ageRange)}</span></div>
       </header>
       <h2>الفكرة في خمسة أسطر</h2>

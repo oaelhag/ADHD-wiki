@@ -1,0 +1,132 @@
+{
+  "note": "وثيقة خدمات صحية وليست كتابًا. تصنيف المستفيدين والأدوات اجتهاد من معدّ الموقع وليس رأي الجهة. بلا جرعات.",
+  "sensitiveChapters": [],
+  "chapterAudiences": {
+    "default": [
+      "parents",
+      "teachers"
+    ]
+  },
+  "tools": {
+    "1": {
+      "kind": "حقيبة إرشادية",
+      "audiences": [
+        "parents",
+        "teachers"
+      ],
+      "tag": "book"
+    },
+    "2": {
+      "kind": "حقيبة إرشادية",
+      "audiences": [
+        "parents",
+        "teachers"
+      ],
+      "tag": "book"
+    },
+    "3": {
+      "kind": "حقيبة إرشادية",
+      "audiences": [
+        "parents",
+        "teachers"
+      ],
+      "tag": "book"
+    },
+    "4": {
+      "kind": "حقيبة إرشادية",
+      "audiences": [
+        "parents",
+        "teachers"
+      ],
+      "tag": "book"
+    },
+    "5": {
+      "kind": "حقيبة إرشادية",
+      "audiences": [
+        "parents",
+        "teachers"
+      ],
+      "tag": "book"
+    },
+    "6": {
+      "kind": "حقيبة إرشادية",
+      "audiences": [
+        "parents",
+        "teachers"
+      ],
+      "tag": "book"
+    },
+    "7": {
+      "kind": "حقيبة إرشادية",
+      "audiences": [
+        "parents",
+        "teachers"
+      ],
+      "tag": "book"
+    },
+    "8": {
+      "kind": "حقيبة إرشادية",
+      "audiences": [
+        "parents",
+        "teachers"
+      ],
+      "tag": "book"
+    },
+    "9": {
+      "kind": "حقيبة إرشادية",
+      "audiences": [
+        "parents",
+        "teachers"
+      ],
+      "tag": "book"
+    },
+    "10": {
+      "kind": "حقيبة إرشادية",
+      "audiences": [
+        "parents",
+        "teachers"
+      ],
+      "tag": "book"
+    },
+    "11": {
+      "kind": "حقيبة إرشادية",
+      "audiences": [
+        "parents",
+        "teachers"
+      ],
+      "tag": "book"
+    },
+    "12": {
+      "kind": "حقيبة إرشادية",
+      "audiences": [
+        "parents",
+        "teachers"
+      ],
+      "tag": "book"
+    },
+    "13": {
+      "kind": "حقيبة إرشادية",
+      "audiences": [
+        "parents",
+        "teachers"
+      ],
+      "tag": "book"
+    },
+    "14": {
+      "kind": "حقيبة إرشادية",
+      "audiences": [
+        "parents",
+        "teachers"
+      ],
+      "tag": "book"
+    },
+    "15": {
+      "kind": "حقيبة إرشادية",
+      "audiences": [
+        "parents",
+        "teachers"
+      ],
+      "tag": "book"
+    }
+  }
+}

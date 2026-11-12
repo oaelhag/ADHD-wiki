@@ -1,6 +1,18 @@
 [
   {
     "date": "2026-11-12",
+    "title": "خمس وثائق صحية (لا كتب)",
+    "note": "وثائق من خدمات صحية بريطانية: بروتوكول Oxford للبالغين، ونشرة Medigold للعمل، ودليل Norfolk & Waveney للأطفال، وحقيبة Cheshire & Merseyside للبالغين، وحقيبة UH Dorset للأهل. كلها موسومة «وثيقة» وبلا جرعات، وسياقها بريطاني.",
+    "books": [
+      "oxford-health-adult-adhd-shared-care",
+      "medigold-adhd-factsheet",
+      "norfolk-waveney-adhd-children-guideline",
+      "cheshire-merseyside-adult-adhd-info-pack",
+      "uh-dorset-adhd-children-advice-pack"
+    ]
+  },
+  {
+    "date": "2026-11-12",
     "title": "أربعة مصادر جديدة عن الغياب والعودة",
     "note": "باركي وكلارك-ستيوارت (مراجعة عن أثر الغياب والمخاطر المتراكمة)، ويسترن وسميث (دراسة عن الاتصال بعد العودة)، Pact (كتيّب تجهيز العودة)، وRetrak (موجز قصير، صلته ضعيفة). كلها بسياق مختلف، وموسومة بحدودها.",
     "books": [

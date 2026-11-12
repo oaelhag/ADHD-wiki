@@ -1,0 +1,74 @@
+{
+  "note": "وثيقة خدمات صحية وليست كتابًا. تصنيف المستفيدين والأدوات اجتهاد من معدّ الموقع وليس رأي الجهة. بلا جرعات.",
+  "sensitiveChapters": [],
+  "chapterAudiences": {
+    "default": [
+      "adults"
+    ]
+  },
+  "tools": {
+    "1": {
+      "kind": "وثيقة سريرية",
+      "audiences": [
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "2": {
+      "kind": "وثيقة سريرية",
+      "audiences": [
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "3": {
+      "kind": "وثيقة سريرية",
+      "audiences": [
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "4": {
+      "kind": "وثيقة سريرية",
+      "audiences": [
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "5": {
+      "kind": "وثيقة سريرية",
+      "audiences": [
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "6": {
+      "kind": "وثيقة سريرية",
+      "audiences": [
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "7": {
+      "kind": "وثيقة سريرية",
+      "audiences": [
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "8": {
+      "kind": "وثيقة سريرية",
+      "audiences": [
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "9": {
+      "kind": "وثيقة سريرية",
+      "audiences": [
+        "adults"
+      ],
+      "tag": "book"
+    }
+  }
+}

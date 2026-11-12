@@ -400,5 +400,40 @@
     "books": [
       "pact-going-home"
     ]
+  },
+  {
+    "id": "oxford-health",
+    "ar": "Oxford Health",
+    "books": [
+      "oxford-health-adult-adhd-shared-care"
+    ]
+  },
+  {
+    "id": "medigold",
+    "ar": "Medigold Health",
+    "books": [
+      "medigold-adhd-factsheet"
+    ]
+  },
+  {
+    "id": "norfolk-waveney",
+    "ar": "Norfolk & Waveney",
+    "books": [
+      "norfolk-waveney-adhd-children-guideline"
+    ]
+  },
+  {
+    "id": "cheshire-merseyside",
+    "ar": "NHS Cheshire & Merseyside",
+    "books": [
+      "cheshire-merseyside-adult-adhd-info-pack"
+    ]
+  },
+  {
+    "id": "uh-dorset",
+    "ar": "UH Dorset",
+    "books": [
+      "uh-dorset-adhd-children-advice-pack"
+    ]
   }
 ]

@@ -957,6 +957,67 @@
         "أهداف",
         "أوراق عمل"
       ]
+    },
+    "oxford-health-adult-adhd-shared-care": {
+      "cats": [
+        "adult-skills",
+        "adhd"
+      ],
+      "tags": [
+        "وثيقة",
+        "بروتوكول سريري",
+        "متابعة",
+        "رعاية مشتركة"
+      ]
+    },
+    "medigold-adhd-factsheet": {
+      "cats": [
+        "adult-skills",
+        "adhd"
+      ],
+      "tags": [
+        "وثيقة",
+        "نشرة",
+        "العمل",
+        "نقاط قوة"
+      ]
+    },
+    "norfolk-waveney-adhd-children-guideline": {
+      "cats": [
+        "adhd",
+        "parenting"
+      ],
+      "tags": [
+        "وثيقة",
+        "دليل سريري",
+        "تثقيف",
+        "تعديلات بيئية"
+      ]
+    },
+    "cheshire-merseyside-adult-adhd-info-pack": {
+      "cats": [
+        "adult-skills",
+        "adhd"
+      ],
+      "tags": [
+        "وثيقة",
+        "حقيبة معلومات",
+        "استراتيجيات",
+        "مشاعر"
+      ]
+    },
+    "uh-dorset-adhd-children-advice-pack": {
+      "cats": [
+        "parenting",
+        "adhd",
+        "caregiver"
+      ],
+      "tags": [
+        "وثيقة",
+        "حقيبة للأهل",
+        "تواصل",
+        "رعاية ذات"
+      ]
     }
   }
 }
