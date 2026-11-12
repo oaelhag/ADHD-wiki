@@ -1,0 +1,116 @@
+{
+  "note": "تصنيف المستفيدين والأدوات اجتهاد من معدّ الموقع وليس رأي المؤلف.",
+  "sensitiveChapters": [],
+  "chapterAudiences": {
+    "default": [
+      "parents"
+    ]
+  },
+  "tools": {
+    "1": {
+      "kind": "تربية",
+      "audiences": [
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "2": {
+      "kind": "تربية",
+      "audiences": [
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "3": {
+      "kind": "تربية",
+      "audiences": [
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "4": {
+      "kind": "تربية",
+      "audiences": [
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "5": {
+      "kind": "تربية",
+      "audiences": [
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "6": {
+      "kind": "تربية",
+      "audiences": [
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "7": {
+      "kind": "تربية",
+      "audiences": [
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "8": {
+      "kind": "تربية",
+      "audiences": [
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "9": {
+      "kind": "تربية",
+      "audiences": [
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "10": {
+      "kind": "تربية",
+      "audiences": [
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "11": {
+      "kind": "تربية",
+      "audiences": [
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "12": {
+      "kind": "تربية",
+      "audiences": [
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "13": {
+      "kind": "تربية",
+      "audiences": [
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "14": {
+      "kind": "تربية",
+      "audiences": [
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "15": {
+      "kind": "تربية",
+      "audiences": [
+        "parents"
+      ],
+      "tag": "book"
+    }
+  }
+}

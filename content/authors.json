@@ -435,5 +435,26 @@
     "books": [
       "uh-dorset-adhd-children-advice-pack"
     ]
+  },
+  {
+    "id": "nelsen",
+    "ar": "نيلسن ولوت وغلين",
+    "books": [
+      "nelsen-positive-discipline-a-to-z"
+    ]
+  },
+  {
+    "id": "arditti",
+    "ar": "أرديتي",
+    "books": [
+      "arditti-parental-incarceration-and-the-family"
+    ]
+  },
+  {
+    "id": "robertson",
+    "ar": "روبرتسون",
+    "books": [
+      "robertson-being-a-mom-with-adhd"
+    ]
   }
 ]

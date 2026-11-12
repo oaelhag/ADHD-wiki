@@ -1018,6 +1018,46 @@
         "تواصل",
         "رعاية ذات"
       ]
+    },
+    "nelsen-positive-discipline-a-to-z": {
+      "cats": [
+        "parenting",
+        "communication"
+      ],
+      "tags": [
+        "انضباط إيجابي",
+        "لطف وحزم",
+        "روتين",
+        "اجتماع أسري"
+      ]
+    },
+    "arditti-parental-incarceration-and-the-family": {
+      "cats": [
+        "parenting",
+        "caregiver",
+        "emotions"
+      ],
+      "tags": [
+        "فقد غامض",
+        "تربية مشتركة",
+        "وصمة",
+        "صمود"
+      ]
+    },
+    "robertson-being-a-mom-with-adhd": {
+      "cats": [
+        "adult-skills",
+        "adhd",
+        "parenting",
+        "emotions"
+      ],
+      "tags": [
+        "أم ADHD",
+        "جهاز عصبي",
+        "حواس",
+        "حساسية الرفض",
+        "شراكة"
+      ]
     }
   }
 }

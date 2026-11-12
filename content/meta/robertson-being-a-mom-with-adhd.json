@@ -1,0 +1,132 @@
+{
+  "note": "تصنيف المستفيدين والأدوات اجتهاد من معدّ الموقع وليس رأي المؤلف.",
+  "sensitiveChapters": [],
+  "chapterAudiences": {
+    "default": [
+      "parents",
+      "adults"
+    ]
+  },
+  "tools": {
+    "1": {
+      "kind": "تنظيم ذاتي",
+      "audiences": [
+        "parents",
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "2": {
+      "kind": "تنظيم ذاتي",
+      "audiences": [
+        "parents",
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "3": {
+      "kind": "تنظيم ذاتي",
+      "audiences": [
+        "parents",
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "4": {
+      "kind": "تنظيم ذاتي",
+      "audiences": [
+        "parents",
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "5": {
+      "kind": "تنظيم ذاتي",
+      "audiences": [
+        "parents",
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "6": {
+      "kind": "تنظيم ذاتي",
+      "audiences": [
+        "parents",
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "7": {
+      "kind": "تنظيم ذاتي",
+      "audiences": [
+        "parents",
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "8": {
+      "kind": "تنظيم ذاتي",
+      "audiences": [
+        "parents",
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "9": {
+      "kind": "تنظيم ذاتي",
+      "audiences": [
+        "parents",
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "10": {
+      "kind": "تنظيم ذاتي",
+      "audiences": [
+        "parents",
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "11": {
+      "kind": "تنظيم ذاتي",
+      "audiences": [
+        "parents",
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "12": {
+      "kind": "تنظيم ذاتي",
+      "audiences": [
+        "parents",
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "13": {
+      "kind": "تنظيم ذاتي",
+      "audiences": [
+        "parents",
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "14": {
+      "kind": "تنظيم ذاتي",
+      "audiences": [
+        "parents",
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "15": {
+      "kind": "تنظيم ذاتي",
+      "audiences": [
+        "parents",
+        "adults"
+      ],
+      "tag": "book"
+    }
+  }
+}
