@@ -3509,5 +3509,175 @@
       "heavy work"
     ],
     "tag": "book"
+  },
+  {
+    "id": "plenty-paradox",
+    "ar": "مفارقة الوفرة",
+    "en": "Plenty Paradox",
+    "tag": "book",
+    "def": "عند ليمبكي: كلما زادت الوفرة والمتع السريعة زاد الإفراط القهري والقلق. ادعاء قوي يحتاج موازنة.",
+    "patterns": [
+      "مفارقة الوفرة",
+      "Plenty Paradox"
+    ]
+  },
+  {
+    "id": "regret-principle",
+    "ar": "مبدأ الندم",
+    "en": "Regret Principle",
+    "tag": "book",
+    "def": "سؤال آخر اليوم أو الأسبوع: أين ندمت على وقتي؟ يكشف ما يضر بي وبمن حولي.",
+    "patterns": [
+      "مبدأ الندم",
+      "regret principle"
+    ]
+  },
+  {
+    "id": "concentric-circles",
+    "ar": "الدوائر المتحدة المركز للتعافي",
+    "en": "Concentric Circles",
+    "tag": "book",
+    "def": "ثلاث دوائر: ما أمتنع عنه، ما يوقظ الاشتهاء، وما أريد فعله أكثر.",
+    "patterns": [
+      "الدوائر المتحدة المركز",
+      "concentric circles",
+      "الدوائر الثلاث للتعافي"
+    ]
+  },
+  {
+    "id": "abstinence-violation-effect",
+    "ar": "أثر انتهاك الامتناع",
+    "en": "Abstinence Violation Effect",
+    "tag": "book",
+    "def": "زلّة واحدة تتحول إلى انتكاس كامل بسبب اللوم والعار. الحل عند ليمبكي: تعامل مع الزلّة كبيانات للتعلم.",
+    "patterns": [
+      "abstinence violation",
+      "أثر انتهاك الامتناع"
+    ]
+  },
+  {
+    "id": "work-hard-play-hard",
+    "ar": "فخ اعمل بجد والعب بجد",
+    "en": "Work Hard–Play Hard Trap",
+    "tag": "book",
+    "def": "الضغط الطويل يدفع إلى مكافأة النفس بالإفراط. الحل: تخفيف الضغط نفسه.",
+    "patterns": [
+      "اعمل بجد والعب بجد",
+      "work hard–play hard",
+      "work hard-play hard"
+    ]
+  },
+  {
+    "id": "masking",
+    "ar": "التقنّع",
+    "en": "Masking",
+    "tag": "book",
+    "def": "إخفاء صعوبات ADHD والتظاهر بالتماسك. يؤخر التشخيص ويستنزف الطاقة عند باليجي.",
+    "patterns": [
+      "التقنع",
+      "masking"
+    ]
+  },
+  {
+    "id": "adhd-cycle",
+    "ar": "دورة ADHD",
+    "en": "ADHD Cycle",
+    "tag": "book",
+    "def": "عند باليجي: حماس ثم تجنّب وشلل ثم ذعر اللحظة الأخيرة ثم انهيار وبداية جديدة.",
+    "patterns": [
+      "دورة ADHD",
+      "ADHD Cycle"
+    ]
+  },
+  {
+    "id": "analysis-paralysis",
+    "ar": "شلل التحليل",
+    "en": "Analysis Paralysis",
+    "tag": "book",
+    "def": "التعطّل عن البدء بسبب كثرة الخيارات أو ثقل المهمة.",
+    "patterns": [
+      "شلل التحليل",
+      "analysis paralysis"
+    ]
+  },
+  {
+    "id": "late-diagnosis-costs",
+    "ar": "تكاليف التشخيص المتأخر",
+    "en": "Late-Diagnosis Costs",
+    "tag": "book",
+    "def": "أثمان عاطفية ومالية وعلاقية وهوياتية يدفعها من شُخّص متأخرًا. تُسمّى قبل أن تُترك.",
+    "patterns": [
+      "التشخيص المتأخر",
+      "تكاليف التشخيص"
+    ]
+  },
+  {
+    "id": "neurodivergent",
+    "ar": "اختلاف الدماغ العصبي",
+    "en": "Neurodivergent",
+    "tag": "book",
+    "def": "تعبير باليجي عن ADHD كأسلوب دماغ مختلف. يختلف مع باركلي الذي يراه اضطرابًا.",
+    "patterns": [
+      "neurodivergent",
+      "أسلوب دماغ عصبي مختلف"
+    ]
+  },
+  {
+    "id": "elements-of-interest",
+    "ar": "عناصر الاهتمام",
+    "en": "Elements of Interest",
+    "tag": "book",
+    "def": "الجوانب العميقة التي يحبها الشخص في نشاطاته (حركة، منافسة، جمهور، خيال)، لا النشاط نفسه. تُكتشف من كلامه.",
+    "patterns": [
+      "عناصر الاهتمام",
+      "Elements of Interest",
+      "عنصر اهتمام"
+    ]
+  },
+  {
+    "id": "escape-or-shape",
+    "ar": "اهرب منه أو شكّله",
+    "en": "Escape It or Shape It",
+    "tag": "book",
+    "def": "أمام الملل: إمّا تغادر الموقف، وإمّا تُدخل فيه عنصر اهتمام.",
+    "patterns": [
+      "Escape It or Shape It",
+      "اهرب منه أو شكله"
+    ]
+  },
+  {
+    "id": "interest-based-performance",
+    "ar": "الأداء المبني على الاهتمام",
+    "en": "Interest-Based Performance",
+    "tag": "book",
+    "def": "الانتباه وضبط الاندفاع يتأثران بكون المهمة مثيرة أو فيها تحدٍّ. عبارة منقولة عن Dodson في كتاب سويتزر.",
+    "patterns": [
+      "الاداء المبني على الاهتمام",
+      "interest-based performance"
+    ]
+  },
+  {
+    "id": "top-10-joys",
+    "ar": "أهم عشر لحظات فرح",
+    "en": "Top 10 Joys",
+    "tag": "book",
+    "def": "تمرين: عشر مناسبات أعطت أكبر فرح، ثم مقابلة «ما الذي أفرحك؟» لاستخراج العناصر.",
+    "patterns": [
+      "اهم 10 افراح",
+      "اهم عشر لحظات فرح",
+      "Top 10 Joys"
+    ]
+  },
+  {
+    "id": "boredom-as-driver",
+    "ar": "الملل كمحرك",
+    "en": "Boredom",
+    "tag": "book",
+    "def": "فرضية سويتزر: الملل هو الفيل في غرفة ADHD ويدفع الشرود والاندفاع. فرضية لا دراسة محكّمة.",
+    "patterns": [
+      "الفيل في غرفة",
+      "مقياس الملل",
+      "الملل كمحرك"
+    ]
   }
 ]

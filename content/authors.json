@@ -160,7 +160,8 @@
     "id": "lembke",
     "ar": "ليمبكي",
     "books": [
-      "lembke-dopamine-nation"
+      "lembke-dopamine-nation",
+      "lembke-dopamine-nation-workbook"
     ]
   },
   {
@@ -356,6 +357,20 @@
     "ar": "جيبس",
     "books": [
       "gibbs-self-regulation-mindfulness"
+    ]
+  },
+  {
+    "id": "palagyi",
+    "ar": "باليجي",
+    "books": [
+      "palagyi-inattentive-adhd-workbook-adults"
+    ]
+  },
+  {
+    "id": "sweitzer",
+    "ar": "سويتزر",
+    "books": [
+      "sweitzer-elephant-in-the-adhd-room"
     ]
   }
 ]

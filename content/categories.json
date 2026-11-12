@@ -864,6 +864,46 @@
         "حركة",
         "تمارين"
       ]
+    },
+    "lembke-dopamine-nation-workbook": {
+      "cats": [
+        "addiction",
+        "adult-skills"
+      ],
+      "tags": [
+        "دوبامين",
+        "صيام",
+        "ربط الذات",
+        "صدق جذري",
+        "دفتر تمارين"
+      ]
+    },
+    "palagyi-inattentive-adhd-workbook-adults": {
+      "cats": [
+        "adhd",
+        "adult-skills"
+      ],
+      "tags": [
+        "ADHD بالغين",
+        "التقنّع",
+        "العار",
+        "التعاطف مع الذات",
+        "القيم"
+      ]
+    },
+    "sweitzer-elephant-in-the-adhd-room": {
+      "cats": [
+        "adhd",
+        "parenting",
+        "education"
+      ],
+      "tags": [
+        "الملل",
+        "عناصر الاهتمام",
+        "التحفيز",
+        "تدريب",
+        "جزئي"
+      ]
     }
   }
 }

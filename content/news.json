@@ -1,5 +1,29 @@
 [
   {
+    "date": "2026-11-12",
+    "title": "ثلاثة كتب جديدة: تمارين ليمبكي، ADHD قليل الانتباه، والملل",
+    "note": "ليمبكي: دفتر تمارين صيام الدوبامين وربط الذات والصدق الجذري. باليجي: التقنّع والعار ودورة ADHD عند البالغين. سويتزر: الملل وعناصر الاهتمام (ملخص جزئي، الفصول 1–6 من 17).",
+    "books": [
+      "lembke-dopamine-nation-workbook",
+      "palagyi-inattentive-adhd-workbook-adults",
+      "sweitzer-elephant-in-the-adhd-room"
+    ],
+    "links": [
+      [
+        "#/book/lembke-dopamine-nation-workbook",
+        "دفتر أمة الدوبامين"
+      ],
+      [
+        "#/book/palagyi-inattentive-adhd-workbook-adults",
+        "ADHD قليل الانتباه للبالغين"
+      ],
+      [
+        "#/book/sweitzer-elephant-in-the-adhd-room",
+        "الفيل في غرفة ADHD"
+      ]
+    ]
+  },
+  {
     "date": "2026-11-11",
     "title": "كتاب جديد: فن النجاح المقصود",
     "note": "كين: الغاية والحملات، التخطيط الأسبوعي، مصفوفة الوقت، وإدارة الطاقة. مع موازنة لادعاءاته عن التشتت والمسؤولية.",

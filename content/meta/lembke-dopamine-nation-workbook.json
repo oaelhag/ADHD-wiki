@@ -1,0 +1,120 @@
+{
+  "note": "تصنيف المستفيدين والأدوات اجتهاد من معدّ الموقع وليس رأي المؤلف.",
+  "sensitiveChapters": [
+    "0",
+    "3",
+    "4"
+  ],
+  "chapterAudiences": {
+    "default": [
+      "adults"
+    ]
+  },
+  "tools": {
+    "1": {
+      "kind": "تحليل عادة",
+      "audiences": [
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "2": {
+      "kind": "تحليل عادة",
+      "audiences": [
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "3": {
+      "kind": "ذات",
+      "audiences": [
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "4": {
+      "kind": "ضبط النفس",
+      "audiences": [
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "5": {
+      "kind": "ضبط النفس",
+      "audiences": [
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "6": {
+      "kind": "تحليل عادة",
+      "audiences": [
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "7": {
+      "kind": "وقاية",
+      "audiences": [
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "8": {
+      "kind": "دعم",
+      "audiences": [
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "9": {
+      "kind": "تنظيم الانفعال",
+      "audiences": [
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "10": {
+      "kind": "علاقة",
+      "audiences": [
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "11": {
+      "kind": "علاقة",
+      "audiences": [
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "12": {
+      "kind": "وقاية",
+      "audiences": [
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "13": {
+      "kind": "وعي بالمشاعر",
+      "audiences": [
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "14": {
+      "kind": "تحفيز",
+      "audiences": [
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "15": {
+      "kind": "تنظيم",
+      "audiences": [
+        "adults"
+      ],
+      "tag": "book"
+    }
+  }
+}
