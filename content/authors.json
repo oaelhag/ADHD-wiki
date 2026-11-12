@@ -372,5 +372,33 @@
     "books": [
       "sweitzer-elephant-in-the-adhd-room"
     ]
+  },
+  {
+    "id": "retrak",
+    "ar": "Retrak",
+    "books": [
+      "retrak-family-reintegration-street-children"
+    ]
+  },
+  {
+    "id": "western-smith",
+    "ar": "ويسترن وسميث",
+    "books": [
+      "western-smith-formerly-incarcerated-parents"
+    ]
+  },
+  {
+    "id": "parke-clarke-stewart",
+    "ar": "باركي وكلارك-ستيوارت",
+    "books": [
+      "parke-clarke-stewart-parental-incarceration-young-children"
+    ]
+  },
+  {
+    "id": "pact",
+    "ar": "Pact",
+    "books": [
+      "pact-going-home"
+    ]
   }
 ]

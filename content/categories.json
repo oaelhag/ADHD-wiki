@@ -904,6 +904,59 @@
         "تدريب",
         "جزئي"
       ]
+    },
+    "retrak-family-reintegration-street-children": {
+      "cats": [
+        "caregiver",
+        "parenting"
+      ],
+      "tags": [
+        "إعادة دمج",
+        "عودة",
+        "متابعة",
+        "موجز دعوي",
+        "سياق مختلف"
+      ]
+    },
+    "western-smith-formerly-incarcerated-parents": {
+      "cats": [
+        "parenting",
+        "caregiver"
+      ],
+      "tags": [
+        "اتصال أثناء الغياب",
+        "علاقة الوالدين",
+        "ثقة",
+        "عودة",
+        "دراسة"
+      ]
+    },
+    "parke-clarke-stewart-parental-incarceration-young-children": {
+      "cats": [
+        "parenting",
+        "caregiver",
+        "emotions"
+      ],
+      "tags": [
+        "انفصال",
+        "شرح للطفل",
+        "مخاطر متراكمة",
+        "تعلق",
+        "عودة"
+      ]
+    },
+    "pact-going-home": {
+      "cats": [
+        "communication",
+        "caregiver"
+      ],
+      "tags": [
+        "تجهيز العودة",
+        "تواصل",
+        "عادات",
+        "أهداف",
+        "أوراق عمل"
+      ]
     }
   }
 }

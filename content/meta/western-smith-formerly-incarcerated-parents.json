@@ -1,0 +1,84 @@
+{
+  "note": "تصنيف المستفيدين والأدوات اجتهاد من معدّ الموقع وليس رأي المؤلف. المصدر قصير، فالأدوات أقل من 15.",
+  "sensitiveChapters": [],
+  "chapterAudiences": {
+    "default": [
+      "parents",
+      "adults"
+    ]
+  },
+  "tools": {
+    "1": {
+      "kind": "روتين",
+      "audiences": [
+        "parents",
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "2": {
+      "kind": "علاقة",
+      "audiences": [
+        "parents",
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "3": {
+      "kind": "دعم",
+      "audiences": [
+        "parents",
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "4": {
+      "kind": "علاقة",
+      "audiences": [
+        "parents",
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "5": {
+      "kind": "علاقة",
+      "audiences": [
+        "parents",
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "6": {
+      "kind": "دعم",
+      "audiences": [
+        "parents",
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "7": {
+      "kind": "علاقة",
+      "audiences": [
+        "parents",
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "8": {
+      "kind": "دعم",
+      "audiences": [
+        "parents",
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "9": {
+      "kind": "وعي بالمشاعر",
+      "audiences": [
+        "parents",
+        "adults"
+      ],
+      "tag": "book"
+    }
+  }
+}

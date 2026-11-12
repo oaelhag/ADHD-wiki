@@ -1,0 +1,100 @@
+{
+  "note": "تصنيف المستفيدين والأدوات اجتهاد من معدّ الموقع وليس رأي المؤلف. المصدر قصير، فالأدوات أقل من 15.",
+  "sensitiveChapters": [],
+  "chapterAudiences": {
+    "default": [
+      "parents",
+      "adults"
+    ]
+  },
+  "tools": {
+    "1": {
+      "kind": "وعي بالمشاعر",
+      "audiences": [
+        "parents",
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "2": {
+      "kind": "وعي بالمشاعر",
+      "audiences": [
+        "parents",
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "3": {
+      "kind": "مهارة تفكير",
+      "audiences": [
+        "parents",
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "4": {
+      "kind": "علاقة",
+      "audiences": [
+        "parents",
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "5": {
+      "kind": "ذات",
+      "audiences": [
+        "parents",
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "6": {
+      "kind": "تواصل",
+      "audiences": [
+        "parents",
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "7": {
+      "kind": "تواصل",
+      "audiences": [
+        "parents",
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "8": {
+      "kind": "تواصل",
+      "audiences": [
+        "parents",
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "9": {
+      "kind": "تواصل",
+      "audiences": [
+        "parents",
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "10": {
+      "kind": "روتين",
+      "audiences": [
+        "parents",
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "11": {
+      "kind": "تنظيم",
+      "audiences": [
+        "parents",
+        "adults"
+      ],
+      "tag": "book"
+    }
+  }
+}

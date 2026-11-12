@@ -1,6 +1,35 @@
 [
   {
     "date": "2026-11-12",
+    "title": "أربعة مصادر جديدة عن الغياب والعودة",
+    "note": "باركي وكلارك-ستيوارت (مراجعة عن أثر الغياب والمخاطر المتراكمة)، ويسترن وسميث (دراسة عن الاتصال بعد العودة)، Pact (كتيّب تجهيز العودة)، وRetrak (موجز قصير، صلته ضعيفة). كلها بسياق مختلف، وموسومة بحدودها.",
+    "books": [
+      "parke-clarke-stewart-parental-incarceration-young-children",
+      "western-smith-formerly-incarcerated-parents",
+      "pact-going-home",
+      "retrak-family-reintegration-street-children"
+    ],
+    "links": [
+      [
+        "#/book/parke-clarke-stewart-parental-incarceration-young-children",
+        "باركي وكلارك-ستيوارت"
+      ],
+      [
+        "#/book/western-smith-formerly-incarcerated-parents",
+        "ويسترن وسميث"
+      ],
+      [
+        "#/book/pact-going-home",
+        "العودة إلى البيت"
+      ],
+      [
+        "#/book/retrak-family-reintegration-street-children",
+        "Retrak"
+      ]
+    ]
+  },
+  {
+    "date": "2026-11-12",
     "title": "ثلاثة كتب جديدة: تمارين ليمبكي، ADHD قليل الانتباه، والملل",
     "note": "ليمبكي: دفتر تمارين صيام الدوبامين وربط الذات والصدق الجذري. باليجي: التقنّع والعار ودورة ADHD عند البالغين. سويتزر: الملل وعناصر الاهتمام (ملخص جزئي، الفصول 1–6 من 17).",
     "books": [
