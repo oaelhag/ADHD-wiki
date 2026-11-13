@@ -3725,5 +3725,38 @@
       "explaining to children",
       "الإفصاح للطفل"
     ]
+  },
+  {
+    "id": "struggle-switch",
+    "ar": "مفتاح الصراع",
+    "en": "Struggle Switch",
+    "tag": "book",
+    "def": "محاولة مقاومة الألم تضاعفه (قلق من القلق، حزن من الحزن). إطفاء المفتاح يترك الألم يرتفع وينخفض طبيعيًا (هاريس).",
+    "patterns": [
+      "مفتاح الصراع",
+      "Drop the Struggle"
+    ]
+  },
+  {
+    "id": "spiral-staircase",
+    "ar": "الدرج اللولبي للحزن",
+    "en": "Spiral Staircase",
+    "tag": "book",
+    "def": "الحزن يتناوب بين حاد وخفيّ في دورات لولبية لا خط مستقيم، وكل دورة تغيّر علاقتك بالفقد (كومار).",
+    "patterns": [
+      "الدرج اللولبي",
+      "Spiral Staircase"
+    ]
+  },
+  {
+    "id": "radical-acceptance",
+    "ar": "القبول الجذري",
+    "en": "Radical Acceptance",
+    "tag": "book",
+    "def": "الترحيب بالشعور والمحفّز كما هو دون هروب أو مجادلة، مع تسميته: «أشعر بـ…».",
+    "patterns": [
+      "القبول الجذري",
+      "Radical Acceptance"
+    ]
   }
 ]
