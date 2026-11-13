@@ -1,132 +1,117 @@
 {
   "note": "تصنيف المستفيدين والأدوات اجتهاد من معدّ الموقع وليس رأي المؤلف.",
   "sensitiveChapters": [
-    "4"
+    "31",
+    "32"
   ],
   "chapterAudiences": {
     "default": [
-      "adults",
-      "parents"
+      "adults"
     ]
   },
   "tools": {
     "1": {
-      "kind": "ذات",
+      "kind": "تنظيم الانفعال",
       "audiences": [
-        "adults",
-        "parents"
+        "adults"
       ],
       "tag": "book"
     },
     "2": {
-      "kind": "وعي بالمشاعر",
+      "kind": "ضبط النفس",
       "audiences": [
-        "adults",
-        "parents"
+        "adults"
       ],
       "tag": "book"
     },
     "3": {
       "kind": "تنظيم الانفعال",
       "audiences": [
-        "adults",
-        "parents"
+        "adults"
       ],
       "tag": "book"
     },
     "4": {
       "kind": "تنظيم الانفعال",
       "audiences": [
-        "adults",
-        "parents"
+        "adults"
       ],
       "tag": "book"
     },
     "5": {
       "kind": "ذات",
       "audiences": [
-        "adults",
-        "parents"
+        "adults"
       ],
       "tag": "book"
     },
     "6": {
       "kind": "مهارة تفكير",
       "audiences": [
-        "adults",
-        "parents"
+        "adults"
       ],
       "tag": "book"
     },
     "7": {
-      "kind": "دعم",
+      "kind": "روتين",
       "audiences": [
-        "adults",
-        "parents"
+        "adults"
       ],
       "tag": "book"
     },
     "8": {
-      "kind": "وعي بالمشاعر",
+      "kind": "علاقة",
       "audiences": [
-        "adults",
-        "parents"
+        "adults"
       ],
       "tag": "book"
     },
     "9": {
-      "kind": "ذات",
+      "kind": "وعي بالمشاعر",
       "audiences": [
-        "adults",
-        "parents"
+        "adults"
       ],
       "tag": "book"
     },
     "10": {
-      "kind": "دعم",
+      "kind": "ذات",
       "audiences": [
-        "adults",
-        "parents"
+        "adults"
       ],
       "tag": "book"
     },
     "11": {
-      "kind": "مهارة تفكير",
+      "kind": "روتين",
       "audiences": [
-        "adults",
-        "parents"
+        "adults"
       ],
       "tag": "book"
     },
     "12": {
-      "kind": "ذات",
+      "kind": "ضبط النفس",
       "audiences": [
-        "adults",
-        "parents"
+        "adults"
       ],
       "tag": "book"
     },
     "13": {
-      "kind": "تنظيم الانفعال",
+      "kind": "تحفيز",
       "audiences": [
-        "adults",
-        "parents"
+        "adults"
       ],
       "tag": "book"
     },
     "14": {
       "kind": "تواصل",
       "audiences": [
-        "adults",
-        "parents"
+        "adults"
       ],
       "tag": "book"
     },
     "15": {
-      "kind": "روتين",
+      "kind": "حدود",
       "audiences": [
-        "adults",
-        "parents"
+        "adults"
       ],
       "tag": "book"
     }

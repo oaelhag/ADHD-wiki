@@ -443,3 +443,9 @@ h2 { font-weight: 600; margin-top: 2.2rem; }
 .guide-ch li{padding:3px 0}
 ul.guide-ch{list-style:none;padding:0}
 .muted{color:var(--muted,#6b6b6b);font-size:.9em}
+
+.refgroup { border: 1px solid var(--line); border-radius: var(--r); background: var(--surface); margin: 6px 0; padding: 6px 14px; }
+.refgroup summary { cursor: pointer; padding: 4px 0; }
+.reflist { margin: 6px 0 8px; padding: 0 18px 0 0; }
+.reflist li { margin: 4px 0; line-height: 1.6; }
+.reflist .en { display: inline-block; color: var(--muted); font-size: .88rem; margin-inline-start: 6px; }

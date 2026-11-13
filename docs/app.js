@@ -327,11 +327,20 @@
     </article>`;
   }
 
-  function concepts() {
-    const list = [...D.concepts].sort((a, b) => a.ar.localeCompare(b.ar, 'ar'));
+  const cnt = (n, one, two, few, many) => n === 1 ? `${one} واحد` : n === 2 ? two : `${n} ${n <= 10 ? few : many}`;
+  function concepts(params) {
+    const sort = ['books', 'mentions', 'alpha'].includes(params.get('sort')) ? params.get('sort') : 'alpha';
+    const ar = (a, b) => a.ar.localeCompare(b.ar, 'ar');
+    const list = [...D.concepts].sort(sort === 'books' ? (a, b) => b.books.length - a.books.length || b.hits.length - a.hits.length || ar(a, b)
+      : sort === 'mentions' ? (a, b) => b.hits.length - a.hits.length || b.books.length - a.books.length || ar(a, b) : ar);
     return `<h1>شبكة المفاهيم</h1>
       <p class="muted">كل مصطلح يقودك إلى الفصول التي يظهر فيها. كلما أضفنا كتابًا اتسعت الشبكة. <a href="#/map">شاهدها كخريطة تفاعلية</a> أو <a href="#/compare">قارن المؤلفين</a>.</p>
-      <div class="cgrid">${list.map(c => `<a href="#/concept/${c.id}"><strong>${esc(c.ar)}</strong><small>${esc(c.en)}</small><span class="muted">${c.hits.length} فصول</span></a>`).join('')}</div>`;
+      <div class="filters"><label>الترتيب: <select data-csort aria-label="ترتيب المفاهيم">
+        <option value="alpha" ${sort === 'alpha' ? 'selected' : ''}>أبجديًا</option>
+        <option value="books" ${sort === 'books' ? 'selected' : ''}>الأكثر كتبًا</option>
+        <option value="mentions" ${sort === 'mentions' ? 'selected' : ''}>الأكثر ذكرًا (عدد الفصول)</option></select></label>
+        <span class="muted">${list.length} مفهومًا في ${D.books.length} كتابًا</span></div>
+      <div class="cgrid">${list.map(c => `<a href="#/concept/${c.id}"><strong>${esc(c.ar)}</strong><small>${esc(c.en)}</small><span class="muted">${cnt(c.books.length, 'كتاب', 'كتابان', 'كتب', 'كتابًا')} · ${cnt(c.hits.length, 'فصل', 'فصلان', 'فصول', 'فصلًا')}</span></a>`).join('')}</div>`;
   }
   function concept(id) {
     const c = D.concepts.find(x => x.id === id); if (!c) return notFound();
@@ -391,11 +400,24 @@
       ${res.length && !results.length ? '<p class="empty">لا توجد نتائج. جرّب كلمة أقصر، أو أزل التصفية.</p>' : ''}`;
   }
 
+  function bookRef() {
+    const li = b => `<li><a href="#/book/${b.id}"><strong>${esc(b.titleAr || b.title)}</strong></a>${b.titleAr ? ` <span class="en" dir="ltr">${esc(b.title)}</span>` : ''}<span class="muted"> ${esc(b.author)}</span></li>`;
+    const byAr = (a, b) => (a.titleAr || a.title).localeCompare(b.titleAr || b.title, 'ar');
+    const cats = D.categories.map(c => ({ c, bs: D.books.filter(b => b.cats.includes(c.id)).sort(byAr) })).filter(x => x.bs.length);
+    const tagMap = new Map();
+    D.books.forEach(b => (b.tags || []).forEach(t => { if (!tagMap.has(t)) tagMap.set(t, []); tagMap.get(t).push(b); }));
+    const tags = [...tagMap.entries()].sort((a, b) => a[0].localeCompare(b[0], 'ar'));
+    return `<h3>حسب التصنيف</h3>` + cats.map(({ c, bs }) => `<details class="refgroup"><summary><b>${esc(c.ar)}</b> <span class="muted">(${bs.length})</span></summary><ul class="reflist">${bs.map(li).join('')}</ul></details>`).join('')
+      + `<h3>حسب الكلمة المفتاحية</h3>` + tags.map(([t, bs]) => `<details class="refgroup"><summary><b>${esc(t)}</b> <span class="muted">(${bs.length})</span></summary><ul class="reflist">${bs.sort(byAr).map(li).join('')}</ul></details>`).join('');
+  }
   function about() {
     return `<h1>عن الموقع</h1>
       <p class="lead">مرجع عائلي غير ربحي يجمع أفكار كتب ADHD والتربية في بنية واحدة يسهل البحث فيها.</p>
       <h2>وسوم الشفافية</h2>
       <div class="legend card">${Object.entries(TAGS).map(([k, v]) => `<div>${chip(k)}<span>${esc(v[1])}</span></div>`).join('')}</div>
+      <h2>مرجع الكتب تحت كل وسم</h2>
+      <p class="muted">يتجدد تلقائيًا عند إضافة كتاب. الكتاب الواحد قد يظهر تحت أكثر من وسم. ${D.books.length} كتابًا.</p>
+      ${bookRef()}
       <h2>ما ليس هذا الموقع</h2>
       <ul class="body"><li>ليس تشخيصًا ولا علاجًا. لا جرعات ولا توصية دوائية.</li><li>ليس بديلًا عن الكتب. الملخص خريطة، والكتاب هو المصدر.</li><li>لا يحكم على أحد، ولا يفترض سبب سلوك بعينه.</li></ul>
       <h2>كيف يُبنى</h2>
@@ -506,7 +528,7 @@
     else if (a === 'library') html = library(params);
     else if (a === 'book') html = !c ? book(b) : c === 'differences' ? differences(b) : c === 'verify' ? verify(b) : chapter(b, c);
     else if (a === 'toolkit') html = toolkit(b, params);
-    else if (a === 'concepts') html = concepts();
+    else if (a === 'concepts') html = concepts(params);
     else if (a === 'concept') { html = concept(b); nav = 'concepts'; }
     else if (a === 'audience') html = audience(b);
     else if (a === 'search') html = search(params);
@@ -542,6 +564,7 @@
     const t = e.target;
     if (t.dataset.f) { const p = hash().params; t.value ? p.set(t.dataset.f, t.value) : p.delete(t.dataset.f); location.hash = '#/search?' + p.toString(); }
     if (t.dataset.tk) { const p = hash().params; t.value ? p.set(t.dataset.tk, t.value) : p.delete(t.dataset.tk); const s = p.toString(); location.hash = '#/toolkit' + (s ? '?' + s : ''); }
+    if (t.dataset.csort !== undefined) { const p = hash().params; t.value === 'alpha' ? p.delete('sort') : p.set('sort', t.value); const q = p.toString(); location.hash = '#/concepts' + (q ? '?' + q : ''); }
     if (t.dataset.libsort !== undefined) { const p = hash().params; t.value === 'new' ? p.delete('sort') : p.set('sort', t.value); const q = p.toString(); location.hash = '#/library' + (q ? '?' + q : ''); }
     if (t.dataset.chk) { const k = 'chk:' + t.dataset.chk; let a = store.get(k, []); const i = +t.dataset.i; a = t.checked ? [...new Set([...a, i])] : a.filter(x => x !== i); store.set(k, a); }
     if (t.dataset.tried) { const d = store.get('tried', {}); d[t.dataset.tried] = t.checked; store.set('tried', d); }
