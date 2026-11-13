@@ -404,11 +404,7 @@
     const li = b => `<li><a href="#/book/${b.id}"><strong>${esc(b.titleAr || b.title)}</strong></a>${b.titleAr ? ` <span class="en" dir="ltr">${esc(b.title)}</span>` : ''}<span class="muted"> ${esc(b.author)}</span></li>`;
     const byAr = (a, b) => (a.titleAr || a.title).localeCompare(b.titleAr || b.title, 'ar');
     const cats = D.categories.map(c => ({ c, bs: D.books.filter(b => b.cats.includes(c.id)).sort(byAr) })).filter(x => x.bs.length);
-    const tagMap = new Map();
-    D.books.forEach(b => (b.tags || []).forEach(t => { if (!tagMap.has(t)) tagMap.set(t, []); tagMap.get(t).push(b); }));
-    const tags = [...tagMap.entries()].sort((a, b) => a[0].localeCompare(b[0], 'ar'));
-    return `<h3>حسب التصنيف</h3>` + cats.map(({ c, bs }) => `<details class="refgroup"><summary><b>${esc(c.ar)}</b> <span class="muted">(${bs.length})</span></summary><ul class="reflist">${bs.map(li).join('')}</ul></details>`).join('')
-      + `<h3>حسب الكلمة المفتاحية</h3>` + tags.map(([t, bs]) => `<details class="refgroup"><summary><b>${esc(t)}</b> <span class="muted">(${bs.length})</span></summary><ul class="reflist">${bs.sort(byAr).map(li).join('')}</ul></details>`).join('');
+    return cats.map(({ c, bs }) => `<details class="refgroup"><summary><b>${esc(c.ar)}</b> <span class="muted">(${bs.length})</span></summary><ul class="reflist">${bs.map(li).join('')}</ul></details>`).join('');
   }
   function about() {
     return `<h1>عن الموقع</h1>
