@@ -36,6 +36,11 @@
       "desc": "تنظيم الوقت والعادات والعمل والمال"
     },
     {
+      "id": "self-development",
+      "ar": "تطوير الذات والمهارات المهنية",
+      "desc": "كتب عامة (ليست عن ADHD) في القرار والتغيير والتواصل المؤثر والقيادة والتعلّم والعمل"
+    },
+    {
       "id": "addiction",
       "ar": "إدمان وعادات قهرية",
       "desc": "الدوبامين، الشاشات، الإفراط وكيف نضبطه"
@@ -352,7 +357,7 @@
     "schewe-super-student": {
       "cats": [
         "education",
-        "adult-skills"
+        "self-development"
       ],
       "tags": [
         "دراسة",
@@ -481,7 +486,7 @@
     "foer-moonwalking-with-einstein": {
       "cats": [
         "education",
-        "adult-skills"
+        "self-development"
       ],
       "tags": [
         "ذاكرة",
@@ -558,8 +563,8 @@
     },
     "oakley-mindshift": {
       "cats": [
-        "education",
-        "adult-skills"
+        "self-development",
+        "education"
       ],
       "tags": [
         "تعلّم الكبار",
@@ -732,7 +737,7 @@
     },
     "horsley-unlimited-memory": {
       "cats": [
-        "adult-skills",
+        "self-development",
         "education"
       ],
       "tags": [
@@ -773,8 +778,8 @@
     },
     "keane-art-of-deliberate-success": {
       "cats": [
-        "adult-skills",
-        "adhd"
+        "self-development",
+        "adult-skills"
       ],
       "tags": [
         "الغاية والحملات",
@@ -1070,6 +1075,151 @@
         "القبول",
         "القيم",
         "الكتابة العلاجية"
+      ]
+    },
+    "hendriksen-how-to-be-enough": {
+      "cats": [
+        "emotions",
+        "self-development",
+        "adult-skills"
+      ],
+      "tags": [
+        "كمالية",
+        "نقد الذات",
+        "رحمة بالذات",
+        "قيم",
+        "تسويف"
+      ]
+    },
+    "brown-dare-to-lead": {
+      "cats": [
+        "self-development",
+        "communication"
+      ],
+      "tags": [
+        "شجاعة",
+        "ضعف",
+        "خزي",
+        "ثقة",
+        "ملاحظات"
+      ]
+    },
+    "carnegie-how-to-stop-worrying": {
+      "cats": [
+        "anxiety-health",
+        "self-development",
+        "emotions"
+      ],
+      "tags": [
+        "قلق",
+        "حجرات اليوم",
+        "أسوأ ما يحدث",
+        "انشغال",
+        "إرهاق"
+      ]
+    },
+    "carnegie-how-to-win-friends": {
+      "cats": [
+        "self-development",
+        "communication"
+      ],
+      "tags": [
+        "تواصل",
+        "نقد",
+        "تقدير",
+        "إصغاء",
+        "اعتراف بالخطأ"
+      ]
+    },
+    "debono-intelligence-information-thinking": {
+      "cats": [
+        "self-development",
+        "education"
+      ],
+      "tags": [
+        "تفكير",
+        "القبعات الست",
+        "التفكير الجانبي",
+        "فخ الذكاء",
+        "تعليم"
+      ]
+    },
+    "heath-switch": {
+      "cats": [
+        "self-development",
+        "communication"
+      ],
+      "tags": [
+        "تغيير السلوك",
+        "الفيل والراكب",
+        "البقع المضيئة",
+        "تقليص التغيير",
+        "العادات"
+      ]
+    },
+    "heath-decisive": {
+      "cats": [
+        "self-development",
+        "adult-skills"
+      ],
+      "tags": [
+        "اتخاذ القرار",
+        "WRAP",
+        "تحيز التأكيد",
+        "ما قبل التشريح",
+        "التجربة الصغيرة"
+      ]
+    },
+    "heath-decisive-workbook": {
+      "cats": [
+        "self-development",
+        "adult-skills"
+      ],
+      "tags": [
+        "اتخاذ القرار",
+        "WRAP",
+        "تمارين",
+        "ما قبل التشريح",
+        "عدالة الإجراء"
+      ]
+    },
+    "heath-made-to-stick": {
+      "cats": [
+        "self-development",
+        "communication"
+      ],
+      "tags": [
+        "تواصل",
+        "لعنة المعرفة",
+        "SUCCESs",
+        "قصص",
+        "تعليم"
+      ]
+    },
+    "kaufman-personal-mba": {
+      "cats": [
+        "self-development",
+        "adult-skills"
+      ],
+      "tags": [
+        "أعمال",
+        "نماذج ذهنية",
+        "إنتاجية",
+        "عادات",
+        "أنظمة"
+      ]
+    },
+    "kracklauer-12-week-mba": {
+      "cats": [
+        "self-development",
+        "adult-skills"
+      ],
+      "tags": [
+        "إدارة",
+        "مالية",
+        "قيادة",
+        "قرار جماعي",
+        "تغذية راجعة"
       ]
     }
   }

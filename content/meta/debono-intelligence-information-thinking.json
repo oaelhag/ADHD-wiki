@@ -1,0 +1,132 @@
+{
+  "note": "تصنيف المستفيدين والأدوات اجتهاد من معدّ الموقع وليس رأي المؤلف.",
+  "sensitiveChapters": [],
+  "chapterAudiences": {
+    "default": [
+      "adults",
+      "teachers"
+    ]
+  },
+  "tools": {
+    "1": {
+      "kind": "مهارة تفكير",
+      "audiences": [
+        "adults",
+        "teachers"
+      ],
+      "tag": "book"
+    },
+    "2": {
+      "kind": "مهارة تفكير",
+      "audiences": [
+        "adults",
+        "teachers"
+      ],
+      "tag": "book"
+    },
+    "3": {
+      "kind": "مهارة تفكير",
+      "audiences": [
+        "adults",
+        "teachers"
+      ],
+      "tag": "book"
+    },
+    "4": {
+      "kind": "دعم الذاكرة",
+      "audiences": [
+        "adults",
+        "teachers"
+      ],
+      "tag": "book"
+    },
+    "5": {
+      "kind": "تواصل",
+      "audiences": [
+        "adults",
+        "teachers"
+      ],
+      "tag": "book"
+    },
+    "6": {
+      "kind": "مهارة تفكير",
+      "audiences": [
+        "adults",
+        "teachers"
+      ],
+      "tag": "book"
+    },
+    "7": {
+      "kind": "مهارة تفكير",
+      "audiences": [
+        "adults",
+        "teachers"
+      ],
+      "tag": "book"
+    },
+    "8": {
+      "kind": "مهارة تفكير",
+      "audiences": [
+        "adults",
+        "teachers"
+      ],
+      "tag": "book"
+    },
+    "9": {
+      "kind": "مهارة تفكير",
+      "audiences": [
+        "adults",
+        "teachers"
+      ],
+      "tag": "book"
+    },
+    "10": {
+      "kind": "مهارة تفكير",
+      "audiences": [
+        "adults",
+        "teachers"
+      ],
+      "tag": "book"
+    },
+    "11": {
+      "kind": "مهارة تفكير",
+      "audiences": [
+        "adults",
+        "teachers"
+      ],
+      "tag": "book"
+    },
+    "12": {
+      "kind": "مهارة تفكير",
+      "audiences": [
+        "adults",
+        "teachers"
+      ],
+      "tag": "book"
+    },
+    "13": {
+      "kind": "مهارة تفكير",
+      "audiences": [
+        "adults",
+        "teachers"
+      ],
+      "tag": "book"
+    },
+    "14": {
+      "kind": "وعي بالمشاعر",
+      "audiences": [
+        "adults",
+        "teachers"
+      ],
+      "tag": "book"
+    },
+    "15": {
+      "kind": "تنظيم",
+      "audiences": [
+        "adults",
+        "teachers"
+      ],
+      "tag": "book"
+    }
+  }
+}

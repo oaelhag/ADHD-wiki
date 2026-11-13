@@ -1,6 +1,25 @@
 [
   {
     "date": "2026-11-13",
+    "title": "اثنا عشر كتابًا جديدًا وتصنيف «تطوير الذات»",
+    "note": "كتب عامة (ليست عن ADHD): الكمالية (هندريكسن)، الشجاعة في القيادة (براون)، القلق وكسب الأصدقاء (كارنيجي)، التفكير (دي بونو)، القرار والتغيير والتواصل (الأخوان هيث، أربعة كتب)، والأعمال (كوفمان وكراكلاور). وأُضيف تصنيف «تطوير الذات والمهارات المهنية» وضُمّت إليه كتب عامة موجودة من قبل. أدلة معظمها أضعف من كتب ADHD، فاقرأ قسم «أين يختلف».",
+    "books": [
+      "hendriksen-how-to-be-enough",
+      "brown-dare-to-lead",
+      "carnegie-how-to-stop-worrying",
+      "carnegie-how-to-win-friends",
+      "debono-intelligence-information-thinking",
+      "heath-switch",
+      "heath-decisive",
+      "heath-decisive-workbook",
+      "heath-made-to-stick",
+      "kaufman-personal-mba",
+      "kracklauer-12-week-mba"
+    ],
+    "links": []
+  },
+  {
+    "date": "2026-11-13",
     "title": "أُضيف حديثًا",
     "note": "كتاب «كيف نحزن على ما فقدناه» (هاريس وآخرون): تمارين عملية للحزن والفقد، يفيد بالتشابه مع الخسائر غير الناتجة عن الموت.",
     "books": [

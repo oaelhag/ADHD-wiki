@@ -463,5 +463,58 @@
     "books": [
       "harris-how-to-grieve-what-weve-lost"
     ]
+  },
+  {
+    "id": "hendriksen",
+    "ar": "هندريكسن",
+    "books": [
+      "hendriksen-how-to-be-enough"
+    ]
+  },
+  {
+    "id": "brene-brown",
+    "ar": "برينيه براون",
+    "books": [
+      "brown-dare-to-lead"
+    ]
+  },
+  {
+    "id": "carnegie",
+    "ar": "ديل كارنيجي",
+    "books": [
+      "carnegie-how-to-stop-worrying",
+      "carnegie-how-to-win-friends"
+    ]
+  },
+  {
+    "id": "debono",
+    "ar": "إدوارد دي بونو",
+    "books": [
+      "debono-intelligence-information-thinking"
+    ]
+  },
+  {
+    "id": "heath",
+    "ar": "الأخوان هيث",
+    "books": [
+      "heath-switch",
+      "heath-decisive",
+      "heath-decisive-workbook",
+      "heath-made-to-stick"
+    ]
+  },
+  {
+    "id": "kaufman",
+    "ar": "جوش كوفمان",
+    "books": [
+      "kaufman-personal-mba"
+    ]
+  },
+  {
+    "id": "kracklauer",
+    "ar": "كراكلاور وبيلهاردت",
+    "books": [
+      "kracklauer-12-week-mba"
+    ]
   }
 ]
