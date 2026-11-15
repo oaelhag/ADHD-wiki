@@ -1,0 +1,135 @@
+{
+  "note": "تصنيف المستفيدين والأدوات اجتهاد من معدّ الموقع وليس رأي المؤلف.",
+  "sensitiveChapters": [
+    "4"
+  ],
+  "chapterAudiences": {
+    "default": [
+      "adults",
+      "parents",
+      "teachers"
+    ]
+  },
+  "tools": {
+    "1": {
+      "kind": "مهارة تفكير",
+      "audiences": [
+        "adults",
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "2": {
+      "kind": "تواصل",
+      "audiences": [
+        "adults",
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "3": {
+      "kind": "تواصل",
+      "audiences": [
+        "adults",
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "4": {
+      "kind": "مهارة تفكير",
+      "audiences": [
+        "adults",
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "5": {
+      "kind": "مهارة تفكير",
+      "audiences": [
+        "adults",
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "6": {
+      "kind": "تواصل",
+      "audiences": [
+        "adults",
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "7": {
+      "kind": "مهارة تفكير",
+      "audiences": [
+        "adults",
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "8": {
+      "kind": "وعي بالمشاعر",
+      "audiences": [
+        "adults",
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "9": {
+      "kind": "تواصل",
+      "audiences": [
+        "adults",
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "10": {
+      "kind": "تواصل",
+      "audiences": [
+        "adults",
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "11": {
+      "kind": "ذات",
+      "audiences": [
+        "adults",
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "12": {
+      "kind": "تواصل",
+      "audiences": [
+        "adults",
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "13": {
+      "kind": "تواصل",
+      "audiences": [
+        "adults",
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "14": {
+      "kind": "تواصل",
+      "audiences": [
+        "adults",
+        "parents"
+      ],
+      "tag": "book"
+    },
+    "15": {
+      "kind": "حدود",
+      "audiences": [
+        "adults",
+        "parents"
+      ],
+      "tag": "book"
+    }
+  }
+}

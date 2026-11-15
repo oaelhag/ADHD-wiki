@@ -3908,5 +3908,438 @@
       "Defusion",
       "defusion"
     ]
+  },
+  {
+    "id": "symptom-response-cycle",
+    "ar": "دورة العرَض–الرد–الرد",
+    "en": "Symptom–Response–Response Cycle",
+    "tag": "book",
+    "def": "يظهر عرَض ADHD، فيفسّره الشريك على أنه عدم اهتمام، فيردّ بغضب أو إلحاح، فينسحب الأول وتتصاعد الدورة. المشكلة في التفاعل لا في العرَض وحده.",
+    "patterns": [
+      "العرَض-الرد-الرد",
+      "العرَض–الرد–الرد",
+      "symptom–response–response",
+      "symptom-response-response"
+    ]
+  },
+  {
+    "id": "parent-child-dynamic",
+    "ar": "ديناميكية الوالد–الطفل",
+    "en": "Parent–Child Dynamic",
+    "tag": "book",
+    "def": "يتولى الشريك غير المصاب دور المراقب الناقد، ويتحول المصاب إلى «طفل»، فتضعف المساواة والرغبة.",
+    "patterns": [
+      "ديناميكية الوالد-الطفل",
+      "ديناميكية الوالد–الطفل",
+      "Parent-Child dynamic"
+    ]
+  },
+  {
+    "id": "chore-wars",
+    "ar": "حروب الأعمال المنزلية",
+    "en": "Chore Wars",
+    "tag": "book",
+    "def": "صراع على الأعمال المنزلية يرمز إلى العدالة والتقدير والإنهاك، ويتفاقم حين يُنسى المصاب أو يتأخر.",
+    "patterns": [
+      "حروب الأعمال المنزلية",
+      "chore wars"
+    ]
+  },
+  {
+    "id": "pursuit-and-escape",
+    "ar": "المطاردة والهروب",
+    "en": "Pursuit and Escape",
+    "tag": "book",
+    "def": "يلحّ أحد الشريكين فينسحب الآخر إلى الانشغال أو الصمت، فيزداد الإلحاح.",
+    "patterns": [
+      "المطاردة والهروب",
+      "pursuit and escape"
+    ]
+  },
+  {
+    "id": "obstacle-emotions",
+    "ar": "المشاعر العائقة",
+    "en": "Obstacle Emotions",
+    "tag": "book",
+    "def": "أربعة مشاعر تعطّل التقدم في الزواج عند أورلوف: الغضب، والخوف من الفشل، والإنكار، واليأس.",
+    "patterns": [
+      "المشاعر العائقة",
+      "Obstacle Emotions"
+    ]
+  },
+  {
+    "id": "three-legged-treatment",
+    "ar": "العلاج بثلاث أرجل",
+    "en": "Three-Legged Treatment",
+    "tag": "book",
+    "def": "علاج جسدي (غالبًا بإشراف طبيب) + تغييرات سلوكية + تحسين تفاعل الزوجين.",
+    "patterns": [
+      "العلاج ثلاثة أرجل",
+      "ثلاثة أرجل",
+      "ثلاث أرجل"
+    ]
+  },
+  {
+    "id": "learning-conversation",
+    "ar": "محادثة التعلّم",
+    "en": "Learning Conversation",
+    "tag": "book",
+    "def": "حوار هدفه فهم الآخر لا الحل: يتحدث أحدهما، ويعيد الآخر ما سمعه، ثم يتحققان. عند ستون وأورلوف.",
+    "patterns": [
+      "محادثة التعلّم",
+      "محادثات التعلّم",
+      "learning conversation"
+    ]
+  },
+  {
+    "id": "verbal-cues",
+    "ar": "الإشارات اللفظية المتفق عليها",
+    "en": "Verbal Cues",
+    "tag": "book",
+    "def": "كلمة أو عبارة يتفق عليها الطرفان لإيقاف نمط متكرر، فتقلّ الوصمة.",
+    "patterns": [
+      "الإشارات اللفظية",
+      "verbal cues",
+      "الإشارة اللفظية"
+    ]
+  },
+  {
+    "id": "three-conversations",
+    "ar": "المحادثات الثلاث",
+    "en": "Three Conversations",
+    "tag": "book",
+    "def": "كل محادثة صعبة هي ثلاث: ماذا حدث؟ والمشاعر، والهوية.",
+    "patterns": [
+      "المحادثات الثلاث",
+      "ثلاث محادثات",
+      "Three Conversations"
+    ]
+  },
+  {
+    "id": "third-story",
+    "ar": "القصة الثالثة",
+    "en": "Third Story",
+    "tag": "book",
+    "def": "وصف محايد للفرق بين قصتين، كما يراه مراقب خارجي، يصلح بداية للحوار.",
+    "patterns": [
+      "القصة الثالثة",
+      "Third Story"
+    ]
+  },
+  {
+    "id": "intent-vs-impact",
+    "ar": "النية مقابل الأثر",
+    "en": "Intent vs. Impact",
+    "tag": "book",
+    "def": "لا نعرف نوايا الآخرين. نتحدث عن الأثر ونسأل عن النية.",
+    "patterns": [
+      "النية والأثر",
+      "النية عن الأثر",
+      "النية مقابل الأثر",
+      "impact vs intent"
+    ]
+  },
+  {
+    "id": "contribution-vs-blame",
+    "ar": "المساهمة بدل اللوم",
+    "en": "Contribution vs. Blame",
+    "tag": "book",
+    "def": "اللوم ينظر إلى الخلف ويحكم؛ المساهمة تفهم كيف ساهم كل طرف وتنظر إلى الأمام.",
+    "patterns": [
+      "المساهمة المشتركة",
+      "منظومة المساهمة",
+      "joint contribution"
+    ]
+  },
+  {
+    "id": "learning-stance",
+    "ar": "موقف التعلّم",
+    "en": "Learning Stance",
+    "tag": "book",
+    "def": "من «يجب أن تفهمني» إلى «ساعدني أن أفهم»: فضول بدل يقين.",
+    "patterns": [
+      "موقف التعلّم",
+      "learning stance"
+    ]
+  },
+  {
+    "id": "and-stance",
+    "ar": "موقف «و»",
+    "en": "And Stance",
+    "tag": "book",
+    "def": "تتسع المحادثة لقصتين ومشاعر متعددة معًا بدل «إما/أو».",
+    "patterns": [
+      "And Stance",
+      "موقف «و»",
+      "موقف \"و\""
+    ]
+  },
+  {
+    "id": "identity-quake",
+    "ar": "زلزال الهوية",
+    "en": "Identity Quake",
+    "tag": "book",
+    "def": "حين تهزّ المحادثة صورتنا عن أنفسنا فنفقد توازننا؛ والعلاج تعقيد الهوية لا إنكارها.",
+    "patterns": [
+      "زلزال الهوية",
+      "identity quake"
+    ]
+  },
+  {
+    "id": "four-horsemen",
+    "ar": "الفرسان الأربعة",
+    "en": "Four Horsemen",
+    "tag": "book",
+    "def": "أربعة أنماط تنذر بتدهور الزواج عند جوتمان: النقد، والازدراء، والدفاعية، والانسحاب الصامت.",
+    "patterns": [
+      "الفرسان الأربعة",
+      "Four Horsemen"
+    ]
+  },
+  {
+    "id": "love-maps",
+    "ar": "خرائط الحب",
+    "en": "Love Maps",
+    "tag": "book",
+    "def": "معرفة تفصيلية بعالم الشريك (أصدقاؤه وضغوطه وأحلامه) تُحدَّث باستمرار.",
+    "patterns": [
+      "خرائط الحب",
+      "خريطة الحب",
+      "Love Maps"
+    ]
+  },
+  {
+    "id": "soft-startup",
+    "ar": "البداية اللطيفة",
+    "en": "Soft Start-up",
+    "tag": "book",
+    "def": "افتتاح النقاش بأربعة أجزاء (أتحمل جزءًا، وأشعر، وحيال موقف محدد، وأحتاج) بدل النقد.",
+    "patterns": [
+      "البداية اللطيفة",
+      "البداية القاسية",
+      "البداية الحادة",
+      "soft start",
+      "harsh start"
+    ]
+  },
+  {
+    "id": "flooding",
+    "ar": "الإغراق الانفعالي",
+    "en": "Flooding",
+    "tag": "book",
+    "def": "ارتفاع جسدي ونفسي يشلّ التفكير أثناء الخلاف؛ العلاج استراحة 20 دقيقة على الأقل.",
+    "patterns": [
+      "الإغراق",
+      "flooding"
+    ]
+  },
+  {
+    "id": "perpetual-problems",
+    "ar": "الخلافات الدائمة",
+    "en": "Perpetual Problems",
+    "tag": "book",
+    "def": "خلافات متجذرة في الشخصية والقيم لا تُحل، وتُدار بالدعابة والتقبل وفهم الحلم وراءها.",
+    "patterns": [
+      "الخلافات الدائمة",
+      "المشكلات الدائمة",
+      "perpetual problem"
+    ]
+  },
+  {
+    "id": "gridlock",
+    "ar": "الجمود",
+    "en": "Gridlock",
+    "tag": "book",
+    "def": "جدال متكرر بلا تقدم يبدو فيه التنازل بيعًا للنفس؛ يكسره كشف الحلم الكامن.",
+    "patterns": [
+      "gridlock",
+      "اكسر الجمود",
+      "الخلاف العالق"
+    ]
+  },
+  {
+    "id": "dreams-within-conflict",
+    "ar": "الأحلام الكامنة في الخلاف",
+    "en": "Dreams Within Conflict",
+    "tag": "book",
+    "def": "وراء الموقف الصلب حلم أو معنى لا يعرفه الآخر؛ يُستكشف بلا محاولة حل.",
+    "patterns": [
+      "الأحلام الكامنة",
+      "الأحلام الخفية",
+      "Dreams Within Conflict"
+    ]
+  },
+  {
+    "id": "accept-influence",
+    "ar": "تقبّل التأثير",
+    "en": "Accept Influence",
+    "tag": "book",
+    "def": "مشاركة السلطة: البحث عن الجزء المعقول في طلب الشريك، وليس إذعانًا.",
+    "patterns": [
+      "قبول التأثير",
+      "تقبّل التأثير",
+      "Accept Influence",
+      "Yield to Win",
+      "الانحناء كي تنتصر"
+    ]
+  },
+  {
+    "id": "emotional-bank-account",
+    "ar": "البنك العاطفي",
+    "en": "Emotional Bank Account",
+    "tag": "book",
+    "def": "كل التفات إلى طلب الشريك إيداع يبني رصيد حسن النية.",
+    "patterns": [
+      "البنك العاطفي"
+    ]
+  },
+  {
+    "id": "positive-sentiment-override",
+    "ar": "تغلّب الإيجابية",
+    "en": "Positive Sentiment Override",
+    "tag": "book",
+    "def": "حين تغمر المشاعر الإيجابية يفسّر الزوجان الأمور بحسن ظن.",
+    "patterns": [
+      "تغلّب الإيجابية",
+      "positive sentiment override"
+    ]
+  },
+  {
+    "id": "stress-reducing-conversation",
+    "ar": "المحادثة المخففة للضغط",
+    "en": "Stress-Reducing Conversation",
+    "tag": "book",
+    "def": "20–30 دقيقة يوميًا لتفريغ ضغوط خارج الزواج بإنصات داعم بلا نصائح.",
+    "patterns": [
+      "المحادثة المخففة للضغط"
+    ]
+  },
+  {
+    "id": "shared-meaning",
+    "ar": "المعنى المشترك",
+    "en": "Shared Meaning",
+    "tag": "book",
+    "def": "طقوس وأدوار وأهداف وقيم يبنيها الزوجان معًا.",
+    "patterns": [
+      "المعنى المشترك",
+      "Shared Meaning"
+    ]
+  },
+  {
+    "id": "motivation-3",
+    "ar": "التحفيز 3.0",
+    "en": "Motivation 3.0",
+    "tag": "book",
+    "def": "نظام دافعية يقوم على الاستقلالية والإتقان والغاية بدل الجزرة والعصا (2.0).",
+    "patterns": [
+      "Motivation 3.0",
+      "Motivation 2.0",
+      "التحفيز 3.0",
+      "التحفيز 2.0"
+    ]
+  },
+  {
+    "id": "self-determination-theory",
+    "ar": "نظرية تقرير المصير",
+    "en": "Self-Determination Theory",
+    "tag": "book",
+    "def": "ثلاث حاجات نفسية: الكفاءة والاستقلالية والانتماء؛ إشباعها يرفع الدافعية.",
+    "patterns": [
+      "نظرية تقرير المصير",
+      "Self-Determination"
+    ]
+  },
+  {
+    "id": "autonomy-mastery-purpose",
+    "ar": "الاستقلالية والإتقان والغاية",
+    "en": "Autonomy, Mastery, Purpose",
+    "tag": "book",
+    "def": "أسس الدافع الداخلي الثلاثة عند بينك.",
+    "patterns": [
+      "استقلالية وإتقان وغاية",
+      "الاستقلالية والإتقان والغاية"
+    ]
+  },
+  {
+    "id": "if-then-rewards",
+    "ar": "مكافآت «إن… فـ…» و«الآن وقد…»",
+    "en": "If-Then vs. Now-That Rewards",
+    "tag": "book",
+    "def": "المكافأة المشروطة المتوقعة تضعف الدافع الداخلي؛ والمفاجئة بعد العمل أخف أثرًا.",
+    "patterns": [
+      "if-then",
+      "now that",
+      "الآن وقد",
+      "إن… فـ…"
+    ]
+  },
+  {
+    "id": "sawyer-effect",
+    "ar": "تأثير سوير",
+    "en": "Sawyer Effect",
+    "tag": "book",
+    "def": "تحويل اللعب إلى عمل حين يصير مدفوعًا أو إلزاميًا.",
+    "patterns": [
+      "تأثير سوير",
+      "Sawyer Effect"
+    ]
+  },
+  {
+    "id": "goldilocks-tasks",
+    "ar": "مهام غولديلوكس",
+    "en": "Goldilocks Tasks",
+    "tag": "book",
+    "def": "مهام أعلى قليلًا من المهارة الحالية، لا سهلة فتُملّ ولا صعبة فتقلق.",
+    "patterns": [
+      "غولديلوكس",
+      "Goldilocks"
+    ]
+  },
+  {
+    "id": "fedex-day",
+    "ar": "يوم FedEx",
+    "en": "FedEx Day",
+    "tag": "book",
+    "def": "24 ساعة لمشروع حر خارج المهام، ثم عرض النتائج.",
+    "patterns": [
+      "يوم FedEx",
+      "يوم فيديكس",
+      "FedEx Day",
+      "أيام FedEx"
+    ]
+  },
+  {
+    "id": "grit",
+    "ar": "الجَلَد",
+    "en": "Grit",
+    "tag": "book",
+    "def": "المثابرة والشغف بأهداف طويلة الأمد.",
+    "patterns": [
+      "(grit",
+      "«الجَلَد»",
+      "مقياس الجَلَد"
+    ]
+  },
+  {
+    "id": "gradual-discipline-rifq",
+    "ar": "الرفق وسلّم التأديب المتدرج",
+    "en": "Rifq and Gradual Discipline",
+    "tag": "book",
+    "def": "الرفق أصل والعقوبة استثناء أخير ومتدرج، بعد تشخيص الباعث والعمر والطبع.",
+    "patterns": [
+      "الرفق أصل",
+      "التأديب المتدرج",
+      "سلّم التأديب"
+    ]
+  },
+  {
+    "id": "substitute-friend",
+    "ar": "الصديق البديل",
+    "en": "The Substitute Friend",
+    "tag": "book",
+    "def": "بدل منع الصحبة السيئة وحده، تُصنع صحبة بديلة صالحة في البيت والحي والمسجد والمدرسة.",
+    "patterns": [
+      "الصديق البديل"
+    ]
   }
 ]

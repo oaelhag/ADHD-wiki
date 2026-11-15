@@ -516,5 +516,40 @@
     "books": [
       "kracklauer-12-week-mba"
     ]
+  },
+  {
+    "id": "orlov",
+    "ar": "أورلوف",
+    "books": [
+      "orlov-adhd-effect-on-marriage"
+    ]
+  },
+  {
+    "id": "stone-patton-heen",
+    "ar": "ستون وباتون وهين",
+    "books": [
+      "stone-difficult-conversations"
+    ]
+  },
+  {
+    "id": "gottman",
+    "ar": "جوتمان",
+    "books": [
+      "gottman-seven-principles-marriage"
+    ]
+  },
+  {
+    "id": "pink",
+    "ar": "بينك",
+    "books": [
+      "pink-drive"
+    ]
+  },
+  {
+    "id": "ulwan",
+    "ar": "علوان",
+    "books": [
+      "ulwan-tarbiyat-al-awlad"
+    ]
   }
 ]

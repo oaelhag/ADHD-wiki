@@ -1221,6 +1221,73 @@
         "قرار جماعي",
         "تغذية راجعة"
       ]
+    },
+    "orlov-adhd-effect-on-marriage": {
+      "cats": [
+        "adhd",
+        "communication",
+        "caregiver"
+      ],
+      "tags": [
+        "ADHD",
+        "زواج",
+        "غضب",
+        "تواصل",
+        "حدود"
+      ]
+    },
+    "stone-difficult-conversations": {
+      "cats": [
+        "communication",
+        "emotions",
+        "self-development"
+      ],
+      "tags": [
+        "محادثات صعبة",
+        "تواصل",
+        "هوية",
+        "إصغاء",
+        "تفاوض"
+      ]
+    },
+    "gottman-seven-principles-marriage": {
+      "cats": [
+        "communication",
+        "emotions"
+      ],
+      "tags": [
+        "زواج",
+        "إصلاح",
+        "خلافات",
+        "صداقة",
+        "أوراق عمل"
+      ]
+    },
+    "pink-drive": {
+      "cats": [
+        "self-development",
+        "education",
+        "parenting"
+      ],
+      "tags": [
+        "دافعية",
+        "استقلالية",
+        "إتقان",
+        "غاية",
+        "حوافز"
+      ]
+    },
+    "ulwan-tarbiyat-al-awlad": {
+      "cats": [
+        "parenting"
+      ],
+      "tags": [
+        "تربية إسلامية",
+        "تأديب متدرج",
+        "قدوة",
+        "انحراف",
+        "صحبة"
+      ]
     }
   }
 }
