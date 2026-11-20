@@ -1,5 +1,33 @@
 [
   {
+    "date": "2026-11-20",
+    "title": "أُضيف حديثًا",
+    "note": "سبعة كتب: الغسيل المتسخ (العار والشريك)، وكيف تتعامل مع ADHD (مكابي)، والسنوات المدهشة (تربية 2–8 سنوات)، وADHD رائع، وADHD 2.0 والقلق الاجتماعي، والعلاجات غير الدوائية (بورديك)، وإتقان الوظائف التنفيذية في 30 يومًا.",
+    "books": [
+      "pink-emery-dirty-laundry",
+      "mccabe-how-to-adhd",
+      "webster-stratton-incredible-years",
+      "holderness-adhd-is-awesome",
+      "hampton-adhd-2-social-anxiety",
+      "burdick-adhd-non-medication-treatments",
+      "harper-30-day-executive-functioning-adults"
+    ],
+    "links": [
+      [
+        "#/book/pink-emery-dirty-laundry",
+        "افتح الكتاب"
+      ],
+      [
+        "#/book/mccabe-how-to-adhd",
+        "افتح الكتاب"
+      ],
+      [
+        "#/book/webster-stratton-incredible-years",
+        "افتح الكتاب"
+      ]
+    ]
+  },
+  {
     "date": "2026-11-15",
     "title": "خمسة كتب جديدة: الزواج والمحادثات الصعبة والدافعية وتربية الأولاد",
     "note": "تأثير ADHD في الزواج (أورلوف)، والمبادئ السبعة لإنجاح الزواج (جوتمان) بأوراق العمل، والمحادثات الصعبة (ستون وباتون وهين)، والدافع (بينك)، وتربية الأولاد في الإسلام (علوان). ثلاثة منها ليست عن ADHD، وأدلتها أضعف من كتب ADHD أو تحتاج تحققًا. الأحكام الفقهية في كتاب علوان تُحال لمفتٍ.",

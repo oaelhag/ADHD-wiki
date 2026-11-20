@@ -551,5 +551,54 @@
     "books": [
       "ulwan-tarbiyat-al-awlad"
     ]
+  },
+  {
+    "id": "pink-emery",
+    "ar": "بينك وإيمري",
+    "books": [
+      "pink-emery-dirty-laundry"
+    ]
+  },
+  {
+    "id": "mccabe",
+    "ar": "مكابي",
+    "books": [
+      "mccabe-how-to-adhd"
+    ]
+  },
+  {
+    "id": "webster-stratton",
+    "ar": "ويبستر-ستراتون",
+    "books": [
+      "webster-stratton-incredible-years"
+    ]
+  },
+  {
+    "id": "holderness",
+    "ar": "هولدرنس",
+    "books": [
+      "holderness-adhd-is-awesome"
+    ]
+  },
+  {
+    "id": "hampton",
+    "ar": "هامبتون",
+    "books": [
+      "hampton-adhd-2-social-anxiety"
+    ]
+  },
+  {
+    "id": "burdick",
+    "ar": "بورديك",
+    "books": [
+      "burdick-adhd-non-medication-treatments"
+    ]
+  },
+  {
+    "id": "harper",
+    "ar": "هاربر",
+    "books": [
+      "harper-30-day-executive-functioning-adults"
+    ]
   }
 ]

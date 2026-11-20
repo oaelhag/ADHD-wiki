@@ -1288,6 +1288,98 @@
         "انحراف",
         "صحبة"
       ]
+    },
+    "pink-emery-dirty-laundry": {
+      "cats": [
+        "adhd",
+        "communication"
+      ],
+      "tags": [
+        "العار",
+        "الشريك",
+        "العلاقة الزوجية",
+        "عمى الوقت",
+        "المال والبيت"
+      ]
+    },
+    "mccabe-how-to-adhd": {
+      "cats": [
+        "adhd",
+        "adult-skills"
+      ],
+      "tags": [
+        "الانتباه",
+        "النوم",
+        "الوقت",
+        "الدافعية",
+        "الذاكرة",
+        "المشاعر"
+      ]
+    },
+    "webster-stratton-incredible-years": {
+      "cats": [
+        "parenting",
+        "adhd"
+      ],
+      "tags": [
+        "الثناء",
+        "الحدود",
+        "مهلة الهدوء",
+        "حل المشكلات",
+        "النوم"
+      ]
+    },
+    "holderness-adhd-is-awesome": {
+      "cats": [
+        "adhd",
+        "communication"
+      ],
+      "tags": [
+        "القوة",
+        "الأسرة",
+        "الشريك",
+        "القوائم",
+        "الحلول عند المنبع"
+      ]
+    },
+    "hampton-adhd-2-social-anxiety": {
+      "cats": [
+        "anxiety-health",
+        "adult-skills"
+      ],
+      "tags": [
+        "القلق الاجتماعي",
+        "التأجيل",
+        "إدارة الوقت",
+        "تقدير الذات",
+        "المهارات الاجتماعية"
+      ]
+    },
+    "burdick-adhd-non-medication-treatments": {
+      "cats": [
+        "adhd",
+        "parenting"
+      ],
+      "tags": [
+        "غير دوائي",
+        "اليقظة الذهنية",
+        "النوم",
+        "المدرسة",
+        "دفتر أدوات"
+      ]
+    },
+    "harper-30-day-executive-functioning-adults": {
+      "cats": [
+        "adult-skills",
+        "adhd"
+      ],
+      "tags": [
+        "الوظائف التنفيذية",
+        "الذاكرة العاملة",
+        "إدارة الوقت",
+        "أهداف صغيرة",
+        "للبالغين"
+      ]
     }
   }
 }
