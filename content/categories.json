@@ -1394,6 +1394,32 @@
         "البيت والغسيل",
         "الراحة"
       ]
+    },
+    "sarkis-klein-add-and-your-money": {
+      "cats": [
+        "adult-skills",
+        "adhd"
+      ],
+      "tags": [
+        "المال",
+        "الميزانية",
+        "الإنفاق الاندفاعي",
+        "الديون",
+        "الشريكان والمال"
+      ]
+    },
+    "kelly-ramundo-you-mean-im-not-lazy-stupid-or-crazy": {
+      "cats": [
+        "adhd",
+        "adult-skills"
+      ],
+      "tags": [
+        "إعادة الصياغة",
+        "العار",
+        "التوازن",
+        "العلاقات",
+        "التنظيم والذاكرة"
+      ]
     }
   }
 }

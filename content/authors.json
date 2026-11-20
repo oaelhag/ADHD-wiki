@@ -607,5 +607,19 @@
     "books": [
       "davis-how-to-keep-house-while-drowning"
     ]
+  },
+  {
+    "id": "sarkis-klein",
+    "ar": "سركيس وكلاين",
+    "books": [
+      "sarkis-klein-add-and-your-money"
+    ]
+  },
+  {
+    "id": "kelly-ramundo",
+    "ar": "كيلي ورامندو",
+    "books": [
+      "kelly-ramundo-you-mean-im-not-lazy-stupid-or-crazy"
+    ]
   }
 ]
