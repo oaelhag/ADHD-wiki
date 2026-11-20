@@ -523,7 +523,7 @@
       <h2>كيف يُبنى</h2>
       <ul class="body"><li>كل كتاب ملف Markdown واحد، يتحول إلى بيانات منظمة (فصول، أدوات، مفاهيم، خلافات).</li><li>إضافة كتاب جديدة لا تغيّر الكود، فقط تضيف ملفًا.</li><li>الأفكار بإعادة صياغة، مع إحالة إلى الفصل. أرقام الصفحات حيث تتوفر.</li><li>آخر بناء: ${esc(D.site.generated)}.</li></ul>
       <h2>الخصوصية</h2>
-      <p>لا حسابات ولا تتبع. علامات «جرّبتها» وقوائم التحقق تُحفظ في متصفحك وحده.</p>
+      <p>${window.GC_CODE ? 'لا حسابات. نعدّ الزيارات بعدّاد مجهول بلا ملفات تعريف ارتباط (GoatCounter) ولا نتتبع الأفراد. ' : 'لا حسابات ولا تتبع. '}علامات «جرّبتها» وقوائم التحقق تُحفظ في متصفحك وحده.</p>
       <h2>تواصل معنا</h2>
       <p>عندك اقتراح أو ملاحظة أو تصحيح؟ <a href="https://docs.google.com/forms/d/e/1FAIpQLSeXicEWE8EKS4o2-Cts_eqWerS70-NndjvD_2ztLf6jCr0R4g/viewform?usp=header" target="_blank" rel="noopener noreferrer">افتح نموذج التواصل</a>. يُفتح في موقع Google، وما تكتبه هناك يخضع لسياسة Google وليس لهذا الموقع.</p>`;
   }
@@ -590,6 +590,41 @@
       </ul>
       <p class="stage">للتعمق في أي فكرة، ارجع إلى <a href="#/library">ملخصات الكتب</a> التي بُني منها الدليل.</p>`;
   }
+  // ---------- صفحة المطوّر (غير مدرجة في القائمة) ----------
+  // ملاحظة: الموقع ثابت بلا خادم، فالرابط مخفي لا محمي. لا تضع فيها شيئًا سريًا.
+  function dev() {
+    try { localStorage.setItem('skipgc', 't'); } catch (e) {}
+    const bs = [...D.books].sort((x, y) => titleOf(x).localeCompare(titleOf(y), 'ar'));
+    return `<h1>لوحة المطوّر</h1>
+      <p class="muted">صفحة داخلية غير مدرجة في القائمة. زيارتك لها من هذا المتصفح لا تُحسب في العدّاد.</p>
+      <section class="card"><h2>الزيارات</h2>
+        ${window.GC_CODE ? `<p><b id="gcCount">…</b> زيارة حتى الآن (تقدير العدّاد منذ تفعيله). <a href="https://${esc(window.GC_CODE)}.goatcounter.com" target="_blank" rel="noopener noreferrer">لوحة التفصيل ↗</a></p>`
+        : `<p class="pending" role="status">العدّاد غير مفعّل بعد. لا توجد بيانات زيارات قبل تفعيله، فلا رقم تاريخي.</p>
+        <ol class="body"><li>سجّل مجانًا في goatcounter.com واختر رمزًا للموقع.</li><li>من الإعدادات فعّل «Allow adding visitor counts on your website».</li><li>ضع الرمز في <code>window.GC_CODE</code> داخل <code>docs/index.html</code>.</li></ol>`}
+      </section>
+      <section class="card"><h2>الموقع الآن</h2><p>${D.books.length} كتابًا · ${D.books.reduce((s, b) => s + b.chapters.length, 0)} فصلًا · ${D.concepts.length} مفهومًا · ${D.concepts.filter(c => c.notes).length} دراسات مفاهيم · ${(D.studies || []).length} مصادر أولية</p></section>
+      <section class="card"><h2>طباعة كتاب أو فصول إلى PDF</h2>
+        <p class="muted">كل البطاقات تُفتح تلقائيًا في الطباعة. اختر الكتاب، ثم الفصول، ثم «حفظ كـ PDF» من نافذة الطباعة.</p>
+        <p><select id="devBook" aria-label="الكتاب">${bs.map(b => `<option value="${esc(b.id)}">${esc(titleOf(b))}</option>`).join('')}</select>
+        <button class="btn" type="button" data-devgo>اختيار الفصول</button></p></section>`;
+  }
+  function devAfter() {
+    if (!window.GC_CODE) return;
+    fetch(`https://${window.GC_CODE}.goatcounter.com/counter/TOTAL.json`).then(r => r.json()).then(j => { const el = document.getElementById('gcCount'); if (el) el.textContent = j.count; })
+      .catch(() => { const el = document.getElementById('gcCount'); if (el) el.textContent = 'تعذّر الجلب'; });
+  }
+  function devPrint(bid, params) {
+    const b = D.books.find(x => x.id === bid); if (!b || !b.chapters) return notFound();
+    const chap = c => `<section class="pchap" data-pch="${c.id}"><h2>${esc(c.prefix + c.title)}</h2>${c.en ? `<p class="muted" dir="ltr">${esc(c.en)}</p>` : ''}
+      ${c.fields.map(f => `<div class="pfld"><h3>${esc(f.label)}</h3><div class="body">${f.html}</div></div>`).join('')}</section>`;
+    return `<p class="crumbs no-print"><a href="#/dev">لوحة المطوّر</a></p>
+      <div class="no-print card"><h1>${esc(titleOf(b))}</h1>
+        <p class="actions"><button class="btn ghost" type="button" data-devall="1">تحديد الكل</button> <button class="btn ghost" type="button" data-devall="0">إلغاء الكل</button> <label><input type="checkbox" data-devcover checked> بطاقة الكتاب في البداية</label></p>
+        <div class="chips">${b.chapters.map(c => `<label class="chip plain"><input type="checkbox" data-devch="${c.id}" checked> ${esc(c.badge || '')} ${esc(c.title)}</label>`).join('')}</div>
+        <p><button class="btn" type="button" data-devprint>طباعة / حفظ PDF</button></p></div>
+      <div class="pcover">${printCard(b).replace('class="printcard" aria-hidden="true"', 'class="pcard"')}</div>
+      ${b.chapters.map(chap).join('')}`;
+  }
   function notFound() { return `<h1>الصفحة غير موجودة</h1><p>الرابط قديم أو خاطئ. <a href="#/">ارجع إلى الرئيسية</a>.</p>`; }
 
   // ---------- تحميل البيانات عند الحاجة ----------
@@ -614,6 +649,7 @@
     let need;
     if (a === 'book' && b) need = loadBook(b);
     else if (a === 'toolkit') need = loadAllBooks();
+    else if (a === 'dev') need = b === 'print' && parts[2] ? loadBook(parts[2]) : loadAllBooks();
     else if (a === 'search') need = loadIndex();
     else if (window.__views[a] && window.__views[a].need) need = window.__views[a].need();
     if (!need) return draw();
@@ -638,6 +674,7 @@
     else if (a === 'sources') html = sources();
     else if (a === 'source') { html = source(b); nav = 'sources'; }
     else if (a === 'about') html = about();
+    else if (a === 'dev') { html = b === 'print' ? devPrint(c, params) : dev(); nav = ''; if (b !== 'print') devAfter(); }
     else if (window.__views[a]) html = window.__views[a].html(b, params);
     else html = notFound();
     $app.innerHTML = html;
@@ -668,6 +705,8 @@
     const t = e.target;
     if (t.dataset.f) { const p = hash().params; t.value ? p.set(t.dataset.f, t.value) : p.delete(t.dataset.f); location.hash = '#/search?' + p.toString(); }
     if (t.dataset.tk) { const p = hash().params; t.value ? p.set(t.dataset.tk, t.value) : p.delete(t.dataset.tk); const s = p.toString(); location.hash = '#/toolkit' + (s ? '?' + s : ''); }
+    if (t.dataset.devch) { const s = document.querySelector(`[data-pch="${t.dataset.devch}"]`); if (s) s.classList.toggle('pskip', !t.checked); }
+    if (t.dataset.devcover !== undefined) { const s = document.querySelector('.pcover'); if (s) s.classList.toggle('pskip', !t.checked); }
     if (t.dataset.cstudy !== undefined) { const p = hash().params; t.checked ? p.set('study', '1') : p.delete('study'); const q = p.toString(); location.hash = '#/concepts' + (q ? '?' + q : ''); }
     if (t.dataset.csort !== undefined) { const p = hash().params; t.value === 'alpha' ? p.delete('sort') : p.set('sort', t.value); const q = p.toString(); location.hash = '#/concepts' + (q ? '?' + q : ''); }
     if (t.dataset.libsort !== undefined) { const p = hash().params; t.value === 'new' ? p.delete('sort') : p.set('sort', t.value); const q = p.toString(); location.hash = '#/library' + (q ? '?' + q : ''); }
@@ -686,6 +725,10 @@
     }
     const b = e.target.closest('button[data-href]');
     if (b) location.hash = b.dataset.href;
+    if (e.target.closest('button[data-devgo]')) { const v = document.getElementById('devBook'); if (v) location.hash = '#/dev/print/' + encodeURIComponent(v.value); }
+    const da = e.target.closest('button[data-devall]');
+    if (da) document.querySelectorAll('[data-devch]').forEach(x => { x.checked = da.dataset.devall === '1'; x.dispatchEvent(new Event('change', { bubbles: true })); });
+    if (e.target.closest('button[data-devprint]')) window.print();
     if (e.target.closest('button[data-print]')) {
       document.querySelectorAll('details.fld').forEach(d => { d.dataset.was = d.open ? '1' : '0'; d.open = true; });
       window.print();

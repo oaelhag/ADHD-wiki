@@ -485,3 +485,16 @@ ul.guide-ch{list-style:none;padding:0}
 .lvl-L1 { border-color: #2f9e6b; } .lvl-L2 { border-color: #4a8fd0; } .lvl-L3 { border-color: #8a7bd0; } .lvl-L4 { border-color: #d9a431; } .lvl-L5 { border-color: #c96a6a; }
 .cite { font-size: .9rem; line-height: 1.7; color: var(--muted); text-align: left; overflow-wrap: anywhere; }
 @media (prefers-color-scheme: dark) { .reviewed { background: #17321f; border-color: #3b7a55; } }
+
+/* صفحة المطوّر والطباعة */
+.pchap, .pcover { margin: 18px 0; border-top: 1px solid var(--line); padding-top: 12px; }
+.pcover .pcard { display: none; }
+.pskip { display: none !important; }
+.pfld h3 { font-size: 1rem; margin: 12px 0 4px; }
+@media print {
+  .no-print { display: none !important; }
+  .pcover .pcard { display: block; }
+  .pcover { border: 0; padding: 0; break-after: page; }
+  .pchap { border: 0; padding: 0; break-before: page; }
+  .pfld { break-inside: auto; } .pfld h3 { break-after: avoid; }
+}
