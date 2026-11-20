@@ -82,7 +82,7 @@
         <a class="door" href="#/library"><b>${nb}</b><span>المكتبة</span><small>${nc} فصلًا بملخصات كاملة، وخريطة لكل كتاب.</small></a>
         <a class="door" href="#/toolkit"><b>${nt}</b><span>الأدوات</span><small>خطوات وقوائم تحقق تجرّبها وتضع عليها علامة.</small></a>
         <a class="door" href="#/concepts"><b>${D.concepts.length}</b><span>المفاهيم</span><small>مصطلح بمصطلح، وأين يظهر في الكتب.</small></a>
-        <a class="door" href="#/sources"><b>${(D.studies || []).length}</b><span>الدراسات</span><small>دراسات وإرشادات رسمية خارج الكتب، بدرجة كل مصدر وحدوده.</small></a>
+        <a class="door" href="#/concepts?study=1"><b>${D.concepts.filter(c => c.notes).length}</b><span>دراسات المفاهيم</span><small>ملفات تقارن الكتب في مفهوم واحد: الشاشات، والعند، والعزل، والمكافآت.</small></a>
         <a class="door" href="#/guide"><b>PDF</b><span>الدليل الكامل</span><small>${GUIDE.pages} صفحة للقراءة هنا أو التنزيل.</small></a>
         <a class="door" href="#/audience"><b>${D.audiences.length}</b><span>حسب من تكون؟</span><small>بالغ مصاب، أب أو أم، معلم، أو تحدٍّ خاص.</small></a>
       </section>
