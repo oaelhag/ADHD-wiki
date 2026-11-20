@@ -468,3 +468,8 @@ ul.guide-ch{list-style:none;padding:0}
 .st-cond { background: #fbeed0; color: #6b4a00; }
 .st-no { background: #f6dcdc; color: #7a1f1f; }
 @media (prefers-color-scheme: dark) { .st-yes { background: #1d3a29; color: #bfe6cc; } .st-cond { background: #3d3216; color: #f0d58f; } .st-no { background: #432222; color: #f0bcbc; } .pending { background: #3a3113; border-color: #8a6d1f; } }
+
+.howto { border: 1px solid var(--line); border-radius: var(--r); background: var(--surface); margin: 10px 0 14px; padding: 6px 14px; }
+.howto summary { cursor: pointer; padding: 4px 0; }
+.howto ol, .howto ul { margin: 6px 0 10px; }
+.howto li { margin: 6px 0; line-height: 1.7; }

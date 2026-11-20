@@ -328,17 +328,38 @@
   }
 
   const cnt = (n, one, two, few, many) => n === 1 ? `${one} واحد` : n === 2 ? two : `${n} ${n <= 10 ? few : many}`;
+  const HOWTO_LIST = `<details class="howto"><summary><b>كيف أستعمل هذه الصفحة؟</b></summary>
+      <ol class="body">
+        <li>اختر مفهومًا. ابدأ بما عليه شارة <span class="stchip st-yes" style="font-size:.75rem">ملف دراسة</span>.</li>
+        <li>«ملف دراسة» يعني أننا قرأنا فصول الكتب فعلًا. فيه خلاصة، وأين تتفق الكتب وأين تختلف، وموقف كل كتاب.</li>
+        <li>بلا شارة: التقاط آلي للمقاطع فقط. اقرأه كفهرس، لا كخلاصة.</li>
+        <li>ابدأ بالخلاصة (ستة أسطر). إن كفتك فتوقف. وإن أردت أكثر فانزل.</li>
+        <li>لا تُرجّح رأيًا لأن عدد من يؤيده أكبر. انظر «الأساس» الذي يستند إليه كل كتاب، ثم «أسئلة تساعدك على الاختيار».</li>
+        <li>ما وُسم «استنتاج» اجتهاد معدّ الموقع وليس نص الكتاب. وما وُسم «يحتاج مختصًا» يُترك للمختص.</li>
+      </ol></details>`;
+  const HOWTO_PAGE = `<details class="howto"><summary><b>كيف أقرأ هذه الصفحة؟</b></summary>
+      <ul class="body">
+        <li><b>الخلاصة:</b> تلخّص كل ما بعدها. المراجع الصغيرة تنقلك إلى الفصل في الكتاب.</li>
+        <li><b>أين تتفق / أين تختلف:</b> الاتفاق أقوى ما يُعتمد عليه. وفي الاختلاف ترى موقف كل طرف وسببه.</li>
+        <li><b>موقف كل كتاب:</b> <span class="stchip st-yes">يؤيد</span> <span class="stchip st-cond">يقيّد بشروط</span> <span class="stchip st-no">يعارض</span>. تصنيف معدّ الموقع. و«الأساس» يبيّن إن كان الكتاب يستند إلى تجارب أو خبرة سريرية أو حجة منطقية أو رأي المؤلف.</li>
+        <li><b>أسئلة الاختيار:</b> استنتاج يساعدك على الموازنة، لا حكم لصالح كتاب.</li>
+        <li><b>«كتب جديدة لم تُدمج بعد»:</b> الخلاصة لا تشمل هذه الكتب إلى أن تُراجَع.</li>
+        <li>القرار الطبي أو التشخيص: للمختص دائمًا.</li>
+      </ul></details>`;
   function concepts(params) {
     const sort = ['books', 'mentions', 'alpha'].includes(params.get('sort')) ? params.get('sort') : 'alpha';
     const ar = (a, b) => a.ar.localeCompare(b.ar, 'ar');
-    const list = [...D.concepts].sort(sort === 'books' ? (a, b) => b.books.length - a.books.length || b.hits.length - a.hits.length || ar(a, b)
+    const onlyStudy = params.get('study') === '1';
+    const list = [...D.concepts].filter(c => !onlyStudy || c.notes).sort(sort === 'books' ? (a, b) => b.books.length - a.books.length || b.hits.length - a.hits.length || ar(a, b)
       : sort === 'mentions' ? (a, b) => b.hits.length - a.hits.length || b.books.length - a.books.length || ar(a, b) : ar);
     return `<h1>شبكة المفاهيم</h1>
       <p class="muted">كل مصطلح يقودك إلى الفصول التي يظهر فيها. كلما أضفنا كتابًا اتسعت الشبكة. <a href="#/map">شاهدها كخريطة تفاعلية</a> أو <a href="#/compare">قارن المؤلفين</a>.</p>
+      ${HOWTO_LIST}
       <div class="filters"><label>الترتيب: <select data-csort aria-label="ترتيب المفاهيم">
         <option value="alpha" ${sort === 'alpha' ? 'selected' : ''}>أبجديًا</option>
         <option value="books" ${sort === 'books' ? 'selected' : ''}>الأكثر كتبًا</option>
         <option value="mentions" ${sort === 'mentions' ? 'selected' : ''}>الأكثر ذكرًا (عدد الفصول)</option></select></label>
+        <label><input type="checkbox" data-cstudy ${onlyStudy ? 'checked' : ''}> ملفات الدراسة فقط</label>
         <span class="muted">${list.length} مفهومًا في ${D.books.length} كتابًا</span></div>
       <div class="cgrid">${list.map(c => `<a href="#/concept/${c.id}"><strong>${esc(c.ar)}</strong><small>${esc(c.en)}</small><span class="muted">${cnt(c.books.length, 'كتاب', 'كتابان', 'كتب', 'كتابًا')} · ${cnt(c.hits.length, 'فصل', 'فصلان', 'فصول', 'فصلًا')}</span>${c.notes ? '<span class="stchip st-yes" style="font-size:.75rem;margin-top:4px">ملف دراسة</span>' : ''}</a>`).join('')}</div>`;
   }
@@ -356,6 +377,7 @@
     return `<section class="card sumcard" aria-labelledby="sum-h"><h2 id="sum-h">الخلاصة</h2>
         <dl class="sumlist">${n.summary.map(x => `<dt>${esc(x.k)}</dt><dd>${esc(x.t)}${refLinks(x.refs)}</dd>`).join('')}</dl>
         <p class="muted small">مبنية على ${n.stances.length} كتابًا لها موقف في المفهوم. آخر مراجعة: ${esc(n.reviewed)}.</p></section>
+      ${HOWTO_PAGE}
       ${n.pending.length ? `<p class="pending" role="status"><strong>كتب جديدة لم تُدمج بعد:</strong> ${names(n.pending)}. الخلاصة أعلاه لا تشملها حتى تُراجَع.</p>` : ''}
       ${(n.agree || []).length ? `<h2>أين تتفق الكتب</h2><ul class="body">${n.agree.map(x => `<li>${esc(x.t)}${refLinks(x.refs)}</li>`).join('')}</ul>` : ''}
       ${(n.differ || []).length ? `<h2>أين تختلف ${chip('dispute')}</h2>${n.differ.map(x => `<article class="card"><h3>${esc(x.t)}</h3><p>${esc(x.why)}</p>${refLinks(x.refs)}</article>`).join('')}` : ''}
@@ -586,6 +608,7 @@
     const t = e.target;
     if (t.dataset.f) { const p = hash().params; t.value ? p.set(t.dataset.f, t.value) : p.delete(t.dataset.f); location.hash = '#/search?' + p.toString(); }
     if (t.dataset.tk) { const p = hash().params; t.value ? p.set(t.dataset.tk, t.value) : p.delete(t.dataset.tk); const s = p.toString(); location.hash = '#/toolkit' + (s ? '?' + s : ''); }
+    if (t.dataset.cstudy !== undefined) { const p = hash().params; t.checked ? p.set('study', '1') : p.delete('study'); const q = p.toString(); location.hash = '#/concepts' + (q ? '?' + q : ''); }
     if (t.dataset.csort !== undefined) { const p = hash().params; t.value === 'alpha' ? p.delete('sort') : p.set('sort', t.value); const q = p.toString(); location.hash = '#/concepts' + (q ? '?' + q : ''); }
     if (t.dataset.libsort !== undefined) { const p = hash().params; t.value === 'new' ? p.delete('sort') : p.set('sort', t.value); const q = p.toString(); location.hash = '#/library' + (q ? '?' + q : ''); }
     if (t.dataset.chk) { const k = 'chk:' + t.dataset.chk; let a = store.get(k, []); const i = +t.dataset.i; a = t.checked ? [...new Set([...a, i])] : a.filter(x => x !== i); store.set(k, a); }
