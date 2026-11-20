@@ -475,3 +475,13 @@ ul.guide-ch{list-style:none;padding:0}
 .howto li { margin: 6px 0; line-height: 1.7; }
 
 .st-frame { background: var(--primary-soft); color: var(--primary-ink); }
+
+/* المصادر الأولية والقالب الجديد */
+.reviewed { background: color-mix(in srgb, #2f9e6b 16%, var(--surface)); border: 1px solid #2f9e6b; border-radius: var(--r); padding: 10px 14px; margin: 12px 0; }
+.scope p { margin: .4em 0; }
+.claim h3 { margin-top: 0; }
+.srefs a { background: color-mix(in srgb, #5b7cc7 18%, var(--surface)); color: inherit; }
+.lvl { display: inline-block; padding: 1px 10px; border-radius: 999px; font-size: .78rem; font-weight: 600; border: 1px solid var(--line); background: var(--surface); }
+.lvl-L1 { border-color: #2f9e6b; } .lvl-L2 { border-color: #4a8fd0; } .lvl-L3 { border-color: #8a7bd0; } .lvl-L4 { border-color: #d9a431; } .lvl-L5 { border-color: #c96a6a; }
+.cite { font-size: .9rem; line-height: 1.7; color: var(--muted); text-align: left; overflow-wrap: anywhere; }
+@media (prefers-color-scheme: dark) { .reviewed { background: #17321f; border-color: #3b7a55; } }

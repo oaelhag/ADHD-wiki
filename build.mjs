@@ -228,6 +228,22 @@ const concepts = conceptsRaw.map(c => {
 // ---------- ملفات دراسة المفاهيم (content/concepts-notes/<id>.json) ----------
 const NOTES_DIR = path.join(ROOT, 'content/concepts-notes');
 const STANCES = ['supports', 'conditional', 'opposes'];
+
+// ---------- سجل المصادر الأولية (content/studies.json) ----------
+// دراسات وتحليلات تلوية وإرشادات رسمية. تُدخل مرة واحدة هنا وتُستدعى بمعرّفها من ملفات المفاهيم.
+const STUDIES_FILE = path.join(ROOT, 'content/studies.json');
+const REG = fs.existsSync(STUDIES_FILE) ? JSON.parse(fs.readFileSync(STUDIES_FILE, 'utf8')) : { levels: [], studies: [] };
+const LEVEL_IDS = REG.levels.map(l => l.id);
+const STUDY_IDS = new Set();
+for (const s of REG.studies) {
+  for (const k of ['id', 'type', 'level', 'short', 'cite', 'url', 'design', 'finding', 'readScope', 'checked']) if (!s[k]) throw new Error(`مصدر ${s.id || '?'}: الحقل مطلوب «${k}»`);
+  if (!LEVEL_IDS.includes(s.level)) throw new Error(`مصدر ${s.id}: درجة غير معروفة ${s.level}`);
+  if (!/^https:\/\//.test(s.url)) throw new Error(`مصدر ${s.id}: الرابط يجب أن يبدأ بـ https`);
+  if (!Array.isArray(s.limits) || !s.limits.length) throw new Error(`مصدر ${s.id}: يلزم ذكر حدود المصدر`);
+  if (STUDY_IDS.has(s.id)) throw new Error('معرّف مصدر مكرر: ' + s.id);
+  STUDY_IDS.add(s.id); s.citedBy = [];
+}
+const CONFIDENCE = ['low', 'mid', 'high', 'unrated'];
 if (fs.existsSync(NOTES_DIR)) {
   for (const f of fs.readdirSync(NOTES_DIR).filter(x => x.endsWith('.json'))) {
     const id = f.replace(/\.json$/, '');
@@ -239,6 +255,19 @@ if (fs.existsSync(NOTES_DIR)) {
     const refs = rs => (rs || []).forEach(([b, ch]) => chk(b, ch));
     if (!Array.isArray(n.summary) || n.summary.length < 4) throw new Error(id + ': الخلاصة تحتاج 4 أسطر على الأقل');
     n.summary.forEach(x => refs(x.refs)); (n.agree || []).forEach(x => refs(x.refs)); (n.differ || []).forEach(x => refs(x.refs));
+    // الحقول الجديدة (كلها اختيارية): الأدلة الأولية، «سمعت أن»، النطاق، المراجعة، علامات الخطر
+    const cited = new Set();
+    const stu = (ids, where) => (ids || []).forEach(sid => { if (!STUDY_IDS.has(sid)) throw new Error(`${id}: مصدر غير موجود في studies.json «${sid}» (${where})`); cited.add(sid); });
+    n.summary.forEach(x => stu(x.studies, 'الخلاصة')); (n.agree || []).forEach(x => stu(x.studies, 'اتفاق')); (n.differ || []).forEach(x => stu(x.studies, 'خلاف'));
+    for (const e of n.evidence || []) { stu([e.id], 'الأدلة الأولية'); if (!e.use) throw new Error(`${id}: الدليل ${e.id} يحتاج حقل use (ما نأخذه منه)`); }
+    for (const cl of n.claims || []) {
+      for (const k of ['q', 'verdict', 't']) if (!cl[k]) throw new Error(`${id}: ادعاء بلا حقل ${k}`);
+      if (!CONFIDENCE.includes(cl.confidence)) throw new Error(`${id}: درجة ثقة غير معروفة في «${cl.q}»`);
+      refs(cl.refs); stu(cl.studies, 'ادعاء');
+    }
+    if (n.reviewer && !['pending', 'reviewed'].includes(n.reviewer.status)) throw new Error(id + ': حالة المراجعة غير معروفة');
+    if (n.reviewer && n.reviewer.status === 'reviewed' && !(n.reviewer.by && n.reviewer.date)) throw new Error(id + ': المراجعة المعلنة تحتاج اسم المراجع وتاريخه');
+    for (const sid of cited) REG.studies.find(s => s.id === sid).citedBy.push(id);
     const frameIds = (n.frames || []).map(f => f.id);
     for (const s of n.stances || []) {
       if (!(n.frames ? frameIds : STANCES).includes(s.stance)) throw new Error(`${id}: موقف أو مقاربة غير معروفة ${s.stance} في ${s.book}`);
@@ -287,12 +316,14 @@ const stub = b => {
   return { id: b.id, titleAr: b.titleAr, title: b.title, author: b.author, year: b.year, audience: b.audience, ageRange: b.ageRange,
     nTools: full.nTools, cats: CATS.books[b.id].cats, tags: CATS.books[b.id].tags, chapters: full.chapters.map(c => ({ id: c.id, badge: c.badge, prefix: c.prefix, title: c.title })) };
 };
+for (const s of REG.studies) index.push({ type: 'study', title: s.short + ' — ' + s.type, sub: 'مصدر أولي', text: s.finding + ' ' + s.design, tag: 'verify', audience: [], book: '', href: `#/source/${s.id}` });
 const data = {
   site: { title: 'ADHD Wiki', subtitle: 'مرجع العائلة', generated: new Date().toISOString().slice(0, 10), stage: `نموذج تجريبي: ${books.length} ${books.length > 10 ? 'كتابًا' : books.length > 2 ? 'كتب' : books.length === 2 ? 'كتابان' : 'كتاب'}` },
   audiences: AUDIENCES.map(a => ({ id: a.id, ar: a.ar, desc: a.desc })),
   news: fs.existsSync(path.join(ROOT, 'content/news.json')) ? JSON.parse(fs.readFileSync(path.join(ROOT, 'content/news.json'), 'utf8')) : [],
   books: books.map(stub),
   categories: CATS.categories,
+  studies: REG.studies, evidenceLevels: REG.levels, sourcesNote: REG.note || '',
   concepts, audienceLists
 };
 const OUT_DIR = path.dirname(OUT);

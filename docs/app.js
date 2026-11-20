@@ -12,7 +12,7 @@
     specialist: ['يحتاج مختصًا', 'قرار طبي أو نفسي. يُترك للطبيب أو المختص.'],
     dispute: ['خلاف', 'موضع اختلف فيه الكتب أو يحتاج موازنة. نعرض الرأيين.']
   };
-  const TYPES = { chapter: 'فصل', tool: 'أداة', concept: 'مفهوم', difference: 'خلاف', verify: 'للتحقق' };
+  const TYPES = { chapter: 'فصل', tool: 'أداة', concept: 'مفهوم', difference: 'خلاف', verify: 'للتحقق', study: 'مصدر' };
 
   // ---------- أدوات ----------
   const esc = s => String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
@@ -371,6 +371,55 @@
         <div class="card">${c.hits.filter(h => h.bookId === bid).map(h => `<div class="hit"><a href="#/book/${h.bookId}/${h.chapterId}"><strong>${esc((h.prefix || '') + h.chTitle)}</strong></a>${h.snippet ? `<q>${esc(h.snippet)}</q>` : ''}</div>`).join('')}</div>`; }).join('')
       + (D.books.length > c.books.length ? `<p class="muted">لم يظهر في: ${D.books.filter(b => !c.books.includes(b.id)).map(b => esc(shortT(b))).join('، ')}.</p>` : '');
   }
+  // ---------- المصادر الأولية والأقسام الجديدة في ملف المفهوم ----------
+  const CONF = { low: ['منخفضة', 'st-no'], mid: ['متوسطة', 'st-cond'], high: ['مرتفعة', 'st-yes'], unrated: ['غير مقيَّمة', 'st-frame'] };
+  const getStudy = id => (D.studies || []).find(s => s.id === id);
+  const levelOf = s => (D.evidenceLevels || []).find(l => l.id === s.level) || { ar: '', desc: '' };
+  const studyLinks = ids => (ids || []).length ? `<span class="refs srefs">${ids.map(id => { const s = getStudy(id); return s ? `<a href="#/source/${id}" title="${esc(levelOf(s).ar)}">${esc(s.short)}</a>` : ''; }).join('')}</span>` : '';
+  const conceptLinks = ids => ids.map(id => { const k = D.concepts.find(x => x.id === id); return k ? `<a href="#/concept/${id}">${esc(k.ar)}</a>` : ''; }).filter(Boolean).join('، ');
+  function trustBlock(n) {
+    const sc = n.scope, rv = n.reviewer;
+    return (rv ? `<p class="${rv.status === 'pending' ? 'pending' : 'reviewed'}" role="status"><strong>${rv.status === 'pending' ? 'لم يراجعها مختص بعد.' : `راجعها ${esc(rv.by)} بتاريخ ${esc(rv.date)}.`}</strong> ${esc(rv.note || '')}</p>` : '')
+      + (sc ? `<section class="card scope"><h2>ماذا تغطي هذه الصفحة؟</h2><p><strong>تغطي:</strong> ${esc(sc.covers || '')}</p><p><strong>لا تغطي:</strong> ${esc(sc.excludes || '')}</p></section>` : '');
+  }
+  function claimsBlock(n) {
+    if (!(n.claims || []).length) return '';
+    return `<h2>سمعت أن… ${chip('verify')}</h2><p class="muted small">ادعاءات متداولة وحكمنا عليها بحسب ما قُرئ. «الثقة» تعني ثقتنا في الحكم، لا في الادعاء نفسه.</p>`
+      + n.claims.map(c => `<article class="card claim"><h3>${esc(c.q)}</h3><p><span class="stchip ${CONF[c.confidence][1]}">${esc(c.verdict)}</span> <span class="muted small">الثقة في الحكم: ${esc(CONF[c.confidence][0])}</span></p><p>${esc(c.t)}</p>${refLinks(c.refs)}${studyLinks(c.studies)}</article>`).join('');
+  }
+  function evidenceBlock(n) {
+    if (!(n.evidence || []).length) return '';
+    return `<h2>الأدلة الأولية خارج الكتب</h2><p class="muted small">دراسات وإرشادات رسمية قُرئت لهذه الصفحة. «درجة المصدر» تصف نوع الدراسة وقوة تصميمها، لا صحة كل ما فيها. <a href="#/sources">كل المصادر</a></p>
+      <ul class="reflist evid">${n.evidence.map(e => { const s = getStudy(e.id); if (!s) return ''; const lv = levelOf(s);
+        return `<li><a class="row" href="#/source/${s.id}"><span><strong>${esc(s.short)}</strong> <span class="lvl lvl-${s.level}">${esc(lv.ar)}</span><br>${esc(e.use)}<br><span class="muted small">${esc(s.type)} · قُرئ: ${esc(s.readScope)}</span></span></a></li>`; }).join('')}</ul>`;
+  }
+  function redFlagsBlock(n) {
+    if (!(n.redFlags || []).length) return '';
+    return `<h2>متى تراجع مختصًا ${chip('specialist')}</h2><ul class="body">${n.redFlags.map(x => `<li>${esc(x)}</li>`).join('')}</ul>${n.redFlagsNote ? `<p class="muted small">${esc(n.redFlagsNote)}</p>` : ''}`;
+  }
+  function sources() {
+    const lv = D.evidenceLevels || [], st = D.studies || [];
+    return `<h1>المصادر الأولية</h1>
+      <p class="muted">${esc(D.sourcesNote || '')}</p>
+      <h2>درجات المصدر</h2><dl class="sumlist">${lv.map(l => `<dt><span class="lvl lvl-${l.id}">${esc(l.ar)}</span></dt><dd>${esc(l.desc)}</dd>`).join('')}</dl>
+      <h2>المصادر (${st.length})</h2>
+      <ul class="reflist evid">${st.map(s => `<li><a class="row" href="#/source/${s.id}"><span><strong>${esc(s.short)}</strong> <span class="lvl lvl-${s.level}">${esc(levelOf(s).ar)}</span><br>${esc(s.type)} · ${esc(s.finding.split('. ')[0])}.<br><span class="muted small">قُرئ: ${esc(s.readScope)}</span></span></a></li>`).join('')}</ul>`;
+  }
+  function source(id) {
+    const s = getStudy(id); if (!s) return notFound();
+    const lv = levelOf(s);
+    return `<p class="crumbs"><a href="#/sources">المصادر الأولية</a></p>
+      <h1>${esc(s.short)}</h1>
+      <div class="card"><p><span class="lvl lvl-${s.level}">${esc(lv.ar)}</span> <span class="muted">${esc(s.type)}</span></p><p class="muted small">${esc(lv.desc)}</p></div>
+      <h2>المرجع</h2><p class="cite" dir="ltr">${esc(s.cite)}${s.doi ? ` doi:${esc(s.doi)}` : ''}</p>
+      <p><a class="btn ghost" href="${esc(s.url)}" target="_blank" rel="noopener noreferrer">افتح المصدر ↗</a></p>
+      <h2>التصميم</h2><p>${esc(s.design)}</p>${s.n ? `<p><strong>العيّنة:</strong> ${esc(s.n)}</p>` : ''}
+      <h2>النتيجة</h2><p>${esc(s.finding)}</p>
+      <h2>حدود المصدر</h2><ul class="body">${s.limits.map(x => `<li>${esc(x)}</li>`).join('')}</ul>
+      ${s.scopeNote ? `<p class="callout"><strong>ملاحظة على النطاق:</strong> ${esc(s.scopeNote)}</p>` : ''}
+      <p class="muted small"><strong>ما قُرئ منه:</strong> ${esc(s.readScope)}. تاريخ التحقق: ${esc(s.checked)}.</p>
+      ${s.citedBy.length ? `<p class="small"><strong>يُستعمل في:</strong> ${conceptLinks(s.citedBy)}.</p>` : ''}`;
+  }
   function conceptStudy(c) {
     const n = c.notes, names = ids => ids.map(id => esc(shortT(getBook(id)))).join('، ');
     const groups = (n.frames
@@ -378,18 +427,22 @@
       : Object.keys(STANCE).map(k => ({ k, label: STANCE[k][0], cls: STANCE[k][1], rows: n.stances.filter(x => x.stance === k) }))).filter(g => g.rows.length);
     const nBooks = new Set(n.stances.map(x => x.book)).size;
     return `<section class="card sumcard" aria-labelledby="sum-h"><h2 id="sum-h">الخلاصة</h2>
-        <dl class="sumlist">${n.summary.map(x => `<dt>${esc(x.k)}</dt><dd>${esc(x.t)}${refLinks(x.refs)}</dd>`).join('')}</dl>
+        <dl class="sumlist">${n.summary.map(x => `<dt>${esc(x.k)}</dt><dd>${esc(x.t)}${refLinks(x.refs)}${studyLinks(x.studies)}</dd>`).join('')}</dl>
         <p class="muted small">مبنية على ${nBooks} كتابًا لها موقف في المفهوم. آخر مراجعة: ${esc(n.reviewed)}.</p></section>
+      ${trustBlock(n)}
+      ${claimsBlock(n)}
       ${HOWTO_PAGE}
       ${n.pending.length ? `<p class="pending" role="status"><strong>كتب جديدة لم تُدمج بعد:</strong> ${names(n.pending)}. الخلاصة أعلاه لا تشملها حتى تُراجَع.</p>` : ''}
-      ${(n.agree || []).length ? `<h2>أين تتفق الكتب</h2><ul class="body">${n.agree.map(x => `<li>${esc(x.t)}${refLinks(x.refs)}</li>`).join('')}</ul>` : ''}
-      ${(n.differ || []).length ? `<h2>أين تختلف ${chip('dispute')}</h2>${n.differ.map(x => `<article class="card"><h3>${esc(x.t)}</h3><p>${esc(x.why)}</p>${refLinks(x.refs)}</article>`).join('')}` : ''}
+      ${(n.agree || []).length ? `<h2>أين تتفق الكتب</h2><ul class="body">${n.agree.map(x => `<li>${esc(x.t)}${refLinks(x.refs)}${studyLinks(x.studies)}</li>`).join('')}</ul>` : ''}
+      ${(n.differ || []).length ? `<h2>أين تختلف ${chip('dispute')}</h2>${n.differ.map(x => `<article class="card"><h3>${esc(x.t)}</h3><p>${esc(x.why)}</p>${refLinks(x.refs)}${studyLinks(x.studies)}</article>`).join('')}` : ''}
+      ${evidenceBlock(n)}
       <h2>${esc(n.stancesTitle || 'موقف كل كتاب')}</h2>
       <p class="muted small">${esc(n.stancesNote || 'الموقف تصنيف معدّ الموقع. «الأساس» يبيّن على ماذا يستند الكتاب.')}</p>
       ${groups.map(g => `<details class="stgroup" ${n.frames || g.k === 'supports' ? '' : 'open'}><summary><span class="stchip ${g.cls}">${esc(g.label)}</span> <span class="muted">(${g.rows.length})</span>${g.desc ? `<br><span class="muted small">${esc(g.desc)}</span>` : ''}</summary>
         <ul class="reflist">${g.rows.map(r => `<li><a class="row" href="#/book/${r.book}/${r.ch}"><span><strong>${esc(shortT(getBook(r.book)))}</strong><br>${esc(r.t)}<br><span class="muted small">الأساس: ${esc(r.basis)}</span></span></a></li>`).join('')}</ul></details>`).join('')}
       ${(n.choose || []).length ? `<h2>أسئلة تساعدك على الاختيار ${chip('inference')}</h2><ol class="body">${n.choose.map(x => `<li>${esc(x)}</li>`).join('')}</ol>` : ''}
       ${(n.gaps || []).length ? `<h2>ما لا تغطيه الكتب</h2><ul class="body">${n.gaps.map(x => `<li>${esc(x)}</li>`).join('')}</ul>` : ''}
+      ${redFlagsBlock(n)}
       ${n.tools.length ? `<h2>أدوات مرتبطة</h2><ul class="reflist">${n.tools.map(t => `<li><a class="row" href="#/toolkit/${t.bookId}-t${t.n}"><span><strong>${esc(t.title)}</strong><br><span class="muted small">${esc(shortT(getBook(t.bookId)))} · ${esc(t.kind || '')}</span></span></a></li>`).join('')}</ul>` : ''}
       ${(n.related || []).length ? `<p class="small"><strong>مفاهيم مرتبطة:</strong> ${n.related.map(r => { const k = D.concepts.find(x => x.id === r); return k ? `<a href="#/concept/${r}">${esc(k.ar)}</a>` : ''; }).join('، ')}.</p>` : ''}
       ${(n.otherSense || []).length ? `<p class="muted small"><strong>بمعنى آخر:</strong> ${esc(n.otherSenseNote || '')} ${names(n.otherSense)}.</p>` : ''}
@@ -581,6 +634,8 @@
     else if (a === 'audience') html = audience(b);
     else if (a === 'search') html = search(params);
     else if (a === 'guide') html = guide();
+    else if (a === 'sources') html = sources();
+    else if (a === 'source') { html = source(b); nav = 'sources'; }
     else if (a === 'about') html = about();
     else if (window.__views[a]) html = window.__views[a].html(b, params);
     else html = notFound();
