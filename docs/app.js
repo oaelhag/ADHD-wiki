@@ -340,7 +340,35 @@
         <option value="books" ${sort === 'books' ? 'selected' : ''}>الأكثر كتبًا</option>
         <option value="mentions" ${sort === 'mentions' ? 'selected' : ''}>الأكثر ذكرًا (عدد الفصول)</option></select></label>
         <span class="muted">${list.length} مفهومًا في ${D.books.length} كتابًا</span></div>
-      <div class="cgrid">${list.map(c => `<a href="#/concept/${c.id}"><strong>${esc(c.ar)}</strong><small>${esc(c.en)}</small><span class="muted">${cnt(c.books.length, 'كتاب', 'كتابان', 'كتب', 'كتابًا')} · ${cnt(c.hits.length, 'فصل', 'فصلان', 'فصول', 'فصلًا')}</span></a>`).join('')}</div>`;
+      <div class="cgrid">${list.map(c => `<a href="#/concept/${c.id}"><strong>${esc(c.ar)}</strong><small>${esc(c.en)}</small><span class="muted">${cnt(c.books.length, 'كتاب', 'كتابان', 'كتب', 'كتابًا')} · ${cnt(c.hits.length, 'فصل', 'فصلان', 'فصول', 'فصلًا')}</span>${c.notes ? '<span class="stchip st-yes" style="font-size:.75rem;margin-top:4px">ملف دراسة</span>' : ''}</a>`).join('')}</div>`;
+  }
+  const STANCE = { supports: ['يؤيد', 'st-yes'], conditional: ['يقيّد بشروط', 'st-cond'], opposes: ['يعارض', 'st-no'] };
+  const shortT = bk => titleOf(bk).split(':')[0];
+  const refLinks = rs => (rs || []).length ? `<span class="refs">${rs.map(([b, ch]) => { const bk = getBook(b); return `<a href="#/book/${b}/${ch}">${esc(shortT(bk))}</a>`; }).join('')}</span>` : '';
+  function conceptRaw(c) {
+    return c.books.map(bid => { const bk = getBook(bid); return `<h3>${esc(shortT(bk))} <span class="muted">${esc(bk.author)}</span></h3>
+        <div class="card">${c.hits.filter(h => h.bookId === bid).map(h => `<div class="hit"><a href="#/book/${h.bookId}/${h.chapterId}"><strong>${esc((h.prefix || '') + h.chTitle)}</strong></a>${h.snippet ? `<q>${esc(h.snippet)}</q>` : ''}</div>`).join('')}</div>`; }).join('')
+      + (D.books.length > c.books.length ? `<p class="muted">لم يظهر في: ${D.books.filter(b => !c.books.includes(b.id)).map(b => esc(shortT(b))).join('، ')}.</p>` : '');
+  }
+  function conceptStudy(c) {
+    const n = c.notes, names = ids => ids.map(id => esc(shortT(getBook(id)))).join('، ');
+    const groups = Object.keys(STANCE).map(k => ({ k, rows: n.stances.filter(x => x.stance === k) })).filter(g => g.rows.length);
+    return `<section class="card sumcard" aria-labelledby="sum-h"><h2 id="sum-h">الخلاصة</h2>
+        <dl class="sumlist">${n.summary.map(x => `<dt>${esc(x.k)}</dt><dd>${esc(x.t)}${refLinks(x.refs)}</dd>`).join('')}</dl>
+        <p class="muted small">مبنية على ${n.stances.length} كتابًا لها موقف في المفهوم. آخر مراجعة: ${esc(n.reviewed)}.</p></section>
+      ${n.pending.length ? `<p class="pending" role="status"><strong>كتب جديدة لم تُدمج بعد:</strong> ${names(n.pending)}. الخلاصة أعلاه لا تشملها حتى تُراجَع.</p>` : ''}
+      ${(n.agree || []).length ? `<h2>أين تتفق الكتب</h2><ul class="body">${n.agree.map(x => `<li>${esc(x.t)}${refLinks(x.refs)}</li>`).join('')}</ul>` : ''}
+      ${(n.differ || []).length ? `<h2>أين تختلف ${chip('dispute')}</h2>${n.differ.map(x => `<article class="card"><h3>${esc(x.t)}</h3><p>${esc(x.why)}</p>${refLinks(x.refs)}</article>`).join('')}` : ''}
+      <h2>موقف كل كتاب</h2>
+      <p class="muted small">الموقف تصنيف معدّ الموقع. الأساس عمود يبيّن على ماذا يستند الكتاب.</p>
+      ${groups.map(g => `<details class="stgroup" ${g.k === 'supports' ? '' : 'open'}><summary><span class="stchip ${STANCE[g.k][1]}">${STANCE[g.k][0]}</span> <span class="muted">(${g.rows.length})</span></summary>
+        <ul class="reflist">${g.rows.map(r => `<li><a class="row" href="#/book/${r.book}/${r.ch}"><span><strong>${esc(shortT(getBook(r.book)))}</strong><br>${esc(r.t)}<br><span class="muted small">الأساس: ${esc(r.basis)}</span></span></a></li>`).join('')}</ul></details>`).join('')}
+      ${(n.choose || []).length ? `<h2>أسئلة تساعدك على الاختيار ${chip('inference')}</h2><ol class="body">${n.choose.map(x => `<li>${esc(x)}</li>`).join('')}</ol>` : ''}
+      ${(n.gaps || []).length ? `<h2>ما لا تغطيه الكتب</h2><ul class="body">${n.gaps.map(x => `<li>${esc(x)}</li>`).join('')}</ul>` : ''}
+      ${n.tools.length ? `<h2>أدوات مرتبطة</h2><ul class="reflist">${n.tools.map(t => `<li><a class="row" href="#/toolkit/${t.bookId}-t${t.n}"><span><strong>${esc(t.title)}</strong><br><span class="muted small">${esc(shortT(getBook(t.bookId)))} · ${esc(t.kind || '')}</span></span></a></li>`).join('')}</ul>` : ''}
+      ${(n.otherSense || []).length ? `<p class="muted small"><strong>بمعنى آخر:</strong> ${esc(n.otherSenseNote || '')} ${names(n.otherSense)}.</p>` : ''}
+      ${(n.passing || []).length ? `<p class="muted small"><strong>ذكر عابر:</strong> ${esc(n.passingNote || '')} ${names(n.passing)}.</p>` : ''}
+      <details class="refgroup"><summary><b>كل المقاطع المرتبطة آليًا</b> <span class="muted">(${c.hits.length} فصلًا)</span></summary>${conceptRaw(c)}</details>`;
   }
   function concept(id) {
     const c = D.concepts.find(x => x.id === id); if (!c) return notFound();
@@ -348,11 +376,7 @@
       <h1>${esc(c.ar)}</h1>
       <p class="muted" dir="ltr" style="text-align:end">${esc(c.en)}</p>
       <div class="card"><p>${esc(c.def)}</p><div class="chips">${chip(c.tag)}</div></div>
-      <h2>أين يظهر</h2>
-      ${c.books.map(bid => { const bk = getBook(bid); return `<h3>${esc(titleOf(bk).split(':')[0])} <span class="muted">${esc(bk.author)}</span></h3>
-        <div class="card">${c.hits.filter(h => h.bookId === bid).map(h => `<div class="hit"><a href="#/book/${h.bookId}/${h.chapterId}"><strong>${esc((h.prefix || '') + h.chTitle)}</strong></a>${h.snippet ? `<q>${esc(h.snippet)}</q>` : ''}</div>`).join('')}</div>`; }).join('')}
-      ${D.books.length > c.books.length ? `<p class="muted">لم يظهر في: ${D.books.filter(b => !c.books.includes(b.id)).map(b => esc(titleOf(b).split(':')[0])).join('، ')}.</p>` : ''}
-      ${D.books.length < 2 ? '<p class="empty">لم تُضف كتب أخرى بعد. عند إضافتها سيظهر هنا ما تقوله عن المفهوم نفسه.</p>' : ''}
+      ${c.notes ? conceptStudy(c) : `<h2>أين يظهر</h2>${conceptRaw(c)}<p class="muted small">ملف الدراسة لهذا المفهوم (الخلاصة وموقف كل كتاب) لم يُعدّ بعد. المقاطع أعلاه التقاط آلي.</p>`}
       <p><a class="btn ghost" href="#/search?q=${encodeURIComponent(c.ar)}">ابحث عن «${esc(c.ar)}» في كل شيء</a></p>`;
   }
 

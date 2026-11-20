@@ -449,3 +449,22 @@ ul.guide-ch{list-style:none;padding:0}
 .reflist { margin: 6px 0 8px; padding: 0 18px 0 0; }
 .reflist li { margin: 4px 0; line-height: 1.6; }
 .reflist .en { display: inline-block; color: var(--muted); font-size: .88rem; margin-inline-start: 6px; }
+
+/* ---------- ملف دراسة المفهوم ---------- */
+.sumcard { border-inline-start: 4px solid var(--primary); }
+.sumcard h2 { margin-top: 0; }
+.sumlist { margin: 0; display: grid; gap: 4px 12px; grid-template-columns: max-content 1fr; }
+.sumlist dt { font-weight: 700; color: var(--primary-ink); }
+.sumlist dd { margin: 0 0 8px; }
+@media (max-width: 560px) { .sumlist { grid-template-columns: 1fr; } .sumlist dd { margin-bottom: 12px; } }
+.refs { display: inline-flex; flex-wrap: wrap; gap: 4px; margin-inline-start: 6px; vertical-align: baseline; }
+.refs a { font-size: .78rem; padding: 1px 8px; border-radius: 999px; background: var(--primary-soft); color: var(--primary-ink); text-decoration: none; }
+.small { font-size: .85rem; }
+.pending { background: color-mix(in srgb, #f5b942 22%, var(--surface)); border: 1px solid #d9a431; border-radius: var(--r); padding: 10px 14px; margin: 12px 0; }
+.stgroup { margin: 10px 0; }
+.stgroup summary { cursor: pointer; padding: 6px 0; }
+.stchip { display: inline-block; padding: 2px 12px; border-radius: 999px; font-weight: 600; font-size: .9rem; }
+.st-yes { background: #dcefe3; color: #17502e; }
+.st-cond { background: #fbeed0; color: #6b4a00; }
+.st-no { background: #f6dcdc; color: #7a1f1f; }
+@media (prefers-color-scheme: dark) { .st-yes { background: #1d3a29; color: #bfe6cc; } .st-cond { background: #3d3216; color: #f0d58f; } .st-no { background: #432222; color: #f0bcbc; } .pending { background: #3a3113; border-color: #8a6d1f; } }

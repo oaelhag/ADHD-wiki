@@ -225,6 +225,37 @@ const concepts = conceptsRaw.map(c => {
   return { id: c.id, ar: c.ar, en: c.en, def: c.def, tag: c.tag, hits, books: [...new Set(hits.map(h => h.bookId))] };
 }).filter(c => c.hits.length > 0);
 
+// ---------- ملفات دراسة المفاهيم (content/concepts-notes/<id>.json) ----------
+const NOTES_DIR = path.join(ROOT, 'content/concepts-notes');
+const STANCES = ['supports', 'conditional', 'opposes'];
+if (fs.existsSync(NOTES_DIR)) {
+  for (const f of fs.readdirSync(NOTES_DIR).filter(x => x.endsWith('.json'))) {
+    const id = f.replace(/\.json$/, '');
+    const c = concepts.find(x => x.id === id);
+    if (!c) throw new Error('ملف دراسة لمفهوم غير موجود أو بلا إصابات: ' + id);
+    const n = JSON.parse(fs.readFileSync(path.join(NOTES_DIR, f), 'utf8'));
+    const bk = bid => books.find(b => b.id === bid) || (() => { throw new Error(`${id}: كتاب غير موجود ${bid}`); })();
+    const chk = (bid, ch) => { if (!bk(bid).chapters.some(x => x.id === ch)) throw new Error(`${id}: فصل غير موجود ${bid}/${ch}`); };
+    const refs = rs => (rs || []).forEach(([b, ch]) => chk(b, ch));
+    if (!Array.isArray(n.summary) || n.summary.length < 4) throw new Error(id + ': الخلاصة تحتاج 4 أسطر على الأقل');
+    n.summary.forEach(x => refs(x.refs)); (n.agree || []).forEach(x => refs(x.refs)); (n.differ || []).forEach(x => refs(x.refs));
+    for (const s of n.stances || []) {
+      if (!STANCES.includes(s.stance)) throw new Error(`${id}: موقف غير معروف ${s.stance} في ${s.book}`);
+      chk(s.book, s.ch);
+    }
+    const tools = (n.tools || []).map(([bid, num]) => {
+      const t = bk(bid).tools.find(x => x.n === num);
+      if (!t) throw new Error(`${id}: أداة غير موجودة ${bid}/${num}`);
+      return { bookId: bid, n: num, title: t.title, kind: t.kind };
+    });
+    for (const b of [...(n.passing || []), ...(n.otherSense || [])]) bk(b);
+    const reviewed = new Set([...(n.stances || []).map(s => s.book), ...(n.passing || []), ...(n.otherSense || [])]);
+    const pending = c.books.filter(b => !reviewed.has(b));
+    c.notes = { ...n, tools, merged: [...reviewed].length, pending };
+    if (pending.length) console.warn(`⚠ مفهوم «${c.ar}»: ${pending.length} كتاب لم يُدمج في ملف الدراسة: ${pending.join(', ')}`);
+  }
+}
+
 const audienceLists = AUDIENCES.map(a => ({
   ...a,
   tools: books.flatMap(b => b.tools.filter(t => t.audiences.includes(a.id)).map(t => ({ bookId: b.id, n: t.n, title: t.title, kind: t.kind }))),
@@ -240,7 +271,7 @@ for (const b of books) {
   for (const d of b.differences) index.push({ type: 'difference', title: d.title, sub: 'خلاف أو موازنة', text: d.text, tag: 'dispute', audience: [], book: b.id, href: `#/book/${b.id}/differences` });
   for (const n of b.numbers) index.push({ type: 'verify', title: 'يحتاج تحققًا', sub: n.chapters.map(c => 'الفصل ' + c).join('، '), text: n.text, tag: 'verify', audience: [], book: b.id, href: `#/book/${b.id}/verify` });
 }
-for (const c of concepts) index.push({ type: 'concept', title: `${c.ar} (${c.en})`, sub: 'مفهوم', text: c.def, tag: c.tag, audience: [], book: '', href: `#/concept/${c.id}` });
+for (const c of concepts) index.push({ type: 'concept', title: `${c.ar} (${c.en})`, sub: 'مفهوم', text: c.def + (c.notes ? ' ' + c.notes.summary.map(x => x.t).join(' ') : ''), tag: c.tag, audience: [], book: '', href: `#/concept/${c.id}` });
 
 const strip = b => ({ ...b, nTools: b.tools.length, chapters: b.chapters.map(({ text, ...rest }) => rest) });
 const CATS = JSON.parse(fs.readFileSync(path.join(ROOT, 'content/categories.json'), 'utf8'));
