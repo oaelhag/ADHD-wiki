@@ -239,10 +239,12 @@ if (fs.existsSync(NOTES_DIR)) {
     const refs = rs => (rs || []).forEach(([b, ch]) => chk(b, ch));
     if (!Array.isArray(n.summary) || n.summary.length < 4) throw new Error(id + ': الخلاصة تحتاج 4 أسطر على الأقل');
     n.summary.forEach(x => refs(x.refs)); (n.agree || []).forEach(x => refs(x.refs)); (n.differ || []).forEach(x => refs(x.refs));
+    const frameIds = (n.frames || []).map(f => f.id);
     for (const s of n.stances || []) {
-      if (!STANCES.includes(s.stance)) throw new Error(`${id}: موقف غير معروف ${s.stance} في ${s.book}`);
+      if (!(n.frames ? frameIds : STANCES).includes(s.stance)) throw new Error(`${id}: موقف أو مقاربة غير معروفة ${s.stance} في ${s.book}`);
       chk(s.book, s.ch);
     }
+    for (const r of n.related || []) if (!concepts.some(x => x.id === r)) throw new Error(`${id}: مفهوم مرتبط غير موجود ${r}`);
     const tools = (n.tools || []).map(([bid, num]) => {
       const t = bk(bid).tools.find(x => x.n === num);
       if (!t) throw new Error(`${id}: أداة غير موجودة ${bid}/${num}`);

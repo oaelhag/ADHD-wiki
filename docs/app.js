@@ -373,21 +373,25 @@
   }
   function conceptStudy(c) {
     const n = c.notes, names = ids => ids.map(id => esc(shortT(getBook(id)))).join('، ');
-    const groups = Object.keys(STANCE).map(k => ({ k, rows: n.stances.filter(x => x.stance === k) })).filter(g => g.rows.length);
+    const groups = (n.frames
+      ? n.frames.map(f => ({ k: f.id, label: f.ar, desc: f.desc, cls: 'st-frame', rows: n.stances.filter(x => x.stance === f.id) }))
+      : Object.keys(STANCE).map(k => ({ k, label: STANCE[k][0], cls: STANCE[k][1], rows: n.stances.filter(x => x.stance === k) }))).filter(g => g.rows.length);
+    const nBooks = new Set(n.stances.map(x => x.book)).size;
     return `<section class="card sumcard" aria-labelledby="sum-h"><h2 id="sum-h">الخلاصة</h2>
         <dl class="sumlist">${n.summary.map(x => `<dt>${esc(x.k)}</dt><dd>${esc(x.t)}${refLinks(x.refs)}</dd>`).join('')}</dl>
-        <p class="muted small">مبنية على ${n.stances.length} كتابًا لها موقف في المفهوم. آخر مراجعة: ${esc(n.reviewed)}.</p></section>
+        <p class="muted small">مبنية على ${nBooks} كتابًا لها موقف في المفهوم. آخر مراجعة: ${esc(n.reviewed)}.</p></section>
       ${HOWTO_PAGE}
       ${n.pending.length ? `<p class="pending" role="status"><strong>كتب جديدة لم تُدمج بعد:</strong> ${names(n.pending)}. الخلاصة أعلاه لا تشملها حتى تُراجَع.</p>` : ''}
       ${(n.agree || []).length ? `<h2>أين تتفق الكتب</h2><ul class="body">${n.agree.map(x => `<li>${esc(x.t)}${refLinks(x.refs)}</li>`).join('')}</ul>` : ''}
       ${(n.differ || []).length ? `<h2>أين تختلف ${chip('dispute')}</h2>${n.differ.map(x => `<article class="card"><h3>${esc(x.t)}</h3><p>${esc(x.why)}</p>${refLinks(x.refs)}</article>`).join('')}` : ''}
-      <h2>موقف كل كتاب</h2>
-      <p class="muted small">الموقف تصنيف معدّ الموقع. الأساس عمود يبيّن على ماذا يستند الكتاب.</p>
-      ${groups.map(g => `<details class="stgroup" ${g.k === 'supports' ? '' : 'open'}><summary><span class="stchip ${STANCE[g.k][1]}">${STANCE[g.k][0]}</span> <span class="muted">(${g.rows.length})</span></summary>
+      <h2>${esc(n.stancesTitle || 'موقف كل كتاب')}</h2>
+      <p class="muted small">${esc(n.stancesNote || 'الموقف تصنيف معدّ الموقع. «الأساس» يبيّن على ماذا يستند الكتاب.')}</p>
+      ${groups.map(g => `<details class="stgroup" ${n.frames || g.k === 'supports' ? '' : 'open'}><summary><span class="stchip ${g.cls}">${esc(g.label)}</span> <span class="muted">(${g.rows.length})</span>${g.desc ? `<br><span class="muted small">${esc(g.desc)}</span>` : ''}</summary>
         <ul class="reflist">${g.rows.map(r => `<li><a class="row" href="#/book/${r.book}/${r.ch}"><span><strong>${esc(shortT(getBook(r.book)))}</strong><br>${esc(r.t)}<br><span class="muted small">الأساس: ${esc(r.basis)}</span></span></a></li>`).join('')}</ul></details>`).join('')}
       ${(n.choose || []).length ? `<h2>أسئلة تساعدك على الاختيار ${chip('inference')}</h2><ol class="body">${n.choose.map(x => `<li>${esc(x)}</li>`).join('')}</ol>` : ''}
       ${(n.gaps || []).length ? `<h2>ما لا تغطيه الكتب</h2><ul class="body">${n.gaps.map(x => `<li>${esc(x)}</li>`).join('')}</ul>` : ''}
       ${n.tools.length ? `<h2>أدوات مرتبطة</h2><ul class="reflist">${n.tools.map(t => `<li><a class="row" href="#/toolkit/${t.bookId}-t${t.n}"><span><strong>${esc(t.title)}</strong><br><span class="muted small">${esc(shortT(getBook(t.bookId)))} · ${esc(t.kind || '')}</span></span></a></li>`).join('')}</ul>` : ''}
+      ${(n.related || []).length ? `<p class="small"><strong>مفاهيم مرتبطة:</strong> ${n.related.map(r => { const k = D.concepts.find(x => x.id === r); return k ? `<a href="#/concept/${r}">${esc(k.ar)}</a>` : ''; }).join('، ')}.</p>` : ''}
       ${(n.otherSense || []).length ? `<p class="muted small"><strong>بمعنى آخر:</strong> ${esc(n.otherSenseNote || '')} ${names(n.otherSense)}.</p>` : ''}
       ${(n.passing || []).length ? `<p class="muted small"><strong>ذكر عابر:</strong> ${esc(n.passingNote || '')} ${names(n.passing)}.</p>` : ''}
       <details class="refgroup"><summary><b>كل المقاطع المرتبطة آليًا</b> <span class="muted">(${c.hits.length} فصلًا)</span></summary>${conceptRaw(c)}</details>`;

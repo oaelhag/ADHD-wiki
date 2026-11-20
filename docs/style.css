@@ -473,3 +473,5 @@ ul.guide-ch{list-style:none;padding:0}
 .howto summary { cursor: pointer; padding: 4px 0; }
 .howto ol, .howto ul { margin: 6px 0 10px; }
 .howto li { margin: 6px 0; line-height: 1.7; }
+
+.st-frame { background: var(--primary-soft); color: var(--primary-ink); }
