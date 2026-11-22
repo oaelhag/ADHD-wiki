@@ -500,7 +500,9 @@
       "heath-switch",
       "heath-decisive",
       "heath-decisive-workbook",
-      "heath-made-to-stick"
+      "heath-made-to-stick",
+      "heath-reset",
+      "heath-power-of-moments"
     ]
   },
   {
@@ -627,6 +629,20 @@
     "ar": "فاراوني وآخرون (الاتحاد العالمي لـ ADHD)",
     "books": [
       "faraone-wfadhd-consensus-2021"
+    ]
+  },
+  {
+    "id": "cialdini",
+    "ar": "تشالديني",
+    "books": [
+      "cialdini-influence"
+    ]
+  },
+  {
+    "id": "johnson",
+    "ar": "سو جونسون",
+    "books": [
+      "johnson-hold-me-tight"
     ]
   }
 ]
