@@ -265,6 +265,18 @@ if (fs.existsSync(NOTES_DIR)) {
       if (!CONFIDENCE.includes(cl.confidence)) throw new Error(`${id}: درجة ثقة غير معروفة في «${cl.q}»`);
       refs(cl.refs); stu(cl.studies, 'ادعاء');
     }
+    // دليل «ماذا تفعل»: مجموعات خطوات، كل خطوة بدرجة: do (افعل) أو disputed (مختلف عليه) أو caution (احترس)
+    const HLV = ['do', 'disputed', 'caution'];
+    for (const g of n.howto || []) {
+      for (const k of ['id', 'title']) if (!g[k]) throw new Error(`${id}: مجموعة في howto بلا ${k}`);
+      if (!Array.isArray(g.steps) || !g.steps.length) throw new Error(`${id}: مجموعة howto «${g.title}» بلا خطوات`);
+      for (const s of g.steps) {
+        if (!s.t || !s.why) throw new Error(`${id}: خطوة في «${g.title}» تحتاج t وwhy`);
+        if (!HLV.includes(s.level)) throw new Error(`${id}: درجة خطوة غير معروفة في «${g.title}»: ${s.level}`);
+        if (!(s.refs || []).length && !(s.studies || []).length) throw new Error(`${id}: خطوة بلا مصدر في «${g.title}»: ${s.t.slice(0, 30)}`);
+        refs(s.refs); stu(s.studies, 'ماذا تفعل');
+      }
+    }
     if (n.reviewer && !['pending', 'reviewed'].includes(n.reviewer.status)) throw new Error(id + ': حالة المراجعة غير معروفة');
     if (n.reviewer && n.reviewer.status === 'reviewed' && !(n.reviewer.by && n.reviewer.date)) throw new Error(id + ': المراجعة المعلنة تحتاج اسم المراجع وتاريخه');
     for (const sid of cited) REG.studies.find(s => s.id === sid).citedBy.push(id);

@@ -498,3 +498,12 @@ ul.guide-ch{list-style:none;padding:0}
   .pchap { border: 0; padding: 0; break-before: page; }
   .pfld { break-inside: auto; } .pfld h3 { break-after: avoid; }
 }
+
+/* دليل ماذا تفعل والمراجع */
+.hgroup h3 { margin-top: 0; }
+.hsteps { padding-inline-start: 1.4em; margin: .4em 0 0; }
+.hs { margin: 0 0 .9em; line-height: 1.7; }
+.hs .stchip { margin-inline-end: 4px; }
+.reflist2 { margin: .4em 0 .6em; padding-inline-start: 1.4em; line-height: 1.8; }
+.cites li { text-align: left; margin-bottom: .6em; font-size: .9rem; overflow-wrap: anywhere; }
+#howto-h { scroll-margin-top: 80px; }

@@ -592,5 +592,231 @@
     "إن بدا الطفل قلقًا أو متوترًا من فقدان النقاط أو يعمل للمكافأة فقط.",
     "قبل أي قرار دوائي، فهو لمختص لا لكتاب."
   ],
-  "redFlagsNote": "القرارات الدوائية والتشخيصية ليست موضوع هذه الصفحة."
+  "redFlagsNote": "القرارات الدوائية والتشخيصية ليست موضوع هذه الصفحة.",
+  "howtoNote": "الترتيب داخل كل مجموعة من اجتهاد معدّ الموقع. لا يغني عن مختص إن ظهرت علامات الخطر أدناه. القرار في نظام بعينه لطفل بعينه يُناقَش مع مختص.",
+  "howto": [
+    {
+      "id": "if-system",
+      "title": "إن اخترت نظام مكافآت",
+      "steps": [
+        {
+          "t": "صف الجهد المحدد بدل الحكم على الشخص («رتّبت حقيبتك» لا «أنت مرتب»).",
+          "level": "do",
+          "why": "باركلي وداوسون وغوير وبيرتن ونيلسن وفابر ومازليش يتفقون، وتقول مراجعة المديح إن المديح المعلوماتي الصادق عن الجهد أنفع من مديح الشخص.",
+          "refs": [
+            [
+              "bertin-mindful-parenting-adhd",
+              "ch6"
+            ],
+            [
+              "nelsen-positive-discipline-a-to-z",
+              "ch1"
+            ],
+            [
+              "faber-mazlish-how-to-talk-so-kids-will-listen",
+              "ch5"
+            ]
+          ],
+          "studies": [
+            "henderlong-lepper-2002"
+          ]
+        },
+        {
+          "t": "اثبت: لا نقاط لم تُكتسب، ولا وعد لا يُوفى، ولا امتياز لا تضمنه.",
+          "level": "do",
+          "why": "شرط يضعه كل من يستعمل نظام نقاط.",
+          "refs": [
+            [
+              "barkley-your-defiant-teen",
+              "ch12"
+            ],
+            [
+              "dawson-guare-smart-but-scattered",
+              "ch11"
+            ],
+            [
+              "bertin-mindful-parenting-adhd",
+              "ch6"
+            ]
+          ]
+        },
+        {
+          "t": "ابدأ بسلوك واحد، مكافأة فورية، ثم مدّ المدة. تجنب البرامج المعقدة.",
+          "level": "do",
+          "why": "ويبستر-ستراتون بصيغة «سلوك واحد، ملصق فوري، ثم مد المدة» وتنبه إلى أن البرامج المعقدة تفشل.",
+          "refs": [
+            [
+              "barkley-your-defiant-teen",
+              "ch10"
+            ],
+            [
+              "morgan-parenting-children-adhd-workbook",
+              "ch6"
+            ],
+            [
+              "rathvon-unmotivated-child",
+              "ch5"
+            ],
+            [
+              "webster-stratton-incredible-years",
+              "ch3"
+            ]
+          ]
+        },
+        {
+          "t": "جدّد المكافآت إن مل الطفل، وأعطها بعد الفعل لا قبله.",
+          "level": "do",
+          "why": "سالين: الأطفال يملّون الحوافز فيجب تجديدها، والحافز بعد الفعل لا قبله (فرق عن الرشوة).",
+          "refs": [
+            [
+              "saline-what-your-adhd-child-wishes-you-knew",
+              "ch3"
+            ]
+          ]
+        },
+        {
+          "t": "اجمع نظامًا مع تدريب على إدارة السلوك لا نقاطًا وحدها.",
+          "level": "do",
+          "why": "إرشاد ADHD 2019 يوصي بشدة بتدريب الأهل على إدارة السلوك حتى المرحلة المتوسطة، وتحليل Daley وجد فائدة للوالدية ومشكلات السلوك. لا يثبت أيٌّ منهما فعالية النقاط وحدها.",
+          "studies": [
+            "aap-adhd-2019",
+            "daley-2014"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rewards-disputed",
+      "title": "ما اختلفت فيه المصادر",
+      "steps": [
+        {
+          "t": "اعتبر المكافأة الخارجية ضرورية لدماغ ADHD.",
+          "level": "disputed",
+          "why": "باركلي: نعم لأن شبكات المكافأة أقل حساسية عنده (بحسب المؤلف). ماتي ونيلسن: لا، التشجيع لا المكافأة. أدلة المقروء على الأعراض الأساسية غير حاسمة.",
+          "refs": [
+            [
+              "barkley-12-principles",
+              "ch7"
+            ],
+            [
+              "barkley-taking-charge-of-adhd",
+              "ch9"
+            ],
+            [
+              "mate-scattered-minds",
+              "ch22"
+            ],
+            [
+              "nelsen-positive-discipline-a-to-z",
+              "ch1"
+            ]
+          ],
+          "studies": [
+            "daley-2014"
+          ]
+        },
+        {
+          "t": "نظام يومي بالنقاط والمراقبة.",
+          "level": "disputed",
+          "why": "باركلي ومورغان وداوسون وغوير يقدمون خطواته، وراثفون تحذر من أنه يتطلب مراقبة تمنع الاستقلال.",
+          "refs": [
+            [
+              "barkley-your-defiant-teen",
+              "ch10"
+            ],
+            [
+              "morgan-parenting-children-adhd-workbook",
+              "ch6"
+            ],
+            [
+              "rathvon-unmotivated-child",
+              "ch5"
+            ],
+            [
+              "webster-stratton-incredible-years",
+              "ch3"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rewards-caution",
+      "title": "احترس",
+      "steps": [
+        {
+          "t": "لا تكافئ بشيء كبير على ما يحبه الطفل أصلًا.",
+          "level": "caution",
+          "why": "براتن تحذّر، وتحليل Deci وجد أن المكافآت المادية المتوقعة تُضعف الدافع في أنشطة ممتعة أصلًا. لا يشمل ADHD ولا المهام المملة.",
+          "refs": [
+            [
+              "pink-drive",
+              "ch2"
+            ],
+            [
+              "braaten-bright-kids-who-couldnt-care-less",
+              "ch5"
+            ],
+            [
+              "kaufman-personal-mba",
+              "ch8"
+            ],
+            [
+              "barkley-your-defiant-teen",
+              "ch12"
+            ],
+            [
+              "webster-stratton-incredible-years",
+              "ch2"
+            ]
+          ],
+          "studies": [
+            "deci-1999"
+          ]
+        },
+        {
+          "t": "لا تعتمد على العقاب وحده.",
+          "level": "caution",
+          "why": "لا يعلّم ماذا يفعل ويضر العلاقة، وهذا يقوله المؤيدون والمعارضون معًا.",
+          "refs": [
+            [
+              "dawson-guare-smart-but-scattered",
+              "ch8"
+            ],
+            [
+              "rathvon-unmotivated-child",
+              "ch5"
+            ],
+            [
+              "rosenberg-nonviolent-communication",
+              "ch11"
+            ]
+          ]
+        },
+        {
+          "t": "لا تفرض النظام إن تكرر الفشل: اسأل هل ينقصه مهارة.",
+          "level": "caution",
+          "why": "غرين وسيجل: قد تكون المشكلة قدرة لا إرادة، وفي هذه الحالة لا تعلّم المكافأة المهارة.",
+          "refs": [
+            [
+              "greene-explosive-child",
+              "ch5"
+            ],
+            [
+              "siegel-power-of-showing-up",
+              "ch4"
+            ],
+            [
+              "barkley-12-principles",
+              "ch7"
+            ],
+            [
+              "siegel-yes-brain",
+              "ch3"
+            ]
+          ]
+        }
+      ]
+    }
+  ]
 }

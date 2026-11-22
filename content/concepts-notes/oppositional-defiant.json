@@ -625,5 +625,250 @@
     "أن يصحبه عنف أو سلاح أو إيذاء للنفس أو هروب.",
     "شبهة تنمر أو إساءة أو صدمة."
   ],
-  "redFlagsNote": "هذه من أسباب مراجعة المختص أولًا، كما ورد في اتفاق الكتب في هذه الصفحة."
+  "redFlagsNote": "هذه من أسباب مراجعة المختص أولًا، كما ورد في اتفاق الكتب في هذه الصفحة.",
+  "howtoNote": "الترتيب داخل كل مجموعة من اجتهاد معدّ الموقع. لا يغني عن مختص إن ظهرت علامات الخطر أدناه. الموقع لا يضع تشخيص ODD ولا يفترض سببًا لسلوك طفل بعينه.",
+  "howto": [
+    {
+      "id": "before",
+      "title": "قبل أي أسلوب",
+      "steps": [
+        {
+          "t": "إن ظهر العناد فجأة أو معه عنف أو سلاح أو إيذاء أو هروب أو تنمر: المختص أولًا.",
+          "level": "do",
+          "why": "لاستبعاد سبب طبي أو صدمة أو تنمر أو إساءة، ويضيف إرشاد نورفولك ببرنامج تدريب للوالدين عند ODD.",
+          "refs": [
+            [
+              "barkley-your-defiant-teen",
+              "ch1"
+            ],
+            [
+              "barkley-your-defiant-teen",
+              "ch2"
+            ],
+            [
+              "norfolk-waveney-adhd-children-guideline",
+              "ch4"
+            ]
+          ]
+        },
+        {
+          "t": "سجّل الصراعات أسبوعين بلا لوم: طلبك، رده، التكرار، التصعيد، النهاية.",
+          "level": "do",
+          "why": "ثم ابحث عن نمط: ما يزيده وما يقلله (باركلي).",
+          "refs": [
+            [
+              "barkley-your-defiant-teen",
+              "ch2"
+            ],
+            [
+              "greene-lost-at-school",
+              "ch2"
+            ],
+            [
+              "mate-scattered-minds",
+              "ch20"
+            ]
+          ]
+        },
+        {
+          "t": "لا تلصق لقب «عنيد» أو «متلاعب».",
+          "level": "do",
+          "why": "باركلي: سلوك لا شخصية. غرين وفابر ومازليش وسيجل وبرايسون يحذّرون من أن الطفل يلعب الدور الذي نلصقه به.",
+          "refs": [
+            [
+              "barkley-your-defiant-teen",
+              "ch1"
+            ],
+            [
+              "greene-explosive-child",
+              "ch0"
+            ],
+            [
+              "faber-mazlish-how-to-talk-so-kids-will-listen",
+              "ch6"
+            ],
+            [
+              "siegel-power-of-showing-up",
+              "ch4"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "during",
+      "title": "لتخفيف العناد",
+      "steps": [
+        {
+          "t": "اختر معاركك: كثير منها تافه.",
+          "level": "do",
+          "why": "باركلي في المراهقة وماتي ونيلسن.",
+          "refs": [
+            [
+              "barkley-your-defiant-teen",
+              "ch3"
+            ],
+            [
+              "mate-scattered-minds",
+              "ch21"
+            ],
+            [
+              "nelsen-positive-discipline-a-to-z",
+              "ch4"
+            ]
+          ]
+        },
+        {
+          "t": "انظر في ردّك أنت: ردّ الكبار جزء من المعادلة.",
+          "level": "do",
+          "why": "باركلي: لست سبب العناد لكنك قد تساهم فيه. غرين: يلزم اثنان للرقص.",
+          "refs": [
+            [
+              "barkley-your-defiant-teen",
+              "ch5"
+            ],
+            [
+              "greene-explosive-child",
+              "ch2"
+            ],
+            [
+              "nelsen-positive-discipline-a-to-z",
+              "ch4"
+            ],
+            [
+              "mate-scattered-minds",
+              "ch21"
+            ]
+          ]
+        },
+        {
+          "t": "اجعل تدريب الأهل السلوكي أساس خطتك للأطفال حتى 12 سنة.",
+          "level": "do",
+          "why": "في تحديث قاعدة الأدلة (64 دراسة) صُنّف العلاج السلوكي الجماعي للأهل والفردي مع مشاركة الطفل «راسخي الأدلة»، وتوصي به AAP لـADHD. تصنيفه بعدّ الدراسات والتباين كبير بين البرامج.",
+          "studies": [
+            "kaminski-2017",
+            "aap-adhd-2019"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "odd-disputed",
+      "title": "ما اختلفت فيه المصادر",
+      "steps": [
+        {
+          "t": "استعد السيطرة أولًا ثم تفاوض (باركلي) أم ابدأ بالعلاقة (ماتي) أم بفهم همّه (غرين).",
+          "level": "disputed",
+          "why": "المقاربات الثلاث لا تقارنها دراسة مباشرة في المقروء.",
+          "refs": [
+            [
+              "barkley-your-defiant-teen",
+              "ch7"
+            ],
+            [
+              "mate-scattered-minds",
+              "ch21"
+            ],
+            [
+              "nelsen-positive-discipline-a-to-z",
+              "ch4"
+            ],
+            [
+              "greene-lost-at-school",
+              "ch4"
+            ]
+          ],
+          "studies": [
+            "kaminski-2017"
+          ]
+        },
+        {
+          "t": "عواقب ومكافآت فورية أم حل المشكلة معًا (الخطة B).",
+          "level": "disputed",
+          "why": "باركلي مع العواقب، وغرين وماتي ضدها على المدى الطويل، ونيلسن بخيارات محدودة، وويبستر-ستراتون بتقليل الأوامر أولًا.",
+          "refs": [
+            [
+              "barkley-your-defiant-teen",
+              "ch9"
+            ],
+            [
+              "mate-scattered-minds",
+              "ch20"
+            ],
+            [
+              "greene-explosive-child",
+              "ch5"
+            ],
+            [
+              "nelsen-positive-discipline-a-to-z",
+              "ch4"
+            ],
+            [
+              "webster-stratton-incredible-years",
+              "ch20"
+            ],
+            [
+              "faraone-wfadhd-consensus-2021",
+              "ch10"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "odd-caution",
+      "title": "احترس",
+      "steps": [
+        {
+          "t": "لا تعدّ مقاربة العلاقة أو المهارة مثبتة بقوة المقاربة السلوكية.",
+          "level": "caution",
+          "why": "لم نقرأ دراسة تختبرهما، وتحديث الأدلة المقروء لا يذكرهما. غياب الدليل لا يعني أنهما لا تنفعان.",
+          "refs": [
+            [
+              "barkley-your-defiant-teen",
+              "ch2"
+            ],
+            [
+              "greene-lost-at-school",
+              "ch2"
+            ],
+            [
+              "mate-scattered-minds",
+              "ch20"
+            ]
+          ],
+          "studies": [
+            "kaminski-2017"
+          ]
+        },
+        {
+          "t": "لا تحدد الحل بلقب أو تشخيص.",
+          "level": "caution",
+          "why": "غرين: التشخيص لا يخبرنا بالمهارة الناقصة. وبيرتن: لا يضيف حلولًا. التشخيص عند المختص.",
+          "refs": [
+            [
+              "greene-lost-at-school",
+              "ch2"
+            ],
+            [
+              "bertin-mindful-parenting-adhd",
+              "ch7"
+            ],
+            [
+              "norfolk-waveney-adhd-children-guideline",
+              "ch4"
+            ],
+            [
+              "fonseca-emotional-intensity-gifted",
+              "ch1"
+            ],
+            [
+              "mccabe-how-to-adhd",
+              "ch11"
+            ]
+          ]
+        }
+      ]
+    }
+  ]
 }

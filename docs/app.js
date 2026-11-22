@@ -398,6 +398,28 @@
     if (!(n.redFlags || []).length) return '';
     return `<h2>متى تراجع مختصًا ${chip('specialist')}</h2><ul class="body">${n.redFlags.map(x => `<li>${esc(x)}</li>`).join('')}</ul>${n.redFlagsNote ? `<p class="muted small">${esc(n.redFlagsNote)}</p>` : ''}`;
   }
+  // ---------- دليل «ماذا تفعل» والمراجع ----------
+  const HLV = { do: ['افعل', 'st-yes'], disputed: ['مختلف عليه', 'st-cond'], caution: ['احترس', 'st-no'] };
+  function howtoBlock(n) {
+    if (!(n.howto || []).length) return '';
+    return `<h2 id="howto-h">ماذا تفعل بعد كل هذا؟ ${chip('inference')}</h2>
+      <p class="muted small">خلاصة عملية مبنية على ما سبق في هذه الصفحة، ومن اجتهاد معدّ الموقع في الترتيب. ${HLV.do[0]}: تتفق عليه المصادر المقروءة أو يسنده دليل. ${HLV.disputed[0]}: المصادر تختلف فيه أو دليله ضعيف. ${HLV.caution[0]}: قد يضر أو يعارض ما قُرئ. ${n.howtoNote ? esc(n.howtoNote) : ''}</p>`
+      + n.howto.map(g => `<section class="card hgroup"><h3>${esc(g.title)}</h3>${g.intro ? `<p class="muted small">${esc(g.intro)}</p>` : ''}
+        <ol class="hsteps">${g.steps.map(s => `<li class="hs hs-${s.level}"><span class="stchip ${HLV[s.level][1]}">${HLV[s.level][0]}</span> <strong>${esc(s.t)}</strong><br><span class="small">${esc(s.why)}</span>${refLinks(s.refs)}${studyLinks(s.studies)}</li>`).join('')}</ol></section>`).join('');
+  }
+  function refsBlock(n) {
+    const bids = [...new Set((n.stances || []).map(x => x.book))].map(getBook).filter(Boolean).sort((x, y) => titleOf(x).localeCompare(titleOf(y), 'ar'));
+    const sids = new Set();
+    const take = a => (a || []).forEach(x => (x.studies || []).forEach(i => sids.add(i)));
+    [n.summary, n.agree, n.differ, n.claims].forEach(take); (n.howto || []).forEach(g => take(g.steps)); (n.evidence || []).forEach(e => sids.add(e.id));
+    const studies = [...sids].map(getStudy).filter(Boolean).sort((x, y) => x.level.localeCompare(y.level) || x.short.localeCompare(y.short));
+    return `<h2>المراجع</h2>
+      <details class="refgroup" open><summary><b>الكتب التي بُنيت عليها هذه الدراسة</b> <span class="muted">(${bids.length})</span></summary>
+        <ol class="reflist2">${bids.map(b => `<li><a href="#/book/${b.id}">${esc(titleOf(b))}</a><span class="muted small"> — ${esc(noDot(b.author))}${b.year ? '، ' + b.year : ''}</span></li>`).join('')}</ol>
+        <p class="muted small">الكتب التي ذكرت المفهوم عرضًا أو بمعنى آخر لم تُحسب هنا، وهي مذكورة أعلاه.</p></details>
+      ${studies.length ? `<details class="refgroup" open><summary><b>المصادر الأولية</b> <span class="muted">(${studies.length})</span></summary>
+        <ol class="reflist2 cites">${studies.map(s => `<li dir="ltr"><span class="lvl lvl-${s.level}">${esc(levelOf(s).ar)}</span> ${esc(s.cite)}${s.doi ? ' doi:' + esc(s.doi) : ''} <a href="#/source/${s.id}">التفاصيل</a> · <a href="${esc(s.url)}" target="_blank" rel="noopener noreferrer">المصدر ↗</a></li>`).join('')}</ol></details>` : ''}`;
+  }
   function sources() {
     const lv = D.evidenceLevels || [], st = D.studies || [];
     return `<h1>المصادر الأولية</h1>
@@ -430,6 +452,7 @@
     return `<section class="card sumcard" aria-labelledby="sum-h"><h2 id="sum-h">الخلاصة</h2>
         <dl class="sumlist">${n.summary.map(x => `<dt>${esc(x.k)}</dt><dd>${esc(x.t)}${refLinks(x.refs)}${studyLinks(x.studies)}</dd>`).join('')}</dl>
         <p class="muted small">مبنية على ${nBooks} كتابًا لها موقف في المفهوم. آخر مراجعة: ${esc(n.reviewed)}.</p></section>
+      ${(n.howto || []).length ? `<p><button class="btn ghost" type="button" data-jump="howto-h">اقفز إلى «ماذا تفعل؟»</button></p>` : ''}
       ${trustBlock(n)}
       ${claimsBlock(n)}
       ${HOWTO_PAGE}
@@ -443,11 +466,13 @@
         <ul class="reflist">${g.rows.map(r => `<li><a class="row" href="#/book/${r.book}/${r.ch}"><span><strong>${esc(shortT(getBook(r.book)))}</strong><br>${esc(r.t)}<br><span class="muted small">الأساس: ${esc(r.basis)}</span></span></a></li>`).join('')}</ul></details>`).join('')}
       ${(n.choose || []).length ? `<h2>أسئلة تساعدك على الاختيار ${chip('inference')}</h2><ol class="body">${n.choose.map(x => `<li>${esc(x)}</li>`).join('')}</ol>` : ''}
       ${(n.gaps || []).length ? `<h2>ما لا تغطيه الكتب</h2><ul class="body">${n.gaps.map(x => `<li>${esc(x)}</li>`).join('')}</ul>` : ''}
+      ${howtoBlock(n)}
       ${redFlagsBlock(n)}
       ${n.tools.length ? `<h2>أدوات مرتبطة</h2><ul class="reflist">${n.tools.map(t => `<li><a class="row" href="#/toolkit/${t.bookId}-t${t.n}"><span><strong>${esc(t.title)}</strong><br><span class="muted small">${esc(shortT(getBook(t.bookId)))} · ${esc(t.kind || '')}</span></span></a></li>`).join('')}</ul>` : ''}
       ${(n.related || []).length ? `<p class="small"><strong>مفاهيم مرتبطة:</strong> ${n.related.map(r => { const k = D.concepts.find(x => x.id === r); return k ? `<a href="#/concept/${r}">${esc(k.ar)}</a>` : ''; }).join('، ')}.</p>` : ''}
       ${(n.otherSense || []).length ? `<p class="muted small"><strong>بمعنى آخر:</strong> ${esc(n.otherSenseNote || '')} ${names(n.otherSense)}.</p>` : ''}
       ${(n.passing || []).length ? `<p class="muted small"><strong>ذكر عابر:</strong> ${esc(n.passingNote || '')} ${names(n.passing)}.</p>` : ''}
+      ${refsBlock(n)}
       <details class="refgroup"><summary><b>كل المقاطع المرتبطة آليًا</b> <span class="muted">(${c.hits.length} فصلًا)</span></summary>${conceptRaw(c)}</details>`;
   }
   function concept(id) {
@@ -725,6 +750,7 @@
     }
     const b = e.target.closest('button[data-href]');
     if (b) location.hash = b.dataset.href;
+    const jp = e.target.closest('button[data-jump]'); if (jp) { const el = document.getElementById(jp.dataset.jump); if (el) el.scrollIntoView({ block: 'start' }); }
     if (e.target.closest('button[data-devgo]')) { const v = document.getElementById('devBook'); if (v) location.hash = '#/dev/print/' + encodeURIComponent(v.value); }
     const da = e.target.closest('button[data-devall]');
     if (da) document.querySelectorAll('[data-devch]').forEach(x => { x.checked = da.dataset.devall === '1'; x.dispatchEvent(new Event('change', { bubbles: true })); });

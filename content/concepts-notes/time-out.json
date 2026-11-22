@@ -520,5 +520,281 @@
     "إن استُعمل بتهديد بالهجر أو كان الطفل يخاف من الانفراد.",
     "إن كان للطفل تاريخ صدمة أو قلق شديد أو فرط إثارة حسية."
   ],
-  "redFlagsNote": "هذه تنبيهات مبنية على ما ذكرته الكتب لا على دراسة قيّمت أضرارًا. المختص يقرر ما يناسب طفلك."
+  "redFlagsNote": "هذه تنبيهات مبنية على ما ذكرته الكتب لا على دراسة قيّمت أضرارًا. المختص يقرر ما يناسب طفلك.",
+  "howtoNote": "الترتيب داخل كل مجموعة من اجتهاد معدّ الموقع. لا يغني عن مختص إن ظهرت علامات الخطر أدناه. لا مصدر مقروء هنا يقارن العزل بالبدائل بدراسة مباشرة.",
+  "howto": [
+    {
+      "id": "if-use",
+      "title": "إن قررت استعمال العزل أو المهلة",
+      "steps": [
+        {
+          "t": "اربط الإنهاء بالهدوء لا بالساعة: يبدأ العدّ حين يهدأ الطفل.",
+          "level": "do",
+          "why": "بيرتن ورابي وهارفي وبينزو وباركلي للمراهق يقولون ذلك، وويبستر-ستراتون لا تخرجه قبل دقيقتين من الهدوء.",
+          "refs": [
+            [
+              "bertin-mindful-parenting-adhd",
+              "ch7"
+            ],
+            [
+              "rapee-helping-your-anxious-child",
+              "ch4"
+            ],
+            [
+              "harvey-penzo-parenting-intense-emotions",
+              "ch6"
+            ],
+            [
+              "morgan-parenting-children-adhd-workbook",
+              "ch7"
+            ],
+            [
+              "webster-stratton-incredible-years",
+              "ch6"
+            ]
+          ]
+        },
+        {
+          "t": "اثبت وتابع، واتفقوا بين كل من يرعى الطفل، ولا تهدد بما لن تنفذه.",
+          "level": "do",
+          "why": "أكبر عائق عند مورغان عدم المتابعة وعدم الثبات، وباركلي يحذّر من التهديد الفارغ.",
+          "refs": [
+            [
+              "morgan-parenting-children-adhd-workbook",
+              "ch7"
+            ],
+            [
+              "rapee-helping-your-anxious-child",
+              "ch4"
+            ],
+            [
+              "barkley-taking-charge-of-adhd",
+              "ch11"
+            ]
+          ]
+        },
+        {
+          "t": "لا تبدأ به وحده: المكافآت والثناء أولًا، ثم المهلة لسلوك أو اثنين.",
+          "level": "do",
+          "why": "باركلي يرتّب المكافآت ثم الغرامات ثم المهلة، ونيلسن وبيرتن يضعانه بين أدوات أخرى. وإرشاد ADHD 2019 يوصي بتدريب الأهل حزمةً لا بتقنية واحدة.",
+          "refs": [
+            [
+              "barkley-taking-charge-of-adhd",
+              "ch11"
+            ],
+            [
+              "nelsen-positive-discipline-a-to-z",
+              "ch1"
+            ],
+            [
+              "bertin-mindful-parenting-adhd",
+              "ch7"
+            ],
+            [
+              "ulwan-tarbiyat-al-awlad",
+              "ch13"
+            ],
+            [
+              "webster-stratton-incredible-years",
+              "ch6"
+            ]
+          ],
+          "studies": [
+            "aap-adhd-2019",
+            "morawska-sanders-2011"
+          ]
+        },
+        {
+          "t": "جرّب أسبوعين وقيّم، فإن زاد التصعيد أو الشعور بالعار فتوقف وراجع مختصًا.",
+          "level": "do",
+          "why": "هذا ما تنتهي إليه أسئلة الاختيار في الصفحة، لأن أثره في العلاقة غير مقيس في المصادر المقروءة.",
+          "refs": [
+            [
+              "barkley-12-principles",
+              "ch12"
+            ],
+            [
+              "mate-scattered-minds",
+              "ch16"
+            ],
+            [
+              "faber-mazlish-how-to-talk-so-kids-will-listen",
+              "conclusion"
+            ],
+            [
+              "siegel-no-drama-discipline",
+              "ch1"
+            ],
+            [
+              "webster-stratton-incredible-years",
+              "ch6"
+            ]
+          ],
+          "studies": [
+            "morawska-sanders-2011",
+            "canning-2023"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "timeout-disputed",
+      "title": "ما اختلفت فيه المصادر",
+      "steps": [
+        {
+          "t": "اعتبره عقوبة مدروسة قصيرة (باركلي) أو وقت راحة يختاره الطفل لتهدئته (نيلسن).",
+          "level": "disputed",
+          "why": "باركلي يعدّه عقوبة ضمن نظام، ونيلسن مكانًا يختاره الطفل لا عقابًا، وسالين ترى عزل السيطرة قائمًا على العار (ادعاء مؤلفة).",
+          "refs": [
+            [
+              "barkley-taking-charge-of-adhd",
+              "ch11"
+            ],
+            [
+              "nelsen-positive-discipline-a-to-z",
+              "ch1"
+            ],
+            [
+              "saline-what-your-adhd-child-wishes-you-knew",
+              "ch10"
+            ],
+            [
+              "hallowell-ratey-adhd-2",
+              "ch7"
+            ],
+            [
+              "ulwan-tarbiyat-al-awlad",
+              "ch13"
+            ]
+          ]
+        },
+        {
+          "t": "المدة: دقيقة لكل سنة، أو 5–10 دقائق، أو نصف المدة خارج البيت.",
+          "level": "disputed",
+          "why": "مورغان ورابي وباركلي وبيرتن لا يتفقون على رقم واحد.",
+          "refs": [
+            [
+              "morgan-parenting-children-adhd-workbook",
+              "ch7"
+            ],
+            [
+              "bertin-mindful-parenting-adhd",
+              "ch7"
+            ],
+            [
+              "rapee-helping-your-anxious-child",
+              "ch4"
+            ],
+            [
+              "barkley-your-defiant-teen",
+              "ch11"
+            ],
+            [
+              "barkley-12-principles",
+              "ch12"
+            ],
+            [
+              "webster-stratton-incredible-years",
+              "ch6"
+            ],
+            [
+              "burdick-adhd-non-medication-treatments",
+              "ch7"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "timeout-caution",
+      "title": "احترس",
+      "steps": [
+        {
+          "t": "لا تطبقه كما هو على الأكبر سنًا.",
+          "level": "caution",
+          "why": "بيرتن: صُمّم أساسًا لصغار ويحتاج حذرًا مع الأكبر. وويبستر-ستراتون للأكبر من 7 تقترح سحب امتياز بدل الكرسي.",
+          "refs": [
+            [
+              "morgan-parenting-children-adhd-workbook",
+              "ch7"
+            ],
+            [
+              "bertin-mindful-parenting-adhd",
+              "ch7"
+            ],
+            [
+              "rapee-helping-your-anxious-child",
+              "ch4"
+            ],
+            [
+              "barkley-your-defiant-teen",
+              "ch11"
+            ],
+            [
+              "barkley-12-principles",
+              "ch12"
+            ],
+            [
+              "webster-stratton-incredible-years",
+              "ch6"
+            ],
+            [
+              "burdick-adhd-non-medication-treatments",
+              "ch7"
+            ]
+          ]
+        },
+        {
+          "t": "لا تستعمله لمهارة ناقصة (الانتقال، ضبط الانفعال).",
+          "level": "caution",
+          "why": "غرين: لا يتعلم الطفل منه مهارة جديدة، وفي قصة جينيفر زاد التهديد بالعزل النوبة.",
+          "refs": [
+            [
+              "greene-explosive-child",
+              "ch3"
+            ],
+            [
+              "greene-explosive-child",
+              "ch5"
+            ],
+            [
+              "barkley-taking-charge-of-adhd",
+              "ch11"
+            ]
+          ]
+        },
+        {
+          "t": "لا تستعمله بتهديد بالهجر أو مع طفل يخاف الانفراد.",
+          "level": "caution",
+          "why": "ماتي وفابر ومازليش وسيجل يرون فيه نفيًا أو تهديدًا بالانفصال، وأثره في العلاقة لم يُقَس في المقروء.",
+          "refs": [
+            [
+              "barkley-12-principles",
+              "ch12"
+            ],
+            [
+              "mate-scattered-minds",
+              "ch16"
+            ],
+            [
+              "faber-mazlish-how-to-talk-so-kids-will-listen",
+              "conclusion"
+            ],
+            [
+              "siegel-no-drama-discipline",
+              "ch1"
+            ],
+            [
+              "webster-stratton-incredible-years",
+              "ch6"
+            ]
+          ],
+          "studies": [
+            "morawska-sanders-2011",
+            "canning-2023"
+          ]
+        }
+      ]
+    }
+  ]
 }
