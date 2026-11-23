@@ -1,0 +1,121 @@
+{
+  "note": "تصنيف المستفيدين والأدوات اجتهاد من معدّ الموقع وليس رأي المؤلف.",
+  "sensitiveChapters": [
+    "10",
+    "15",
+    "17",
+    "18"
+  ],
+  "chapterAudiences": {
+    "default": [
+      "adults"
+    ]
+  },
+  "tools": {
+    "1": {
+      "kind": "ضبط النفس",
+      "audiences": [
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "2": {
+      "kind": "دعم",
+      "audiences": [
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "3": {
+      "kind": "دعم",
+      "audiences": [
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "4": {
+      "kind": "وعي بالمشاعر",
+      "audiences": [
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "5": {
+      "kind": "ذات",
+      "audiences": [
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "6": {
+      "kind": "تنظيم",
+      "audiences": [
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "7": {
+      "kind": "تنظيم",
+      "audiences": [
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "8": {
+      "kind": "وقاية",
+      "audiences": [
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "9": {
+      "kind": "وقاية",
+      "audiences": [
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "10": {
+      "kind": "ضبط النفس",
+      "audiences": [
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "11": {
+      "kind": "وعي بالمشاعر",
+      "audiences": [
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "12": {
+      "kind": "تنظيم",
+      "audiences": [
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "13": {
+      "kind": "تحفيز",
+      "audiences": [
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "14": {
+      "kind": "وعي بالمشاعر",
+      "audiences": [
+        "adults"
+      ],
+      "tag": "book"
+    },
+    "15": {
+      "kind": "وعي بالمشاعر",
+      "audiences": [
+        "adults"
+      ],
+      "tag": "book"
+    }
+  }
+}
