@@ -1956,6 +1956,149 @@
    "scopeNote": "أطفال الصفوف 3–5 المصابون بـADHD مع صعوبات تنظيمية؛ لا يُعمَّم على المراهقين ولا البالغين.",
    "readScope": "ملخص صفحة جامعة",
    "checked": "2026-11-25"
+  },
+  {
+   "id": "curran-hill-2019",
+   "type": "تحليل تلوي عبر الزمن",
+   "level": "L2",
+   "short": "Curran وHill 2019",
+   "cite": "Curran T, Hill AP. Perfectionism is increasing over time: A meta-analysis of birth cohort differences from 1989 to 2016. Psychological Bulletin. 2019;145(4):410-429.",
+   "doi": "10.1037/bul0000138",
+   "url": "https://researchportal.bath.ac.uk/en/publications/perfectionism-is-increasing-over-time-a-meta-analysis-of-birth-co/",
+   "design": "تحليل تلوي عبر الأزمنة لمجموعات الميلاد باستعمال مقياس الكمالية متعدد الأبعاد.",
+   "n": "164 عينة، 41641 طالبًا جامعيًا من أمريكا وكندا وبريطانيا (70.9% إناث، متوسط العمر 20.7).",
+   "finding": "ارتفعت الكمالية الذاتية والمفروضة اجتماعيًا والموجهة للآخرين خطيًا من 1989 إلى 2016، وبقي الاتجاه بعد ضبط الجنس والبلد. يفسر المؤلفون ذلك بأن الشباب يدركون أن الآخرين أكثر تطلبًا منهم (تفسير ثقافي، لا إثبات).",
+   "limits": [
+    "عينات طلاب جامعة فقط.",
+    "أحجام الأثر لم تظهر في الصفحة المقروءة.",
+    "لا يثبت سبب الارتفاع.",
+    "قُرئ الملخص فقط."
+   ],
+   "scopeNote": "طلاب جامعة أنجلو أمريكيون؛ لا يخص ADHD.",
+   "readScope": "ملخص صفحة جامعة",
+   "checked": "2026-11-25"
+  },
+  {
+   "id": "limburg-2017",
+   "type": "تحليل تلوي",
+   "level": "L2",
+   "short": "Limburg وآخرون 2017",
+   "cite": "Limburg K, Watson HJ, Hagger MS, Egan SJ. The relationship between perfectionism and psychopathology: a meta-analysis. Journal of Clinical Psychology. 2017;73(10):1301-1326.",
+   "doi": "10.1002/jclp.22435",
+   "url": "https://research-repository.uwa.edu.au/en/publications/the-relationship-between-perfectionism-and-psychopathology-a-meta/",
+   "design": "تحليل تلوي وانحدار تلوي لعلاقة بُعدي الكمالية (السعي والهموم) بالاكتئاب والقلق والوسواس واضطرابات الأكل وإيذاء النفس والأفكار الانتحارية.",
+   "n": "284 دراسة، 2047 حجم أثر.",
+   "finding": "الكمالية عامل عابر للتشخيصات: كلا البعدين ارتبط بأشكال مرضية متعددة. أحجام الأثر حسب البعد والاضطراب لم تظهر في الصفحة.",
+   "limits": [
+    "ارتباط لا سببية.",
+    "لم تظهر الأحجام ولا القيود في الصفحة.",
+    "قُرئ الملخص فقط."
+   ],
+   "scopeNote": "بالغون ومراهقون في عيّنات سريرية وغير سريرية؛ لا يخص ADHD.",
+   "readScope": "ملخص صفحة جامعة",
+   "checked": "2026-11-25"
+  },
+  {
+   "id": "galloway-2022",
+   "type": "مراجعة منهجية وتحليل تلوي",
+   "level": "L2",
+   "short": "Galloway وآخرون 2022",
+   "cite": "Galloway R, Watson H, Greene D, Shafran R, Egan SJ. The efficacy of randomised controlled trials of cognitive behaviour therapy for perfectionism: a systematic review and meta-analysis. Cognitive Behaviour Therapy. 2022;51(2):170-184.",
+   "doi": "10.1080/16506073.2021.1952302",
+   "url": "https://researchportal.murdoch.edu.au/esploro/outputs/journalArticle/The-efficacy-of-randomised-controlled-trials/991005881354107891",
+   "design": "تحليل تلوي لتجارب عشوائية للعلاج المعرفي السلوكي (ذاتي المساعدة ووجهًا لوجه) للكمالية.",
+   "n": "15 تجربة، 912 مشاركًا، متوسط العمر المجمّع 23.",
+   "finding": "تحسن الكمالية: المعايير الشخصية g = 0.57، القلق من الأخطاء 0.89، الكمالية السريرية 0.87. الاكتئاب 0.60، والقلق 0.42، وأعراض اضطراب الأكل 0.61. لم يظهر تحيز نشر.",
+   "limits": [
+    "عدد التجارب قليل.",
+    "لا مقارنات مع علاجات فعالة أخرى.",
+    "المتابعة لم تظهر في الصفحة.",
+    "قُرئ الملخص فقط."
+   ],
+   "scopeNote": "شباب وبالغون، لا ADHD ولا أطفال.",
+   "readScope": "ملخص صفحة جامعة",
+   "checked": "2026-11-25"
+  },
+  {
+   "id": "sirois-molnar-2017",
+   "type": "تحليل تلوي",
+   "level": "L2",
+   "short": "Sirois وآخرون 2017",
+   "cite": "Sirois FM, Molnar DS, Hirsch JK. A Meta-analytic and Conceptual Update on the Associations Between Procrastination and Multidimensional Perfectionism. European Journal of Personality. 2017;31(2):137-159.",
+   "doi": "10.1002/per.2098",
+   "url": "https://eprints.whiterose.ac.uk/id/eprint/112533/",
+   "design": "تحليل تلوي يعيد فحص علاقة التسويف بالكمالية بنظرة متعددة الأبعاد.",
+   "n": "43 دراسة (10000 مشارك) للهموم الكمالية، و38 دراسة (9544) للسعي الكمالي.",
+   "finding": "التسويف ارتبط إيجابيًا بالهموم الكمالية (r = 0.23؛ 0.19–0.27) وسلبيًا بالسعي الكمالي (r = −0.22؛ −0.26 إلى −0.18)، وبقيا بعد ضبط الارتباط بين البعدين.",
+   "limits": [
+    "ارتباط لا سببية.",
+    "لم تظهر القيود في الصفحة.",
+    "قُرئ الملخص فقط."
+   ],
+   "scopeNote": "التسويف السمة لدى طلاب وبالغين غير ADHD غالبًا.",
+   "readScope": "ملخص مستودع الجامعة",
+   "checked": "2026-11-25"
+  },
+  {
+   "id": "hill-curran-2016",
+   "type": "تحليل تلوي",
+   "level": "L2",
+   "short": "Hill وCurran 2016",
+   "cite": "Hill AP, Curran T. Multidimensional perfectionism and burnout: a meta-analysis. Personality and Social Psychology Review. 2016;20(3):269-288.",
+   "doi": "10.1177/1088868315596286",
+   "url": "https://researchportal.bath.ac.uk/en/publications/multidimensional-perfectionism-and-burnout-a-meta-analysis/",
+   "design": "تحليل تلوي لعلاقة بُعدي الكمالية بالإنهاك في العمل والرياضة والتعليم.",
+   "n": "43 دراسة، 9838 مشاركًا، 663 حجم أثر.",
+   "finding": "الهموم الكمالية ارتبطت بالإنهاك ارتباطًا متوسطًا إلى كبير، والسعي الكمالي ارتباطًا سلبيًا صغيرًا أو غير دال. بعد ضبط التداخل بين البعدين صار السعي «الخالص» أوضح ارتباطًا سلبيًا بالإنهاك. في العمل أحيانًا كان السعي أقل تكيفًا.",
+   "limits": [
+    "أغلبها مقطعي.",
+    "الأرقام لم تظهر في الصفحة.",
+    "قُرئ الملخص فقط."
+   ],
+   "scopeNote": "عمل ورياضة وتعليم؛ لا ADHD.",
+   "readScope": "ملخص صفحة جامعة",
+   "checked": "2026-11-25"
+  },
+  {
+   "id": "stoeber-otto-2006",
+   "type": "مراجعة نظرية",
+   "level": "L4",
+   "short": "Stoeber وOtto 2006",
+   "cite": "Stoeber J, Otto K. Positive conceptions of perfectionism: Approaches, evidence, challenges. Personality and Social Psychology Review. 2006;10(4):295-319.",
+   "doi": "10.1207/s15327957pspr1004_2",
+   "url": "https://kar.kent.ac.uk/4481",
+   "design": "مراجعة تقارن نهجًا بُعديًا (سعي مقابل هموم) ونهجًا يصنف الأشخاص (كماليون أصحاء وغير أصحاء).",
+   "n": "",
+   "finding": "ترى المراجعة أن السعي الكمالي الذاتي يبدو إيجابيًا ما دام صاحبه غير مفرط الهم بالأخطاء وتقييم الآخرين السلبي، وأن «الكماليين الأصحاء» لديهم صفات إيجابية أكثر. وتبقى أسئلة مفتوحة عن جوهر الكمالية الإيجابية ومنشئها.",
+   "limits": [
+    "مراجعة سردية بلا حجم أثر.",
+    "مفهوم «الكمالية الصحية» موضع جدل (الصفحة لا تعرضه).",
+    "قُرئ الملخص فقط."
+   ],
+   "scopeNote": "يخص شخصية الكمالية عامة، لا ADHD.",
+   "readScope": "ملخص مستودع الجامعة",
+   "checked": "2026-11-25"
+  },
+  {
+   "id": "strohmeier-2016",
+   "type": "مراجعة سجلات (ارتباطية)",
+   "level": "L3",
+   "short": "Strohmeier وآخرون 2016",
+   "cite": "Strohmeier CW, Rosenfield B, DiTomasso RA, Ramsay JR. Assessment of the relationship between self-reported cognitive distortions and adult ADHD, anxiety, depression, and hopelessness. Psychiatry Research. 2016;238:153-158.",
+   "doi": "10.1016/j.psychres.2016.02.034",
+   "url": "https://www.sciencedirect.com/science/article/abs/pii/S0165178116302815",
+   "design": "مراجعة بأثر رجعي لسجلات تقييم في عيادة جامعية للبالغين المصابين بـADHD، بتحليل ارتباطي.",
+   "n": "30 بالغًا مشخّصًا بـADHD.",
+   "finding": "التشوهات المعرفية (الكلية) ارتبطت بأعراض ADHD (r = 0.49) وبالاكتئاب (0.65) واليأس (0.53). كانت الكمالية الفئة الأكثر تأييدًا بين التشوهات، ولم تظهر النسبة.",
+   "limits": [
+    "عينة صغيرة (30) من عيادة واحدة.",
+    "أثر رجعي وارتباطي.",
+    "القيود غير مذكورة في الصفحة (القائمة ملاحظاتي).",
+    "قُرئ الملخص فقط."
+   ],
+   "scopeNote": "بالغون في عيادة ADHD أمريكية؛ لا يعمّم على الأطفال ولا على المراهقين.",
+   "readScope": "ملخص ScienceDirect",
+   "checked": "2026-11-25"
   }
  ]
 }
